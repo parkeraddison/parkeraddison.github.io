@@ -9,6 +9,8 @@ loop: true,
 loopCount: Infinity,
 });
 
+//Want to stop typed.js if the window is too small
+
 // Adding functionality to add background to navbar once scrolled past 100px
 /* Currently not working on mobile
 */
@@ -18,3 +20,7 @@ if ($(window).scrollTop() >= 100){
 else{
   $('.navbar').removeClass("scrolled");}
 });
+
+if ((window).width() < 768){
+  $('.navbar').addClass("scrolled");
+}
