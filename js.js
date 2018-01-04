@@ -18,13 +18,3 @@ if ($(window).scrollTop() >= 100){
 else{
   $('.navbar').removeClass("scrolled");}
 });
-
-// Making sure my landing is the same size as my browser
-/* Taken from StyleShout Template and modified for production
-*/
-   $('header').css({ 'height': $(window).height()/2 });
-   $(window).on('resize', function() {
-
-        $('header').css({ 'height': $(window).height()/2 });
-        $('body').css({ 'width': $(window).width() })
-   });
