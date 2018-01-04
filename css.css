@@ -3,7 +3,7 @@
 }
 
 .navbar.scrolled {
-    background-color: rgb(30, 30, 30, 0.9);}
+    background-color: rgb(30, 30, 30, 0.95);}
 
 header h1 {
   color: #f2f2f2;
@@ -19,7 +19,7 @@ header h1 {
 
     header {
        position: relative;
-       height: 800px;
+       height: 50vh;
        min-height: 200px;
        width: 100%;
        background: #161415 url(stationbg.jpg) no-repeat top center;
