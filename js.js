@@ -18,18 +18,9 @@ else {
   });
 }
 
-if ($(window).width() <= 480) {
-  $('.navbar').addClass("scrolled");
-}
-else {
-  $(window).scroll(function () {
-  if ($(window).scrollTop() >= 100){
-    $('.navbar').addClass("scrolled");}
-  else{
-    $('.navbar').removeClass("scrolled");}
-  });
-}
-
-// Adding functionality to add background to navbar once scrolled past 100px
-/* Currently not working on mobile
-*/
+$(window).scroll(function () {
+if ($(window).scrollTop() >= 100){
+  $('.navbar').addClass("scrolled");}
+else{
+  $('.navbar').removeClass("scrolled");}
+});
