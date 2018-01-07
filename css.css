@@ -1,236 +1,197 @@
-.navbar {
-  transition: background-color 0.5s ease;
-}
 
-.navbar.scrolled {
-    background-color: rgb(30, 30, 30, 0.95);}
+/* ----- Navbar ----- */
+  .navbar {
+    transition: background-color 0.5s ease;
+  }
 
-@media screen and (max-width: 700px) {
-    .navbar {
-        background-color: #1e1e1e;
+  .navbar.scrolled {
+      background-color: rgb(30, 30, 30, 0.95);}
+
+  @media screen and (max-width: 700px) {
+      .navbar {
+          background-color: #1e1e1e;
+      }
+  }
+
+
+/* ----- Header ----- */
+    header h1 {
+      color: #f2f2f2;
+      font-size: 5vw;
+      text-align: left;
+      padding-top: 20vh;
+      padding-left: 22vw;
     }
-}
 
-header h1 {
-  color: #f2f2f2;
-  font-size: 5vw;
-  text-align: left;
-  padding-top: 20vh;
-  padding-left: 22vw;
-}
+    header {
+      position: relative;
+      height: 50vh;
+      min-height: 200px;
+      width: 100%;
+      background: #161415 url(stationbg.jpg) no-repeat top center;
+      background-size: cover !important;
+      -webkit-background-size: cover !important;
+      text-align: center;
+      overflow: hidden;
+    }
 
-/* ------------------------------------------------------------------ */
-/* b. Header Styles
-/* ------------------------------------------------------------------ */
+    header .social {
+      padding: 0;
+      padding-bottom: 50vh;
+      text-shadow: 2px 2px 2px rgba(0, 0, 0, .8);
 
-header {
-   position: relative;
-   height: 50vh;
-   min-height: 200px;
-   width: 100%;
-   background: #161415 url(stationbg.jpg) no-repeat top center;
-   background-size: cover !important;
-	-webkit-background-size: cover !important;
-   text-align: center;
-   overflow: hidden;
- }
+    }
+    header .social li {
+      display: inline-block;
+      margin: 0 15px;
+      padding: 0;
+    }
+    header .social li a {
+      color: #f2f2f2;
+      font-size: 60px;
+    }
 
- header .social {
-    margin: 24px 0;
-    padding: 0;
-    padding-top: 50;
-    font-size: 30px;
-    text-shadow: 0px 1px 2px rgba(0, 0, 0, .8);
- }
- header .social li {
-    display: inline-block;
-    margin: 0 15px;
-    padding: 0;
- }
- header .social li a { color: #f2f2f2; }
- header .social li a:hover { color: #4C4F6D; }
+    @media (max-width: 600px) {
+      header .social li a {font-size: 50px;}
+    }
 
+    header .social li a:hover { color: #4C4F6D; }
 
-/* Accordion */
- .accordion {
-   width: 100%;
-   height: 100%;
-   overflow: hidden;
- }
+/* ----- About ----- */
 
- .accordion ul {
-   width: 100%;
-   height: 100%;
-   display: table;
-   table-layout: fixed;
- }
+/* ----- Projects ----- */
+    #projects h1 {
+      color: #aaa;
+      text-align: center;
+      font-size: 22px
+    }
 
- .accordion ul li {
-   display: table-cell;
-   vertical-align: bottom;
-   position: relative;
-   width: 16.666%;
-   height: 350px;
-   background-repeat: no-repeat;
-   background-position: center center;
-   transition: all 500ms ease-in-out;
- }
+    #projects div {
+      background: #eee;
+      padding-top: 50px;
+    }
 
- .accordion ul li div {
-   display: block;
-   overflow: hidden;
-   width: 100%;
- }
+    #projects a {
+      text-align: center;
+      display: inline-block;
+      margin-bottom: 8px;
+      width: calc(50% - 4px);
+    }
 
- .accordion ul li div a {
-   display: block;
-   height: 350px;
-   width: 100%;
-   position: relative;
-   z-index: 3;
-   vertical-align: bottom;
-   padding: 15px 20px;
-   box-sizing: border-box;
-   color: #fff;
-   text-shadow: 1px 1px 2px #000;
-   /*filter: invert(100%);*/
-   text-decoration: none;
-   font-family: Open Sans, sans-serif;
-   transition: all 300ms ease-in-out;
- }
+    @media screen and (min-width: 50em) {
+    #projects a {
+       width: calc(25% - 6px);
+     }
+    }
 
- .accordion ul li div a * {
-   opacity: 0;
-   margin: 0;
-   width: 100%;
-   text-overflow: ellipsis;
-   position: relative;
-   z-index: 5;
-   white-space: nowrap;
-   overflow: hidden;
-   -webkit-transform: translateX(-20px);
-   transform: translateX(-20px);
-   -webkit-transition: all 400ms ease-in-out;
-   transition: all 400ms ease-in-out;
- }
- .accordion ul li div a h2 {
-   font-family: Montserrat, sans-serif;
-   text-overflow: clip;
-   font-size: 32px;
-   text-transform: uppercase;
-   margin-bottom: 2px;
-   top: 160px;
- }
+    #projects img {
+      height: 200px;
+      width: 200px;
+    }
 
- .accordion ul li div a p {
-   top: 160px;
-   font-size: 18px;
-   padding-left: 1em;
- }
+    #projects figure img {
+      background: #000;
+      opacity: 1;
+      -webkit-transition: .3s ease-in-out;
+    	transition: .3s ease-in-out;
+    }
+    #projects figure:hover img {
+	     opacity: 0.1;
+    }
 
- .accordion ul li:nth-child(1) {
-   background-image: url("http://dev.fjwestcott.com/media/wysiwyg/home/home_ind_studio_portrait_photography_bob_harrington.jpg");
-   background-position: 50% 30%;
- }
+    #projects .text {
+      color: white;
+      font-size: 20px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+    }
 
- .accordion ul li:nth-child(2) {
-   background-image: url("http://dev.fjwestcott.com/media/wysiwyg/home/home_ind_cinema_flex_whale_wars_gavin_garrison.jpg");
-  background-position: 70% 0%;
- }
+/* -----Projects ----- */
+  /* The Modal (background) */
+  .modal {
+     display: none; /* Hidden by default */
+     position: fixed; /* Stay in place */
+     z-index: 1; /* Sit on top */
+     left: 0;
+     top: 0;
+     width: 100%; /* Full width */
+     height: 100%; /* Full height */
+     overflow: auto; /* Enable scroll if needed */
+     background-color: rgb(0,0,0); /* Fallback color */
+     background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  }
 
- .accordion ul li:nth-child(3) {
-   background-image: url("http://dev.fjwestcott.com/media/wysiwyg/home/home_ind_studio_portrait_photography_bob_harrington_bts.jpg");
- background-position: 50% 50%;
- }
+  /* Modal Content/Box */
+  .modal-content {
+     background-color: #fefefe;
+     margin: 15% auto; /* 15% from the top and centered */
+     padding: 20px;
+     border: 1px solid #888;
+     width: 80%; /* Could be more or less, depending on screen size */
+  }
 
- .accordion ul li:nth-child(4) {
-   background-image: url("http://dev.fjwestcott.com/media/wysiwyg/home/home_ind_travel_rapidbox.jpg");
-   background-position: 30% 40%;
- }
+  /* The Close Button */
+  .close {
+     color: #aaa;
+     float: right;
+     font-size: 28px;
+     font-weight: bold;
+  }
 
- .accordion ul li:nth-child(5) {
-   background-image: url("http://dev.fjwestcott.com/media/wysiwyg/home/home_ind_enthusiast_portrait_photography_little_studio_basics_lights.jpg");
-   background-position: 60% 64%;
- }
+  .close:hover,
+  .close:focus {
+     color: black;
+     text-decoration: none;
+     cursor: pointer;
+  }
 
- .accordion ul li:nth-child(6) {
-   background-image: url("http://dev.fjwestcott.com/media/wysiwyg/home/home_ind_flex_enthusiast_portrait_photography.jpg");
-   background-position: 70% 25%;
- }
+/* ----- Resume ----- */
+  #resume h2 {
+    color: #555;
+  }
+  #resume h2 span {
+    border-bottom: 3px solid #4C4F6D;
+  }
 
- .accordion ul li { background-size: cover; }
- .accordion ul:hover li { width: 10%; }
- .accordion ul:hover li:hover { width: 90%; }
-
- .accordion ul:hover li:hover a { background: rgba(0, 0, 0, 0.4); }
-
- .accordion ul:hover li:hover a * {
-   opacity: 1;
-   -webkit-transform: translateX(0);
-   transform: translateX(0);
- }
-  @media screen and (max-width: 680px) {
-
-   body { margin: 0; }
-   .accordion { height: auto; }
-
-   .accordion ul li,
-   .accordion ul li:hover,
-   .accordion ul:hover li,
-   .accordion ul:hover li:hover {
-     position: relative;
-     display: table;
-     table-layout: fixed;
-     width: 100%;
-     -webkit-transition: none;
-     transition: none;
-   }
-   .accordion ul li div a * {
-     opacity: 1;
-     -webkit-transform: translateX(0);
-     transform: translateX(0);
-   }
- }
-/* End Accordion */
-
-#resume h2 {
-
-}
-#resume h2 span {
-  border-bottom: 3px solid #4C4F6D;
-}
-
-#resume a, #resume a:visited  { color: #11ABB0; }
-#resume a:hover, #resume a:focus { color: #313131; }
+  #resume a, #resume a:visited  { color: #11ABB0; }
+  #resume a:hover, #resume a:focus { color: #313131; }
 
 
-#resume h1 span {
-   border-bottom: 3px solid #353B4E;
-   padding-bottom: 6px;
-}
-#resume h3 {
-   font: 25px/30px 'opensans-bold', sans-serif;
-}
+  #resume h1 span {
+     border-bottom: 3px solid #353B4E;
+     padding-bottom: 6px;
+  }
+  #resume h3 {
+     font: 25px/30px 'opensans-bold', sans-serif;
+  }
 
-#resume .header-col { padding-top: 9px; }
-#resume .main-col { padding-right: 10%; }
+  #resume .header-col { padding-top: 9px; }
+  #resume .main-col { padding-right: 10%; }
 
-.education, .work {
-   margin-bottom: 48px;
-   padding-bottom: 24px;
-   border-bottom: 1px solid #E8E8E8;
-}
-#resume .info {
-   font: 16px/24px 'librebaskerville-italic', serif;
-   color: #6E7881;
-   margin-bottom: 18px;
-   margin-top: 9px;
-}
-#resume .info span {
-   margin-right: 5px;
-   margin-left: 5px;
-}
-#resume .date {
-   font: 15px/24px 'opensans-regular', sans-serif;
-   margin-top: 6px;
-}
+  .education, .work {
+     margin-bottom: 48px;
+     padding-bottom: 24px;
+     border-bottom: 1px solid #E8E8E8;
+  }
+  #resume .info {
+     font: 16px/24px 'librebaskerville-italic', serif;
+     color: #6E7881;
+     margin-bottom: 18px;
+     margin-top: 9px;
+  }
+  #resume .info span {
+     margin-right: 5px;
+     margin-left: 5px;
+  }
+  #resume .date {
+     font: 15px/24px 'opensans-regular', sans-serif;
+     margin-top: 6px;
+  }
+
+/* ----- Footer ----- */
+  #footer p {
+    padding: 15px 15px 0;
+  }
