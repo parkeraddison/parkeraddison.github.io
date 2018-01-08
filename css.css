@@ -1,3 +1,6 @@
+h1 {
+  color: #333;
+}
 
 /* ----- Navbar ----- */
   .navbar {
@@ -58,6 +61,9 @@
     header .social li a:hover { color: #4C4F6D; }
 
 /* ----- About ----- */
+    #about h1 {
+      color: #333;
+    }
 
 /* ----- Projects ----- */
     #projects h1 {
@@ -78,25 +84,23 @@
       width: calc(50% - 4px);
     }
 
-    @media screen and (min-width: 50em) {
+    @media screen and (min-width: 960px) {
     #projects a {
        width: calc(25% - 6px);
      }
     }
 
-    #projects img {
+    #projects figure img {
       height: 200px;
       width: 200px;
-    }
-
-    #projects figure img {
       background: #000;
       opacity: 1;
       -webkit-transition: .3s ease-in-out;
     	transition: .3s ease-in-out;
     }
     #projects figure:hover img {
-	     opacity: 0.1;
+       -webkit-filter: brightness(30%); /* Safari 6.0 - 9.0 */
+       filter: brightness(30%);
     }
 
     #projects .text {
@@ -110,47 +114,11 @@
     }
 
 /* -----Projects ----- */
-  /* The Modal (background) */
-  .modal {
-     display: none; /* Hidden by default */
-     position: fixed; /* Stay in place */
-     z-index: 1; /* Sit on top */
-     left: 0;
-     top: 0;
-     width: 100%; /* Full width */
-     height: 100%; /* Full height */
-     overflow: auto; /* Enable scroll if needed */
-     background-color: rgb(0,0,0); /* Fallback color */
-     background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-  }
 
-  /* Modal Content/Box */
-  .modal-content {
-     background-color: #fefefe;
-     margin: 15% auto; /* 15% from the top and centered */
-     padding: 20px;
-     border: 1px solid #888;
-     width: 80%; /* Could be more or less, depending on screen size */
-  }
-
-  /* The Close Button */
-  .close {
-     color: #aaa;
-     float: right;
-     font-size: 28px;
-     font-weight: bold;
-  }
-
-  .close:hover,
-  .close:focus {
-     color: black;
-     text-decoration: none;
-     cursor: pointer;
-  }
 
 /* ----- Resume ----- */
   #resume h2 {
-    color: #555;
+    color: #33;
   }
   #resume h2 span {
     border-bottom: 3px solid #4C4F6D;

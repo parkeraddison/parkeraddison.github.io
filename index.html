@@ -84,28 +84,23 @@
       <div class="col mx-auto">
         <p class="lead">I'm keeping this site up as I work on it, so it is a continual work in progress.  If you're curious what I have planned:</p>
         <ul>
-          <li>Full screen landing page instead of header, text that fits the landing responsively</li>
           <li>Smooth scrolling between sections of the page when using navigation links</li>
           <li>Contact form using php to send email
-          <li>Footer with social media links, a thanks to GitHub for hosting!</li>
-          <li>The entire rest of the content of this page...
-            <li>About should be full, have a photo, look nice.</li>
-            <li>Projects should be boxes that go to another page when clicked.  Boxes should be grouped by Data Science, Programming, Design, Music, and Other.</li>
-            <li>Résumé should only highlight important bits of Education, Work, and Skills.  Otherwise allow for a download pdf for the résumé.
-          </li>
+          <li>About should be full, have a photo, look nice.</li>
+          <li>Projects should be boxes that go to another page when clicked.  Boxes should be grouped by Data Science, Programming, Design, Music, and Other.</li>
+          <li>Résumé should only highlight important bits of Education, Work, and Skills.  Otherwise allow for a download pdf for the résumé.
         </ul>
       </div>
     </div>
   </div>
 </section>
 
-
 <!--Projects 4.0 -->
 <section id="projects">
   <div>
     <h1>CHECK OUT SOME OF MY PROJECTS</h1>
     <div class="container">
-      <a href="#about">
+      <a href="#modal1" class="texttrigger" data-toggle="modal">
         <figure>
           <img src="lion.jpg" alt="">
         </figure>
@@ -156,7 +151,7 @@
 
       <a href="#about">
         <figure>
-          <img src="lion.jpg" alt="">
+          <img src="plus.png" alt="">
         </figure>
         <p><br></p>
       </a>
@@ -243,5 +238,29 @@
     <script src="js.js"></script>
 
 </body>
+
+<!-- Modals -->
+<section id="modals">
+  <!-- Modal -->
+  <div class="modal fade" id="modal1" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          ...
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Save changes</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
 </html>
