@@ -1,6 +1,12 @@
-h1 {
-  color: #333;
-}
+/* Header */
+  #header h1 {
+    font-size: 5em;
+    text-align: right;
+    padding: 2em;
+    color: #FFFAF0;
+    font-weight: lighter;
+  }
+
 
 /* ----- Navbar ----- */
   .navbar {
@@ -8,12 +14,24 @@ h1 {
   }
 
   .navbar.scrolled {
-      background-color: rgb(30, 30, 30, 0.95);}
+      background-color: #111;
+      opacity: 0.9;}
 
   @media screen and (max-width: 700px) {
       .navbar {
           background-color: #1e1e1e;
       }
+  }
+
+  .navbar .navbar-nav .nav-item .nav-link {
+    font-weight: lighter;
+    font-size: 14px;
+    color: #b3b3bf;
+
+  }
+
+  .navbar .navbar-nav .nav-item a:hover {
+    color: #ddd
   }
 
 /* Bio */
@@ -27,12 +45,35 @@ h1 {
   #bio hr {
     padding: 5vh;
   }
+  #bio p {
+    text-align: justify;
+  }
+
+/* Resume */
+  #resume h3 {
+    font-weight: lighter;
+    font-size: 20px;
+  }
+  #resume h4 {
+    font-weight: normal;
+  }
+  #resume hr {
+    padding: 5vh;
+  }
+  #resume p {
+    text-align: justify;
+  }
 
 /* ----- Footer ----- */
   #footer a {
     text-align: center;
-    color: #eee;
+    color: #b3b3bf;
+    text-decoration: none;
+    font-weight: lighter;
+    font-size: 14px;
     padding: 5px;
-    padding-top: 60px;
-    padding-bottom: 40px;
+  }
+
+  #footer a:hover {
+    color: #ddd;
   }
