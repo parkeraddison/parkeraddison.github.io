@@ -16,150 +16,23 @@ h1 {
       }
   }
 
-
-/* ----- Header ----- */
-    header h1 {
-      color: #f2f2f2;
-      font-size: 5vw;
-      text-align: left;
-      padding-top: 20vh;
-      padding-left: 22vw;
-    }
-
-    header {
-      position: relative;
-      height: 50vh;
-      min-height: 200px;
-      width: 100%;
-      background: #161415 url(stationbg.jpg) no-repeat top center;
-      background-size: cover !important;
-      -webkit-background-size: cover !important;
-      text-align: center;
-      overflow: hidden;
-    }
-
-    header .social {
-      padding: 0;
-      padding-bottom: 50vh;
-      text-shadow: 2px 2px 2px rgba(0, 0, 0, .8);
-
-    }
-    header .social li {
-      display: inline-block;
-      margin: 0 15px;
-      padding: 0;
-    }
-    header .social li a {
-      color: #f2f2f2;
-      font-size: 60px;
-    }
-
-    @media (max-width: 600px) {
-      header .social li a {font-size: 50px;}
-    }
-
-    header .social li a:hover { color: #4C4F6D; }
-
-/* ----- About ----- */
-    #about h1 {
-      color: #333;
-    }
-
-/* ----- Projects ----- */
-    #projects h1 {
-      color: #aaa;
-      text-align: center;
-      font-size: 22px
-    }
-
-    #projects div {
-      background: #eee;
-      padding-top: 50px;
-    }
-
-    #projects a {
-      text-align: center;
-      display: inline-block;
-      margin-bottom: 8px;
-      width: calc(50% - 4px);
-    }
-
-    @media screen and (min-width: 960px) {
-    #projects a {
-       width: calc(25% - 6px);
-     }
-    }
-
-    #projects figure img {
-      height: 200px;
-      width: 200px;
-      background: #000;
-      opacity: 1;
-      -webkit-transition: .3s ease-in-out;
-    	transition: .3s ease-in-out;
-    }
-    #projects figure:hover img {
-       -webkit-filter: brightness(30%); /* Safari 6.0 - 9.0 */
-       filter: brightness(30%);
-    }
-
-    #projects .text {
-      color: white;
-      font-size: 20px;
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      -ms-transform: translate(-50%, -50%);
-    }
-
-/* -----Projects ----- */
-
-
-/* ----- Resume ----- */
-  #resume h2 {
-    color: #33;
+/* Bio */
+  #bio h3 {
+    font-weight: lighter;
+    font-size: 20px;
   }
-  #resume h2 span {
-    border-bottom: 3px solid #4C4F6D;
+  #bio h4 {
+    font-weight: normal;
   }
-
-  #resume a, #resume a:visited  { color: #11ABB0; }
-  #resume a:hover, #resume a:focus { color: #313131; }
-
-
-  #resume h1 span {
-     border-bottom: 3px solid #353B4E;
-     padding-bottom: 6px;
-  }
-  #resume h3 {
-     font: 25px/30px 'opensans-bold', sans-serif;
-  }
-
-  #resume .header-col { padding-top: 9px; }
-  #resume .main-col { padding-right: 10%; }
-
-  .education, .work {
-     margin-bottom: 48px;
-     padding-bottom: 24px;
-     border-bottom: 1px solid #E8E8E8;
-  }
-  #resume .info {
-     font: 16px/24px 'librebaskerville-italic', serif;
-     color: #6E7881;
-     margin-bottom: 18px;
-     margin-top: 9px;
-  }
-  #resume .info span {
-     margin-right: 5px;
-     margin-left: 5px;
-  }
-  #resume .date {
-     font: 15px/24px 'opensans-regular', sans-serif;
-     margin-top: 6px;
+  #bio hr {
+    padding: 5vh;
   }
 
 /* ----- Footer ----- */
-  #footer p {
-    padding: 15px 15px 0;
+  #footer a {
+    text-align: center;
+    color: #eee;
+    padding: 5px;
+    padding-top: 60px;
+    padding-bottom: 40px;
   }
