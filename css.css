@@ -1,5 +1,5 @@
 .col {
-  min-width: 350px;
+  min-width: 320px;
 }
 
 /* Header */
@@ -44,13 +44,27 @@
   }
   #bio h4 {
     font-weight: normal;
+    font-size: 1.5em;
   }
+
   #bio hr {
     padding: 5vh;
   }
   #bio p {
     text-align: justify;
   }
+  #bio p.bio {
+    font-size: 5vw;
+  }
+  @media all and (min-width: 650px) {
+    #bio p.bio {
+      font-size: 1em;
+    }
+    .container-fluid {
+      padding: 60px;
+    }
+  }
+
 
 /* Resume */
   #resume h3 {
