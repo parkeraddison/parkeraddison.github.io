@@ -1,0 +1,66 @@
+/* CSS STYLE SHEET */
+
+
+.title {
+  background: #eeeeec;
+  text-align: center;
+  font-size: 1.5em;
+  padding: 0 2em;
+  display: grid;
+  grid-template-rows: 50vh;
+  align-items: center;
+}
+
+.overview {
+  padding: 4em 1em;
+}
+
+h5.l {
+  font-weight: lighter;
+}
+
+p {
+  font-size: 18px;
+  text-align: justify;
+}
+
+.break1 {
+  height: 8em;
+  background: #111;
+  background-image: url(mountainbg.jpeg);
+  background-size: cover;
+  background-position: bottom;
+  background-attachment: fixed;
+}
+
+.news {
+  padding: 4em 1em;
+}
+
+@media(min-width: 700px) {
+
+  .overview {
+    display: grid;
+    grid-template-columns: 1fr repeat(2, minmax(auto, 25em)) 1fr;
+    grid-gap: 2em;
+    padding: 4em 2em;
+  }
+
+  .news {
+    display: grid;
+    grid-template-columns: 1fr repeat(2, minmax(auto, 25em)) 1fr;
+    grid-gap: 2em;
+    padding: 4em 2em;
+  }
+
+  .head {
+    grid-column: 2;
+  }
+  .bio {
+    grid-column: 3;
+    grid-row: 1/4;
+  }
+  .content {
+    grid-column: 3;
+  }
+}
