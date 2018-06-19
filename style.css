@@ -1,15 +1,29 @@
 /* CSS STYLE SHEET */
 
+.pre-loader {
+    background-color: #2c3e50;
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+}
+
+.sk-fading-circle {
+    margin: 100px auto;
+  }
+
 .nav {
   padding: 2px;
   padding-left: 1em;
   list-style-type: none;
-  background-color: #222;
-  background: linear-gradient(to right, #222, #111);
+  /* background-color: #222; */
+  /* background: linear-gradient(to right, #222, #111); */
+  position: absolute;
 }
 
 .nav li {
-  display: inline;
+  display: inline-block;
   font-size: 0.8em;
 }
 
@@ -17,27 +31,33 @@
   text-decoration: none;
   margin-right: 1em;
   color: #eee;
+  transition: color 0.3s, background-color 0.3s;
 }
 
 .nav li a:hover {
   color: #111;
   background-color: #eee;
-  transition: color 0.3s, background-color 0.5s;
 }
 
 .title {
   background: #eeeeec;
   background: linear-gradient(-45deg, #ddd, #eeeeec);
+  background-image: url(forestbg.jpg);
+  background-size: cover;
+  background-position: bottom;
   text-align: center;
   font-size: 1.5em;
+  font-weight: lighter;
+  color: #fff;
   padding: 0 2em;
   display: grid;
-  grid-template-rows: 50vh;
+  grid-template-rows: 100vh;
   align-items: center;
 }
 
 .overview {
   padding: 4em 1em;
+  box-shadow: 0px 5px 15px 5px #444;
 }
 
 h5.l {
@@ -62,28 +82,31 @@ p {
   background: #111;
 }
 
+.divider > div {
+  box-shadow: 0px 5px 15px -5px #222 inset;
+  background-size: cover;
+}
+
 .break1 {
   height: 100%;
   background-image: url(mountainbg.jpeg);
-  background-size: cover;
-  background-position: bottom;
-  background-attachment: fixed;
+  background-position: 0% 80%;
 }
 
 .break2 {
   height: 100%;
-  background-image: url(forestbg.jpg);
-  background-size: cover;
-  background-position: bottom;
-  background-attachment: fixed;
+  background-image: url(autumnbg.jpg);
+  background-position: 0% 30%;
 }
 
 .news {
   padding: 4em 1em;
+  box-shadow: 0px 5px 15px 5px #222;
 }
 
-.pdf-download {
+.pdf-container {
   padding: 4em 1em;
+  box-shadow: 0px 5px 15px 5px #444;
 }
 
 .contact-title {
@@ -94,7 +117,7 @@ p {
 .media-links {
   padding: 0;
   padding-top: 4em;
-  padding-bottom: 3em;
+  padding-bottom: 2em;
   background: #222;
   background: linear-gradient(-45deg, #111, #261a0c);
   text-align: center;
@@ -111,15 +134,26 @@ p {
   text-decoration: none;
   font-weight: lighter;
   font-variant: small-caps;
+  transition: color 0.3s, background-color 0.3s;
 }
 
 .media-links ul li a:hover {
   color: #111;
   background-color: #eee;
-  transition: color 0.3s, background-color 0.5s;
 }
 
 @media(min-width: 700px) {
+
+  .title {
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: bottom;
+  }
+
+  .divider > div {
+    background-attachment: fixed;
+    background-position: bottom;
+  }
 
   .overview {
     display: grid;
@@ -164,20 +198,9 @@ p {
   .pdf-container {
     display: grid;
     grid-template-columns: 1fr repeat(2, minmax(auto, 25em)) 1fr;
-    grid-gap: 1em;
-    padding: 4em;
+    grid-gap: 2em;
+    padding: 4em 2em;
   }
-  /* .iframe-container {
-    grid-column: 2/4;
-    text-align: center;
-    height: 20em;
-  }
-  .pdf-container iframe {
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-  } */
 
   .pdf-download {
     padding: 0;
@@ -187,8 +210,9 @@ p {
   .media-links {
     display: grid;
     grid-template-columns: 1fr repeat(2, minmax(auto, 25em)) 1fr;
-    grid-gap: 1em;
-    padding: 4em;
+    grid-gap: 2em;
+    padding: 4em 2em;
+    padding-bottom: 2em;
   }
 
   .media-links ul {
