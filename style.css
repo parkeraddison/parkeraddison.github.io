@@ -1,8 +1,33 @@
 /* CSS STYLE SHEET */
 
+.nav {
+  padding: 2px;
+  padding-left: 1em;
+  list-style-type: none;
+  background-color: #222;
+  background: linear-gradient(to right, #222, #111);
+}
+
+.nav li {
+  display: inline;
+  font-size: 0.8em;
+}
+
+.nav li a {
+  text-decoration: none;
+  margin-right: 1em;
+  color: #eee;
+}
+
+.nav li a:hover {
+  color: #111;
+  background-color: #eee;
+  transition: color 0.3s, background-color 0.5s;
+}
 
 .title {
   background: #eeeeec;
+  background: linear-gradient(-45deg, #ddd, #eeeeec);
   text-align: center;
   font-size: 1.5em;
   padding: 0 2em;
@@ -24,10 +49,30 @@ p {
   text-align: justify;
 }
 
-.break1 {
-  height: 8em;
+.section-title {
+  position: absolute;
+  padding: 1.7em 1em;
+  font-variant: small-caps;
+  text-align: center;
+  color: #ccc;
+}
+
+.divider {
+  height: 6em;
   background: #111;
+}
+
+.break1 {
+  height: 100%;
   background-image: url(mountainbg.jpeg);
+  background-size: cover;
+  background-position: bottom;
+  background-attachment: fixed;
+}
+
+.break2 {
+  height: 100%;
+  background-image: url(forestbg.jpg);
   background-size: cover;
   background-position: bottom;
   background-attachment: fixed;
@@ -35,6 +80,43 @@ p {
 
 .news {
   padding: 4em 1em;
+}
+
+.pdf-download {
+  padding: 4em 1em;
+}
+
+.contact-title {
+  color: #444;
+  font-weight: bolder;
+}
+
+.media-links {
+  padding: 0;
+  padding-top: 4em;
+  padding-bottom: 3em;
+  background: #222;
+  background: linear-gradient(-45deg, #111, #261a0c);
+  text-align: center;
+}
+
+.media-links ul {
+  list-style: none;
+  padding: 1em;
+  line-height: 2;
+}
+
+.media-links ul li a {
+  color: #ddd;
+  text-decoration: none;
+  font-weight: lighter;
+  font-variant: small-caps;
+}
+
+.media-links ul li a:hover {
+  color: #111;
+  background-color: #eee;
+  transition: color 0.3s, background-color 0.5s;
 }
 
 @media(min-width: 700px) {
@@ -50,30 +132,68 @@ p {
     padding: 4em 2em;
   }
 
-  .news > span {
-      display: grid;
-      grid-template-columns: 1fr repeat(2, minmax(auto, 25em)) 1fr;
-      grid-gap: 2em;
+  .news>span {
+    display: grid;
+    grid-template-columns: 1fr repeat(2, minmax(auto, 25em)) 1fr;
+    grid-gap: 2em;
   }
 
   .head {
     grid-column: 2;
   }
+
   .bio {
     grid-column: 3;
     grid-row: 1/4;
   }
+
   .content {
     grid-column: 3;
     grid-row: 1;
   }
 
-  .news > span:nth-child(odd) .head {
+  .news>span:nth-child(odd) .head {
     grid-column: 3;
     text-align: right;
   }
 
-  .news > span:nth-child(odd) .content {
+  .news>span:nth-child(odd) .content {
     grid-column: 2;
+  }
+
+  .pdf-container {
+    display: grid;
+    grid-template-columns: 1fr repeat(2, minmax(auto, 25em)) 1fr;
+    grid-gap: 1em;
+    padding: 4em;
+  }
+  /* .iframe-container {
+    grid-column: 2/4;
+    text-align: center;
+    height: 20em;
+  }
+  .pdf-container iframe {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  } */
+
+  .pdf-download {
+    padding: 0;
+    grid-column: 2/4;
+  }
+
+  .media-links {
+    display: grid;
+    grid-template-columns: 1fr repeat(2, minmax(auto, 25em)) 1fr;
+    grid-gap: 1em;
+    padding: 4em;
+  }
+
+  .media-links ul {
+    text-align: left;
+    grid-column: 2/4;
+    padding: 0;
   }
 }
