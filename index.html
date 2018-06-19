@@ -48,25 +48,6 @@
 </head>
 
 <body>
-  <!-- <nav class="navbar navbar-expand-sm sticky-top navbar-dark bg-dark">
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="fas fa-angle-down"></span>
-    </button>
-
-    <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
-      <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-        <li class="nav-item">
-          <a class="nav-link" href="#about">Bio</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#resume">Resume</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#contact">Contact</a>
-        </li>
-      </ul>
-    </div>
-  </nav> -->
 
   <section id="nav">
       <ul class="nav">
@@ -89,25 +70,25 @@
 
   <section id="about" class="grid">
     <div class="overview">
-      <div class=head>
+      <div class="head scroll-reveal">
         <hr>
         <h5 class="l">BORN: 1999</h5>
         <h5>San Francisco, CA</h5>
       </div>
 
-      <div class="head">
+      <div class="head scroll-reveal">
         <hr>
         <h5 class="l">SCHOOL: Class of 2021</h5>
         <h5>University of California, San Diego</h5>
       </div>
 
-      <div class="head">
+      <div class="head scroll-reveal">
         <hr>
         <h5 class="l">PURPOSE: Data Science</h5>
         <h5>Make the world better through data</h5>
       </div>
 
-      <div class="bio">
+      <div class="bio scroll-reveal">
         <p>What drives my interest in data science is the ability for seemingly disparate numbers to weave a compelling story — a story that requires both quantitative analysis and qualitative reflection in order to be told.<br><br>I was born in July, 1999
           in San Francisco. Throughout my childhood, I was interested in understanding the world around me. I developed an aptitude for mathetmatics and natural sciences. However, at the same time, the way we understand the world is just as much about
           how the world works as it is about how we experience it. I've used music to connect to humanity, and have taken interest in philosphy, how it pertains to the way the world effects us, and how in turn it illuminates the effects our actions have
@@ -128,12 +109,12 @@
     <!-- <h4 class="section-title">some recent news updates</h4> -->
     <div class="news">
       <span class="news1">
-        <div class="head">
+        <div class="head scroll-reveal">
           <hr>
           <h5 class="l">UC San Diego: April 2018</h5>
           <h5>Instructional Assistant</h5>
         </div>
-        <div class="content">
+        <div class="content scroll-reveal">
           <p><br><br>After two quarters at UC San Diego I was offered an IA (instructional assistant) position for an introductory data science class, <i>DSC 10: Principles of Data Science</i>! I am excited to be part of a brand new major, and to be among the people
             who can open students' eyes to the world of data science.<br><br>This quarter, the CSE Department didn't want the Data Science program taking all of the graduate student TA's, so I had to assume many of the roles of a TA such as creating,
             revising, and grading homework and project assignments, grading exams and creating exam solutions, and proctoring exams — in addition to my primary job holding office hours to tutor students. I wrote about some exciting experiences <a href=#>here</a>.</p>
@@ -141,12 +122,12 @@
       </span>
 
       <span class="news2">
-        <div class="head">
+        <div class="head scroll-reveal">
           <hr>
           <h5 class="l">Chapman University: April 2018</h5>
           <h5>ASA DataFest</h5>
         </div>
-        <div class="content">
+        <div class="content scroll-reveal">
           <p><br><br>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni in ullam qui, consectetur expedita, esse suscipit laborum id sequi eveniet officia culpa repudiandae impedit a, cum mollitia. Voluptas, quidem, vitae.</p>
         </div>
       </span>
@@ -172,7 +153,7 @@
       <!-- <div class="iframe-container">
         <iframe src="https://drive.google.com/file/d/1e4SOHztUfVuP84XndSOooSwDZLpHtwrJ/preview#view=fit"></iframe>
       </div> -->
-      <div class="pdf-download">
+      <div class="pdf-download scroll-reveal">
         <p>My resume can be viewed and downloaded <a href="https://drive.google.com/file/d/12RtsoDz5Vr1Qe3Pg7m3VgB7Gh71jVDBB/preview" target="_blank">here</a>.</p>
       </div>
     </div>
@@ -196,6 +177,12 @@
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
+
+  <script>
+    window.sr = ScrollReveal();
+    sr.reveal(".scroll-reveal", { duration: 1000 });
+  </script>
 </body>
 
 </html>
