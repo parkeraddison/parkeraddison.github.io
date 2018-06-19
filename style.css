@@ -47,10 +47,13 @@ p {
   }
 
   .news {
-    display: grid;
-    grid-template-columns: 1fr repeat(2, minmax(auto, 25em)) 1fr;
-    grid-gap: 2em;
     padding: 4em 2em;
+  }
+
+  .news > span {
+      display: grid;
+      grid-template-columns: 1fr repeat(2, minmax(auto, 25em)) 1fr;
+      grid-gap: 2em;
   }
 
   .head {
@@ -62,5 +65,15 @@ p {
   }
   .content {
     grid-column: 3;
+    grid-row: 1;
+  }
+
+  .news > span:nth-child(odd) .head {
+    grid-column: 3;
+    text-align: right;
+  }
+
+  .news > span:nth-child(odd) .content {
+    grid-column: 2;
   }
 }
