@@ -68,14 +68,13 @@
   font-size: 2em;
   font-weight: lighter;
   color: #fff;
-  padding: 0 1em;
+  padding: 0 0.5em;
 }
 
 .title .title-logo {
   position: absolute;
   left: calc(50% - 3em);
-  top: 30%;
-  padding: 0;
+  top: calc(50% - 8em);
 }
 
 .title .title-logo > img {
