@@ -62,7 +62,9 @@
 
   <section id="header" class="grid">
     <div class="title">
-      <span class="title-name" title="This Greek letter, Xi, reminded me of a graph.  So I put it here.">&#x039e; Parker Grey Addison</span>
+      <!-- <span class="title-name" title="This Greek letter, Xi, reminded me of a graph.  So I put it here.">&#x039e; Parker Grey Addison</span> -->
+      <div class="title-logo fade-in"><img src="geom-white.png"></div>
+      <span class="title-name">Parker Grey Addison</span>
     </div>
   </section>
 
@@ -183,6 +185,7 @@
 
   <script>
     window.sr = ScrollReveal();
+    sr.reveal(".fade-in", { distance: 0, scale: 1.5, duration: 2000 })
     sr.reveal(".scroll-reveal", { duration: 1000 });
   </script>
 </body>

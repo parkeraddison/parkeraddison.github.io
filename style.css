@@ -38,18 +38,33 @@
   background-size: cover;
   background-position: bottom;
   text-align: center;
-  font-size: 1.5em;
-  font-weight: lighter;
-  color: #fff;
-  padding: 0 2em;
   display: grid;
   grid-template-rows: 100vh;
   align-items: center;
 }
 
+.title .title-name {
+  font-size: 2em;
+  font-weight: lighter;
+  color: #fff;
+  padding: 0 1em;
+}
+
+.title .title-logo {
+  position: absolute;
+  left: calc(50% - 3em);
+  top: 30%;
+  padding: 0;
+}
+
+.title .title-logo > img {
+  height: 6em;
+  width: 6em;
+}
+
 .overview {
   padding: 4em 1em;
-  box-shadow: 0px 5px 15px 5px #444;
+  box-shadow: 0px 5px 15px 5px #222;
 }
 
 h5.l {
@@ -98,7 +113,7 @@ p {
 
 .pdf-container {
   padding: 4em 1em;
-  box-shadow: 0px 5px 15px 5px #444;
+  box-shadow: 0px 5px 15px 5px #222;
 }
 
 .contact-title {
@@ -156,6 +171,10 @@ p {
     background-attachment: fixed;
     background-size: cover;
     background-position: bottom;
+  }
+
+  .title .title-name {
+    font-size: 2.5em;
   }
 
   .divider > div {
