@@ -1,5 +1,26 @@
 /* CSS STYLE SHEET */
 
+#overlay {
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background: rgba(20, 20, 20, 20);
+  position: fixed;
+  z-index: 1000;
+  text-align: center;
+  display: grid;
+}
+
+.pre-loader {
+  align-self: center;
+  color: #fff;
+}
+
+.no-js #overlay {
+  display: none;
+}
+
 .grid {
   background-color: #eee;
   background: linear-gradient(-45deg, #ddd, #eeeeec);
