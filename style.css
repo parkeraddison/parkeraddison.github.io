@@ -5,7 +5,7 @@
   width: 100%;
   top: 0;
   left: 0;
-  background: rgba(20, 20, 20, 20);
+  background: rgba(20, 20, 20, 0.2);
   position: fixed;
   z-index: 1000;
   text-align: center;
@@ -30,8 +30,6 @@
   padding: 2px;
   padding-left: 1em;
   list-style-type: none;
-  /* background-color: #222; */
-  /* background: linear-gradient(to right, #222, #111); */
   position: absolute;
 }
 
@@ -77,7 +75,7 @@
   top: calc(50% - 8em);
 }
 
-.title .title-logo > img {
+.title .title-logo>img {
   height: 6em;
   width: 6em;
 }
@@ -109,7 +107,7 @@ p {
   background: #111;
 }
 
-.divider > div {
+.divider>div {
   box-shadow: 0px 5px 15px -5px #222 inset;
   background-size: cover;
 }
@@ -186,94 +184,55 @@ p {
 }
 
 @media(min-width: 700px) {
-
+  .grid>div {
+    display: grid;
+    grid-template-columns: 1fr repeat(2, minmax(auto, 25em)) 1fr;
+    grid-gap: 2em;
+  }
   .title {
     background-attachment: fixed;
     background-size: cover;
     background-position: bottom;
   }
-
   .title .title-name {
     font-size: 2.5em;
   }
-
-  .divider > div {
+  .divider>div {
     background-attachment: fixed;
     background-position: bottom;
   }
-
-  .overview {
-    display: grid;
-    grid-template-columns: 1fr repeat(2, minmax(auto, 25em)) 1fr;
-    grid-gap: 2em;
-    padding: 4em 2em;
-  }
-
-  .news {
-    padding: 4em 2em;
-  }
-
-  .news>span {
-    display: grid;
-    grid-template-columns: 1fr repeat(2, minmax(auto, 25em)) 1fr;
-    grid-gap: 2em;
-  }
-
   .head {
     grid-column: 2;
   }
-
   .bio {
     grid-column: 3;
     grid-row: 1/4;
   }
-
   .content {
     grid-column: 3;
     grid-row: 1;
   }
-
-  .news>span:nth-child(odd) .head {
+  .news>div:nth-child(odd) .head {
     grid-column: 3;
     text-align: right;
   }
-
-  .news>span:nth-child(odd) .content {
+  .news>div:nth-child(odd) .content {
     grid-column: 2;
   }
-
-  .pdf-container {
-    display: grid;
-    grid-template-columns: 1fr repeat(2, minmax(auto, 25em)) 1fr;
-    grid-gap: 2em;
-    padding: 4em 2em;
-  }
-
   .pdf-download {
     padding: 0;
     grid-column: 2/4;
   }
-
-  .media-links {
-    display: grid;
-    grid-template-columns: 1fr repeat(2, minmax(auto, 25em)) 1fr;
-    grid-gap: 2em;
-    padding: 4em 2em;
-    padding-bottom: 0;
-  }
-
   .media-links ul {
     text-align: left;
     grid-column: 2/4;
     padding: 0;
   }
-
   .media-links .copyright {
     grid-column: 3;
     grid-row: 2;
     text-align: left;
   }
-
   .media-links .credits {
     grid-column: 3;
     grid-row: 2;
