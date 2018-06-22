@@ -217,10 +217,12 @@
           var values = transformed.split('(')[1].split(')')[0].split(',');
           var a = values[0];
           var b = values[1];
-          var angle = Math.round(Math.atan2(b, a) * (180/Math.PI));
-          // console.log(angle);
+          var angle = Math.round(Math.atan2(b, a) * (180 / Math.PI));
 
-          $(this).css("transform", "rotate(" + (45 + angle) + "deg)");
+          var newAngle = 45 + Math.ceil(angle / 45) * 45
+          // console.log(newAngle);
+
+          $(this).css("transform", "rotate(" + (newAngle) + "deg)");
       });
     </script>
 </body>
