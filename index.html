@@ -120,7 +120,7 @@
           <p><br><br>
             After two quarters at UC San Diego I was offered an IA (instructional assistant) position for the third-ever offering of a new data science class, <i>DSC 10: Principles of Data Science</i>. I am excited to be part of a brand new major, and to be among the people who can open new students' eyes to the world of data science.<br><br>
 
-            This quarter, the CSE Department didn't want the Data Science program taking all of the graduate student TA's, so I had to assume many of the roles of a TA such as:  creating, revising, and grading homework and project assignments; grading exams, creating exam solutions, and proctoring exams; and participating heavily in course organization and management.  I did this all in addition to holding office hours to tutor students. I wrote about some more exciting experiences <a href=#>here</a>.</p>
+            This quarter, the CSE Department didn't want the Data Science program taking all of the graduate student TA's, so I had to assume many of the roles of a TA such as:  creating, revising, and grading homework and project assignments; grading exams, creating exam solutions, and proctoring exams; and participating heavily in course organization and management.  I did this all in addition to holding office hours to tutor students. I wrote about some more exciting experiences <a href=dsc-tutor-experiences.html>here</a>.</p>
         </div>
       </div>
 
@@ -203,6 +203,24 @@
       })
       sr.reveal(".scroll-reveal", {
         duration: 1000
+      });
+    </script>
+
+    <!-- Fun logo animation because I want to practice javascript -->
+    <script>
+      $(".title-logo" ).click(function() {
+          // console.log($(this).css("transform"))
+          var transformed = $(this).css("transform");
+          // console.log(transformed);
+
+          /* From css-tricks.com */
+          var values = transformed.split('(')[1].split(')')[0].split(',');
+          var a = values[0];
+          var b = values[1];
+          var angle = Math.round(Math.atan2(b, a) * (180/Math.PI));
+          // console.log(angle);
+
+          $(this).css("transform", "rotate(" + (45 + angle) + "deg)");
       });
     </script>
 </body>
