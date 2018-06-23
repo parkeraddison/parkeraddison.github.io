@@ -1,5 +1,9 @@
 /* CSS STYLE SHEET */
 
+html, body {
+  font-family: Montserrat, "Helvetica Neue", Arial, sans-serif;
+}
+
 #overlay {
   height: 100%;
   width: 100%;
@@ -64,7 +68,7 @@
 
 .title .title-name {
   font-size: 2em;
-  font-weight: lighter;
+  font-weight: 200;
   color: #fff;
   padding: 0 0.5em;
 }
@@ -97,6 +101,7 @@
   list-style: none;
   padding: 0;
   font-size: 0.8em;
+  font-weight: 600;
 }
 
 .page-top li a {
@@ -115,8 +120,12 @@
   box-shadow: 0px 5px 15px 5px #222;
 }
 
+h5 {
+  font-weight: 600;
+}
+
 h5.l {
-  font-weight: lighter;
+  font-weight: 200;
 }
 
 p {
@@ -128,6 +137,7 @@ p {
   position: absolute;
   padding: 1.7em 1em;
   font-variant: small-caps;
+  font-weight: 600;
   text-align: center;
   color: #bbb;
 }
@@ -166,7 +176,7 @@ p {
 
 .contact-title {
   color: #444;
-  font-weight: bolder;
+  font-weight: 600;
 }
 
 .media-links {
@@ -187,7 +197,6 @@ p {
 .media-links ul li a {
   color: #ddd;
   text-decoration: none;
-  font-weight: lighter;
   font-variant: small-caps;
   transition: color 0.3s, background-color 0.3s;
 }
