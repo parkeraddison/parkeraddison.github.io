@@ -1,7 +1,7 @@
 /* CSS STYLE SHEET */
 
 html, body {
-  font-family: Montserrat, "Helvetica Neue", Arial, sans-serif;
+  font-family: "Open Sans", "Helvetica Neue", Arial, sans-serif;
 }
 
 #overlay {
@@ -68,7 +68,7 @@ html, body {
 
 .title .title-name {
   font-size: 2em;
-  font-weight: 200;
+  font-weight: 100;
   color: #fff;
   padding: 0 0.5em;
 }
@@ -101,7 +101,6 @@ html, body {
   list-style: none;
   padding: 0;
   font-size: 0.8em;
-  font-weight: 600;
 }
 
 .page-top li a {
@@ -125,7 +124,7 @@ h5 {
 }
 
 h5.l {
-  font-weight: 200;
+  font-weight: 100;
 }
 
 p {
