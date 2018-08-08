@@ -1,91 +1,176 @@
 /* CSS STYLE SHEET */
 
-html, body {
+/* FOR PHONES AND LARGER */
+
+/* PRE-LOADER */
+  #overlay {
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background: #111;
+    position: fixed;
+    z-index: 999;
+    text-align: center;
+    display: grid;
+  }
+  .pre-loader {
+    align-self: center;
+    color: #fff;
+  }
+  .no-js #overlay {
+    display: none;
+  }
+/* --- */
+
+/* BASIC FORMATS */
+
+/* Variable font size from Mike Riethmuller */
+html {
+  font-size: calc(12px + (16 - 12) * ((100vw - 300px) / (800 - 300)));
   font-family: "Open Sans", "Helvetica Neue", Arial, sans-serif;
 }
 
-#overlay {
-  height: 100%;
-  width: 100%;
-  top: 0;
-  left: 0;
-  background: #111;
-  position: fixed;
-  z-index: 1000;
-  text-align: center;
-  display: grid;
+body {
+  color: #333;
 }
-
-.pre-loader {
-  align-self: center;
-  color: #fff;
+h1 {
+  margin-top: 0;
+  font-size: 2.074em;
 }
-
-.no-js #overlay {
-  display: none;
+h2 {
+  font-size: 1.728em;
 }
-
-.grid {
-  background-color: #eee;
-  background: linear-gradient(-45deg, #ddd, #eeeeec);
+h3 {
+  font-size: 1.44em;
 }
-
-.nav {
-  padding: 0.5em;
-  padding-left: 1em;
-  list-style-type: none;
-  position: absolute;
+h4 {
+  font-size: 1.2em;
+  margin: 0;
+  padding: 0;
 }
-
-.nav li {
-  display: inline-block;
+.heavier {
+  font-weight: 600;
+}
+.lighter {
+  font-weight: 100;
+}
+.smaller {
   font-size: 0.8em;
 }
+p {
+  margin: 0;
+  text-align: justify;
+}
+a {
+  color: #007bff;
+  text-decoration: none;
+}
+a:hover {
+  color: #005cbb;
+  text-decoration: underline;
+}
+hr {
+  border: none;
+  background-color: #ccc;
+  color: #ccc;
+  height: 1px;
+}
+/* --- */
 
+/* MAIN PAGE */
+.grid {
+  background-color: #eee;
+  background: -webkit-linear-gradient(135deg, #ddd, #eeeeec);
+  background: linear-gradient(-45deg, #ddd, #eeeeec);
+}
+.padded-sides {
+  padding-left: 1em;
+  padding-right: 1em;
+}
+.padded-ends {
+  padding-top: 4em;
+  padding-bottom: 4em;
+}
+/* --- */
+
+/* TOP PAGE NAVIGATION */
+.nav {
+  position: absolute;
+  list-style-type: none;
+  top: 0.5em;
+}
+.nav li {
+  display: inline-block;
+  font-variant: small-caps;
+}
 .nav li a {
   text-decoration: none;
   margin-right: 1em;
   color: #eee;
+  -webkit-transition: color 0.3s, background-color 0.3s;
   transition: color 0.3s, background-color 0.3s;
 }
-
 .nav li a:hover {
   color: #111;
   background-color: #eee;
 }
+/* --- */
 
-.title {
-  background: #eeeeec;
-  background: linear-gradient(-45deg, #ddd, #eeeeec);
-  background-image: url(forestbg.jpg);
-  background-size: cover;
-  background-position: bottom;
-  text-align: center;
-  display: grid;
-  grid-template-rows: 100vh;
-  align-items: center;
+/* SHADOWS AND FIXED IMAGE */
+/* Fixed workaround from  https://medium.com/vehikl-news/fixed-background-image-performance-issue-6b7d9e2dbc55 */
+.with-shadow {
+  box-shadow: 0px 0px 4px 1px rgba(30, 30, 30, 0.3);
 }
+.fixed-image {
+  position: relative;
+  overflow: hidden;
+}
+.fixed-image::before {
+  position: fixed;
+  height: 100%;
+  left: 0;
+  top: 0;
+  width: 100%;
 
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  background-size: cover;
+  content: '';
+    
+  will-change: transform;  
+  z-index: -1;
+}
+/* --- */
+
+/* TITLE */
+.title {
+  height: 93vh;
+}
+.title::before {
+    background-image: url('forestbg.jpg');
+}
 .title .title-name {
+  position: relative;
+  color: #fff;
   font-size: 2em;
   font-weight: 100;
-  color: #fff;
-  padding: 0 0.5em;
+  text-align: left;
+  top: 20%;
 }
-
-.title .title-logo {
-  position: absolute;
-  left: calc(50% - 3em);
-  top: calc(50% - 8em);
-}
-
 .title .title-logo img {
   height: 6em;
   width: 6em;
 }
+/* --- */
+
+.head {
+  text-align: center;
+}
 
 .page-top {
   height: 2.6em;
+  background: -webkit-linear-gradient(-45deg, #111, #1c1308);
   background: linear-gradient(-45deg, #111, #1c1308);
   padding: 0.5em 1em;
 }
@@ -106,6 +191,7 @@ html, body {
 .page-top li a {
   text-decoration: none;
   color: #eee;
+  -webkit-transition: color 0.3s, background-color 0.3s;
   transition: color 0.3s, background-color 0.3s;
 }
 
@@ -114,82 +200,36 @@ html, body {
   background-color: #eee;
 }
 
-.overview {
-  padding: 4em 1em;
-  box-shadow: 0px 5px 15px 5px #222;
-}
-
-h5 {
-  font-weight: 600;
-}
-
-h5.l {
-  font-weight: 100;
-}
-
-p {
-  font-size: 18px;
-  text-align: justify;
-}
-
 .section-title {
-  position: absolute;
-  padding: 1.7em 1em;
+  position: relative;
+  margin: 0;
+  height: 0;
+  top: 1.5em;
+
   font-variant: small-caps;
   font-weight: 600;
-  text-align: center;
   color: #bbb;
 }
 
 .divider {
-  height: 6em;
-  background: #111;
-}
-
-.divider>div {
-  box-shadow: 0px 5px 15px -5px #222 inset;
-  background-size: cover;
-}
-
-.break1 {
-  height: 100%;
-  background-image: url(mountainbg.jpeg);
-  background-position: 0% 80%;
-}
-
-.break2 {
-  height: 100%;
-  background-image: url(autumnbg.jpg);
-  background-position: 0% 30%;
-}
-
-.news {
-  padding: 4em 1em;
-  box-shadow: 0px 5px 15px 5px #222;
-}
-
-.pdf-container {
-  padding: 4em 1em;
-  box-shadow: 0px 5px 15px 5px #222;
+  height: 3em;
 }
 
 .contact-title {
   color: #444;
-  font-weight: 600;
 }
 
 .media-links {
-  padding: 0;
-  padding-top: 4em;
-  padding-bottom: 2em;
+  padding: 4em;
   background: #222;
+  background: -webkit-linear-gradient(135deg, #111, #1c1308);
   background: linear-gradient(-45deg, #111, #1c1308);
   text-align: center;
 }
 
 .media-links ul {
+  padding: 0;
   list-style: none;
-  padding: 1em;
   line-height: 2;
 }
 
@@ -197,6 +237,7 @@ p {
   color: #ddd;
   text-decoration: none;
   font-variant: small-caps;
+  -webkit-transition: color 0.3s, background-color 0.3s;
   transition: color 0.3s, background-color 0.3s;
 }
 
@@ -206,91 +247,80 @@ p {
 }
 
 .media-links .copyright {
-  font-size: 0.7em;
-  color: #444;
-  float: left;
-  padding: 0em 1em;
-  margin: 0;
+  display: inline-block;
+  text-align: left;
 }
 
 .media-links .credits {
-  font-size: 0.7em;
-  color: #444;
-  float: right;
-  padding: 0em 1em;
-  margin: 0;
+  display: inline-block;
+  text-align: right;
 }
 
 .main {
   padding: 4em 1em;
-  box-shadow: 0px 5px 15px 5px #222;
 
   min-height: calc(100vh - 6em - 2.6em - 13em);
 }
 
-@media(min-width: 700px) {
-  .grid>div {
+/* FOR TABLETS AND LAPTOPS */
+
+@media(min-width: 800px) {
+  html {
+    font-size: 16px;
+
     display: grid;
-    grid-template-columns: 1fr repeat(2, minmax(auto, 25em)) 1fr;
-    grid-gap: 2em;
+    grid-template-columns: 1fr minmax(auto, 60em) 1fr;
   }
-  .title {
-    background-attachment: fixed;
-    background-size: cover;
-    background-position: bottom;
-  }
-  .title .title-name {
-    font-size: 2.5em;
-  }
-  .divider>div {
-    background-attachment: fixed;
-    background-position: bottom;
-  }
-  .head {
+  
+  body {
     grid-column: 2;
   }
+
+  .padded-sides {
+    padding-left: 2em;
+    padding-right: 2em;
+  }
+
+  .grid>.gridded {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 2em;
+    padding: 4em;
+  }
+  .head {
+    grid-column: 1;
+    text-align: left;
+    margin: 0;
+    padding: 0;
+  }
   .bio {
-    grid-column: 3;
+    grid-column: 2;
     grid-row: 1/4;
   }
   .content {
-    grid-column: 3;
-    grid-row: 1;
+    /* grid-column: 2; */
+    /* grid-row: 1; */
+    margin: 0;
+    padding: 0;
   }
-  .news>div:nth-child(odd) .head {
-    grid-column: 3;
+  /* .news>div:nth-child(odd) .head {
+    grid-column: 2;
     text-align: right;
   }
   .news>div:nth-child(odd) .content {
-    grid-column: 2;
-  }
+    grid-column: 1;
+  } */
   .pdf-download {
     padding: 0;
-    grid-column: 2/4;
+    grid-column: 1/3;
   }
   .media-links ul {
     text-align: left;
-    grid-column: 2/4;
+    grid-column: 1/3;
     grid-row: 1;
     padding: 0;
   }
-  .media-links .copyright {
-    position: absolute;
-    grid-column: 3;
-    grid-row: 1;
-    text-align: left;
-    align-self: flex-end;
-    padding: 0.5em 1em;
-  }
-  .media-links .credits {
-    position: absolute;
-    grid-column: 3;
-    grid-row: 1;
-    text-align: right;
-    align-self: flex-end;
-    right: 0;
-    padding: 0.5em 1em;
-  }
+
   .main p {
     grid-column: 2/4;
     text-align: justify;
