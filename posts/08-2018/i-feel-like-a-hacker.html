@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="../../style.css">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
+
+  <!-- ****** faviconit.com favicons ****** -->
+  <link rel="shortcut icon" href="../../favicon/favicon.ico">
+  <link rel="icon" sizes="16x16 32x32 64x64" href="../../favicon/favicon.ico">
+  <link rel="icon" type="image/png" sizes="196x196" href="../../favicon/favicon-192.png">
+  <link rel="icon" type="image/png" sizes="160x160" href="../../favicon/favicon-160.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="../../favicon/favicon-96.png">
+  <link rel="icon" type="image/png" sizes="64x64" href="../../favicon/favicon-64.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="../../favicon/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../../favicon/favicon-16.png">
+  <link rel="apple-touch-icon" href="../../favicon/favicon-57.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="../../favicon/favicon-114.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="../../favicon/favicon-72.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="../../favicon/favicon-144.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="../../favicon/favicon-60.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="../../favicon/favicon-120.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="../../favicon/favicon-76.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="../../favicon/favicon-152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="../../favicon/favicon-180.png">
+  <meta name="msapplication-TileColor" content="#FFFFFF">
+  <meta name="msapplication-TileImage" content="../../favicon/favicon-144.png">
+  <meta name="msapplication-config" content="../../favicon/browserconfig.xml">
+  <!-- ****** faviconit.com favicons ****** -->
+
+  <title>I Feel Like A Total Hacker 😎</title>
+</head>
+
+<body>
+  <section id="nav">
+    <ul class="nav">
+      <span>
+        <li>
+          <a href="../../index.html">HOME</a>
+        </li>
+        <li>
+          <a href="#updates">NEWS</a>
+        </li>
+        <li>
+          <a href="#contact">LINKS</a>
+        </li>
+      </span>
+    </ul>
+  </section>
+
+  <section id="header">
+    <div class="blog-title">
+      <div class="blog-bg fixed-image"></div>
+      <div class="title-name blog-name">I Feel Like A Total Hacker 😎
+        <div class="subtitle">09 August, 2018 • 5 minute read</div>
+      </div>
+    </div>
+  </section>
+
+  <section id="main" class="grid">
+
+    <div class="section-title padded-sides">
+      <a class="blog-nav-link disabled-link">&#10094; PREV</a>
+    </div>
+    <div class="section-title right-align padded-sides">
+      <a class="blog-nav-link disabled-link">NEXT &#10095;</a>
+    </div>
+
+    <div class="main with-shadow padded-sides padded-ends">
+      <div class="center-grid">
+        <div class="post">
+          <p>
+            Last week I got a taste of how cool it is to be a Hollywood-hacker, and how challenging yet rewarding it is to do what I
+            assume is closer to actual web-hacking.</p>
+          <hr class="short">
+          <p>
+            First, I learned how to use Selenium with Python and instantly felt like I was rewatching every single movie scene there
+            is that involves "hacking". In short,
+            <i>I controlled a browser using nothing but the command line!</i> This meant that as I typed code and pressed return
+            on one half of my screen, a window popped up and interacted with the web on the other half of my screen, and
+            I didn't so much as move my cursor.</p>
+          <p>
+            Selenium is a web browser automation tool; you can write a set of instructions and then those actions will be carried out
+            in a web browser. However, as is always the case with programming, those instructions need to be
+            <i>very</i> specific. The easiest thing to do after launching the webdriver (literally the driver that runs the
+            browser) is to navigate to a webpage using one command and a full URL address (including the "https://www").
+            But after that, you need to know the source code of the page in order to do much else. Unfortunately, unless
+            you can magically sense the css-id of an element or rely upon common naming conventions, this means each time
+            you want to click on a button or enter text into a field you need to first look at the HTML behind the webpage
+            and examine that element. Oh well.</p>
+          <p>
+            I learned Selenium to help with scraping data off a page that was the result of form inputs and some dynamically loaded content.
+            I couldn't access the content through pure HTML requests, so I had to submit the form and let the resulting page
+            load in order to get to the data I needed. Sure, I had to carefully examine the webpage every step of the way
+            in order to tell the script what to do — down to the characters in the element id's — but I still got a little
+            kick out of every time my browser magically opened and filled out an entire form.</p>
+          <p>
+            Needless to say, I thought it would be great to feel like a hacker every time I searched something on Google, so I got really
+            fast at typing the full google URL, I memorized that the id of the search bar is
+            <code>#lst-ib</code>, and I figured out that Python's lovely special characters such as
+            <code>\n</code> and
+            <code>\b</code> do in fact work to submit my search or to backspace if I spelled something wrong. After that, all I
+            needed to do was change my terminal theme to that green/black Matrix aesthetic, and I was set to be cast in the
+            next Russian espionage movie.</p>
+          <hr class="short">
+          <p>
+            The second feat is much more inline with what I assume a real web-hacker might do — I opened up Firefox's web debugger and
+            sifted through the source code of a page in order to access a database that was otherwise hidden. Funnily enough,
+            I actually did this in order to avoid the need for Selenium! Loading a page, then scraping the content, then
+            reformatting the scraped data into a usable structure seemed a bit inefficient. However, I figured that if the
+            page was generating content, then it must have a supply of data, and perhaps I could access that data directly.
+            After an initial look at the network requests and then a quick look at the source code of the page, I found just
+            what I was looking for. Following a very helpful comment,
+            <code>&lt;!-- start of dynamic data load case --&gt;</code>, I found an extended URL that displayed all the data I
+            needed in a json format!</p>
+          <p>
+            I ended up getting lucky here. This was the first site I had to scrape, and coincidentally is the one site behind which I
+            absolutely
+            <i>love</i> the code — there are comments, there's whitespace, there are a bunch of meaningful variable names, it's
+            beautiful. This was not the case for the other sites I visited, some of which I'm
+            <i>still</i> trying to find a similar backdoor somewhere in the code. There was even one site whose core HTML file
+            consisted of a filled out
+            <code>&lt;head&gt;</code>, an open
+            <code>&lt;body&gt;</code>, and a rather large handful of
+            <code>&lt;script&gt;</code> calls which in turn assembled the
+            <i>entire page</i>.</p>
+          <p>
+            Even though this version of "hacking" is nowhere near as glamorous as green ASCII running down the screen with windows popping
+            up and disappearing, finding that backdoor to the database still felt like a total
+            <i>"I'm in"</i> moment. Ultimately, this rather simple achievement was much more rewarding than the first — and
+            likewise much more practical, as web security is an increasingly important topic. As I pursue research projects
+            and other forays into data science, I've realized that the simple act of collecting and organizing the data is
+            extremely important (and often challenging) in its own right. I hypothesize that my browser's "developer tools"
+            will become some of my favorite tools for gathering information off the web.</p>
+          <hr class="short double">
+          <p>
+            * Just as a little disclaimer: my data scraping is entirely for academic research purposes and not for anything commercial.
+            I found it a bit ironic that I ended on a note about web security when my ultimate goal is to circumvent it!</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="section-title section-foot padded-sides">
+      <a class="blog-nav-link disabled-link">&#10094; PREV</a>
+    </div>
+    <div class="section-title section-foot right-align padded-sides">
+      <a class="blog-nav-link disabled-link">NEXT &#10095;</a>
+    </div>
+
+  </section>
+
+  <div class="divider"></div>
+
+  <section id="contact" class="grid">
+    <div class="section-title contact-title padded-sides">WHERE YOU CAN FIND ME</div>
+
+    <div class="media-links center-grid">
+      <ul>
+        <li>
+          <a href="https://github.com/parkergreyaddison/" target="_blank">GITHUB</a>
+        </li>
+        <li>
+          <a href="https://www.linkedin.com/in/parkeraddison/" target="_blank">LINKEDIN</a>
+        </li>
+        <li>
+          <a href="mailto: ">CONTACT</a>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <div class="foot smaller padded-sides">© 2018 Parker Grey Addison | Image from Unsplash</div>
+
+  <!-- jQuery first, then Popper.js -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+    crossorigin="anonymous"></script>
+
+</body>
+
+</html>

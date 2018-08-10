@@ -3,115 +3,173 @@
 /* FOR PHONES AND LARGER */
 
 /* PRE-LOADER */
-  #overlay {
-    height: 100%;
-    width: 100%;
-    top: 0;
-    left: 0;
-    background: #111;
-    position: fixed;
-    z-index: 999;
-    text-align: center;
-    display: grid;
-  }
-  .pre-loader {
-    align-self: center;
-    color: #fff;
-  }
-  .no-js #overlay {
-    display: none;
-  }
+
+#overlay {
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background: #111;
+  position: fixed;
+  z-index: 999;
+  text-align: center;
+  display: grid;
+}
+
+.pre-loader {
+  align-self: center;
+  color: #fff;
+}
+
+.no-js #overlay {
+  display: none;
+}
+
 /* --- */
 
 /* BASIC FORMATS */
 
 /* Variable font size from Mike Riethmuller */
+
 html {
-  font-size: calc(13px + (18 - 13) * ((100vw - 300px) / (800 - 300)));
+  font-size: calc(13px + (18 - 13) * ((100vw - 300px) / (768 - 300)));
   font-family: "Open Sans", "Helvetica Neue", Arial, sans-serif;
 }
 
 body {
   color: #333;
 }
+
 h1 {
   margin-top: 0;
   font-size: 2.074em;
 }
+
 h2 {
   font-size: 1.728em;
 }
+
 h3 {
   font-size: 1.44em;
 }
+
 h4 {
   font-size: 1.2em;
   margin: 0;
   padding: 0;
 }
+
 .heavier {
   font-weight: 600;
 }
+
 .lighter {
   font-weight: 100;
 }
+
 .smaller {
   font-size: 0.8em;
 }
+
 p {
-  margin: 0;
+  margin: 1em 0;
+  line-height: 1.618em;
   text-align: justify;
 }
+
 a {
   color: #007bff;
   text-decoration: none;
 }
+
 a:hover {
-  color: #005cbb;
+  color: #007bff;
   text-decoration: underline;
 }
+
+.news-link {
+  color: #333;
+}
+
+.news-title {
+  color: #007bff;
+}
+
+.blog-nav-link {
+  color: #bbb;
+}
+
+.disabled-link:hover {
+  text-decoration: line-through;
+  color: #888;
+}
+
 hr {
   border: none;
   background-color: #ccc;
   color: #ccc;
   height: 1px;
 }
+
+hr.short {
+  width: 20%;
+}
+
+hr.double::after {
+  content: '';
+  display: block;
+  position: relative;
+  width: 100%;
+  height: 1px;
+  top: 2px;
+  background-color: #ccc;
+}
+
 /* --- */
 
 /* MAIN PAGE */
+
 .grid {
   background-color: #eee;
   background: -webkit-linear-gradient(135deg, #ddd, #eeeeec);
   background: linear-gradient(-45deg, #ddd, #eeeeec);
 }
-.gridded, .center-grid {
+
+.gridded,
+.center-grid {
+  display: -ms-grid;
   display: grid;
   /* grid-template-columns: fit-content(50vw); */
   /* grid-template-columns: minmax(auto, 400px); */
-  grid-template-columns: minmax(auto, 25em);
+  -ms-grid-columns: minmax(auto, 33em);
+  grid-template-columns: minmax(auto, 33em);
   justify-content: center;
 }
-
 
 .padded-sides {
   padding-left: 1em;
   padding-right: 1em;
 }
+
 .padded-ends {
   padding-top: 4em;
   padding-bottom: 4em;
 }
+
 /* --- */
 
 /* TOP PAGE NAVIGATION */
+
 .nav {
   padding: 0;
   list-style-type: none;
   top: 0.5em;
 }
+
 .nav li {
   display: inline-block;
 }
+
 .nav li a {
   font-size: 0.9em;
   text-decoration: none;
@@ -120,53 +178,63 @@ hr {
   -webkit-transition: color 0.3s, background-color 0.3s;
   transition: color 0.3s, background-color 0.3s;
 }
+
 .nav li a:hover {
   color: #111;
   background-color: #eee;
 }
+
 /* --- */
 
 /* SHADOWS AND FIXED IMAGE */
+
 /* Fixed image workaround from https://medium.com/vehikl-news/fixed-background-image-performance-issue-6b7d9e2dbc55 */
+
 .with-shadow {
   box-shadow: 0px 0px 4px 1px rgba(20, 20, 20, 0.5);
 }
+
 .fixed-image {
   position: relative;
   overflow: hidden;
 }
+
 .fixed-image::before {
   position: fixed;
   height: 100%;
   left: 0;
   top: 0;
   width: 100%;
-
   background-repeat: no-repeat;
   background-position: center bottom;
   background-size: cover;
   content: '';
-    
-  will-change: transform;  
+  will-change: transform;
   z-index: -1;
 }
+
 /* --- */
 
 /* TITLE */
+
 .title {
   height: calc(100vh - 7em);
 }
+
 .blog-title {
   display: inline-block;
   min-height: 33vh;
   height: min-content;
 }
+
 .title-bg::before {
-    background-image: url('forestbg.jpg');
+  background-image: url('forestbg.jpg');
 }
+
 .blog-bg::before {
   background-image: url('autumnbg.jpg');
 }
+
 .title-name {
   position: relative;
   color: #fff;
@@ -175,13 +243,16 @@ hr {
   text-align: left;
   top: 33%;
 }
+
 .blog-name {
   margin-top: 20%;
 }
+
 .subtitle {
   font-size: 1rem;
   padding: 1em 0em;
 }
+
 /* --- */
 
 .heading {
@@ -193,10 +264,17 @@ hr {
   margin: 0;
   height: 0;
   top: 1.5em;
-
   font-size: 0.9em;
   font-weight: 600;
   color: #bbb;
+}
+
+.section-foot {
+  top: -3em;
+}
+
+.right-align {
+  text-align: right;
 }
 
 .divider {
@@ -204,7 +282,7 @@ hr {
 }
 
 .contact-title {
-  color: #444;
+  color: #3a3a3a;
 }
 
 .media-links {
@@ -224,7 +302,6 @@ hr {
 .media-links ul li a {
   color: #ddd;
   text-decoration: none;
-  font-variant: small-caps;
   -webkit-transition: color 0.3s, background-color 0.3s;
   transition: color 0.3s, background-color 0.3s;
 }
@@ -234,7 +311,7 @@ hr {
   background-color: #eee;
 }
 
-.media-links .copyright {
+/* .media-links .copyright {
   display: inline-block;
   text-align: left;
 }
@@ -242,42 +319,58 @@ hr {
 .media-links .credits {
   display: inline-block;
   text-align: right;
+} */
+
+.foot {
+  position: relative;
+  text-align: center;
+  top: -2em;
+  padding: 0;
+  margin: 0;
+  height: 0;
 }
 
 /* FOR TABLETS AND LAPTOPS */
 
-@media(min-width: 800px) {
+@media(min-width: 768px) {
   html {
     font-size: 18px;
-
+    display: -ms-grid;
     display: grid;
-    grid-template-columns: 1fr minmax(auto, 60em) 1fr;
+    -ms-grid-columns: 1fr minmax(auto, 960px) 1fr;
+    grid-template-columns: 1fr minmax(auto, 960px) 1fr;
   }
-  
   body {
+    -ms-grid-column: 2;
     grid-column: 2;
   }
-
   .padded-sides {
     padding-left: 2em;
     padding-right: 2em;
   }
-
   .gridded {
+    display: -ms-grid;
     display: grid;
+    -ms-grid-columns: 1fr 1fr;
     grid-template-columns: 1fr 1fr;
     grid-gap: 2em;
     padding: 4em;
   }
   .heading {
+    -ms-grid-column: 1;
     grid-column: 1;
     text-align: left;
     margin: 0;
     padding: 0;
   }
   .bio {
+    -ms-grid-column: 2;
     grid-column: 2;
     grid-row: 1/4;
+  }
+  .bio p {
+    position: relative;
+    top: -1em;
   }
   .content {
     /* grid-column: 2; */
@@ -294,12 +387,13 @@ hr {
   } */
   .pdf-download {
     padding: 0;
+    -ms-grid-column: 1/3;
     grid-column: 1/3;
   }
-  .media-links ul {
+  /* .media-links ul {
     text-align: left;
+    -ms-grid-column: 1/3;
     grid-column: 1/3;
-    grid-row: 1;
     padding: 0;
-  }
+  } */
 }
