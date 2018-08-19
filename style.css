@@ -239,11 +239,11 @@ hr.short {
 }
 
 .title-bg::before {
-  background-image: url('forestbg.jpg');
+  background-image: url('images/forestbg.jpg');
 }
 
 .blog-bg::before {
-  background-image: url('autumnbg.jpg');
+  background-image: url('images/autumnbg.jpg');
 }
 
 .title-name {
