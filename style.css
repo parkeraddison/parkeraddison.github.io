@@ -79,7 +79,7 @@ h4 {
 p {
   margin: 1em 0;
   line-height: 1.618em;
-  text-align: justify;
+  text-align: left;
 }
 
 a {
@@ -92,8 +92,18 @@ a:hover {
   text-decoration: underline;
 }
 
+.emoji {
+  height: 1em;
+  position: relative;
+  bottom: -0.2em;
+}
+
 .news-link {
   color: #333;
+}
+
+.news-link .content p {
+  text-align: center;
 }
 
 .news-title {
@@ -169,29 +179,45 @@ hr.short {
 /* --- */
 
 /* TOP PAGE NAVIGATION */
-
 .nav {
+  margin: 0;
   padding: 0;
+  padding-top: 0.5em;
+}
+
+.nav ul {
   list-style-type: none;
-  top: 0.5em;
+  margin: 0;
+  padding: 0;
 }
 
-.nav li {
-  display: inline-block;
+.nav-left ul li {
+  float: left;
+  margin-right: 1em;
 }
 
-.nav li a {
+.nav-right ul li {
+  float: right;
+  margin-left: 1em;
+}
+
+.nav ul li a {
   font-size: 0.9em;
   text-decoration: none;
-  margin-right: 1em;
   color: #eee;
   -webkit-transition: color 0.3s, background-color 0.3s;
   transition: color 0.3s, background-color 0.3s;
 }
 
-.nav li a:hover {
+.nav ul li a:hover {
   color: #111;
   background-color: #eee;
+}
+
+.nav::after {
+  content: '\00a0 ';
+  height: 0;
+  width: 0;
 }
 
 /* --- */
@@ -343,9 +369,14 @@ hr.short {
 }
 
 .top-button {
-  font-size: 1.5em;
+  font-weight: 600;
   position: relative;
-  top: -0.4em;
+  /* Full height equal to text */
+  font-size: 1.25em;
+  top: -0.25em;
+  /* Wedge height equal to text, bar above */
+  font-size: 1.5em;
+  top: -0.35em;
 }
 
 .foot {
@@ -364,8 +395,8 @@ hr.short {
     font-size: 18px;
     display: -ms-grid;
     display: grid;
-    -ms-grid-columns: 1fr minmax(auto, 960px) 1fr;
-    grid-template-columns: 1fr minmax(auto, 960px) 1fr;
+    -ms-grid-columns: 1fr minmax(auto, 1000px) 1fr;
+    grid-template-columns: 1fr minmax(auto, 1000px) 1fr;
     grid-gap: 1em;
 
     margin: 0;
@@ -389,6 +420,10 @@ hr.short {
     grid-gap: 2em;
     padding: 4em;
   }
+  .thirds-grid {
+    -ms-grid-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
   .heading {
     -ms-grid-column: 1;
     grid-column: 1;
@@ -397,8 +432,8 @@ hr.short {
     padding: 0;
   }
   .bio {
-    -ms-grid-column: 2;
-    grid-column: 2;
+    -ms-grid-column: 2/4;
+    grid-column: 2/4;
     grid-row: 1/4;
   }
   .bio p {
