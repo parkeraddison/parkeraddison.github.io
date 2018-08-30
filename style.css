@@ -102,10 +102,6 @@ a:hover {
   color: #333;
 }
 
-.news-link .content p {
-  text-align: center;
-}
-
 .news-title {
   color: #007bff;
 }
@@ -115,7 +111,7 @@ a:hover {
 }
 
 .footer-link {
-  color: #333;
+  color: #3a3a3a;
 }
 
 .disabled-link, .disabled-link:hover {
@@ -193,12 +189,12 @@ hr.short {
 
 .nav-left ul li {
   float: left;
-  margin-right: 1em;
+  margin-right: 0.8em;
 }
 
 .nav-right ul li {
   float: right;
-  margin-left: 1em;
+  margin-left: 0.8em;
 }
 
 .nav ul li a {
@@ -379,7 +375,52 @@ hr.short {
   top: -0.35em;
 }
 
+
+/* Tooltip from w3schools.com */
+.tooltip {
+  position: relative;
+}
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 15em;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    padding: 5px 0;
+    border-radius: 6px;
+
+    /* Position the tooltip text */
+    position: absolute;
+    z-index: 1;
+    bottom: 133%;
+    left: -30%;
+
+    /* Fade in tooltip */
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+/* Tooltip arrow */
+.tooltip .tooltiptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
+}
+
+/* Show the tooltip text when you mouse over the tooltip container */
+.tooltip:hover .tooltiptext, .tooltip:active .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+}
+
 .foot {
+  color: #3a3a3a;
   position: relative;
   text-align: center;
   top: -2em;
@@ -423,6 +464,12 @@ hr.short {
   .thirds-grid {
     -ms-grid-columns: 1fr 1fr 1fr;
     grid-template-columns: 1fr 1fr 1fr;
+  }
+  .nav-left ul li {
+    margin-right: 1em;
+  }
+  .nav-right ul li {
+    margin-left: 1em;
   }
   .heading {
     -ms-grid-column: 1;
