@@ -10,7 +10,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
   <!-- Custom CSS -->
-  <link rel="stylesheet" href="../../style.css">
+  <link rel="stylesheet" href="/style.css">
 
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
@@ -41,7 +41,7 @@
   <title>I Feel Like A Total Hacker 😎</title>
 </head>
 
-<body>
+<body onscroll="scrollCloseTooltip()">
 
   <section id="nav" class="padded-sides mobile-padded">
     <nav class="nav">
@@ -73,7 +73,7 @@
       <div class="blog-bg fixed-image"></div>
       <div class="title-name blog-name">I Feel Like A Total Hacker
         <img class='emoji' src="https://twemoji.maxcdn.com/2/72x72/1f60e.png" alt="😎">
-        <div class="subtitle">09 August, 2018 • 5 minute read</div>
+        <div class="subtitle">09 August, 2018 • 4 minute read</div>
       </div>
     </div>
   </section>
@@ -184,7 +184,7 @@
 
   <section id="contact" class="grid">
     <div class="section-title contact-title padded-sides">WHERE YOU CAN FIND ME</div>
-    <a href="#" class="top-button" title="Top of page">
+    <a class="top-button" title="Top of page" onclick="scrollToTop()">
       <div class="section-title contact-title padded-sides right-align">&#8892;</div>
     </a>
 
@@ -200,12 +200,12 @@
           <a href="mailto: parkergreyaddison@gmail.com">CONTACT</a>
         </li>
         <li>
-          <a class="tooltip">FIND ME ANYWHERE
-            <span class="tooltiptext">
-              You can query "2581e73" to uniquely find many of my contributions via any search engine.
-            </span>
-          </a>
-        </li>
+            <a class="tooltip" onclick="toggleTooltip()">FIND ME ANYWHERE
+              <span class="tooltiptext" id="tooltiptext">
+                You can query "2581e73" to uniquely find many of my contributions via any search engine.
+              </span>
+            </a>
+          </li>
       </ul>
     </div>
   </section>
@@ -214,9 +214,9 @@
     <a href="http://www.pgaddison.com" class="footer-link">Home</a>
   </div>
 
-  <!-- jQuery -->
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-    crossorigin="anonymous"></script>
+  <!-- loading js files -->
+  <script src="/scrollreveal.min.js"></script>
+  <script src="/main.js"></script>
 
 </body>
 
