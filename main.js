@@ -40,6 +40,9 @@ const scrollCloseTooltip = () => {
     }
 }
 
+// Add touchstart event for mobile
+document.getElementById("tooltip").addEventListener("touchstart", toggleTooltip(), false);
+
 /* Page scrolling */
 const scrollTo = (element) => {
     element.scrollIntoView({
