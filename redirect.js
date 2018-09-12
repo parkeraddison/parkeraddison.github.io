@@ -8,7 +8,7 @@ for (let link of document.getElementsByClassName("redirect-linkedin")) {
         directTo(
             '<b>Pro Tip:</b> The first few lines of my experience summaries are bullet points, but clicking <i>"See more"</i> reveals a more detailed description.',
             {name: "LinkedIn", color: "#0077b5"},
-            1);
+            1.5);
     });
 }
 for (let link of document.getElementsByClassName("redirect-github")) {
@@ -18,7 +18,7 @@ for (let link of document.getElementsByClassName("redirect-github")) {
         directTo(
             '<b>Wow:</b> GitHub is a really cool place :)',
             {name: "GitHub", color: "#3f4448"},
-            2);
+            2.5);
     });
 }
 
@@ -34,14 +34,14 @@ function directTo(message, destination, speedMult) {
 
 
     document.body.innerHTML = `
-    <div class="redirect-container">
-        <div class="redirect-tip">
+    <div id="redirect-container">
+        <div id="redirect-tip">
         ${message}
         </div>
         <div id="redirect-timer">
             <div id="redirect-progress"></div>
         </div>    
-        <div class="redirect-destination">
+        <div id="redirect-destination">
         Directing to ${destination.name}. You can click anywhere to skip the wait.
         </div>
     </div>
@@ -51,9 +51,11 @@ function directTo(message, destination, speedMult) {
 
 function startTimer(color, speedMult) {
     const progress = document.getElementById("redirect-progress");
-    progress.style.backgroundColor = color;
+    progress.style.backgroundColor = "white";
+    document.body.style.transition = "all 1s";
+    document.body.style.backgroundColor = color;
     let index = 500 / speedMult;
-    let loading = setInterval(increment, 1);
+    let loading = setInterval(increment, 15);
 
     function increment() {
         if (index < 0) {

@@ -437,7 +437,7 @@ hr.short {
   height: 0;
 }
 
-.redirect-container {
+#redirect-container {
   display: -ms-grid;
   display: grid;
   -ms-grid-rows: 50vh auto auto;
@@ -452,23 +452,28 @@ hr.short {
   margin: 0.5em 0;
   width: 100%;
   height: 2px;
-  background-color: #ccc;
+  background-color: #111;
+  opacity: 0.2;
 }
 
 #redirect-progress {
   width: 100%;
   height: 2px;
+  color: #fff;
 }
 
-.redirect-tip {
+#redirect-tip {
   padding: 0;
   margin: 0;
+  color: #fff;
+  opacity: 0.9;
 }
 
-.redirect-destination {
+#redirect-destination {
   padding: 0;
   margin: 0;
-  color: #888;
+  color: #fff;
+  opacity: 0.5;
 }
 
 /* FOR TABLETS AND LAPTOPS */
