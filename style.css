@@ -2,30 +2,64 @@
 
 /* FOR PHONES AND LARGER */
 
-/* PRE-LOADER */
+/* OVERLAY (on redirect) */
 
 #overlay {
-  /* height: 100%; */
-  width: 100%;
+  position: absolute;
+  width: 100vw;
+  max-width: 100%;
+  height: 100vh;
+  z-index: 999;
   top: 0;
   left: 0;
-  background: #111;
-  position: fixed;
-  z-index: 999;
-  text-align: center;
+  display: none;
+
+  justify-items: center;
+  /* align-items: center; */
+
+  transition: all 1s;
+}
+
+#redirect-container {
   display: -ms-grid;
   display: grid;
+  -ms-grid-rows: 45% min-content min-content;
+      grid-template-rows: 45% min-content min-content;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  max-width: 1000px;
+  padding: 0 1em;
 }
 
-.pre-loader {
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
+#redirect-timer {
+  margin: 0.5em 0;
+  width: 100%;
+  height: 2px;
+  background-color: rgba(10, 10, 10, 0.5);
+  opacity: 0.8;
+}
+
+#redirect-progress {
+  width: 100%;
+  height: 2px;
+  background-color: #fff;
+
+  transition: width 2s linear;
+}
+
+#redirect-tip {
+  padding: 0;
+  margin: 0;
   color: #fff;
+  opacity: 0.8;
 }
 
-.no-js #overlay {
-  display: none;
+#redirect-destination {
+  padding: 0;
+  margin: 0;
+  color: #fff;
+  opacity: 0.5;
 }
 
 /* --- */
@@ -43,7 +77,7 @@ html {
 body {
   color: #333;
   background-color: #e6e6e6;
-  margin: 0;
+  margin: 0 5px;
 }
 
 h1 {
@@ -165,8 +199,8 @@ hr.short {
 }
 
 .padded-sides {
-  padding-left: 1rem;
-  padding-right: 1rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
 }
 
 .padded-ends {
@@ -225,40 +259,15 @@ hr.short {
 
 /* --- */
 
-/* SHADOWS AND FIXED IMAGE */
-
 .with-shadow {
   box-shadow: 1px 1px 3px 1px rgba(20, 20, 20, 0.5);
 }
 
-/* Fixed image workaround from https://medium.com/vehikl-news/fixed-background-image-performance-issue-6b7d9e2dbc55 */
-
-/* Fixed images */
-/* .fixed-image {
-  position: relative;
-  overflow: hidden;
-}
-
-.fixed-image::before {
-  position: fixed;
-  height: 100%;
-  left: 0;
-  top: 0;
-  width: 100%;
-  background-repeat: no-repeat;
-  background-position: center bottom;
-  background-size: cover;
-  content: '';
-  will-change: transform;
-  z-index: -1;
-} */
-
-/* --- */
-
 /* TITLE */
 
 .title {
-  height: calc(100vh - 6em);
+  /* height: calc(60vh - 6em); */
+  /* height: 40vh; */
   -webkit-transition: 5ms;
   transition: 5ms;
 
@@ -275,18 +284,8 @@ hr.short {
       align-content: end;
 }
 
-/* Fixed images */
-/* .title-bg::before {
-  background-image: url('images/forestbg.jpg');
-} */
-
-/* .blog-bg::before {
-  background-image: url('images/autumnbg.jpg');
-} */
-
 .title-name {
-  position: relative;
-  top: calc(100% - 3em - 50%);
+  margin: 2em 0;
   color: #111;
   font-size: 2em;
   font-weight: 100;
@@ -435,45 +434,6 @@ hr.short {
   padding: 0;
   margin: 0;
   height: 0;
-}
-
-#redirect-container {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-rows: 50vh auto auto;
-      grid-template-rows: 50vh auto auto;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
-  padding: 0 1em;
-}
-
-#redirect-timer {
-  margin: 0.5em 0;
-  width: 100%;
-  height: 2px;
-  background-color: #111;
-  opacity: 0.2;
-}
-
-#redirect-progress {
-  width: 100%;
-  height: 2px;
-  color: #fff;
-}
-
-#redirect-tip {
-  padding: 0;
-  margin: 0;
-  color: #fff;
-  opacity: 0.9;
-}
-
-#redirect-destination {
-  padding: 0;
-  margin: 0;
-  color: #fff;
-  opacity: 0.5;
 }
 
 /* FOR TABLETS AND LAPTOPS */

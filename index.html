@@ -41,10 +41,9 @@
   <title>Hi, I'm Parker Addison</title>
 </head>
 
-<body onscroll="scrollCloseTooltip()">
+<body>
 
   <section id="overlay">
-    <div class="pre-loader">Loading...</div>
   </section>
 
   <section id="nav" class="padded-sides mobile-padded">
@@ -65,12 +64,10 @@
       <div class="nav-right">
         <ul>
           <li>
-            <!-- <a href="https://www.linkedin.com/in/parkeraddison/">LINKEDIN</a> -->
-            <a class="redirect-linkedin">LINKEDIN</a>
+            <a href="https://linkedin.com/in/parkeraddison/" class="redirect-linkedin">LINKEDIN</a>
           </li>
           <li>
-            <!-- <a href="https://github.com/parkergreyaddison/" target="_blank">GITHUB</a> -->
-            <a class="redirect-github">GITHUB</a>
+            <a href="https://github.com/parkergreyaddison/" class="redirect-github">GITHUB</a>
           </li>
         </ul>
       </div>
@@ -214,11 +211,11 @@
   </section>
 
   <div class="divider"></div>
-  <section class="slide-in">
+  <section class="slide-in with-shadow">
     <section id="resume" class="grid">
       <div class="section-title padded-sides">CHECK OUT MY RESUME</div>
 
-      <div class="pdf-container gridded with-shadow padded-sides padded-ends">
+      <div class="pdf-container gridded padded-sides padded-ends">
         <div class="pdf-download scroll-reveal">
           <p>My resume can be seen and downloaded
             <a href="http://nbviewer.jupyter.org/github/ParkerGreyAddison/resume/blob/master/resume.pdf" target="_blank">here</a>.</p>
@@ -235,20 +232,18 @@
       <div class="media-links center-grid">
         <ul>
           <li>
-            <!-- <a href="https://github.com/parkergreyaddison/" target="_blank">GITHUB</a> -->
-            <a class="redirect-github">GITHUB</a>
+            <a href="https://github.com/parkergreyaddison/" class="redirect-github">GITHUB</a>
           </li>
           <li>
-            <!-- <a href="https://www.linkedin.com/in/parkeraddison/" target="_blank">LINKEDIN</a> -->
-            <a class="redirect-linkedin">LINKEDIN</a>
+            <a href="https://linkedin.com/in/parkeraddison/" class="redirect-linkedin">LINKEDIN</a>
           </li>
           <li>
             <a href="mailto: ">CONTACT</a>
           </li>
           <li>
-            <a class="tooltip" id="tooltip" onclick="toggleTooltip()">FIND ME ANYWHERE
+            <a class="tooltip" id="tooltip">FIND ME ANYWHERE
               <span class="tooltiptext" id="tooltiptext">
-                You can query "2581e73" to uniquely find many of my contributions via any search engine.
+                You can query<br>"Parker 2581e73"<br>to uniquely find many of my contributions via a search engine.
               </span>
             </a>
           </li>
@@ -262,18 +257,9 @@
   </section>
 
   <!-- loading js files -->
-  <script src="/scrollreveal.min.js"></script>
-  <script src="/redirect.js"></script>
-  <script src="/main.js"></script>
-
-  <!-- Pre-loader -->
-  <script>
-    const overlay = document.getElementById("overlay");
-
-    window.addEventListener("load", function () {
-      overlay.style.display = "none";
-    })
-  </script>
+  <script src="/js/scrollreveal.min.js"></script>
+  <script src="/js/redirect.js"></script>
+  <script src="/js/main.js"></script>
 
 </body>
 

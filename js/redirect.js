@@ -1,24 +1,30 @@
 let url = "http://pgaddison.com";
 
+const overlay = document.getElementById("overlay");
+
+let redirectTimeout;
+
 /* Adding listeners to links */
 for (let link of document.getElementsByClassName("redirect-linkedin")) {
     addRedirect(link, function(e) {
+        e.preventDefault();
         e.stopImmediatePropagation();
         url = "https://linkedin.com/in/parkeraddison/";
         directTo(
-            '<b>Pro Tip:</b> The first few lines of my experience summaries are bullet points, but clicking <i>"See more"</i> reveals a more detailed description.',
+            '<b>Pro Tip:</b> The first few lines of my experience summaries are bullet points, but I write more detailed descriptions if you click <i>"See more"</i>.',
             {name: "LinkedIn", color: "#0077b5"},
-            1.5);
+            5000);
     });
 }
 for (let link of document.getElementsByClassName("redirect-github")) {
     addRedirect(link, function(e) {
+        e.preventDefault();
         e.stopImmediatePropagation();
         url = "https://github.com/parkergreyaddison/"
         directTo(
             '<b>Wow:</b> GitHub is a really cool place :)',
             {name: "GitHub", color: "#3f4448"},
-            2.5);
+            3000);
     });
 }
 
@@ -27,13 +33,13 @@ function addRedirect(element, handler) {
     element.addEventListener("touchend", handler);
 }
 
-function directTo(message, destination, speedMult) {
+function directTo(message, destination, duration) {
 
-    document.addEventListener("click", redirect);
-    document.addEventListener("touchend", redirect);
+    overlay.addEventListener("click", redirect);
+    overlay.addEventListener("touchend", redirect);
 
 
-    document.body.innerHTML = `
+    overlay.innerHTML = `
     <div id="redirect-container">
         <div id="redirect-tip">
         ${message}
@@ -46,28 +52,24 @@ function directTo(message, destination, speedMult) {
         </div>
     </div>
 `;
-    startTimer(destination.color, speedMult);
+    startTimer(destination.color, duration);
 }
 
-function startTimer(color, speedMult) {
+function startTimer(color, duration) {
     const progress = document.getElementById("redirect-progress");
-    progress.style.backgroundColor = "white";
-    document.body.style.transition = "all 1s";
-    document.body.style.backgroundColor = color;
-    let index = 500 / speedMult;
-    let loading = setInterval(increment, 15);
+    progress.style.transition = `width ${duration}ms linear`;
+    progress.style.width = "100%";
+    overlay.style.display = "grid";
+    overlay.style.backgroundColor = color;
+    document.body.style.overflow = "hidden";
 
-    function increment() {
-        if (index < 0) {
-            clearInterval(loading);
-            redirect(url);
-        } else {
-            index--;
-            progress.style.width = index * speedMult / 5 + '%';
-        }
-    }
+    setTimeout(function() { progress.style.width = "0%" }, 15);
+    redirectTimeout = setTimeout(redirect, duration);
 }
 
 function redirect() {
+    clearTimeout(redirectTimeout);
+    overlay.style.display = "none";
+    document.body.style.overflow = "scroll";
     window.location.href = url;
 }
