@@ -437,6 +437,40 @@ hr.short {
   height: 0;
 }
 
+.redirect-container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 50vh auto auto;
+      grid-template-rows: 50vh auto auto;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  padding: 0 1em;
+}
+
+#redirect-timer {
+  margin: 0.5em 0;
+  width: 100%;
+  height: 2px;
+  background-color: #ccc;
+}
+
+#redirect-progress {
+  width: 100%;
+  height: 2px;
+}
+
+.redirect-tip {
+  padding: 0;
+  margin: 0;
+}
+
+.redirect-destination {
+  padding: 0;
+  margin: 0;
+  color: #888;
+}
+
 /* FOR TABLETS AND LAPTOPS */
 
 @media(min-width: 768px) {
