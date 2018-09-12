@@ -41,7 +41,10 @@
   <title>I Feel Like A Total Hacker 😎</title>
 </head>
 
-<body onscroll="scrollCloseTooltip()">
+<body>
+
+  <section id="overlay">
+  </section>
 
   <section id="nav" class="padded-sides mobile-padded">
     <nav class="nav">
@@ -58,10 +61,10 @@
       <div class="nav-right">
         <ul>
           <li>
-            <a href="https://www.linkedin.com/in/parkeraddison/">LINKEDIN</a>
+            <a href="https://www.linkedin.com/in/parkeraddison/" class="redirect-linkedin">LINKEDIN</a>
           </li>
           <li>
-            <a href="https://www.github.com/parkergreyaddison">GITHUB</a>
+            <a href="https://www.github.com/parkergreyaddison" class="redirect-github">GITHUB</a>
           </li>
         </ul>
       </div>
@@ -182,7 +185,7 @@
 
   <div class="divider"></div>
 
-  <section id="contact" class="grid">
+  <section id="contact" class="grid with-shadow">
     <div class="section-title contact-title padded-sides">WHERE YOU CAN FIND ME</div>
     <a class="top-button" title="Top of page" onclick="scrollToTop()">
       <div class="section-title contact-title padded-sides right-align">&#8892;</div>
@@ -191,18 +194,18 @@
     <div class="media-links center-grid">
       <ul>
         <li>
-          <a href="https://github.com/parkergreyaddison/" target="_blank">GITHUB</a>
+          <a href="https://github.com/parkergreyaddison/" class="redirect-github">GITHUB</a>
         </li>
         <li>
-          <a href="https://www.linkedin.com/in/parkeraddison/" target="_blank">LINKEDIN</a>
+          <a href="https://linkedin.com/in/parkeraddison/" class="redirect-linkedin">LINKEDIN</a>
         </li>
         <li>
           <a href="mailto: parkergreyaddison@gmail.com">CONTACT</a>
         </li>
         <li>
-            <a class="tooltip" id="tooltip" onclick="toggleTooltip()">FIND ME ANYWHERE
+            <a class="tooltip" id="tooltip">FIND ME ANYWHERE
               <span class="tooltiptext" id="tooltiptext">
-                You can query "2581e73" to uniquely find many of my contributions via any search engine.
+                You can query<br>"Parker 2581e73"<br>to uniquely find many of my contributions via a search engine.
               </span>
             </a>
           </li>
@@ -215,8 +218,9 @@
   </div>
 
   <!-- loading js files -->
-  <script src="/scrollreveal.min.js"></script>
-  <script src="/main.js"></script>
+  <script src="/js/scrollreveal.min.js"></script>
+  <script src="/js/redirect.js"></script>
+  <script src="/js/main.js"></script>
 
 </body>
 
