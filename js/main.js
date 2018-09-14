@@ -47,12 +47,14 @@ function scrollCloseTooltip() {
 const tooltip = document.getElementById("tooltip");
 const tooltiptext = document.getElementById("tooltiptext");
 tooltip.addEventListener("click", toggleTooltip);
-tooltip.addEventListener("touchstart", toggleTooltip, false);
+// tooltip.addEventListener("touchstart", toggleTooltip, false);
 
 /* Page scrolling */
 function scrollTo(element) {
-    element.scrollIntoView({
-        behavior: "smooth"
+    window.scroll({
+        behavior: "smooth",
+        left: 0,
+        top: element.offsetTop
     })
 }
 

@@ -4,12 +4,15 @@ const overlay = document.getElementById("overlay");
 
 let redirectTimeout;
 
+let currentScrollPosition;
+
 /* Adding listeners to links */
 for (let link of document.getElementsByClassName("redirect-linkedin")) {
     addRedirect(link, function(e) {
         e.preventDefault();
         e.stopImmediatePropagation();
         url = "https://linkedin.com/in/parkeraddison/";
+        currentScrollPosition = document.documentElement.scrollTop;
         directTo(
             '<b>Pro Tip:</b> The first few lines of my experience summaries are bullet points, but I write more detailed descriptions if you click <i>"See more"</i>.',
             {name: "LinkedIn", color: "#0077b5"},
@@ -20,7 +23,8 @@ for (let link of document.getElementsByClassName("redirect-github")) {
     addRedirect(link, function(e) {
         e.preventDefault();
         e.stopImmediatePropagation();
-        url = "https://github.com/parkergreyaddison/"
+        url = "https://github.com/parkergreyaddison/";
+        currentScrollPosition = document.documentElement.scrollTop;
         directTo(
             '<b>Wow:</b> GitHub is a really cool place :)',
             {name: "GitHub", color: "#3f4448"},
@@ -56,6 +60,7 @@ function directTo(message, destination, duration) {
 }
 
 function startTimer(color, duration) {
+    scroll(0,0);
     const progress = document.getElementById("redirect-progress");
     progress.style.transition = `width ${duration}ms linear`;
     progress.style.width = "100%";
@@ -68,6 +73,7 @@ function startTimer(color, duration) {
 }
 
 function redirect() {
+    scroll(0, currentScrollPosition);
     clearTimeout(redirectTimeout);
     overlay.style.display = "none";
     document.body.style.overflow = "scroll";
