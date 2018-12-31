@@ -1,3 +1,6 @@
+/* Twemoji parse */
+window.onload = function() {twemoji.parse(document.body)};
+
 /* Scroll Reveal */
 window.sr = ScrollReveal();
 sr.reveal(".scroll-reveal", {
@@ -12,6 +15,7 @@ sr.reveal(".slide-in", {
 });
 
 /* Toggle the tooltip on click, close on scroll */
+/*
 function openTooltip() {
     tooltiptext.style.visibility = "visible";
     tooltiptext.style.opacity = '1';
@@ -48,6 +52,7 @@ const tooltip = document.getElementById("tooltip");
 const tooltiptext = document.getElementById("tooltiptext");
 tooltip.addEventListener("click", toggleTooltip);
 // tooltip.addEventListener("touchstart", toggleTooltip, false);
+*/
 
 /* Page scrolling */
 function scrollTo(element) {
