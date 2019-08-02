@@ -83,9 +83,9 @@ html {
 body {
   color: #333;
   background-color: #e6e6e6;
-  /* background: -webkit-linear-gradient(-200deg, #6a8, #9a6); */
-  /* background: linear-gradient(-200deg, #8ad, #ae8); */
   background-color: #007bff;
+  background-color: #427;
+  background: linear-gradient(110deg, #327, #745);
   margin: 0;
 }
 
@@ -102,7 +102,7 @@ html:after {
   height: 100%;
   background-image: url(images/topo.svg);
   background-size: fill;
-  opacity: 0.15;
+  opacity: 0.06;
 }
 
 h1 {
@@ -273,12 +273,13 @@ hr.short {
 }
 
 .nav ul li a {
+  padding: 0 1px;
   font-size: 0.9em;
   text-decoration: none;
   color: #111;
   color: #eee;
-  -webkit-transition: color 0.3s, background-color 0.3s;
-  transition: color 0.3s, background-color 0.3s;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
 }
 
 .nav ul li a:hover {
@@ -327,7 +328,7 @@ hr.short {
   margin: 2em 0;
   /* color: #111; */
   /* color: #eee; */
-  font-size: 2em;
+  font-size: 2.4em;
   font-weight: 100;
   text-align: left;
 }
@@ -344,17 +345,20 @@ hr.short {
 }
 
 .subtitle a {
-  color: #eee;
-  color: gold;
+  /* color: #eee; */
+  /* color: #f9c80e; */
+  /* color: #007bff; */
   /* font-weight: bolder; */
   /* background-color: #111; */
+  /* padding: 2px; */
   text-decoration: underline;
-  -webkit-transition: color 0.3s, background-color 0.3s;
-  transition: color 0.3s, background-color 0.3s;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
 }
 
 .subtitle a:hover {
-  color: #eee;
+  /* color: #eee; */
+  /* padding: 1px; */
   background-color: #111;
 }
 
@@ -418,11 +422,12 @@ hr.short {
 .media-links ul li a {
   color: #ddd;
   text-decoration: none;
-  -webkit-transition: color 0.3s, background-color 0.3s;
-  transition: color 0.3s, background-color 0.3s;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
 }
 
 .media-links ul li a:hover {
+  padding: 0 4px;
   color: #111;
   background-color: #eee;
 }
@@ -438,44 +443,6 @@ hr.short {
   top: -0.35em;
 }
 
-
-/* Tooltip from w3schools.com */
-.tooltip {
-  position: relative;
-}
-
-.tooltip .tooltiptext {
-    visibility: hidden;
-    width: 15em;
-    background-color: #555;
-    color: #fff;
-    text-align: center;
-    padding: 5px 0;
-    border-radius: 6px;
-
-    /* Position the tooltip text */
-    position: absolute;
-    z-index: 1;
-    bottom: 133%;
-    left: -30%;
-
-    /* Fade in tooltip */
-    opacity: 0;
-    transition: opacity 0.3s;
-}
-
-/* Tooltip arrow */
-.tooltip .tooltiptext::after {
-    content: "";
-    position: absolute;
-    top: 100%;
-    left: 50%;
-    margin-left: -5px;
-    border-width: 5px;
-    border-style: solid;
-    border-color: #555 transparent transparent transparent;
-}
-
 .foot {
   color: #3a3a3a;
   position: relative;
@@ -484,6 +451,37 @@ hr.short {
   padding: 0;
   margin: 0;
   height: 0;
+}
+
+/* Contact modal */
+.contact-modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(20, 20, 20, 0.6);
+}
+
+.contact-content {
+  margin: 15% auto;
+  padding: 4em 2em;
+  width: 80%;
+  max-width: 50em;
+  background-color: #e6e6e6;
+}
+
+.contact-modal .contact-close {
+  position: relative;
+  float: right;
+  top: -1.5em;
+  font-size: 2em;
+}
+
+.contact-modal .contact-close:hover {
+  cursor: pointer;
 }
 
 /* FOR TABLETS AND LAPTOPS */
