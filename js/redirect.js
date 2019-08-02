@@ -1,4 +1,4 @@
-let url = "http://pgaddison.com";
+let url = "http://parkeraddison.com";
 
 const overlay = document.getElementById("overlay");
 
@@ -16,7 +16,7 @@ for (let link of document.getElementsByClassName("redirect-linkedin")) {
         directTo(
             '<b>Pro Tip:</b> The first few lines of my experience summaries are bullet points, but I write more detailed descriptions if you click <i>"See more"</i>.',
             {name: "LinkedIn", color: "#0077b5"},
-            5000);
+            4000);
     });
 }
 for (let link of document.getElementsByClassName("redirect-github")) {
@@ -26,9 +26,9 @@ for (let link of document.getElementsByClassName("redirect-github")) {
         url = "https://github.com/parkergreyaddison/";
         currentScrollPosition = document.documentElement.scrollTop;
         directTo(
-            '<b>Wow:</b> GitHub is a really cool place :)',
+            "<b>Take a peek:</b> Make sure to check out my comments.  I'm particularly proud of my `coding-challenges` comments!",
             {name: "GitHub", color: "#3f4448"},
-            3000);
+            4000);
     });
 }
 
@@ -65,10 +65,13 @@ function startTimer(color, duration) {
     progress.style.transition = `width ${duration}ms linear`;
     progress.style.width = "100%";
     overlay.style.display = "grid";
-    overlay.style.backgroundColor = color;
     document.body.style.overflow = "hidden";
 
-    setTimeout(function() { progress.style.width = "0%" }, 15);
+    setTimeout(function() {
+        progress.style.width = "0%";
+        overlay.style.fontSize = "1em";
+        overlay.style.backgroundColor = color;
+    }, 15);
     redirectTimeout = setTimeout(redirect, duration);
 }
 

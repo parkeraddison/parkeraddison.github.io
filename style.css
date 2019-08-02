@@ -5,19 +5,20 @@
 /* OVERLAY (on redirect) */
 
 #overlay {
-  position: absolute;
+  position: fixed;
   width: 100vw;
-  max-width: 100%;
   height: 100vh;
   z-index: 999;
   top: 0;
   left: 0;
+
   display: none;
+  font-size: 0.5em;
 
   justify-items: center;
   /* align-items: center; */
 
-  transition: all 1s;
+  transition: all 0.4s;
 }
 
 #redirect-container {
@@ -68,6 +69,11 @@
 
 /* Variable font size from Mike Riethmuller */
 
+html, body {
+  height: fit-content;
+  position: relative;
+}
+
 html {
   font-size: calc(15px + (18 - 15) * ((100vw - 320px) / (768 - 300)));
   font-family: "Open Sans", "Helvetica Neue", Arial, sans-serif;
@@ -77,9 +83,26 @@ html {
 body {
   color: #333;
   background-color: #e6e6e6;
-  /* background: -webkit-linear-gradient(-200deg, #6a8, #9a6);
-  background: linear-gradient(-200deg, #6a8, #9a6); */
+  /* background: -webkit-linear-gradient(-200deg, #6a8, #9a6); */
+  /* background: linear-gradient(-200deg, #8ad, #ae8); */
+  background-color: #007bff;
   margin: 0;
+}
+
+html:after {
+  content: '';
+  display: block;
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url(images/topo.svg);
+  background-size: fill;
+  opacity: 0.15;
 }
 
 h1 {
@@ -121,6 +144,7 @@ p {
 
 a {
   color: #007bff;
+  /* color: gold; */
   text-decoration: none;
   cursor: pointer;
 }
@@ -149,6 +173,7 @@ img.emoji {
 
 .link-title {
   color: #007bff;
+  /* color: gold; */
 }
 
 .blog-nav-link {
@@ -220,6 +245,7 @@ hr.short {
 /* --- */
 
 /* TOP PAGE NAVIGATION */
+
 .nav {
   margin: 0;
   padding: 0;
@@ -250,6 +276,7 @@ hr.short {
   font-size: 0.9em;
   text-decoration: none;
   color: #111;
+  color: #eee;
   -webkit-transition: color 0.3s, background-color 0.3s;
   transition: color 0.3s, background-color 0.3s;
 }
@@ -274,12 +301,15 @@ hr.short {
 
 /* TITLE */
 
+#header {
+  color: #eee;
+}
+
 .title {
   /* height: calc(60vh - 6em); */
   /* height: 40vh; */
   -webkit-transition: 5ms;
   transition: 5ms;
-
 }
 
 .blog-title {
@@ -295,7 +325,8 @@ hr.short {
 
 .title-name {
   margin: 2em 0;
-  color: #111;
+  /* color: #111; */
+  /* color: #eee; */
   font-size: 2em;
   font-weight: 100;
   text-align: left;
@@ -307,8 +338,24 @@ hr.short {
 }
 
 .subtitle {
+  /* color: #eee; */
   font-size: 1rem;
   padding: 1em 0em;
+}
+
+.subtitle a {
+  color: #eee;
+  color: gold;
+  /* font-weight: bolder; */
+  /* background-color: #111; */
+  text-decoration: underline;
+  -webkit-transition: color 0.3s, background-color 0.3s;
+  transition: color 0.3s, background-color 0.3s;
+}
+
+.subtitle a:hover {
+  color: #eee;
+  background-color: #111;
 }
 
 /* --- */
