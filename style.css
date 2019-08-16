@@ -100,7 +100,7 @@ html:after {
   right: 0;
   width: 100%;
   height: 100%;
-  background-image: url(images/topo.svg);
+  background-image: url(images/topo-tile-white.svg);
   background-size: fill;
   opacity: 0.06;
 }
