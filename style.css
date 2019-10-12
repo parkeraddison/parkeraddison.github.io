@@ -1,3 +1,15 @@
+:root {
+    --body-text-color: #333;
+    --page-back-color: #eee;
+    --link-color: #007bff;
+    --accent-purple: #8528ff;
+    /* --accent-purple: #9560ff; */
+    --accent-green: #06d6a0;
+    --accent-red: #ff6961;
+    --accent-yellow: #f0a30a;
+    --accent-blue: #00b3e5;
+}
+
 /* For phones, tablets, etc */
 
 html, body {
@@ -14,24 +26,15 @@ html {
     overflow-x: hidden;
 }
 
-/* Background color and topo svg */
-
-:root {
-    --body-text-color: #333;
-    --page-back-color: #eee;
-    --link-color: #007bff;
-    --accent-purple: #8528ff;
-    /* --accent-purple: #9560ff; */
-    --accent-green: #06d6a0;
-    --accent-red: #ff6961;
-    --accent-yellow: #f0a30a;
-    --accent-blue: #00b3e5;
-}
-
 body {
     color: var(--body-text-color);
     background: var(--page-back-color);
     margin: 0;
+}
+
+.body-container {
+    overflow-x: hidden;
+    overflow-y: hidden;
 }
 
 /* General element styles */
@@ -392,6 +395,7 @@ a.button.red {
 .paper-preview {
     position: relative;
     width: 80%;
+    margin: auto;
     padding-bottom: calc(1.24 * 80%);
     background-color: #ccc;
     background-size: contain;
