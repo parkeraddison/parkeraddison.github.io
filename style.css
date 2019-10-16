@@ -9,6 +9,7 @@
     --accent-yellow: #f0a30a;
     --accent-blue: #00b3e5;
     --text-light-grey: #888;
+    --text-extra-light-grey: #a8a8a8;
     --element-light-grey: #ccc;
 }
 
@@ -57,7 +58,7 @@ body {
     }
 }
 
-/* == GENERAL ============================================================== */
+/* == GENERAL ############################################################== */
 
 p {
     margin: 1em 0;
@@ -67,6 +68,10 @@ p {
 
 i {
     padding-right: 0.1em;
+}
+
+small {
+    color: var(--text-extra-light-grey);
 }
 
 a {
@@ -134,10 +139,16 @@ hr.short {
     font-weight: bold;
     font-family: Consolas;
     position: relative;
-    top: 25%;
+    top: 0;
 }
 
-/* == NAV ================================================================== */
+@media (min-width: 910px) {
+    .wip-banner::after {
+        top: 25%;
+    }
+}
+
+/* == NAV ################################################################== */
 
 .nav {
     margin: 0;
@@ -175,7 +186,7 @@ hr.short {
 
 .nav a {
     font-family: Consolas, "Open Sans";
-    color: #a8a8a8;
+    color: var(--text-extra-light-grey);
     font-weight: bolder;
     transition: color 0.3s;
 }
@@ -190,7 +201,7 @@ hr.short {
     width: 0;
 }
 
-/* == HEADER =============================================================== */
+/* == HEADER ############################################################=== */
 
 #header {
     position: relative;
@@ -264,7 +275,7 @@ hr.short {
     text-align: center;
 }
 
-/* == CARD and PAGE CONTENTS =============================================== */
+/* == CARD and PAGE CONTENTS ############################################=== */
 
 .card {
     position: relative;
@@ -332,7 +343,7 @@ hr.short {
     }
 }
 
-/* == BUTTONS ============================================================== */
+/* == BUTTONS ############################################################== */
 
 .underbar-hover a:before {
     content: '';
@@ -411,19 +422,30 @@ a.button.red {
     color: var(--accent-red);
 }
 
-/* == PORTFOLIO-HOME ======================================================= */
+/* == PORTFOLIO-HOME ####################################################=== */
 
 #portfolio {
     display: grid;
     grid-template-columns: 1fr;
     gap: 2em;
 }
+/* 
+.portfolio-html #portfolio {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1em;
+} */
 
 @media (min-width: 768px) {
     #portfolio {
         grid-template-columns: 1fr 1fr;
         gap: 2em;
     }
+    /* .portfolio-html #portfolio {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 1em;
+    } */
 }
 
 #portfolio .featured-item {
@@ -491,7 +513,64 @@ a.button.red {
     text-align: center;
 }
 
-/* == RESUME-HOME and RESUME-HTML ========================================== */
+/* PORTFOLIO-HTML ########################################################## */
+
+#data-sci-portfolio {
+    
+}
+
+#data-sci-portfolio .selection {
+    text-align: center;
+    margin: auto;
+    margin-bottom: 4em;
+}
+
+@media (min-width: 768px) {
+    #data-sci-portfolio .selection {
+        width: 66%;
+    }
+}
+
+#data-sci-portfolio .selection ul {
+    display: table;
+    width: 100%;
+}
+
+#data-sci-portfolio .selection li {
+    display: table-cell;
+}
+
+#data-sci-portfolio .selection li a {
+    color: var(--text-light-grey);
+}
+
+#data-sci-portfolio .section {
+    padding: 1em;
+    /* background-color: var(--accent-blue); */
+}
+
+#data-sci-portfolio .section .title {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: var(--text-extra-light-grey);
+    border-bottom: 1px solid var(--element-light-grey);
+}
+
+.section .item {
+    padding-top: 2em;
+}
+
+.section .item h3 {
+    margin: 0;
+}
+
+.section .item h4 {
+    font-weight: lighter;
+    margin: 0;
+}
+
+
+/* RESUME-HOME ############################################################# */
 
 #resume {
     display: grid;
@@ -559,9 +638,8 @@ a.button.red {
     box-shadow: inset 20em 0 0 0 var(--accent-red);
 }
 
-/* ================================== === ================================== */
 
-/* ============================== RESUME PAGE ============================== */
+/* RESUME-HTML ############################################################# */
 
 .resume-html #choice {
     display: grid;
@@ -640,9 +718,7 @@ a.button.red {
     content: "WEB CV";
 }
 
-/* ========================================================================= */
-
-/* Footer section formatting */
+/* FOOTER ################################################################## */
 
 #footer {
     /* background-color: #312f2d; */
@@ -657,7 +733,7 @@ a.button.red {
     color: var(--text-light-grey);
 }
 
-/* == IMAGES =============================================================== */
+/* IMAGES ################################################################## */
 
 .img-resume {
     background-image: url(images/resume-preview.jpg);
@@ -679,9 +755,7 @@ a.button.red {
     background-image: url(images/astro-wip.svg);
 }
 
-/* ========================================================================= */
-
-/* Animation */
+/* ANIMATION ############################################################### */
 
 @keyframes fadeIn {
     0% {
