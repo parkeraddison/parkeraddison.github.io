@@ -33,6 +33,7 @@ html {
 }
 
 body {
+    font-size: 100%;
     color: var(--body-text-color);
     background: var(--page-back-color);
     margin: 0;
@@ -64,6 +65,7 @@ body {
 /* == GENERAL ############################################################== */
 
 p {
+    font-size: 100%;
     margin: 1em 0;
     line-height: 1.618em;
     text-align: left;
@@ -310,6 +312,7 @@ hr.short {
     -o-border-image: -o-linear-gradient( 135deg, var(--element-light-grey), rgba(0, 0, 0, 0) 80%) 1 1;
        border-image: linear-gradient( -45deg, var(--element-light-grey), rgba(0, 0, 0, 0) 80%) 1 1;
     /* border-left-width: 0; */
+    font-size: 1em;
 }
 
 #page-content .main {
