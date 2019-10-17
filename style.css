@@ -173,7 +173,7 @@ hr.short {
 }
 
 .nav .nav-left li {
-    margin-right: 0.7em;
+    margin-right: 0.6em;
 }
 
 .nav .nav-left li:last-child {
@@ -185,7 +185,7 @@ hr.short {
 }
 
 .nav .nav-right li {
-    margin-left: 0.7em;
+    margin-left: 0.6em;
 }
 
 @media (min-width: 768px) {
@@ -568,11 +568,12 @@ a.button.red {
 
 #data-sci-portfolio {}
 
-#data-sci-portfolio .selection {
+/* #data-sci-portfolio .selection {
     text-align: center;
     margin: auto;
     margin-bottom: 4em;
 }
+
 
 @media (min-width: 768px) {
     #data-sci-portfolio .selection {
@@ -587,10 +588,25 @@ a.button.red {
 
 #data-sci-portfolio .selection li {
     display: table-cell;
+} */
+
+
+#data-sci-portfolio .selection {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    /* gap: 2em; */
+    padding: 1em;
+}
+
+#data-sci-portfolio .selection p {
+    text-align: right;
+    padding-right: 1em;
+    border-right: 1px solid var(--element-light-grey);
 }
 
 #data-sci-portfolio .selection li a {
     color: var(--text-light-grey);
+    margin-left: 1em;
 }
 
 #data-sci-portfolio .section {
