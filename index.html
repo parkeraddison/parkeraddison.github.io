@@ -55,7 +55,7 @@
                     <div class="title" data-anim="fade-right">
                         <h1>Hi there, <span class="typed">I'm Parker Addison</span></h1>
                         <h3>I am a data scientist who loves rigorous analysis and effective
-                            communication... and I am very glad you came by :)</h3>
+                            communication... and I am very glad you came by!</h3>
                     </div>
                 </div>
                 <!-- <div class="subtitle">
@@ -70,7 +70,7 @@
                 <div class="text">
                     <p>
                         I was born July 1999 in San Francisco, and I've been constantly driven to understand the world
-                        around me.  I study data science at UC San Diego, but beyond school or work the field still has
+                        around me. I study data science at UC San Diego, but beyond school or work the field still has
                         deep ties to my personal ambitions.
                     </p>
                     <p>
@@ -88,14 +88,15 @@
             <section id="portfolio" data-aos="slide-up">
                 <div class="featured-item">
                     <div class="item-wrapper">
-                        <h3>AR-NOC and more works untilas lisgdiua sadgpi </h3>
-                        <h4>Placeholder</h4>
-                        <div class="featured-image"></div>
+                        <h3>Hyperclusters, Chatbots, AR-NOCs, oh my!</h3>
+                        <h4>Qualcomm Institute, NSF REU</h4>
+                        <div class="featured-image img-suncave"></div>
                         <div class="description">
                             <p>
-                                Description goes here Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                Voluptatum
-                                eum odit quos saepe vel tempora.
+                                Hyperclusters, Kubernetes-explaining bots, AR command centers, oh my!
+                            </p>
+                            <p>
+                                Our teams are tackling problems that bring the future to our doorstep.
                             </p>
                         </div>
                         <a href="/ar-noc.html" class="button">Experience the future</a>
@@ -163,9 +164,11 @@
                         <div class="featured-image img-uc-health-hack"></div>
                         <div class="description">
                             <p>
-                                Placeholder Lorem ipsum dolor sit, amet consectetur adipisicing elit. Praesentium
-                                sunt
-                                exercitationem quam vero officiis ducimus.
+                                How an Amazon Alexa skill can open the door to data-driven medical insights.
+                            </p>
+                            <p>
+                                I worked with a diverse team at a health-oriented hackathon to tackle a major problem in
+                                the medical field.
                             </p>
                         </div>
                         <a href="/uc-health-hack.html" class="button">Discover our idea</a>
@@ -217,10 +220,6 @@
 
 </body>
 
-<!-- <div>Icons made by <a href="https://www.flaticon.com/authors/eucalyp" title="Eucalyp">Eucalyp</a> from <a href="https://www.flaticon.com/"             title="Flaticon">www.flaticon.com</a></div> -->
-<!-- <a href="https://www.vecteezy.com/free-vector/image-src">Image Src Vectors by Vecteezy</a> -->
-
-
 <script>
 
     let colors = ["#ff6961", "#f0a30a", "#06d6a0", "#00b3e5", "#9560ff"];
@@ -235,39 +234,12 @@
         button.style.color = color;
     }
 
-
-    // let callback = (entries, observer) => {
-    //     entries.forEach(entry => {
-    //         console.log(entry.isIntersecting);
-    //         if (entry.isIntersecting) {
-    //             entry.target.classList.add("visible");
-    //             // entry.target.classList.remove("not-visible");
-    //         } else {
-    //             // entry.target.classList.remove("visible");
-    //             // entry.target.classList.add("not-visible");
-    //         }
-    //     })
-    // };
-
-    // let options = {
-    //     // threshold: 0.2,
-    //     // rootMargin: "0px 0px -50px 0px",
-    // }
-    // const observer = new IntersectionObserver(callback, options);
-
-    // let targets = document.querySelectorAll("[data-anim^=reveal]");
-
-    // window.addEventListener("load", function () {
-    //     targets.forEach(target => {
-    //         observer.observe(target);
-    //     });
-    //     console.log("LOADED");
-    // });
-
     AOS.init({
         duration: 800,
-        delay: 80,
+        delay: 50,
         easing: "ease",
+        anchorPlacement: "top-bottom",
+        offset: 50,
     });
 
     window.addEventListener("load", AOS.refresh);
