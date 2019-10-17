@@ -60,7 +60,7 @@ body {
     }
 }
 
-/* == GENERAL ############################################################== */
+/* ## GENERAL ############################################################## */
 
 p {
     font-size: 100%;
@@ -152,7 +152,7 @@ hr.short {
     }
 }
 
-/* == NAV ################################################################== */
+/* ## NAV ################################################################## */
 
 .nav {
     margin: 0;
@@ -192,7 +192,6 @@ hr.short {
     .nav .nav-left li {
         margin-right: 0.9em;
     }
-
     .nav .nav-right li {
         margin-left: 0.9em;
     }
@@ -217,7 +216,7 @@ hr.short {
     width: 0;
 }
 
-/* == HEADER ############################################################=== */
+/* ## HEADER ############################################################### */
 
 #header {
     position: relative;
@@ -243,7 +242,6 @@ hr.short {
 
 #header .main h1 {
     font-weight: bold;
-    /* color: rgb(35, 241, 162); */
     color: var(--accent-purple);
     margin: 0;
 }
@@ -308,7 +306,7 @@ hr.short {
     text-align: center;
 }
 
-/* == CARD and PAGE CONTENTS ############################################=== */
+/* ## CARD and PAGE CONTENTS ############################################### */
 
 .card {
     position: relative;
@@ -377,7 +375,7 @@ hr.short {
     }
 }
 
-/* == BUTTONS ############################################################== */
+/* ## BUTTONS ############################################################## */
 
 .underbar-hover a:before {
     content: '';
@@ -426,10 +424,12 @@ a.button:hover, a.button:focus {
 }
 
 a.button::before {
-    content: "\1f862";
+    /* content: "\1f862"; */
+    content: "\2192";
+    font-size: 1.5em;
     position: absolute;
-    top: 0.4em;
-    left: 0.4em;
+    top: 0.1em;
+    left: 0.5em;
     visibility: hidden;
     opacity: 0;
     -webkit-transform: scale(0.2, 0.2);
@@ -466,7 +466,23 @@ a.button.red {
     color: var(--accent-red);
 }
 
-/* == PORTFOLIO-HOME ####################################################=== */
+a.back-home {
+    display: block;
+    margin: auto;
+    text-align: center;
+    position: relative;
+    color: var(--accent-blue);
+    border: 3px solid var(--accent-blue);
+    width: 100%;
+    font-family: Consolas, Menlo, monospace;
+    padding: 0.25em 0;
+}
+
+a.back-home:hover, a.back-home:focus {
+    text-decoration: none;
+}
+
+/* ## PORTFOLIO-HOME ####################################################### */
 
 #portfolio {
     display: -ms-grid;
@@ -476,24 +492,12 @@ a.button.red {
     gap: 2em;
 }
 
-/* 
-.portfolio-html #portfolio {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 1em;
-} */
-
 @media (min-width: 768px) {
     #portfolio {
         -ms-grid-columns: 1fr 2em 1fr;
         grid-template-columns: 1fr 1fr;
         gap: 2em;
     }
-    /* .portfolio-html #portfolio {
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        gap: 1em;
-    } */
 }
 
 #portfolio .featured-item {
@@ -566,35 +570,11 @@ a.button.red {
 
 /* PORTFOLIO-HTML ########################################################## */
 
-#data-sci-portfolio {}
-
-/* #data-sci-portfolio .selection {
-    text-align: center;
-    margin: auto;
-    margin-bottom: 4em;
-}
-
-
-@media (min-width: 768px) {
-    #data-sci-portfolio .selection {
-        width: 66%;
-    }
-}
-
-#data-sci-portfolio .selection ul {
-    display: table;
-    width: 100%;
-}
-
-#data-sci-portfolio .selection li {
-    display: table-cell;
-} */
-
-
 #data-sci-portfolio .selection {
+    display: -ms-grid;
     display: grid;
+    -ms-grid-columns: 1fr 1fr;
     grid-template-columns: 1fr 1fr;
-    /* gap: 2em; */
     padding: 1em;
 }
 
@@ -611,7 +591,6 @@ a.button.red {
 
 #data-sci-portfolio .section {
     padding: 1em;
-    /* background-color: var(--accent-blue); */
 }
 
 #data-sci-portfolio .section .title {
@@ -636,22 +615,46 @@ a.button.red {
     margin: 0;
 }
 
-.section .item a:hover,
-.section .item a:focus {
+.section .item a:hover, .section .item a:focus {
     text-decoration: none;
 }
 
 .section .item a::after {
-    content: "\1f862";
+    content: "\2192";
+    font-family: Consolas, Menlo, monospace;
+    font-size: 1.5em;
     position: relative;
-    top: -0.15em;
-    left: 1em;
+    top: -0.1em;
+    left: 0.5em;
+    -webkit-transition: left 0.3s;
+    -o-transition: left 0.3s;
     transition: left 0.3s;
 }
 
-.section .item a:hover::after,
-.section .item a:focus::after {
-    left: 2em;
+.section .item a:hover::after, .section .item a:focus::after {
+    left: 1em;
+}
+
+.section .item p a::after {
+    display: none;
+}
+
+.section .courses {
+    padding-top: 2em;
+}
+
+.section .courses table {
+    border-spacing: 1em 8px;
+    padding: 1em 0;
+}
+
+.section .courses td {
+    min-width: 8em;
+}
+
+.section .courses tr td:nth-child(even) {
+    font-weight: 100;
+    font-size: 1.2em;
 }
 
 /* RESUME-HOME ############################################################# */
@@ -769,7 +772,6 @@ a.button.red {
     font-family: Consolas, Menlo, monospace;
     text-align: center;
     position: absolute;
-    /* top: calc(100% - 1.25em); */
     top: 1.25em;
     right: 1em;
     width: 3.5em;
@@ -821,7 +823,6 @@ a.button.red {
 /* FOOTER ################################################################## */
 
 #footer {
-    /* background-color: #312f2d; */
     height: 10em;
     text-align: center;
     color: var(--text-light-grey);
