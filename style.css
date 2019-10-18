@@ -587,6 +587,12 @@ a.back-home:hover, a.back-home:focus {
 #data-sci-portfolio .selection li a {
     color: var(--text-light-grey);
     margin-left: 1em;
+    transition: color 0.3s;
+}
+
+#data-sci-portfolio .selection li a:hover,
+#data-sci-portfolio .selection li a:focus {
+    color: var(--body-text-color);
 }
 
 #data-sci-portfolio .section {
