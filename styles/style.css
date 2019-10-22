@@ -248,9 +248,10 @@ hr.short {
 
 #header .main img {
     display: block;
-    width: 80px;
-    margin: auto;
-    padding: 2em;
+    width: 90px;
+    margin: 2em auto;
+
+    /* border-radius: 50%; */
 }
 
 #header .main h1 {
@@ -312,6 +313,21 @@ hr.short {
         top: 2em;
         z-index: 1;
     }
+
+    /* #header .main img {
+        -ms-grid-column: 2;
+        grid-column: 2;
+        -ms-grid-row: 1;
+        grid-row: 1;
+        width: 25vw;
+        max-width: 16em;
+        padding-top: 3em;
+        padding-right: 4em;
+        position: relative;
+        top: 3.5em;
+        left: 3.5em;
+        z-index: 1;
+    } */
 }
 
 #header .main.centered {
@@ -581,104 +597,6 @@ a.back-home:hover, a.back-home:focus {
     text-align: center;
 }
 
-/* PORTFOLIO-HTML ########################################################## */
-
-#data-sci-portfolio .selection {
-    display: -ms-grid;
-    display: grid;
-    -ms-grid-columns: 1fr 1fr;
-    grid-template-columns: 1fr 1fr;
-    padding: 1em;
-}
-
-#data-sci-portfolio .selection p {
-    text-align: right;
-    padding-right: 1em;
-    border-right: 1px solid var(--element-light-grey);
-}
-
-#data-sci-portfolio .selection li a {
-    color: var(--text-light-grey);
-    margin-left: 1em;
-    -webkit-transition: color 0.3s;
-    -o-transition: color 0.3s;
-    transition: color 0.3s;
-}
-
-#data-sci-portfolio .selection li a:hover,
-#data-sci-portfolio .selection li a:focus {
-    color: var(--body-text-color);
-}
-
-#data-sci-portfolio .section {
-    padding: 1em;
-}
-
-#data-sci-portfolio .section .title {
-    font-size: 1.2em;
-    font-weight: bold;
-    color: var(--text-extra-light-grey);
-    border-bottom: 1px solid var(--element-light-grey);
-}
-
-.section .item {
-    position: relative;
-    padding-top: 2em;
-}
-
-.section .item h3 {
-    margin: 0;
-    display: inline-block;
-}
-
-.section .item h4 {
-    font-weight: lighter;
-    margin: 0;
-}
-
-.section .item a:hover, .section .item a:focus {
-    text-decoration: none;
-}
-
-.section .item a::after {
-    content: "\2192";
-    font-family: Consolas, Menlo, monospace;
-    font-size: 1.5em;
-    position: relative;
-    top: -0.1em;
-    left: 0.5em;
-    -webkit-transition: left 0.3s;
-    -o-transition: left 0.3s;
-    transition: left 0.3s;
-}
-
-.section .item a:hover::after, .section .item a:focus::after {
-    left: 1em;
-}
-
-.section .item p a::after {
-    display: none;
-}
-
-.section .courses {
-    padding-top: 2em;
-}
-
-.section .courses table {
-    border-spacing: 1em 8px;
-    padding-bottom: 2em;
-    padding-top: 0.5em;
-}
-
-.section .courses td {
-    min-width: 8em;
-}
-
-.section .courses tr td:nth-child(even) {
-    font-weight: 100;
-    font-size: 1.2em;
-}
-
 /* RESUME-HOME ############################################################# */
 
 #resume {
@@ -859,27 +777,27 @@ a.back-home:hover, a.back-home:focus {
 /* IMAGES ################################################################## */
 
 .img-resume {
-    background-image: url(images/resume-preview.jpg);
+    background-image: url(/images/resume-preview.jpg);
 }
 
 .img-cv {
-    background-image: url(images/cv-preview.png);
+    background-image: url(/images/cv-preview.png);
 }
 
 .img-bikes {
-    background-image: url(images/topo-bike.jpg);
+    background-image: url(/images/topo-bike.jpg);
 }
 
 .img-uc-health-hack {
-    background-image: url(images/uc-health-hack-2018.jpg);
+    background-image: url(/images/uc-health-hack-2018.jpg);
 }
 
 .img-suncave {
-    background-image: url(images/suncave.jpg);
+    background-image: url(/images/suncave.jpg);
 }
 
 .img-wip {
-    background-image: url(images/astro-wip.svg);
+    background-image: url(/images/astro-wip.svg);
 }
 
 /* ANIMATION ############################################################### */
