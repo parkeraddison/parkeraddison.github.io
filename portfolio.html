@@ -5,11 +5,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description"
+        content="A portfolio of most of the cool data science research, jobs, projects, and skills that I've done or have acquired while pursuing Data Science at UC San Diego.">
+    <meta name="keywords"
+        content="Parker Grey Addison, Parker Addison, Data Science, Data Science Portfolio, UCSD, UC San Diego">
+    <meta name="author" content="Parker Grey Addison">
     <title>Data Science Portfolio - Parker Addison</title>
 
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
 
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/portfolio.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/remarkable/2.0.0/remarkable.min.js"></script>
 
 </head>
 
@@ -45,7 +53,7 @@
     </section>
 
 
-    <div class="body-container">
+    <div class="body-container" data-anim="fade">
         <div class="body-content">
 
             <section id="header">
@@ -56,300 +64,19 @@
                 </div>
             </section>
 
-            <section id="data-sci-portfolio">
-
-                <div class="selection underbar-hover">
-                    <p>
-                        Enjoy a nice scroll,
-                        <br>
-                        or jump to a section.
-                    </p>
-                    <ul>
-                        <li><a href="#research">Research</a></li>
-                        <li><a href="#hackathons">Hackathons</a></li>
-                        <li><a href="#communication">Communication</a></li>
-                        <li><a href="#projects">Other Projects</a></li>
-                        <li><a href="#courses">Courses</a></li>
-                    </ul>
-                </div>
-
-                <div id="research" class="section">
-                    <div class="title">Research</div>
-                    <div class="item">
-                        <a href="/ar-noc.html">
-                            <h3>AR-NOC</h3>
-                        </a>
-                        <h4>Qualcomm Institute, National Science Foundation</h4>
-                        <p>
-                            My team is building a hybrid Helpdesk and DevOps chatbot to aid researchers on the Nautilus
-                            HyperCluster. We are currently exploring various clustering techniques for natural language
-                            queries.
-                        </p>
-                        <p>
-                            This massive Kubernetes cluster which supports the Pacific Research Platform allows
-                            researchers to share data and compute resources. They don't all know how to use Kubernetes
-                            or Docker, and it's important to maintain cluster health if something accidentally breaks—so
-                            that's where Kubot comes in to the picture.
-                        </p>
-                        <p>
-                            Another of our main NSF grants is to create an augmented reality network operations center
-                            (AR-NOC) to monitor cluster health and diagnose problems that may arise. I am helping
-                            prototype data input pipelines and automate existing diagnosis pipelines.
-                        </p>
-                    </div>
-                    <div class="item">
-                        <h3>Research Assistant, Bootgraph</h3>
-                        <h4>UC San Diego</h4>
-                        <p>
-                            Working closely with one of my favorite professors, Prof. Aaron Fraenkel, we explored bias
-                            in various network graph sampling schemes.
-                        </p>
-                        <p>
-                            We developed statistical approaches to describe the bias in a degree distribution from a
-                            sampling scheme. We researched new sampling schemes to address this bias, and we implemented
-                            the Snowboot R package in Python.
-                        </p>
-                    </div>
-                    <div class="item">
-                        <h3>HDSI Undergraduate Fellowship</h3>
-                        <h4>Halıcıoğlu Data Science Institute</h4>
-                        <p>
-                            As a team of four undergraduates, we were rewarded with a competitive fellowship to conduct
-                            a self-lead data science research project. In effort to reduce the negative health effects
-                            of food deserts, we developed an accessible tool which generates grocery lists optimized on
-                            both nutrition and cost.
-                        </p>
-                        <p>
-                            We got our hands dirty with various forms of data mining, and turned to pure numerical
-                            optimization as our core algorithm. We looked at Linear Programming, Continuous Quadratic
-                            Programming, and Mixed Integer Non-Linear Programming in order to accomplish our goals.
-                        </p>
-                        <p>
-                            We will be presenting our results in November 2019.
-                        </p>
-                    </div>
-                    <div class="item">
-                        <h3>Sapie Space</h3>
-                        <h4>The Basement startup incubator</h4>
-                        <p>
-                            I worked as a machine learning engineer at a startup founded on campus. We built a product
-                            to match clients with microinfluencers to boost their ROI.
-                        </p>
-                        <p>
-                            Microinfluencers are often location and demographic specific, they fill a particular niche,
-                            and they often don't realize that they are an influencer! From a database of all Instagram,
-                            YouTube, and Twitter personalities, our service would rank their influence over a given
-                            industry and keywords using recommender systems, association rule learning, and other graph
-                            theory techniques.
-                        </p>
-                    </div>
-                </div>
-
-                <div id="hackathons" class="section">
-                    <div class="title">Hackathons</div>
-                    <div class="item">
-                        <h3>Datathon Mentor <small>(Now called DataHacks)</small></h3>
-                        <h4>Data Science Student Society (DS3) @ UC San Diego</h4>
-                        <p>
-                            I had the distinct opportunity to be one of the few mentors at UC San Diego's first-ever
-                            data-centric hackathon.
-                        </p>
-                        <p>
-                            I mentored over 100+ students who were tackling projects on Azure's computer vision
-                            classification models, Google Local business reviews, and Open Data traffic collisions in
-                            San Diego.
-                        </p>
-                    </div>
-                    <div class="item">
-                        <a href="https://devpost.com/software/neural-network-visual-3d-graphical-editor">
-                            <h3><i>Neural Network Visual</i></h3>
-                        </a>
-                        <h4>SD Hacks 2018 @ UC San Diego</h4>
-                        <p>
-                            Education in Machine Learning has experienced incredible growth. To aid the educational
-                            cause, we created an interactive, 3D visual editor for simple neural network models.
-                        </p>
-                    </div>
-                    <div class="item">
-                        <a href="/uc-health-hack.html">
-                            <h3><i>Ouch! That Hurts</i></h3>
-                        </a>
-                        <h4>UC Health Hack 2018 @ UC San Diego</h4>
-                        <p>
-                            How an Amazon Alexa skill can open the door to data-driven medical insights.
-                        </p>
-                        <p>
-                            We created an Amazon Alexa skill named "Ouch, That Hurts!" which allows patients to easily
-                            report symptoms without needing to keep a journal or call the doctor. By making it extremely
-                            easy to report such symptoms, we could collect a plethora of data that could be used to help
-                            predict and diagnose symptoms in the future.
-                        </p>
-                    </div>
-                    <div class="item">
-                        <h3><i>Indeed Job Search City Recommender</i></h3>
-                        <h4>ASA DataFest @ Chapman Univ.</h4>
-                        <p>
-                            We were given an anonymized dataset from <i>indeed.com</i>, and tasked to come up with an
-                            interesting question and create a short business pitch to present to <i>indeed</i> by the
-                            end of the hackathon. After plenty of stress and sleep depravation, we posed a question to
-                            find out what cities have the best prospects for different types of jobs and we created an
-                            algorithm to rank and recommend cities that are well suited for a given job industry.
-                        </p>
-                    </div>
-                </div>
-
-                <div id="communication" class="section">
-                    <div class="title">Communication</div>
-                    <div class="item">
-                        <a href="https://youtu.be/S7srcEu3Lpw">
-                            <h3>Invited Speaker, <i>"What Ignited My Love For Data Science"</i></h3>
-                        </a>
-                        <h4>Ignite Talks UC San Diego</h4>
-                        <p>
-                            Ignite Talks are speedy (5-minute) TED-esque presentations.
-                        </p>
-                        <p>
-                            I outline the purpose of data science and reveal what ignited my interest in observing,
-                            analyzing, and communicating data.
-                        </p>
-                    </div>
-                    <div class="item">
-                        <h3>Instructional Assistant</h3>
-                        <h4>UC San Diego</h4>
-                        <p>
-                            I've tutored for various DSC courses, such as DSC 10, 40B, and 80. I was even placed in
-                            charge of discussion sections (both creating <a
-                                href="https://github.com/ucsd-ets/dsc10-fa18/tree/master/Discussions">the materials</a>
-                            and leading the sessions). <a
-                                href="https://github.com/ucsd-ets/dsc10-fa18/blob/master/Discussions/week09/discussion09-filled.ipynb">
-                                Week 9</a> has some good stuff... then again I think I liked all of the notebooks I
-                            made!
-                        </p>
-                        <p>
-                            Teaching holds a very special place in my heart, and I have no doubt that I will continue to
-                            pursue opportunities to spread knowledge and facilitate those "a-ha" moments!
-                        </p>
-                    </div>
-                </div>
-
-                <div id="projects" class="section">
-                    <div class="title">Other Projects</div>
-                    <div class="item">
-                        <h3><i>Sharing the Road</i></h3>
-                        <h4>A data-driven journey on the bike path to enlightenment</h4>
-                        <p>
-                            I'm writing a blog post detailing some of the interesting results from a <a
-                                href="https://nbviewer.jupyter.org/github/ParkerGreyAddison/Geospatial-Data-Science/blob/master/mp3.ipynb">project
-                                a teammate and I did in our Geospatial Data Science course.</a>
-                        </p>
-                        <p>
-                            Come back again soon when the post is complete!
-                        </p>
-                    </div>
-                </div>
-
-                <div id="courses" class="section">
-                    <div class="title">Relevant Courses</div>
-                    <div class="item">
-                        <h3>B.S. Data Science, Minor Business Management</h3>
-                        <h4>University of California, San Diego</h4>
-                    </div>
-                    <div class="courses">
-                        <h4>Data Science</h4>
-                        <table>
-                            <tr>
-                                <td>COGS 9</td>
-                                <td>Introduction to Data Science</td>
-                            </tr>
-                            <tr>
-                                <td>DSC 10</td>
-                                <td>Principles of Data Science</td>
-                            </tr>
-                            <tr>
-                                <td>DSC 20, 30</td>
-                                <td>Data Structures and Algorithms</td>
-                            </tr>
-                            <tr>
-                                <td>DSC 80</td>
-                                <td>Practice and Application of Data Science</td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <hr>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>CSE 151</td>
-                                <td>Intro to AI: Statistical Approaches</td>
-                            </tr>
-                            <tr>
-                                <td>CSE 158</td>
-                                <td>Recommender Systems and Web Mining</td>
-                            </tr>
-                            <tr>
-                                <td>DSC 170</td>
-                                <td>Spatial Data Science and its Applications</td>
-                            </tr>
-                            <tr>
-                                <td>ECE 188</td>
-                                <td>Machine Learning for the Arts</td>
-                            </tr>
-
-                        </table>
-                        <h4>Mathematics</h4>
-                        <table>
-                            <tr>
-                                <td>DSC 40A-B</td>
-                                <td>Theoretical Foundataions of Data Science I, II</td>
-                            </tr>
-                            <tr>
-                                <td>MATH 18, 31AH</td>
-                                <td>Linear Algebra</td>
-                            </tr>
-                            <tr>
-                                <td>MATH 20C</td>
-                                <td>Calculus and Analytic Geometry</td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <hr>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>MATH 180A</td>
-                                <td>Introduction to Probability</td>
-                            </tr>
-                            <tr>
-                                <td>MATH 181A-B</td>
-                                <td>Mathematical Statistics I, II</td>
-                            </tr>
-                        </table>
-                        <table>
-                            <h4>Management</h4>
-                            <tr>
-                                <td>MGT 18</td>
-                                <td>Managing Diverse Teams</td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <hr>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>MGT 103</td>
-                                <td>Product Marketing and Management</td>
-                            </tr>
-                            <tr>
-                                <td>MGT 119</td>
-                                <td>Data Analytics for Event Management</td>
-                            </tr>
-                        </table>
-                    </div>
-                </div>
-
+            <section id="table-of-contents" class="underbar-hover">
+                <p>
+                    Enjoy a nice scroll,
+                    <br>
+                    or jump to a section.
+                </p>
+                <ul>
+                </ul>
             </section>
 
+            <section id="md">
         </div>
+
     </div>
 
 
@@ -363,5 +90,7 @@
 
 
 </body>
+
+<script src="scripts/portfolio.js"></script>
 
 </html>
