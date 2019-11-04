@@ -10,12 +10,13 @@
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
 
     <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/content-page.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/remarkable/2.0.0/remarkable.min.js"></script>
 
 </head>
 
 <body class="uc-health-hack-html">
-
-    <div class="wip-banner"></div>
 
     <section id="nav" data-anim="fade">
         <nav class="nav underbar-hover">
@@ -50,49 +51,8 @@
     <div class="body-container">
         <div class="body-content">
 
-            <section id="header">
-                <div class="main centered">
-                    <div class="title" data-anim="fade-right">
-                        <h1> > How does your head feel?</h1>
-                        <h2>
-                            How an Amazon Alexa skill can open the door to data-driven medical insights
-                        </h2>
-                    </div>
-                </div>
-            </section>
-
-            <div id="page-content">
-                <div class="main">
-                    <p>
-                        The weekend before SD Hacks, I participated in the 2018 <a
-                            href="https://healthhack.uchealth.edu/">UC Health Hack</a>. I worked alongside a fellow
-                        classmate, as well as a pediatrician from Harvard, a database engineer, and a software solutions
-                        architect. Working with this team was a great example of the true power of team diversity.
-                    </p>
-                    <p>
-                        Consulting with the pediatrician, we discovered that patients not reporting their symptoms is a
-                        <i>huge</i> problem in the medical field. While a patient may complain to their doctor about a
-                        pain in their heart or about a cough that wont subside, other more &lsquo;minor&rsquo; symptoms
-                        such as a headache or soreness end up going largely unreported.
-                    </p>
-                    <p>
-                        We created an Amazon Alexa skill named "Ouch, That Hurts!" which allows patients to easily
-                        report symptoms without needing to keep a journal or call the doctor. By making it extremely
-                        easy to report such symptoms, we could collect a plethora of data that could be used to help
-                        predict and diagnose symptoms in the future.
-                    </p>
-                    <p>
-                        I got my hands dirty with AWS Lambda and DynamoDB in order to establish persistence with a
-                        scalable database.
-                    </p>
-                    <div class="image-container">
-                        <div class="image"></div>
-                        <div class="caption">
-                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptates, nulla!
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <section id="md"></section>
+            
         </div>
     </div>
 
@@ -107,5 +67,10 @@
 
 
 </body>
+
+<script src="/scripts/content-page.js"></script>
+<script>
+    loadPage("uc-health-hack");
+</script>
 
 </html>
