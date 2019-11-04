@@ -1,6 +1,6 @@
 :root {
     --body-text-color: #333;
-    --page-back-color: #f3f3f3;
+    --page-back-color: #f6f6f6;
     --link-color: #007bff;
     --accent-purple: #8528ff;
     /* --accent-purple: #9560ff; */
@@ -11,6 +11,7 @@
     --text-light-grey: #888;
     --text-extra-light-grey: #a8a8a8;
     --element-light-grey: #ccc;
+    --near-white: #fafafa;
 }
 
 /* For phones, tablets, etc */
@@ -24,7 +25,7 @@ html, body {
 
 html {
     font-size: 12px;
-    font-size: calc(12px + 0.5vw);
+    font-size: calc(12px + 0.4vw);
     font-family: "Open Sans", "Helvetica Neue", Arial, sans-serif;
     margin: 0;
     overflow-x: hidden;
@@ -45,7 +46,7 @@ body {
 
 @media(min-width: 768px) {
     html {
-        font-size: 17px;
+        font-size: 16px;
         margin: 0;
     }
     .body-container {
@@ -335,7 +336,7 @@ hr.short {
     text-align: center;
 }
 
-/* ## CARD and PAGE CONTENTS ############################################### */
+/* ## CARD ############################################### */
 
 .card {
     position: relative;
@@ -347,61 +348,6 @@ hr.short {
     border-image: linear-gradient( -45deg, var(--element-light-grey), rgba(0, 0, 0, 0) 80%) 1 1;
     /* border-left-width: 0; */
     font-size: 1em;
-}
-
-#page-content .main {
-    padding: 1em;
-}
-
-#page-content .main p:first-of-type::first-letter {
-    float: left;
-    font-family: Georgia;
-    font-size: 3.35em;
-    padding-top: 0.2em;
-    padding-right: 0.1em;
-}
-
-#page-content .main p {
-    text-align: justify;
-}
-
-#page-content .main .image-container {
-    position: relative;
-    margin: 2em 0;
-}
-
-#page-content .main .image {
-    position: relative;
-    width: 80%;
-    padding-bottom: calc(0.666 * 80%);
-    background-color: var(--element-light-grey);
-    background-size: cover;
-    margin: auto;
-}
-
-#page-content .main .caption {
-    position: relative;
-    width: 66%;
-    left: calc(34% / 2);
-    color: var(--text-light-grey);
-    font-family: Consolas, Menlo, monospace;
-    font-size: 0.9em;
-}
-
-@media (min-width: 768px) {
-    #page-content .main p {
-        width: 66%;
-    }
-    #page-content .main p.centered {
-        width: 66%;
-        position: relative;
-        left: calc(34% / 2);
-        text-align: center;
-    }
-    #page-content .main .image {
-        width: 66%;
-        padding-bottom: calc(0.666 * 66%);
-    }
 }
 
 /* ## BUTTONS ############################################################## */
@@ -521,22 +467,36 @@ a.back-home:hover, a.back-home:focus {
     gap: 2em;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 600px) {
     #portfolio {
-        -ms-grid-columns: 1fr 2em 1fr;
-        grid-template-columns: 1fr 1fr;
-        gap: 2em;
+        /* -ms-grid-columns: 1fr 2em 1fr; */
+        /* grid-template-columns: 1fr 1fr; */
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1024px) {
+    #portfolio {
+        grid-template-columns: repeat(3, 1fr);
     }
 }
 
 #portfolio .featured-item {
     min-width: 0;
     position: relative;
-    border-width: 1px;
+    /* border-width: 1px;
     border-style: solid;
     -o-border-image: -o-linear-gradient( 135deg, var(--element-light-grey), rgba(0, 0, 0, 0) 80%) 1 1;
-    border-image: linear-gradient( -45deg, var(--element-light-grey), rgba(0, 0, 0, 0) 80%) 1 1;
+    border-image: linear-gradient( -45deg, var(--element-light-grey), rgba(0, 0, 0, 0) 80%) 1 1; */
     padding: 1em;
+    background-color: var(--near-white);
+    -webkit-box-shadow: 0 0 3px -2.5px #000;
+            box-shadow: 0 0 3px -2.5px #000;
+    border-bottom: 3px solid;
+}
+
+#portfolio .featured-item a.button {
+    background-color: var(--near-white);
 }
 
 #portfolio .item-wrapper {
@@ -549,6 +509,7 @@ a.back-home:hover, a.back-home:focus {
     white-space: nowrap;
     -o-text-overflow: ellipsis;
     text-overflow: ellipsis;
+    font-size: 1.2em
 }
 
 #portfolio .featured-item h4 {

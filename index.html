@@ -54,8 +54,8 @@
 
             <section id="header">
                 <div class="main">
-                    <img src="images/astro-sitter.svg" alt="Icons made by Smashicons from www.flaticon.com"
-                        data-anim="fade-left" data-anim-duration="1000" data-anim-easing="ease-in-out-back">
+                    <!-- <img src="images/astro-sitter.svg" alt="Icons made by Smashicons from www.flaticon.com"
+                        data-anim="fade-left" data-anim-duration="1000" data-anim-easing="ease-in-out-back"> -->
                     <!-- <img src="images/Photo.jpg" alt="" srcset=""> -->
                     <div class="title" data-anim="fade-right">
                         <h1>Hi there, <span class="typed">I'm Parker Addison</span></h1>
@@ -216,27 +216,37 @@
         <a href="/index.html">&copy; 2019 Parker Grey Addison</a> |
         <a href="https://github.com/parkergreyaddison/ParkerGreyAddison.GitHub.io"><code>&lt;/&gt;</code> on
             GitHub</a>
-        <div>
+        <!-- <div>
             Astronaut graphic made by <a href="https://www.flaticon.com/authors/smashicons">Smashicons from
                 www.flaticon.com</a>
-        </div>
+        </div> -->
     </section>
 
 </body>
 
 <script>
 
-    let colors = ["#ff6961", "#f0a30a", "#06d6a0", "#00b3e5", "#9560ff"];
-    let buttons = [...document.querySelectorAll("a.button")]
-        .filter(e => !(e.classList.contains("blue") | e.classList.contains("red")));
+    function colorize() {
+        let colors = ["#ff6961", "#f0a30a", "#06d6a0", "#00b3e5", "#9560ff"];
 
-    for (let i = 0; i < buttons.length; i++) {
-        button = buttons[i];
-        color = colors[i % colors.length];
 
-        button.style.borderColor = color;
-        button.style.color = color;
+        let items = document.querySelectorAll("#portfolio .featured-item");
+        let buttons = [...document.querySelectorAll("a.button")]
+            .filter(e => !(e.classList.contains("blue") | e.classList.contains("red")));
+
+        for (let i = 0; i < items.length; i++) {
+            item = items[i];
+            button = buttons[i]
+            color = colors[i % colors.length];
+
+            
+            item.style.borderColor = color;
+            button.style.borderColor = color;
+            button.style.color = color;
+        }
     }
+
+    colorize();
 
     AOS.init({
         duration: 800,
