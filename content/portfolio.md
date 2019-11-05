@@ -6,6 +6,13 @@
 
 I (ab)used OpenAI's GPT-2 model—the one that's "too dangerous to release"—to make an art piece which doubles the word count of my high school essay by injecting machine-generated fluff text.
 
+## This website.
+### It might not feature the most data, but I think it's cool
+
+Most pages on my website (including this one) are dynamically populated from Markdown files!
+
+[The code can be found on GitHub!](https://github.com/ParkerGreyAddison/ParkerGreyAddison.github.io)
+
 ## Sharing the Road
 ### A data-driven journey on the bike path to enlightenment
 
@@ -75,7 +82,7 @@ Ignite Talks are speedy (5-minute) TED-esque presentations.
 
 I outline the purpose of data science and reveal what ignited my interest in observing, analyzing, and communicating data.
 
-## Datathon Mentor (Now called DataHacks)
+## Datathon Mentor <small>(Now called DataHacks)</small>
 ### Data Science Student Society (DS3) @ UC San Diego
 
 I had the distinct opportunity to be one of the few mentors at UC San Diego's first-ever data-centric hackathon.
@@ -89,7 +96,21 @@ I've tutored for various DSC courses, such as DSC 10, 40B, and 80. I was even pl
 
 Teaching holds a very special place in my heart, and I have no doubt that I will continue to pursue opportunities to spread knowledge and facilitate those "a-ha" moments!
 
-# Relevant Courses {#Courses}
+# Involvement / Relevant Courses {#(Extra)curriculars}
+
+## Student Representative, Course Evaluation Support
+### Halıcıoğlu Data Science Institute
+
+Since I joined the program, I have been advocating for a student representative position to help feedback reach the right ears.  Having seen the major through the eyes of a student as as a tutor, and being able to empathize with both students after me and professors above me, I think I have a unique perspective that will allow me to come up with beneficial changes to the current curriculum.
+
+I want to help make this program the best data science program in the world, and I'm so extraordinarily happy that this opportunity finally exists!
+
+## Committee Member
+### Data Science Student Society (DS3)
+
+I am part of the committee organizing an upcoming conference to address the purpose and power of data science, and what UC San Diego's department is doing to advance the field.  We will be showcasing faculty and student research, projects from industry connections, and we will be inviting two keynote speakers to present broadly on the essence of data science.
+
+I am heavily involved with the management of this committee, and am currently in the process of organizing our timeline for contacting presenters.
 
 ## B.S. Data Science, Minor Business Management
 ### University of California, San Diego

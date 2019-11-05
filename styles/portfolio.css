@@ -74,6 +74,10 @@
     left: 1em;
 }
 
+#md small {
+    color: var(--text-extra-light-grey);
+}
+
 #md table {
     border-spacing: 1em 8px;
     padding-bottom: 2em;
