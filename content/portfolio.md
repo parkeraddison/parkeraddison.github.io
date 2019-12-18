@@ -98,7 +98,7 @@ Teaching holds a very special place in my heart, and I have no doubt that I will
 
 # Involvement / Relevant Courses {#(Extra)curriculars}
 
-## Student Representative, Course Evaluation Support
+## Student Representative, Founding Member
 ### Halıcıoğlu Data Science Institute
 
 Since I joined the program, I have been advocating for a student representative position to help feedback reach the right ears.  Having seen the major through the eyes of a student as as a tutor, and being able to empathize with both students after me and professors above me, I think I have a unique perspective that will allow me to come up with beneficial changes to the current curriculum.
@@ -114,7 +114,7 @@ I am heavily involved with the management of this committee, and am currently in
 
 ## B.S. Data Science, Minor Business Management
 ### University of California, San Diego
-### Technical GPA: 3.94
+### Technical GPA: 3.96
 
 | Data Science ||
 | --- | --- |
@@ -122,6 +122,7 @@ I am heavily involved with the management of this committee, and am currently in
 | DSC 10 | Principles of Data Science |
 | DSC 20, 30 | Data Structures and Algorithms |
 | DSC 80 | Practice and Application of Data Science |
+| DSC 100 | Introduction to Data Management |
 | <hr> |
 | CSE 151 | Intro to AI: Statistical Approaches |
 | CSE 158 | Recommender Systems and Web Mining |
@@ -143,3 +144,4 @@ I am heavily involved with the management of this committee, and am currently in
 | <hr> |
 | MGT 103 | Product Marketing and Management |
 | MGT 119 | Data Analytics for Event Management |
+| MGT 166 | Business Ethics and Corporate Social Responsibility |
