@@ -5,7 +5,7 @@ const md = new remarkable.Remarkable({
 
 let bodyMd = document.getElementById("md");
 
-cv = fetch("https://raw.githubusercontent.com/ParkerGreyAddison/resume/master/cv.md")
+cv = fetch("https://raw.githubusercontent.com/parkeraddison/resume/master/cv.md")
 .then(resp => resp.text())
 .then(data => {
     bodyMd.innerHTML = md.render(data);
