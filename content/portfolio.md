@@ -11,12 +11,12 @@ I (ab)used OpenAI's GPT-2 model—the one that's "too dangerous to release"—to
 
 Most pages on my website (including this one) are dynamically populated from Markdown files!
 
-[The code can be found on GitHub!](https://github.com/ParkerGreyAddison/ParkerGreyAddison.github.io)
+[The code can be found on GitHub!](https://github.com/parkeraddison/parkeraddison.github.io)
 
 ## Sharing the Road
 ### A data-driven journey on the bike path to enlightenment
 
-I'm writing a blog post detailing some of the interesting results from [a project a teammate and I did in our Geospatial Data Science course](https://nbviewer.jupyter.org/github/ParkerGreyAddison/Geospatial-Data-Science/blob/master/mp3.ipynb).
+I'm writing a blog post detailing some of the interesting results from [a project a teammate and I did in our Geospatial Data Science course](https://nbviewer.jupyter.org/github/parkeraddison/Geospatial-Data-Science/blob/master/mp3.ipynb).
 
 Come back again soon when the post is complete!
 
