@@ -1,0 +1,10 @@
+:root {
+    --page-background: #191411;
+    --page-background-alt: #150f0e;
+    --text-color: #f3eeca;
+    --text-color-alt: #cdcab4;
+    --shadow-color: rgba(180, 180, 180, 0.3);
+    --shadow-color: rgba(0, 0, 0, 1);
+    --narrow-light-gray: #515151;
+    --element-light-gray: #515151;
+}

@@ -1,0 +1,35 @@
+<div class="card-container post-container">
+    {{ range (.posts.ByParam "date").Reverse }}
+    <div class="card post-card">
+
+        <p class="date">{{ .Params.Date.Format "Jan 2, 2006" }}</p>
+        <h2 class="title"><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
+        {{ if or (.Params.Image) (.Params.Video) }}
+        <figure class="image">
+            {{ if .Params.Video }}
+            <iframe src="{{ .Params.Video }}" frameborder="0" allowfullscreen></iframe>
+            {{ else }}
+            <img src="{{ replace .Params.Image "./" .Site.BaseURL }}" alt="">
+            {{ end }}
+        </figure>
+        {{ end }}
+        <p class="description">{{ .Params.Description | .RenderString }}</p>
+        {{ partial "tags.html" . }}
+
+    </div>
+    {{ end }}
+
+    {{ if .ctx.IsHome }}
+    <a class="see-more card" href="{{ .ctx.Site.BaseURL }}blog">
+        Read on
+        <!-- &rarr; -->
+        <i class="fas fa-arrow-right"></i>
+    </a>
+    {{ else if (eq .ctx.Section "tags" )}}
+    <a class="see-more card" href="{{ .ctx.Site.BaseURL }}blog">
+        See all
+        <!-- &rarr; -->
+        <i class="fas fa-arrow-right"></i>
+    </a>
+    {{ end }}
+</div>

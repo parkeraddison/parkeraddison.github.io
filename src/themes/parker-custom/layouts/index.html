@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+{{ partial "head.html" . }}
+
+
+{{ partial "header.html" . }}
+
+<main>
+
+    <div class="intro">
+        <div class="image">
+            <!-- <img src="./parker-addison.jpg" alt=""> -->
+            <img src="./parker-addison-tree.jpg" alt="">
+        </div>
+        <div class="title">Hi there, I'm Parker Addison
+            <div class="subtitle">
+                Data science is my passion
+            </div>
+        </div>
+    </div>
+
+    <h1 class="section-title">Recent Posts</h1>
+
+    {{ with $posts := where .Site.RegularPages "Section" "blog" }}
+    {{ partial "post-cards.html" (dict "posts" $posts "ctx" $) }}
+    {{ end }}
+
+    <h1 class="section-title">Recent Projects</h1>
+
+    {{ with $projects := where .Site.RegularPages "Section" "projects" }}
+    {{ partial "project-cards.html" (dict "projects" $projects "ctx" $) }}
+    {{ end }}
+
+    <h1 class="section-title">All Sections</h1>
+    {{ range sort .Data.Pages.ByTitle }}
+    <h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
+    {{ end }}
+
+</main>
+
+{{ partial "footer.html" . }}
+
+</html>

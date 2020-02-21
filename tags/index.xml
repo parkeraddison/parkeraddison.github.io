@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tags on Parker Addison</title>
+    <link>https://parkeraddison.com/tags/</link>
+    <description>Recent content in Tags on Parker Addison</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 20 Feb 2020 20:47:36 -0800</lastBuildDate>
+    
+	<atom:link href="https://parkeraddison.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>data-acquisition</title>
+      <link>https://parkeraddison.com/tags/data-acquisition/</link>
+      <pubDate>Thu, 20 Feb 2020 20:47:36 -0800</pubDate>
+      
+      <guid>https://parkeraddison.com/tags/data-acquisition/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>hackathon</title>
+      <link>https://parkeraddison.com/tags/hackathon/</link>
+      <pubDate>Thu, 20 Feb 2020 20:47:36 -0800</pubDate>
+      
+      <guid>https://parkeraddison.com/tags/hackathon/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>speculative</title>
+      <link>https://parkeraddison.com/tags/speculative/</link>
+      <pubDate>Thu, 20 Feb 2020 20:47:36 -0800</pubDate>
+      
+      <guid>https://parkeraddison.com/tags/speculative/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>talk</title>
+      <link>https://parkeraddison.com/tags/talk/</link>
+      <pubDate>Fri, 31 May 2019 00:00:00 -0800</pubDate>
+      
+      <guid>https://parkeraddison.com/tags/talk/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>video</title>
+      <link>https://parkeraddison.com/tags/video/</link>
+      <pubDate>Fri, 31 May 2019 00:00:00 -0800</pubDate>
+      
+      <guid>https://parkeraddison.com/tags/video/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
