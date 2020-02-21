@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+{{ partial "head.html" . }}
+{{ partial "header.html" . }}
+<main class="portfolio">
+
+    {{/* .TableOfContents */}}
+
+    <h1 class="title">{{ .Title }}</h1>
+
+    {{ .Content }}
+
+</main>
+{{ partial "footer.html" . }}

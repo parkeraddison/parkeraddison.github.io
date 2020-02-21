@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Parker Addison</title>
+    <link>https://parkeraddison.com/</link>
+    <description>Recent content on Parker Addison</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 20 Feb 2020 20:47:36 -0800</lastBuildDate>
+    
+	<atom:link href="https://parkeraddison.com/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>How an Amazon Alexa skill can open the door to data-driven medical insights</title>
+      <link>https://parkeraddison.com/blog/alexa-medical-insight/</link>
+      <pubDate>Thu, 20 Feb 2020 20:47:36 -0800</pubDate>
+      
+      <guid>https://parkeraddison.com/blog/alexa-medical-insight/</guid>
+      <description>There are a huge number of &amp;ldquo;minor symptoms&amp;rdquo; in the world that go largely unreported. Sore throats, sniffles, dull pains, chest pressures, headaches&amp;hellip; the list goes on. These symptoms are generally not going to prompt a patient to call up their doctor&#39;s office. Nor is the patient likely to remember them at all once their next appointment finally comes around.
+Doctors wish they could change this. We&#39;ll explore how we can change this, and examine the effects of widespread symptom reporting from a data science perspective.</description>
+    </item>
+    
+    <item>
+      <title>More</title>
+      <link>https://parkeraddison.com/more/</link>
+      <pubDate>Fri, 07 Feb 2020 14:52:20 -0800</pubDate>
+      
+      <guid>https://parkeraddison.com/more/</guid>
+      <description>Resume Data Science Portfolio / Curriculum Vitae </description>
+    </item>
+    
+    <item>
+      <title>This website.</title>
+      <link>https://parkeraddison.com/projects/this-website/</link>
+      <pubDate>Fri, 07 Feb 2020 12:17:54 -0800</pubDate>
+      
+      <guid>https://parkeraddison.com/projects/this-website/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Indeed Job Search City Recommender</title>
+      <link>https://parkeraddison.com/projects/indeed-city-recommender/</link>
+      <pubDate>Fri, 07 Feb 2020 12:10:49 -0800</pubDate>
+      
+      <guid>https://parkeraddison.com/projects/indeed-city-recommender/</guid>
+      <description>My team represented UCSD at the 2018 ASA DataFest, hosted at Chapman University.</description>
+    </item>
+    
+    <item>
+      <title>The Verbosified Works of A.I. Space Rovers</title>
+      <link>https://parkeraddison.com/projects/verbosified-space-rovers/</link>
+      <pubDate>Fri, 07 Feb 2020 12:00:34 -0800</pubDate>
+      
+      <guid>https://parkeraddison.com/projects/verbosified-space-rovers/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Neural Network Visual</title>
+      <link>https://parkeraddison.com/projects/neural-network-visual/</link>
+      <pubDate>Fri, 07 Feb 2020 11:58:37 -0800</pubDate>
+      
+      <guid>https://parkeraddison.com/projects/neural-network-visual/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>What Ignited My Love For Data Science</title>
+      <link>https://parkeraddison.com/blog/what-ignited-my-love-for-data-science/</link>
+      <pubDate>Fri, 31 May 2019 00:00:00 -0800</pubDate>
+      
+      <guid>https://parkeraddison.com/blog/what-ignited-my-love-for-data-science/</guid>
+      <description>Starting by outlining the purpose of data science in today&#39;s world, this brief talk by Parker Addison sheds light into what ignited an interest in observing, analyzing, and communicating data.
+This was scheduled as the first talk in a series of Ignite Talks with a theme of discovering and pursuing career paths. Ignite Talks are like super-fast TED talks—a speedy style of presentation in which slides advance automatically every 15 seconds, resulting in a 5-minute total run time.</description>
+    </item>
+    
+  </channel>
+</rss>

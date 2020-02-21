@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html>
+{{ partial "head.html" . }}
+
+{{ partial "header.html" . }}
+<main>
+    <h1 class="section-title">Blog posts</h1>
+    {{ partial "post-cards.html" (dict "posts" .Pages "ctx" $) }}
+</main>
+{{ partial "footer.html" . }}
+
+</html>

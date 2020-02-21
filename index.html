@@ -1,263 +1,292 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
+	<meta name="generator" content="Hugo 0.62.2" />
+    <title>Parker Addison</title>
+
+    
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta name="description"
-        content="I am a student studying Data Science and trying to make the world a better place.  This website contians my data science portfolio as well as some other cool links you may want to check out.">
-    <meta name="keywords" content="Parker Grey Addison, Parker Addison, Data Science, Data Science Portfolio, UCSD, UC San Diego">
-    <meta name="author" content="Parker Grey Addison">
-    <title>Hi, I'm Parker Addison</title>
 
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans:300,400,600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://parkeraddison.com/css/style.css">
+    <link id="darkstyle" rel="stylesheet" href="null">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0/css/fontawesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0/css/brands.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0/css/solid.min.css">
 
-    <link rel="stylesheet" href="styles/style.css">
+    <script>
+        const darkstyle = document.getElementById("darkstyle");
+        const darkcss = "https:\/\/parkeraddison.com\/css/darkmode.css";
 
-    <link href="/styles/aos.css" rel="stylesheet">
-    <script src="/scripts/aos.js"></script>
+        function toggleDarkmode() {
+            darkstyle.href = (darkstyle.href == darkcss) ? null : darkcss;
+        }
+    </script>
 </head>
 
+
 <body>
-    <section id="nav" data-anim="fade">
-        <nav class="nav underbar-hover">
-            <div class="nav-left">
+
+    <div class="main-wrapper">
+
+        <header>
+            <div class="title">
+                <a href="https://parkeraddison.com/">Addison</a>
+            </div>
+            <nav>
                 <ul>
                     <li>
-                        <a href="/about.html">BIO</a>
+                        <a class="hover-bar" href="https://parkeraddison.com/blog">Blog</a>
                     </li>
                     <li>
-                        <a href="/portfolio.html">PORTFOLIO</a>
+                        <a class="hover-bar" href="https://parkeraddison.com/projects">Projects</a class="hover-bar">
                     </li>
                     <li>
-                        <a href="/resume.html">RESUME</a>
+                        <a class="hover-bar" href="https://parkeraddison.com/more">More</a class="hover-bar">
                     </li>
                 </ul>
+            </nav>
+        </header>
+
+<main>
+
+    <div class="intro">
+        <div class="image">
+            
+            <img src="./parker-addison-tree.jpg" alt="">
+        </div>
+        <div class="title">Hi there, I'm Parker Addison
+            <div class="subtitle">
+                Data science is my passion
             </div>
-
-            <div class="nav-right">
-                <ul>
-                    <li>
-                        <a href="https://github.com/parkeraddison">GITHUB</a>
-                    </li>
-                    <li>
-                        <a href="https://linkedin.com/in/parkeraddison">LINKEDIN</a>
-                    </li>
-                </ul>
-            </div>
-        </nav>
-    </section>
-
-    <div class="body-container">
-        <div class="body-content">
-
-            <section id="header">
-                <div class="main">
-                    <!-- <img src="images/astro-sitter.svg" alt="Icons made by Smashicons from www.flaticon.com"
-                        data-anim="fade-left" data-anim-duration="1000" data-anim-easing="ease-in-out-back"> -->
-                    <!-- <img src="images/Photo.jpg" alt="" srcset=""> -->
-                    <div class="title" data-anim="fade-right">
-                        <h1>Hi there, <span class="typed">I'm Parker Addison</span></h1>
-                        <h3>I am a data scientist who loves rigorous analysis and effective
-                            communication... and I am very glad you came by!</h3>
-                    </div>
-                </div>
-                <!-- <div class="subtitle">
-            <p>
-                You can view my UC San Diego homepage at <a
-                    href="acsweb.ucsd.edu/~pgaddiso">acsweb.ucsd.edu/~pgaddiso</a>
-            </p>
-        </div> -->
-            </section>
-
-            <section id="bio" class="card" data-anim="slide-right">
-                <div class="text">
-                    <p>
-                        I study, tutor, and work in the field of Data Science at the University of California, San
-                        Diego. But, beyond school and work, the field still has deep ties to my personal ambitions.
-                    </p>
-                    <p>
-                        People have asked me what I want to accomplish in my life, and I've told them that I want to
-                        help people understand the world. That's not entirely true&hellip;
-                    </p>
-                </div>
-                <a href="/about.html" class="button blue">
-                    Find out more about me
-                </a>
-            </section>
-
-            <div class="divider"></div>
-
-            <section id="portfolio" data-aos="slide-up">
-                <div class="featured-item">
-                    <div class="item-wrapper">
-                        <h3>Hyperclusters, Chatbots, AR-NOCs, oh my!</h3>
-                        <h4>Qualcomm Institute, NSF REU</h4>
-                        <div class="featured-image img-suncave"></div>
-                        <div class="description">
-                            <p>
-                                Hyperclusters, Kubernetes-explaining bots, AR command centers, oh my!
-                            </p>
-                            <p>
-                                Our teams are tackling problems that bring the future to our doorstep.
-                            </p>
-                        </div>
-                        <a href="/ar-noc.html" class="button">Experience the future</a>
-                    </div>
-                </div>
-                <div class="featured-item">
-                    <div class="item-wrapper">
-                        <h3>Invited Speaker - My Love for Data Science
-                        </h3>
-                        <h4>Ignite Talks UC San Diego 2019</h4>
-                        <div class="featured-image">
-                            <iframe src="https://www.youtube.com/embed/S7srcEu3Lpw" frameborder='0' allowfullscreen
-                                class="featured-video"></iframe>
-                        </div>
-                        <div class="description">
-                            <p>
-                                Ignite Talks are speedy (5-minute) TED-esque presentations.
-                            </p>
-                            <p>
-                                I outline the purpose of data science and reveal what ignited my interest in
-                                observing, analyzing, and communicating data.
-                            </p>
-                        </div>
-                        <a href="https://youtu.be/S7srcEu3Lpw" class="button">Check out the talk</a>
-                    </div>
-                </div>
-                <div class="featured-item">
-                    <div class="item-wrapper">
-                        <h3>Neural Network Visual</h3>
-                        <h4>SD Hacks 2018</h4>
-                        <div class="featured-image">
-                            <iframe src="https://www.youtube.com/embed/5Cw0u_wDvik" frameborder="0" allowfullscreen
-                                class="featured-video"></iframe>
-                        </div>
-                        <div class="description">
-                            <p>
-                                Education in Machine Learning has experienced incredible growth. To
-                                aid the educational cause, we created an interactive, 3D visual editor for simple
-                                neural network models.
-                            </p>
-                        </div>
-                        <a href="https://devpost.com/software/neural-network-visual-3d-graphical-editor"
-                            class="button">See the demo</a>
-                    </div>
-                </div>
-                <div class="featured-item">
-                    <div class="item-wrapper">
-                        <h3>A Journey on the Bike Path to Enlightenment</h3>
-                        <h4>DSC 170: Spatial Data Science</h4>
-                        <div class="featured-image img-bikes"></div>
-                        <div class="description">
-                            <p>
-                                Placeholder Lorem ipsum dolor sit, amet consectetur adipisicing elit. Praesentium
-                                sunt
-                                exercitationem quam vero officiis ducimus.
-                            </p>
-                        </div>
-                        <a href="/sharing-the-road.html" class="button">Read the blog</a>
-                    </div>
-                </div>
-                <div class="featured-item">
-                    <div class="item-wrapper">
-                        <h3>Ouch! That Hurts</h3>
-                        <h4>UC Health Hack 2018</h4>
-                        <div class="featured-image img-uc-health-hack"></div>
-                        <div class="description">
-                            <p>
-                                How an Amazon Alexa skill can open the door to data-driven medical insights.
-                            </p>
-                            <p>
-                                I worked with a diverse team at a health-oriented hackathon to tackle a major problem in
-                                the medical field.
-                            </p>
-                        </div>
-                        <a href="/uc-health-hack.html" class="button">Discover our idea</a>
-                    </div>
-                </div>
-                <div class="see-more">
-                    <p>
-                        There's more, I promise.
-                    </p>
-                    <p>
-                        Go ahead, you can read on&hellip;
-                    </p>
-                    <a href="/portfolio.html" class="button blue swipe-hover">Learn more</a>
-                </div>
-
-            </section>
-
-
-            <div class="divider"></div>
-            <div class="divider"></div>
-
-            <section id="resume" data-aos="slide-left">
-                <a href="/resume.html">
-                    <div class="paper-preview img-resume paper-fold">
-                    </div>
-                </a>
-                <div class="text">
-                    <p>
-                        If you've gotten this far, you may as well check out my resume!
-                    </p>
-                    <a href="/resume.html" class="button red swipe-hover">Look at me</a>
-                </div>
-            </section>
-
-            <div class="divider"></div>
-
         </div>
     </div>
 
-    <section id="footer">
-        <a href="/index.html">&copy; 2019 Parker Grey Addison</a> |
-        <a href="https://github.com/parkeraddison/parkeraddison.github.io"><code>&lt;/&gt;</code> on
-            GitHub</a>
-        <!-- <div>
-            Astronaut graphic made by <a href="https://www.flaticon.com/authors/smashicons">Smashicons from
-                www.flaticon.com</a>
-        </div> -->
-    </section>
+    <h1 class="section-title">Recent Posts</h1>
+
+    
+    <div class="card-container post-container">
+    
+    <div class="card post-card">
+
+        <p class="date">Feb 20, 2020</p>
+        <h2 class="title"><a href="https://parkeraddison.com/blog/alexa-medical-insight/">How an Amazon Alexa skill can open the door to data-driven medical insights</a></h2>
+        
+        <p class="description">What incredible medical insights are just waiting to be found if we can unlock new data streams?</p>
+        
+
+
+<ul class="tags-list">
+    
+    
+    <li class="tag"><a href="https://parkeraddison.com/tags/speculative/">speculative</a></li>
+    
+    
+    
+    <li class="tag"><a href="https://parkeraddison.com/tags/hackathon/">hackathon</a></li>
+    
+    
+    
+    <li class="tag"><a href="https://parkeraddison.com/tags/data-acquisition/">data-acquisition</a></li>
+    
+    
+</ul>
+
+
+    </div>
+    
+    <div class="card post-card">
+
+        <p class="date">May 31, 2019</p>
+        <h2 class="title"><a href="https://parkeraddison.com/blog/what-ignited-my-love-for-data-science/">What Ignited My Love For Data Science</a></h2>
+        
+        <figure class="image">
+            
+            <iframe src="https://www.youtube.com/embed/S7srcEu3Lpw" frameborder="0" allowfullscreen></iframe>
+            
+        </figure>
+        
+        <p class="description">Ignite Talks are speedy (5-minute) TED-esque presentations.
+I outline the purpose of data science and reveal what ignited my interest in observing, analyzing, and communicating data.</p>
+        
+
+
+<ul class="tags-list">
+    
+    
+    <li class="tag"><a href="https://parkeraddison.com/tags/talk/">talk</a></li>
+    
+    
+    
+    <li class="tag"><a href="https://parkeraddison.com/tags/video/">video</a></li>
+    
+    
+</ul>
+
+
+    </div>
+    
+
+    
+    <a class="see-more card" href="https://parkeraddison.com/blog">
+        Read on
+        
+        <i class="fas fa-arrow-right"></i>
+    </a>
+    
+</div>
+    
+
+    <h1 class="section-title">Recent Projects</h1>
+
+    
+    <div class="card-container project-container">
+    
+    <div class="card project-card">
+
+        
+
+        
+        
+        
+
+        <h2 class="title"><a href="https://github.com/parkeraddison/parkeraddison.github.io">This website.</a></h2>
+        <p class="subline"></p>
+        
+        <p class="description">
+            I programmed this website using <a href="https://gohugo.io">Hugo</a>—an open-source static site builder—and created my own custom themes and scripts.  Check out the code on GitHub!
+        </p>
+    </div>
+    
+    <div class="card project-card">
+
+        
+
+        
+
+        <h2 class="title"><a href="https://parkeraddison.com/projects/indeed-city-recommender/">Indeed Job Search City Recommender</a></h2>
+        <p class="subline">ASA DataFest @ Chapman Univ.</p>
+        
+        <figure class="image">
+            
+            <img src="https://parkeraddison.com/indeed.png" alt="">
+            
+        </figure>
+        
+        <p class="description">
+            We were given an anonymized dataset from indeed.com and asked to create a business pitch.  We created an algorithm to rank and recommend cities that have the best prospects for a given job industry.
+        </p>
+    </div>
+    
+    <div class="card project-card">
+
+        
+
+        
+        
+        
+
+        <h2 class="title"><a href="https://lost-in-deep.space/">The Verbosified Works of A.I. Space Rovers</a></h2>
+        <p class="subline">Convincing GPT-2 that more is more - An A.I. Art Piece</p>
+        
+        <figure class="image">
+            
+            <img src="https://raw.githubusercontent.com/parkeraddison/aiArt-verbosified-space-rovers/master/images/example.gif" alt="">
+            
+        </figure>
+        
+        <p class="description">
+            I (ab)used OpenAI's GPT-2 model—the one that's &ldquo;too dangerous to release&rdquo;—to make an art piece which doubles the word count of my high school essay by injecting machine-generated fluff text.
+The <a href="https://github.com/parkeraddison/aiArt-verbosified-space-rovers">writeup and code</a> can be found here!
+        </p>
+    </div>
+    
+    <div class="card project-card">
+
+        
+
+        
+        
+        
+
+        <h2 class="title"><a href="https://devpost.com/software/neural-network-visual-3d-graphical-editor">Neural Network Visual</a></h2>
+        <p class="subline">SD Hacks 2018 @ UC San Diego</p>
+        
+        <figure class="image">
+            
+            <iframe src="https://www.youtube.com/embed/5Cw0u_wDvik" frameborder="0" allowfullscreen></iframe>
+            
+        </figure>
+        
+        <p class="description">
+            Education in Machine Learning has experienced incredible growth. To aid the educational cause, we created an interactive, 3D visual editor for simple neural network models.
+        </p>
+    </div>
+    
+
+    
+    
+    <a class="see-more card" href="https://parkeraddison.com/projects">
+        Keep exploring
+        <i class="fas fa-arrow-right"></i>
+    </a>
+    
+</div>
+    
+
+    <h1 class="section-title">All Sections</h1>
+    
+    <h2><a href="https://parkeraddison.com/blog/">Blog</a></h2>
+    
+    <h2><a href="https://parkeraddison.com/portfolio/">Data Science Portfolio</a></h2>
+    
+    <h2><a href="https://parkeraddison.com/more/">More</a></h2>
+    
+    <h2><a href="https://parkeraddison.com/projects/">Projects</a></h2>
+    
+
+</main>
+
+</div> 
+
+<footer>
+    <div class="foot">
+        <p class="message">
+            Thanks for stopping by,
+            <a class="hover-bar" href="https://github.com/parkeraddison"><code>&lt;/&gt;</code> on GitHub</a>
+        </p>
+        <div class="content">
+            <h4>You can find me elsewhere on the web at:</h4>
+            <div class="links">
+                <p>
+                    <i class="fab fa-github"></i>
+                    <a href="https://github.com/parkeraddison">git/parkeraddison</a>
+                </p>
+                <p>
+                    <i class="fab fa-linkedin-in"></i>
+                    <a href="https://linkedin.com/in/parkeraddison">in/parkeraddison</a>
+                </p>
+                <p>
+                    <i class="fas fa-university"></i>
+                    <a href="http://acsweb.ucsd.edu/~pgaddiso/">ucsd/~pgaddiso</a>
+                </p>
+            </div>
+            <h4>I'll leave you with this parting thought:</h4>
+            <div class="parting">
+                <p>
+                    I hope that you enjoy your day.
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script src="https://parkeraddison.com/js/main.js"></script>
 
 </body>
-
-<script>
-
-    function colorize() {
-        let colors = ["#ff6961", "#f0a30a", "#06d6a0", "#00b3e5", "#9560ff"];
-
-
-        let items = document.querySelectorAll("#portfolio .featured-item");
-        let buttons = [...document.querySelectorAll("a.button")]
-            .filter(e => !(e.classList.contains("blue") | e.classList.contains("red")));
-
-        for (let i = 0; i < items.length; i++) {
-            item = items[i];
-            button = buttons[i]
-            color = colors[i % colors.length];
-
-            
-            item.style.borderColor = color;
-            button.style.borderColor = color;
-            button.style.color = color;
-        }
-    }
-
-    colorize();
-
-    AOS.init({
-        duration: 800,
-        delay: 50,
-        easing: "ease",
-        anchorPlacement: "top-bottom",
-        offset: 50,
-    });
-
-    window.addEventListener("load", AOS.refresh);
-
-</script>
 
 </html>
