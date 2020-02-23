@@ -1,5 +1,4 @@
-<!-- COURTESY OF KEITH P, keithpblog.org -->
-
+<!-- SCHEMA COURTESY OF KEITH P, keithpblog.org -->
 <script type="application/ld+json">
     {
         "@context" : "http://schema.org",
@@ -26,3 +25,9 @@
         "keywords" : [ {{ if isset .Params "tags" }}{{ range .Params.tags }}"{{ . }}",{{ end }}{{ end }}"Blog","Data Science" ]
     }
 </script>
+
+<!-- Open Graph Protocol -->
+<meta property="og:title" content="{{ .Title }}">
+<meta property="og:image" content="{{ .Site.BaseURL }}parker-addison-tree.jpg">
+<meta property="og:description" content="{{ if .Description }}{{ .Description }}{{ else }}Delving into data science and what it can do for the world.{{ end }}">
+<meta property="og:url" content="{{ .Permalink }}">

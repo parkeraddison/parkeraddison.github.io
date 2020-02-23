@@ -17,7 +17,8 @@
     --accent-purple: #8528ff;
     --accent-green: #06d6a0;
     --accent-red: #ff6961;
-    --accent-yellow: #f0a30a;
+    /* --accent-yellow: #f0a30a; */
+    --accent-yellow: #f0c60a;
     --accent-blue: #00b3e5;
     --accent-blue: #28f;
     --link-color: #007bff;
@@ -311,6 +312,8 @@ section.card-container {
     /* -webkit-columns: calc(var(--page-width) / 3.2);
     -moz-columns: calc(var(--page-width) / 3.2);
     columns: calc(var(--page-width) / 3.2); */
+    -webkit-column-width: 250px;
+    -moz-column-width: 250px;
     column-width: 250px;
 }
 
@@ -318,6 +321,8 @@ section.card-container {
     /* -webkit-columns: calc(var(--page-width) / 2.4);
     -moz-columns: calc(var(--page-width) / 2.4);
     columns: calc(var(--page-width) / 2.4); */
+    -webkit-column-width: 300px;
+    -moz-column-width: 300px;
     column-width: 300px;
 }
 
