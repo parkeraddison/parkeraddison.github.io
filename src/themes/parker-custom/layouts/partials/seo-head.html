@@ -1,33 +1,35 @@
-<!-- SCHEMA COURTESY OF KEITH P, keithpblog.org -->
-<script type="application/ld+json">
-    {
-        "@context" : "http://schema.org",
-        "@type" : "BlogPosting",
-        "mainEntityOfPage": {
-             "@type": "WebPage",
-             "@id": "{{ .Site.BaseURL }}"
-        },
-        "articleSection" : "{{ .Section }}",
-        "name" : "{{ .Title }}",
-        "headline" : "{{ .Title }}",
-        "description" : "{{ if .Description }}{{ .Description }}{{ else }}{{if .IsPage}}{{ .Summary }}{{ end }}{{ end }}",
-        "inLanguage" : "en-US",
-        "author" : "{{ range .Site.Author }}{{ . }}{{ end }}",
-        "creator" : "{{ range .Site.Author }}{{ . }}{{ end }}",
-        "publisher": "{{ range .Site.Author }}{{ . }}{{ end }}",
-        "accountablePerson" : "{{ range .Site.Author }}{{ . }}{{ end }}",
-        "copyrightHolder" : "{{ range .Site.Author }}{{ . }}{{ end }}",
-        "copyrightYear" : "{{ .Date.Format "2006" }}",
-        "datePublished": "{{ .Date }}",
-        "dateModified" : "{{ .Date }}",
-        "url" : "{{ .Permalink }}",
-        "wordCount" : "{{ .WordCount }}",
-        "keywords" : [ {{ if isset .Params "tags" }}{{ range .Params.tags }}"{{ . }}",{{ end }}{{ end }}"Blog","Data Science" ]
-    }
-</script>
+    {{ if not .IsHome }}
+    <!-- SCHEMA COURTESY OF KEITH P, keithpblog.org -->
+    <script type="application/ld+json">
+        {
+            "@context" : "http://schema.org",
+            "@type" : "BlogPosting",
+            "mainEntityOfPage": {
+                "@type": "WebPage",
+                "@id": "{{ .Site.BaseURL }}"
+            },
+            "articleSection" : "{{ .Section }}",
+            "name" : "{{ .Title }}",
+            "headline" : "{{ .Title }}",
+            "description" : "{{ if .Description }}{{ .Description }}{{ else }}{{if .IsPage}}{{ .Summary }}{{ end }}{{ end }}",
+            "inLanguage" : "en-US",
+            "author" : "{{ range .Site.Author }}{{ . }}{{ end }}",
+            "creator" : "{{ range .Site.Author }}{{ . }}{{ end }}",
+            "publisher": "{{ range .Site.Author }}{{ . }}{{ end }}",
+            "accountablePerson" : "{{ range .Site.Author }}{{ . }}{{ end }}",
+            "copyrightHolder" : "{{ range .Site.Author }}{{ . }}{{ end }}",
+            "copyrightYear" : "{{ .Date.Format "2006" }}",
+            "datePublished": "{{ .Date }}",
+            "dateModified" : "{{ .Date }}",
+            "url" : "{{ .Permalink }}",
+            "wordCount" : "{{ .WordCount }}",
+            "keywords" : [ {{ if isset .Params "tags" }}{{ range .Params.tags }}"{{ . }}",{{ end }}{{ end }}"Blog","Data Science" ]
+        }
+    </script>
+    {{ end }}
 
-<!-- Open Graph Protocol -->
-<meta property="og:title" content="{{ .Title }}">
-<meta property="og:image" content="{{ .Site.BaseURL }}parker-addison-tree.jpg">
-<meta property="og:description" content="{{ if .Description }}{{ .Description }}{{ else }}Delving into data science and what it can do for the world.{{ end }}">
-<meta property="og:url" content="{{ .Permalink }}">
+    <!-- Open Graph Protocol -->
+    <meta property="og:title" content="{{ .Title }}">
+    <meta property="og:image" content="{{ .Site.BaseURL }}parker-addison-tree.jpg">
+    <meta property="og:description" content="{{ if .Description }}{{ .Description }}{{ else }}Delving into data science and what it can do for the world.{{ end }}">
+    <meta property="og:url" content="{{ .Permalink }}">
