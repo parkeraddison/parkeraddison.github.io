@@ -1,6 +1,6 @@
-<div class="card-container post-container">
+<section class="card-container post-container">
     {{ range (.posts.ByParam "date").Reverse }}
-    <div class="card post-card">
+    <article class="card contains-anchor post-card">
 
         <p class="date">{{ .Params.Date.Format "Jan 2, 2006" }}</p>
         <h2 class="title"><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
@@ -16,7 +16,7 @@
         <p class="description">{{ .Params.Description | .RenderString }}</p>
         {{ partial "tags.html" . }}
 
-    </div>
+    </article>
     {{ end }}
 
     {{ if .ctx.IsHome }}
@@ -32,4 +32,4 @@
         <i class="fas fa-arrow-right"></i>
     </a>
     {{ end }}
-</div>
+</section>

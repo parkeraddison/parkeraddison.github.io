@@ -9,6 +9,7 @@
     --page-background-alt: #f4f4f4;
     --page-width: 768px;
     --page-width: 700px;
+    --page-width-wider: 1200px;
     --monospace: Consolas, Menlo, monospace;
     --light-gray: #888;
     --narrow-light-gray: #e8e8e8;
@@ -112,7 +113,9 @@ figure {
 }
 
 main {
+    position: relative;
     max-width: var(--page-width);
+    max-width: var(--page-width-wider);
     margin: auto;
     padding: 1em;
     padding-bottom: 6em;
@@ -126,11 +129,16 @@ main>.title {
     font-size: 2.6em;
 }
 
+section.narrow {
+    margin: auto;
+    max-width: var(--page-width);
+}
+
 .section-title {
-    font-size: 1.8em;
+    font-size: 2em;
     text-align: center;
     text-align: right;
-    color: var(--element-light-gray);
+    color: var(--narrow-light-gray);
     text-transform: lowercase;
 }
 
@@ -140,6 +148,7 @@ header {
     /* padding: 1em calc((100vw - var(--page-width)) / 2); */
     padding: 2em 1em 1em 1em;
     max-width: var(--page-width);
+    max-width: var(--page-width-wider);
     margin: auto;
     /* box-shadow: inset 0 -10px 10px -10px rgba(0,0,0,0.2); */
     /* box-shadow: 0 -0.5em 1em 0 rgba(0,0,0.2); */
@@ -186,7 +195,8 @@ nav li {
 
 /* === INTRO =============================================================== */
 
-.intro {
+section.intro {
+    margin: auto;
     margin-top: 10%;
     display: -ms-grid;
     display: grid;
@@ -213,13 +223,21 @@ nav li {
 }
 
 .intro .title {
-    font-size: 2em;
+    font-size: 2.4em;
     font-weight: bold;
+    text-align: left;
+}
+
+@media (min-width: 700px) {
+    section.intro .title {
+        text-align: center;
+    }
 }
 
 .intro .subtitle {
     font-size: calc(1em / 1.4);
     color: var(--light-gray);
+    /* color: var(--accent-indigo); */
 }
 
 /* === FOOTER ============================================================== */
@@ -229,10 +247,11 @@ footer {
     color: var(--text-color-alt);
     padding: 6em 0 8em;
     height: calc(100vh - 6em - 8em);
-    position: -webkit-sticky;
-    position: sticky;
-    bottom: 0px;
-    z-index: 0;
+    /* position: -webkit-sticky;
+    position: sticky; */
+    /* position: fixed; */
+    /* bottom: 0px; */
+    /* z-index: 0; */
 }
 
 footer .foot {
@@ -280,22 +299,26 @@ footer a {
 
 /* === BLOG POST CARDS ===================================================== */
 
-.card-container {
+section.card-container {
+    position: relative;
     -webkit-column-gap: 1em;
     -moz-column-gap: 1em;
     column-gap: 1em;
+    margin: auto;
 }
 
 .card-container.post-container {
-    -webkit-columns: calc(var(--page-width) / 3.2);
+    /* -webkit-columns: calc(var(--page-width) / 3.2);
     -moz-columns: calc(var(--page-width) / 3.2);
-    columns: calc(var(--page-width) / 3.2);
+    columns: calc(var(--page-width) / 3.2); */
+    column-width: 250px;
 }
 
 .card-container.project-container {
-    -webkit-columns: calc(var(--page-width) / 2.4);
+    /* -webkit-columns: calc(var(--page-width) / 2.4);
     -moz-columns: calc(var(--page-width) / 2.4);
-    columns: calc(var(--page-width) / 2.4);
+    columns: calc(var(--page-width) / 2.4); */
+    column-width: 300px;
 }
 
 .card-container .see-more {
@@ -322,21 +345,23 @@ footer a {
 }
 
 .card {
-    display: inline-table;
-    width: calc(100% - 2em);
     -webkit-column-break-inside: avoid;
     -moz-column-break-inside: avoid;
-    break-inside: avoid-column;
+    -webkit-break-inside: avoid;
+    break-inside: avoid;
+    page-break-inside: avoid;
+    display: table;
+    width: calc(100% - 2em);
     margin-bottom: 1em;
     position: relative;
     padding: 1em;
     background-color: var(--page-background);
     box-shadow: 0px 0px 4px -2.5px var(--shadow-color);
+    -webkit-transition: all var(--transition-speed);
+    transition: all var(--transition-speed);
     /* FIX for Chrome: Prevents box shadow from bleeding to previous column */
     -webkit-transform: translateZ(0);
     transform: translateZ(0);
-    -webkit-transition: all var(--transition-speed);
-    transition: all var(--transition-speed);
 }
 
 .card:hover, .card:focus {
@@ -384,7 +409,8 @@ footer a {
 
 /* === POSTS =============================================================== */
 
-.post {
+main.post {
+    /* max-width: var(--page-width); */
     font-size: 19px;
 }
 
@@ -399,59 +425,73 @@ footer a {
     font-size: 0.85em;
 }
 
-.post .content {
+.post article {
+    max-width: var(--page-width);
+    margin: auto;
+}
+
+.post article .content {
     margin-top: 4em;
 }
 
-.post h2 {
+.post article h2 {
     margin-top: 1.4em;
 }
 
-.post p {
+.post article p {
     letter-spacing: 0.5px;
     line-height: 1.4;
 }
 
-.post figure {
+.post article figure {
     width: 66.6%;
     margin: auto;
 }
 
-.post figure img {
+.post article figure img {
     width: 100%;
 }
 
-.post figure figcaption>* {
+.post article figure figcaption>* {
     color: var(--light-gray);
     font-size: 0.85em;
     margin-top: 0;
 }
 
-.post .content>hr {
+.post article .content>hr {
     border: none;
     position: relative;
     margin: 1.5em 0;
     text-align: center;
 }
 
-.post .content>hr::after {
+.post article .content>hr::after {
     content: "\2022 \2022 \2022";
     width: 100%;
     color: var(--narrow-light-gray);
 }
 
 .post .nextprev {
+    position: relative;
     display: grid;
+    margin: auto;
     margin-top: 4em;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(2, 1fr);
     gap: 4em;
     text-align: center;
     width: 100%;
+    /* width: var(--page-width); */
 }
 
-.post .nextprev a.disabled {
+.post .nextprev a {
+    height: 100%;
+    /* max-width: 12em; */
+}
+
+.post .nextprev .disabled {
     pointer-events: none;
     color: var(--element-light-gray);
+    box-shadow: none;
 }
 
 /* This shifts the hash positions so that they aren't covered by the header. */

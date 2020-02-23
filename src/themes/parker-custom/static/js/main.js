@@ -1,4 +1,4 @@
-let cards = document.querySelectorAll(".card");
+let cards = document.querySelectorAll(".card.contains-anchor");
 
 for (card of cards) {
     card.addEventListener("click", function() {

@@ -8,7 +8,7 @@
 
 <main>
 
-    <div class="intro">
+    <section class="intro narrow">
         <div class="image">
             <!-- <img src="./parker-addison.jpg" alt=""> -->
             <img src="./parker-addison-tree.jpg" alt="">
@@ -18,7 +18,7 @@
                 Data science is my passion
             </div>
         </div>
-    </div>
+    </section>
 
     <h1 class="section-title">Recent Posts</h1>
 
@@ -33,9 +33,12 @@
     {{ end }}
 
     <h1 class="section-title">All Sections</h1>
-    {{ range sort .Data.Pages.ByTitle }}
-    <h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
-    {{ end }}
+    <section class="narrow">
+        {{ range sort .Data.Pages.ByTitle }}
+        <h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
+        {{ end }}
+        <h2><a href="{{  .Site.Params.resumeURL }}">Resume</a></h2>
+    </section>
 
 </main>
 
