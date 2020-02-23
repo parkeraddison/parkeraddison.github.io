@@ -2,7 +2,7 @@
     <title>{{ .Title }}</title>
 
     {{ if not (.IsHome) }}
-    {{ partial "seo_schema" . }}
+    {{ partial "seo-head" . }}
     {{ end }}
 
     <meta charset="UTF-8">
