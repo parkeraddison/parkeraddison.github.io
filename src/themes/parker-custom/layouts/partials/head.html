@@ -1,9 +1,7 @@
 <head>
     <title>{{ .Title }}</title>
 
-    {{ if not (.IsHome) }}
-    {{ partial "seo-head" . }}
-    {{ end }}
+    {{ partial "seo-head.html" . }}
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
