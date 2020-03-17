@@ -4,6 +4,7 @@ date: 2020-03-17T14:24:43-07:00
 draft: false
 description: "Teaching strategies won't return to \"normal\" once we recover from the pandemic. But might they actually get better?"
 tags: ["speculative", "education"]
+image: "./coronavirus-stain.jpg"
 ---
 
 Amidst the doom and gloom around coronavirus, I invite you to entertain some potential silver linings with me.
