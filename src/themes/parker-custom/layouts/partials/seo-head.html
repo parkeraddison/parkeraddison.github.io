@@ -30,6 +30,6 @@
 
     <!-- Open Graph Protocol -->
     <meta property="og:title" content="{{ .Title }}">
-    <meta property="og:image" content="{{ if isset .Params "image" }}{{ .Params.image }}{{ else }}{{ .Site.BaseURL }}parker-addison-tree.jpg{{ end }}">
+    <meta property="og:image" content="{{ if isset .Params "image" }}{{ replace .Params.image "./" .Site.BaseURL }}{{ else }}{{ .Site.BaseURL }}parker-addison-tree.jpg{{ end }}">
     <meta property="og:description" content="{{ if .Description }}{{ .Description }}{{ else }}Delving into data science and what it can do for the world.{{ end }}">
     <meta property="og:url" content="{{ .Permalink }}">
