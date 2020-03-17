@@ -71,10 +71,15 @@ a {
     transition: color var(--transition-speed);
 }
 
-main p a {
+main .content a {
     color: var(--link-color);
     color: #38f;
     color: var(--accent-blue);
+}
+
+main .content a:hover,
+main .content a:focus {
+    color: var(--hover-highlight);
 }
 
 a:hover, a:focus {
@@ -446,6 +451,12 @@ main.post {
 .post article p {
     letter-spacing: 0.5px;
     line-height: 1.4;
+}
+
+.post article li {
+    letter-spacing: 0.5px;
+    line-height: 1.4;
+    margin-bottom: 1em;
 }
 
 .post article figure {
