@@ -1,6 +1,6 @@
 <section class="card-container project-container">
     {{ range sort .projects.ByDate.Reverse }}
-    <div class="card contains-anchor project-card">
+    <article class="card contains-anchor project-card">
 
         {{ $url := .Permalink }}
 
@@ -19,10 +19,10 @@
             {{ end }}
         </figure>
         {{ end }}
-        <p class="description">
+        <p class="description content">
             {{ .Params.Description | .RenderString }}
         </p>
-    </div>
+    </article>
     {{ end }}
 
     {{ if .ctx.IsHome }}
