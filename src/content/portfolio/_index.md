@@ -120,7 +120,7 @@ I am heavily involved with the management of this committee, and am currently in
 
 ## B.S. Data Science, Minor Business Management
 ### University of California, San Diego
-### Technical GPA: 3.96
+### Technical GPA: 3.97
 
 <br>
 
@@ -132,10 +132,11 @@ I am heavily involved with the management of this committee, and am currently in
 | DSC 10<small> *</small> | Principles of Data Science |
 | DSC 20, 30 | Data Structures and Algorithms |
 | DSC 80<small> *</small> | Practice and Application of Data Science |
-| DSC 100 | Introduction to Data Management |
 | <hr> |
-| CSE 151 | Intro to AI: Statistical Approaches |
+| CSE 151<small> *</small> | Intro to AI: Statistical Approaches |
 | CSE 158 | Recommender Systems and Web Mining |
+| DSC 100 | Introduction to Data Management |
+| DSC 106 | Data Visualization |
 | DSC 170 | Spatial Data Science and its Applications <br> <small>[UCSD joined forces with Microsoft and Esri to make this course possible—check out this blog post from GeoAI!](https://medium.com/geoai/esri-microsoft-join-uc-san-diego-teaching-practical-geospatial-data-science-and-deep-learning-3d7e62bd23fb)</small> |
 | ECE 188 | Machine Learning for the Arts |
 
@@ -147,6 +148,7 @@ I am heavily involved with the management of this committee, and am currently in
 | <hr> |
 | MATH 180A | Introduction to Probability |
 | MATH 181A-B | Mathematical Statistics I, II |
+| MATH 189 | Exploratory Data Analysis and Inference |
 
 | Management ||
 | :--- | :--- |
