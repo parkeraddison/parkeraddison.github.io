@@ -1,0 +1,85 @@
+{{ define "css" }}
+{{ partial "include-css" "index" }}
+{{ end }}
+
+
+{{ define "aside" }}
+{{ end }}
+
+{{ define "main" }}
+<main>
+
+    <section id="introduction">
+
+        <!-- <img src="images/parker-addison-tree-small.jpg" alt="" height=200> -->
+        <div class="intro">
+            <img src="parker-addison.jpg" alt="" height=180>
+            <div>
+                <h1>Hi there,<br />
+                    I&rsquo;m Parker Addison.</h1>
+
+                <p>
+                    I'm studying at the intersection of data science, statistics, and society — delving into data
+                    science and what it can do for the world.
+                </p>
+            </div>
+        </div>
+
+        <!-- <p>
+                I recently did x, y, z, which I think you should <a href="">check out</a>.
+            </p> -->
+
+    </section>
+
+    <div class="generic-wrapper">
+
+        {{ partial "news" . }}
+        {{ partial "latest-posts" . }}
+
+
+
+        <section id="featured">
+
+            <h1 class="section-title">Featured</h1>
+
+            <article>
+                <a href="https://parkeraddison.com/dvorak-viz">
+                    <hgroup>
+                        <h1 class="title">QWERTY vs Dvorak</h1>
+                        <h2 class="subtitle">A visual exploration into the Dvorak keyboard layout</h2>
+                    </hgroup>
+                    <p>
+                        Have you ever wondered why we're stuck typing on the same keyboard layout that the earliest
+                        typewriters used?
+                    </p>
+                    <p>
+                        The Dvorak keyboard layout is fabled to be much more efficient... I created a program and fun
+                        visualization to put that claim to the test.
+                    </p>
+                </a>
+            </article>
+
+            {{ with .Site.GetPage "/projects/verbosified-space-rovers.md" }}
+            <article>
+                <a href="{{ .Params.ProjectURL }}">
+                    <hgroup>
+                        <h1 class="title">{{ .Title }}</h1>
+                        <h2 class="subtitle">{{ .Params.Subline }}</h2>
+                    </hgroup>
+                    <figure>
+                        <!-- <figcaption>{{ .Params.Subline }}</figcaption> -->
+                        <img src="{{ .Params.Image }}" alt="" width="100%" ;>
+
+                    </figure>
+                </a>
+                <p>{{ .Params.Description | markdownify }}</p>
+            </article>
+            {{ end }}
+
+            <span class="see-more"><a href="{{ .Site.BaseURL }}projects">Interested? Check out my projects</a></span>
+        </section>
+
+    </div>
+
+</main>
+{{ end }}

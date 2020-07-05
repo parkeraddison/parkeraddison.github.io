@@ -1,0 +1,51 @@
+{{ define "css" }}
+    {{ partial "include-css" "blog" }}
+{{ end }}
+
+{{ define "main" }}
+
+<main class="post">
+    <article>
+        <h1 class="title">{{ .Title }}</h1>
+        <p class="info">{{ .Date.Format "Jan 02, 2006" }} &bullet; {{ .ReadingTime }} minute read</p>
+        <div class="content">{{ .Content }}</div>
+    </article>
+    <hr>
+    {{/* <p class="info">Related:</p>{{ partial "tags.html" . }} */}}
+    <div class="nextprev">
+        {{ if (ne .NextInSection nil) }}
+        <a href="{{ .NextInSection.Permalink }}" class="card">
+            <p>
+                <i class="fas fa-arrow-left"></i>
+                <!-- Newer -->
+            </p>
+            <h4>{{ .NextInSection.Title }}</h4>
+        </a>
+        {{ else }}
+        <a href="" class="card disabled">
+            <p>
+                <i class="fas fa-arrow-left"></i>
+                <!-- Newer -->
+            </p>
+        </a>
+        {{ end }}
+        {{ if (ne .PrevInSection nil) }}
+        <a href="{{ .PrevInSection.Permalink }}" class="card">
+            <p>
+                <!-- Older -->
+                <i class="fas fa-arrow-right"></i>
+            </p>
+            <h4>{{ .PrevInSection.Title }}</h4>
+        </a>
+        {{ else }}
+        <a href="" class="card disabled">
+            <p>
+                <!-- Older -->
+                <i class="fas fa-arrow-right"></i>
+            </p>
+        </a>
+        {{ end }}
+    </div>
+</main>
+
+{{ end }}

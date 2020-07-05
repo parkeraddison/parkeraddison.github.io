@@ -1,0 +1,53 @@
+header {
+    position: fixed;
+    background-color: var(--page-background);
+    margin-top: -0.5em; /* To account for the padding around the first link */
+}
+
+header a {
+    color: var(--text-color-alt);
+    fill: #808090;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    margin-left: -0.5em;
+}
+
+nav a {
+    border: none;
+    display: block;
+    padding: 0.5em;
+}
+
+nav .social {
+    max-width: 8em;
+    display: flex;
+    justify-content: space-between;
+}
+
+nav .social li a svg {
+    --size: 1.1em;
+    height: var(--size);
+    width: var(--size);
+}
+
+/* === Smaller Viewports ==================================================== */
+
+@media only screen and (max-width: 960px) {
+    header {
+        width: 100%;
+        padding-top: 1em;
+        z-index: 1;
+    }
+    nav ul {
+        display: flex;
+        float: left;
+    }
+    nav .social {
+        float: right;
+        margin-right: 1em;
+    }
+}

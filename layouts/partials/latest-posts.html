@@ -1,0 +1,39 @@
+<section id="aside-wrapper">
+    {{ $numRecentPosts := 3 }}
+    {{ $lines := 0 }}
+    {{ $maxDescLines := 0 }}
+    {{ with $posts := where .Site.RegularPages "Section" "blog" }}
+    {{    range first $numRecentPosts ( $posts.ByParam "date" ).Reverse }}
+    {{        $titleLines := math.Ceil ( div (len .Title ) 36.0 ) }}
+    {{        $lines = add $lines $titleLines }}
+    {{        $descLines := math.Ceil ( div ( len .Params.Description ) 36.0 ) }}
+    {{        if gt $descLines $maxDescLines }}
+    {{            $maxDescLines = $descLines }}
+    {{        end }}
+    {{        $lines = add $lines 6 }}
+    {{    end }}
+    {{    $lines = add $lines $maxDescLines }}
+    {{ end }}
+    
+    <aside id="blog-posts">
+        <h1 class="section-title">Latest Posts</h1>
+        <div class="article-wrapper">
+            {{ with $posts := where .Site.RegularPages "Section" "blog" }}
+            {{ range first $numRecentPosts ($posts.ByParam "date").Reverse }}
+            <a href="{{ .Permalink }}">
+                <article>
+    
+                    <h1 class="title">{{ .Title }}</h1>
+                    <p class="description" lang="en">{{ .Params.Description | .RenderString }}</p>
+                    <p class="date">{{ .Params.Date.Format "Jan 2, 2006" }}</p>
+    
+                </article>
+            </a>
+            {{ end }}
+            {{ end }}
+        </div>
+        <span class="see-more"><a href="{{ .Site.BaseURL }}blog">
+                All
+            </a></span>
+    </aside>
+</section>

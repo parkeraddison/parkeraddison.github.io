@@ -1,0 +1,7 @@
+#news article {
+    margin: 1em 0;
+}
+
+#news article h1, #news article p:first-of-type {
+    display: inline;
+}
