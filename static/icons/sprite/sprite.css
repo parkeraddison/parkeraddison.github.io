@@ -1,0 +1,21 @@
+[class^="icon-"], [class*=" icon-"] {
+  display: inline-block;
+  background-repeat: no-repeat;
+  background-image: url(sprite.svg);
+}
+.icon-library {
+  width: 34px;
+  height: 32px;
+  background-position: 0 0;
+}
+.icon-github {
+  width: 32px;
+  height: 32px;
+  background-position: -48px 0;
+}
+.icon-linkedin2 {
+  width: 32px;
+  height: 32px;
+  background-position: -96px 0;
+}
+

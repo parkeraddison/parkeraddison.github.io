@@ -1,0 +1,45 @@
+
+#aside-wrapper {
+    position: absolute;
+    /* right: calc(-1 * var(--aside-width)); */
+    /* right: var(--side-margin); */
+    left: calc((100vw - 8em - 18em - 4em - 4em));
+    top: 0;
+    width: var(--aside-width);
+}
+
+aside article {
+    padding: 0;
+    margin: 0;
+    margin-bottom: 4em;
+}
+
+aside .title {
+    margin: 0;
+}
+
+aside .description {
+    opacity: 0;
+    max-height: 0;
+    margin: 0.25em 0;
+    transition: opacity var(--transition-speed), max-height var(--transition-speed);
+    hyphens: auto;
+}
+
+aside article:hover .description {
+    opacity: 1;
+    max-height: 3em;
+}
+
+aside .date {
+    display: none;
+    color: var(--text-color-alt);
+    font-weight: 500;
+    font-size: 0.9em;
+    margin: 1em 0;
+    margin: 0;
+}
+
+aside .see-more a {
+    padding-bottom: 4em;
+}

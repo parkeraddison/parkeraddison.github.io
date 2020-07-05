@@ -1,0 +1,27 @@
+{{ define "css" }}
+<script>
+    console.log("{{ .Type }}list");
+</script>
+{{ $section := .Type | printf "%slist" }}
+{{ partial "include-css" (string $section) }}
+{{ end }}
+
+{{ define "main" }}
+<main>
+
+    <h1 class="section-title">{{ .Title }}</h1>
+
+    {{ range .Pages  }}
+    <article>
+        
+        <a href="{{ .Permalink }}">
+            <h1 class="title">{{ .Title }}</h1>
+        </a>
+            <p class="description" lang="en">{{ .Params.Description | .RenderString }}</p>
+            <p class="date">{{ .Params.Date.Format "Jan 2, 2006" }}</p>
+
+        </article>
+    {{ end }}
+
+</main>
+{{ end }}

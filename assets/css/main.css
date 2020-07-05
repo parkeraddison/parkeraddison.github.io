@@ -1,0 +1,304 @@
+:root {
+    --text-color: #303030;
+    --text-color-alt: #778;
+
+    --transition-speed: 0.1s;
+    --page-background: #fcfcfc;
+    --page-background-alt: #f4f4f4;
+    --page-width: 768px;
+    --page-width: 700px;
+    --page-width-wider: 1200px;
+    --sans-serif: 'IBM Plex Sans', sans-serif;
+    --sans-serif: 'Lexend Deca', sans-serif;
+    --serif: 'Source Serif Pro', Cambria, Cochin, Georgia, Times,
+        'Times New Roman', serif;
+    --monospace: Consolas, Menlo, monospace;
+
+    --light-grey: #888;
+    --narrow-light-grey: #e8e8e8;
+    --element-light-grey: #cecece;
+    --accent-purple: #8528ff;
+    --accent-green: #06d6a0;
+    --accent-red: #ff6961;
+    --accent-yellow: #f0c60a;
+    --accent-blue: #00b3e5;
+    --accent-blue: #28f;
+    --link-color: #007bff;
+    --accent-indigo: #764afa;
+    --dark-background: #2f3542;
+    --dark-background: rgb(40, 45, 50);
+
+    --header-width: 9em;
+    --aside-width: 18em;
+    --side-margin: 4em;
+    --top-margin: 4em;
+
+    --link-color: rgb(110, 140, 255);
+    --link-color: rgb(120, 130, 250);
+}
+
+/* === Raw elements ========================================================= */
+
+html,
+body {
+    padding: 0;
+    margin: 0;
+    font-family: var(--sans-serif);
+    font-size: 19px;
+    background-color: var(--page-background);
+    color: var(--text-color);
+}
+
+p {
+    color: var(--text-color-alt);
+}
+
+p i,
+p em {
+    padding-right: 2px;
+}
+
+p code {
+    font-family: var(--monospace);
+    /* color: #f26; */
+    font-size: 90%;
+    padding: 4px 4px 2px;
+    background-color: #f0f0f0;
+    border-radius: 4px;
+}
+
+h1,
+h2,
+h3 {
+    font-family: var(--serif);
+    font-weight: 600;
+}
+
+h1 {
+    font-size: 150%;
+}
+h2 {
+    font-size: 150%;
+}
+h3 {
+    font-size: 100%;
+}
+
+h1.section-title {
+    font-family: var(--serif);
+    font-size: 110%;
+    font-family: var(--sans-serif);
+    color: var(--text-color-alt);
+    margin: 0 0 2em;
+}
+
+article h1 {
+    font-size: 110%;
+}
+
+article h2 {
+    font-size: 100%;
+}
+
+a {
+    color: var(--text-color);
+    fill: var(--text-color-alt);
+    text-decoration: none;
+    border-bottom: none;
+    transition: color var(--transition-speed),
+        border-bottom var(--transition-speed);
+}
+
+a:hover,
+a:focus {
+    color: var(--link-color);
+    fill: var(--link-color);
+}
+
+p a {
+    color: var(--text-color-alt);
+    border-bottom: 1px solid #ddd;
+}
+
+p a:hover,
+p a:focus {
+    border-bottom: 2px solid var(--link-color);
+}
+
+span.see-more a,
+span.see-less a {
+    display: inline-block;
+    width: 100%;
+    font-size: 95%;
+    padding-bottom: 1em;
+    position: relative;
+}
+span.see-less a {
+    padding-left: 1em;
+}
+
+span.see-more a::after {
+    content: ' \2192';
+    padding-left: 0;
+    transition: padding-left var(--transition-speed);
+}
+span.see-more a:hover::after,
+span.see-more a:focus::after {
+    padding-left: 1em;
+}
+
+span.see-less a::before {
+    content: '\2190 ';
+    padding-left: 0;
+    position: absolute;
+    left: 0;
+    transition: left var(--transition-speed);
+}
+span.see-less a:hover::before,
+span.see-less a:focus::before {
+    left: -1em;
+}
+
+/* .highlight {
+    color: var(--text-color);
+    background-color: var(--highlight-color-alpha);
+    border-bottom: 2px solid var(--highlight-color);
+    transition: background-color var(--transition-speed);
+}
+
+.highlight:hover,
+.highlight:focus {
+    color: var(--text-color);
+    background-color: var(--highlight-color);
+} */
+
+#body-container {
+    display: grid;
+    grid-template-columns: var(--header-width) 1fr var(--aside-width);
+    gap: 4em;
+    padding: var(--top-margin) var(--side-margin);
+    margin: 0;
+}
+
+main,
+.main-like {
+    max-width: 36em;
+    margin: auto;
+}
+
+section {
+    margin-bottom: 6em;
+}
+
+main > article,
+main section > article {
+    margin: 0 0 4em;
+}
+
+main article hgroup {
+    margin: 1em 0;
+    position: relative;
+}
+
+main article hgroup > * {
+    margin: 0.25em 0;
+}
+
+main article .subtitle {
+    font-weight: normal;
+    font-size: 1.1em;
+}
+
+main article figure {
+    margin: 1em 0;
+    text-align: center;
+}
+
+main article p {
+    --text-color: var(--text-color-alt);
+}
+
+
+.generic-wrapper {
+    position: relative;
+}
+
+/* === Smaller Viewports ==================================================== */
+
+@media only screen and (max-width: 1500px) {
+    :root {
+        --side-margin: 1em;
+        --aside-width: 20vw;
+    }
+
+    #body-container {
+        gap: 2em;
+    }
+}
+
+@media only screen and (max-width: 1100px) {
+    html, body {
+        font-size: 17px;
+    }
+}
+
+@media only screen and (max-width: 960px) {
+    :root {
+        --top-margin: 0;
+        --side-margin: 0.5em;
+    }
+
+    #body-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* @media (max-width: 1300px) {
+    #body-container {
+        padding: 0;
+        margin: 0 0.5em;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 10em auto 1fr;
+        gap: 1em;
+        font-size: 16px;
+    }
+
+    header {
+        width: 100%;
+        position: static;
+    }
+
+    nav ul,
+    nav .social {
+        display: flex;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+    }
+
+    #aside-wrapper {
+        grid-row: 2;
+        font-size: 0.9em;
+        margin-top: 10em;
+    }
+
+    aside .article-wrapper {
+        height: min-content;
+        margin: 0;
+    }
+
+    aside article {
+        margin: 2em 0;
+    }
+
+    aside article .description,
+    aside article .description:hover {
+        display: none;
+    }
+
+    aside .see-more a {
+        padding: 1em 12em 3em 0;
+    }
+
+
+} */

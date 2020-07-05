@@ -1,0 +1,26 @@
+{{ if and (not .IsHome) (ne .Kind "404") }}
+<div class="main-like">
+    <span class="see-less"><a href="{{ .Parent.Permalink }}">
+        {{ if .Parent.IsHome }}
+        Back
+        {{ else }}
+        {{ .Parent.Title }}
+        {{ end }}
+    </a></span>
+</div>
+{{ end }}
+
+
+<footer>
+    <p>
+        <!-- Thanks for stopping by, -->
+        <a href="https://parkeraddison.com">
+            <img src="/images/parker-headshot-small.jpg" alt="">
+            Made by Parker</a>,
+        <a href="https://github.com/parkeraddison/parkeraddison.github.io"><code><b>&lt;/&gt;</b></code> on
+            GitHub</a>
+    </p>
+    <!-- <p>
+:)
+</p> -->
+</footer>

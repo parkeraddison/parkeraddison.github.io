@@ -1,0 +1,145 @@
+/* === POSTS =============================================================== */
+
+main.post {
+    --body-text-color: #444;
+}
+
+main.post article h1 {
+    font-size: 2.6em;
+    margin: 0;
+    margin: 0 0 2rem;
+}
+
+main.post article .info {
+    font-family: var(--monospace);
+    font-size: 75%;
+}
+
+main.post article .content {
+    margin-top: 4em;
+}
+
+main.post article .content h2, h3 {
+    margin: 2rem 0 0;
+}
+
+main.post article .content p,
+main.post article .content li {
+    color: var(--body-text-color);
+    line-height: 1.4;
+    margin-bottom: 1.4em;
+}
+
+main.post article .content > hr {
+    border: 3px double #666;
+    border-style: double none none;
+    color: #444;
+    text-align: center;
+    margin: 2em auto;
+    height: 2px;
+    max-width: 80%;
+}
+
+main.post article .content > hr:after {
+    background: var(--page-background);
+    content: "§";
+    padding: 0 4px;
+    position: relative;
+    font-family: sans-serif;
+    font-size: 85%;
+    top: -16px;
+}
+
+main.post article .footnotes p,
+main.post article .footnotes li {
+    color: var(--text-color-alt);
+}
+
+
+main.post article .content figure img {
+    max-width: 100%;
+}
+main.post article .content figure:not(.raw) img {
+    width: 100%;
+}
+main.post article .content figure figcaption p {
+    color: var(--text-color-alt);
+    font-size: 85%;
+}
+
+
+/* 
+
+
+.post article figure figcaption>* {
+    color: var(--light-grey);
+    font-size: 0.85em;
+    margin-top: 0;
+}
+
+
+
+.post .nextprev {
+    position: relative;
+    display: grid;
+    margin: auto;
+    margin-top: 4em;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 4em;
+    text-align: center;
+    width: 100%;
+}
+
+.post .nextprev a {
+    height: 100%;
+}
+
+.post .nextprev .disabled {
+    pointer-events: none;
+    color: var(--element-light-grey);
+    box-shadow: none;
+} */
+
+/* This shifts the hash positions so that they aren't covered by the header. */
+
+sup[id^="fnref:"], li[id^="fn:"] {
+    padding-top: 6em;
+    margin-top: -6em;
+}
+
+/* .footnote-ref, .footnote-backref {
+    color: var(--light-grey);
+}
+
+.footnotes {
+    color: var(--light-grey);
+    font-size: 0.85em;
+    padding: 1em 0;
+}
+
+.post .tags-list {
+    margin-left: 1em;
+    margin-right: 1em;
+} */
+
+/* === TAGS ================================================================ */
+
+.tags-list {
+    list-style-type: none;
+    margin: 0;
+    margin-top: 0.5em;
+    padding: 0;
+    overflow: hidden;
+    color: var(--light-grey);
+}
+
+.tag a {
+    font-size: 0.85em;
+    border: none;
+    float: left;
+    margin: 0.2em 0.4em 0.2em 0;
+    padding: 2px 6px;
+    background-color: var(--narrow-light-grey);
+    background-color: var(--narrow-light-grey);
+    border-radius: 4px;
+}

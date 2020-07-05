@@ -1,0 +1,30 @@
+{{ define "css" }}
+{{ $section := replaceRE "/.*" "" .File.Dir }}
+{{ partial "include-css" (string $section) }}
+{{ end }}
+
+
+{{ define "main" }}
+<main>
+    {{/* 
+    {{ eq ($section) ("portfolio") }}
+    {{ $page := replace "css/pages/PAGE.css" "PAGE" $section }}
+    {{ $css := resources.Get $page }}
+    <script>
+        console.log("For input `{{ . }}` fetching resources `{{ $css }}`");
+    </script>
+    {{ $style := "" }}
+    {{ if $css }}
+    {{ $style = $css | minify | fingerprint }}
+    {{ end }}
+    {{ $css }}
+    {{ $style }}
+    {{ (resources.Get $page).Permalink }}
+    */}}
+    <script>
+    
+    </script>
+    <h1 class="section-title">{{.Title}}</h1>
+    {{.Content}}
+</main>
+{{ end }}

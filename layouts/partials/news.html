@@ -1,0 +1,31 @@
+{{ $num := 999 }}
+{{ if .IsHome }}
+<article id="news">
+{{ $num = 5 }}
+{{ else }}
+<main id="news">
+{{ end }}
+
+    <h1 class="section-title">News</h1>
+    {{ with $pages := where .Site.RegularPages "Section" "news" }}
+    {{ range first $num ($pages.ByParam "date").Reverse }}
+    <article>
+        <h1>{{ .Date.Format "01/02" }}:</h1>
+        {{ .Content }}
+    </article>
+    {{ end }}
+    {{ end }}
+    {{ if .IsHome }}
+    <article>
+        <span class="see-more">
+            <a href="{{ .Site.BaseURL }}news">
+                Older
+            </a>
+        </span>
+    </article>
+    {{ end }}
+{{ if .IsHome }}
+</article>
+{{ else }}
+</main>
+{{ end }}
