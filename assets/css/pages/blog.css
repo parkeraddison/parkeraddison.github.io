@@ -6,8 +6,7 @@ main.post {
 
 main.post article h1 {
     font-size: 2.6em;
-    margin: 0;
-    margin: 0 0 2rem;
+    margin: 0 auto 2rem;
 }
 
 main.post article .info {
@@ -20,7 +19,7 @@ main.post article .content {
 }
 
 main.post article .content h2, h3 {
-    margin: 2rem 0 0;
+    margin-top: 2rem;
 }
 
 main.post article .content p,
@@ -37,7 +36,7 @@ main.post article .content > hr {
     text-align: center;
     margin: 2em auto;
     height: 2px;
-    max-width: 80%;
+    max-width: calc(var(--text-width) * 0.8);
 }
 
 main.post article .content > hr:after {
@@ -56,8 +55,19 @@ main.post article .footnotes li {
 }
 
 
+/* === Styling for specific components, like tables, figures, code ========== */
+
+
+/* main.post article .content .sourceCode,
+    main.post article .content figure {
+    margin: initial auto;
+    max-width: 100%;
+} */
+
+
 main.post article .content figure img {
     max-width: 100%;
+    margin: auto;
 }
 main.post article .content figure:not(.raw) img {
     width: 100%;
@@ -69,15 +79,6 @@ main.post article .content figure figcaption p {
 
 
 /* 
-
-
-.post article figure figcaption>* {
-    color: var(--light-grey);
-    font-size: 0.85em;
-    margin-top: 0;
-}
-
-
 
 .post .nextprev {
     position: relative;

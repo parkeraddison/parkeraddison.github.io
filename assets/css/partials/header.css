@@ -1,7 +1,12 @@
 header {
     position: fixed;
+    height: 100%;
     background-color: var(--page-background);
     margin-top: -0.5em; /* To account for the padding around the first link */
+}
+header:hover,
+header:focus {
+    opacity: 1;
 }
 
 header a {
