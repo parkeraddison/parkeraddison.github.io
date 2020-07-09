@@ -31,12 +31,11 @@
 
     </section>
 
-    <div class="generic-wrapper">
+    <div class="main-like generic-wrapper">
 
-        {{ partial "news" . }}
-        {{ partial "latest-posts" . }}
-
-
+        <section id="news">
+            {{ partial "news" . }}
+        </section>
 
         <section id="featured">
 
@@ -76,7 +75,11 @@
             </article>
             {{ end }}
 
-            <span class="see-more"><a href="{{ .Site.BaseURL }}projects">Interested? Check out my projects</a></span>
+            <span class="see-more"><a href="{{ .Site.BaseURL }}portfolio">Interested? Check out my projects</a></span>
+        </section>
+
+        <section id="posts">
+            {{ partial "latest-posts" . }}
         </section>
 
     </div>

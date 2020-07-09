@@ -1,14 +1,14 @@
 {{ define "css" }}
-    {{ partial "include-css" "blog" }}
+{{ partial "include-css" "blog" }}
 {{ end }}
 
 {{ define "main" }}
 
 <main class="post">
-    <article>
+    <article class="main-like">
         <h1 class="title">{{ .Title }}</h1>
         <p class="info">{{ .Date.Format "Jan 02, 2006" }} &bullet; {{ .ReadingTime }} minute read</p>
-        <div class="content">{{ .Content }}</div>
+        <div class="content main-like">{{ .Content }}</div>
     </article>
     <hr>
     {{/* <p class="info">Related:</p>{{ partial "tags.html" . }} */}}

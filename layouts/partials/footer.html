@@ -1,12 +1,14 @@
 {{ if and (not .IsHome) (ne .Kind "404") }}
 <div class="main-like">
-    <span class="see-less"><a href="{{ .Parent.Permalink }}">
-        {{ if .Parent.IsHome }}
-        Back
-        {{ else }}
-        {{ .Parent.Title }}
-        {{ end }}
-    </a></span>
+    <div>
+        <span class="see-less"><a href="{{ .Parent.Permalink }}">
+            {{ if .Parent.IsHome }}
+            Back
+            {{ else }}
+            {{ .Parent.Title }}
+            {{ end }}
+        </a></span>
+    </div>
 </div>
 {{ end }}
 

@@ -1,6 +1,7 @@
 :root {
     --text-color: #303030;
     --text-color-alt: #778;
+    --text-width: 36rem;
 
     --transition-speed: 0.1s;
     --page-background: #fcfcfc;
@@ -28,10 +29,11 @@
     --dark-background: #2f3542;
     --dark-background: rgb(40, 45, 50);
 
-    --header-width: 9em;
+    --header-width: 8em;
     --aside-width: 18em;
     --side-margin: 4em;
     --top-margin: 4em;
+    --gap: 4em;
 
     --link-color: rgb(110, 140, 255);
     --link-color: rgb(120, 130, 250);
@@ -131,6 +133,8 @@ span.see-less a {
     width: 100%;
     font-size: 95%;
     padding-bottom: 1em;
+    padding-top: 0.5em;
+    margin-top: 0.5em;
     position: relative;
 }
 span.see-less a {
@@ -159,31 +163,23 @@ span.see-less a:focus::before {
     left: -1em;
 }
 
-/* .highlight {
-    color: var(--text-color);
-    background-color: var(--highlight-color-alpha);
-    border-bottom: 2px solid var(--highlight-color);
-    transition: background-color var(--transition-speed);
-}
-
-.highlight:hover,
-.highlight:focus {
-    color: var(--text-color);
-    background-color: var(--highlight-color);
-} */
-
 #body-container {
     display: grid;
     grid-template-columns: var(--header-width) 1fr var(--aside-width);
-    gap: 4em;
+    gap: var(--gap);
     padding: var(--top-margin) var(--side-margin);
     margin: 0;
 }
 
-main,
-.main-like {
-    max-width: 36em;
-    margin: auto;
+main > :not(.main-like),
+.main-like > :not(.main-like) {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: var(--text-width);
+}
+
+.generic-wrapper {
+    position: relative;
 }
 
 section {
@@ -218,21 +214,13 @@ main article p {
     --text-color: var(--text-color-alt);
 }
 
-
-.generic-wrapper {
-    position: relative;
-}
-
 /* === Smaller Viewports ==================================================== */
 
 @media only screen and (max-width: 1500px) {
     :root {
         --side-margin: 1em;
         --aside-width: 20vw;
-    }
-
-    #body-container {
-        gap: 2em;
+        --gap: 2em;
     }
 }
 
@@ -253,52 +241,16 @@ main article p {
     }
 }
 
-/* @media (max-width: 1300px) {
-    #body-container {
-        padding: 0;
-        margin: 0 0.5em;
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: 10em auto 1fr;
-        gap: 1em;
-        font-size: 16px;
+/* === No hover capability ================================================== */
+
+@media (hover: none) {
+    span.see-more a {
+        /* color: var(--link-color); */
     }
 
-    header {
-        width: 100%;
-        position: static;
+    a h1 {
+        text-decoration: underline;
+        text-decoration-color: var(--link-color);
+        text-decoration-style: dashed;
     }
-
-    nav ul,
-    nav .social {
-        display: flex;
-        justify-content: space-evenly;
-        flex-wrap: wrap;
-    }
-
-    #aside-wrapper {
-        grid-row: 2;
-        font-size: 0.9em;
-        margin-top: 10em;
-    }
-
-    aside .article-wrapper {
-        height: min-content;
-        margin: 0;
-    }
-
-    aside article {
-        margin: 2em 0;
-    }
-
-    aside article .description,
-    aside article .description:hover {
-        display: none;
-    }
-
-    aside .see-more a {
-        padding: 1em 12em 3em 0;
-    }
-
-
-} */
+}
