@@ -5,8 +5,6 @@ title: "Parker Addison"
 enableRobotsTXT: true
 canonifyURLs: true
 
-# publishDir: "../"
-
 Author:
     name: "Parker Grey Addison"
 
@@ -22,3 +20,4 @@ markup:
     defaultMarkdownHandler: pandoc
 
 assetDir: assets
+publishDir: "../"
