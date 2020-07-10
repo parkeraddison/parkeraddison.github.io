@@ -1,5 +1,5 @@
 ---
-title: "Test"
+title: "This is only a test. But this is not a drill!"
 date: 2020-07-02T13:27:34-07:00
 draft: true
 description: 
@@ -49,6 +49,13 @@ async def get_frame(self, session):
             print(f"Mask request failed, retrying: {e}")
             traceback.print_exc()
 ```
+
+{{< margin >}}
+Here's a margin note -- *wow*!
+Note that it shows up next to the content that it is written **after**
+
+Here's another [paragraph](null) to look at.
+{{< /margin >}}
 
 ```javascript
 let ofDifferent = flavors ? true : Array;

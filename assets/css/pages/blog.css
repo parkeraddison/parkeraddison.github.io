@@ -1,86 +1,79 @@
 /* === POSTS =============================================================== */
 
-main.post {
+main {
     --body-text-color: #444;
+    color: var(--body-text-color);
 }
 
-main.post article h1 {
+h1 {
     font-size: 2.6em;
-    margin: 0 auto 2rem;
+    margin-bottom: 0;
 }
 
-main.post article .info {
+main .info {
     font-family: var(--monospace);
     font-size: 75%;
+    margin-bottom: 4rem;
 }
 
-main.post article .content {
-    margin-top: 4em;
-}
-
-main.post article .content h2, h3 {
+main h2,
+h3 {
     margin-top: 2rem;
 }
 
-main.post article .content p,
-main.post article .content li {
+main p,
+main li {
     color: var(--body-text-color);
     line-height: 1.4;
     margin-bottom: 1.4em;
 }
 
-main.post article .content > hr {
-    border: 3px double #666;
-    border-style: double none none;
-    color: #444;
-    text-align: center;
-    margin: 2em auto;
-    height: 2px;
-    max-width: calc(var(--text-width) * 0.8);
+main > hr {
+    border: none;
+    border-top: 1px solid var(--narrow-light-grey);
+    width: calc(100% - 4em);
+    margin: 1em auto;
+    height: 1em;
 }
 
-main.post article .content > hr:after {
+/* main > hr:after {
     background: var(--page-background);
-    content: "§";
+    content: '§';
     padding: 0 4px;
     position: relative;
     font-family: sans-serif;
     font-size: 85%;
     top: -16px;
-}
+} */
 
-main.post article .footnotes p,
-main.post article .footnotes li {
+main .footnotes p,
+main .footnotes li {
     color: var(--text-color-alt);
 }
 
-
 /* === Styling for specific components, like tables, figures, code ========== */
 
-
-/* main.post article .content .sourceCode,
-    main.post article .content figure {
-    margin: initial auto;
-    max-width: 100%;
-} */
-
-
-main.post article .content figure img {
-    max-width: 100%;
-    margin: auto;
+table,
+th,
+td {
+    border-collapse: collapse;
+    border: 1px solid var(--narrow-light-grey);
 }
-main.post article .content figure:not(.raw) img {
-    width: 100%;
+
+main figure.raw {
+    margin: 1em auto;
 }
-main.post article .content figure figcaption p {
+main figure img {
+    max-width: 100%;
+}
+main figure figcaption p {
     color: var(--text-color-alt);
     font-size: 85%;
 }
 
-
 /* 
 
-.post .nextprev {
+ .nextprev {
     position: relative;
     display: grid;
     margin: auto;
@@ -91,11 +84,11 @@ main.post article .content figure figcaption p {
     width: 100%;
 }
 
-.post .nextprev a {
+ .nextprev a {
     height: 100%;
 }
 
-.post .nextprev .disabled {
+ .nextprev .disabled {
     pointer-events: none;
     color: var(--element-light-grey);
     box-shadow: none;
@@ -103,7 +96,8 @@ main.post article .content figure figcaption p {
 
 /* This shifts the hash positions so that they aren't covered by the header. */
 
-sup[id^="fnref:"], li[id^="fn:"] {
+sup[id^='fnref:'],
+li[id^='fn:'] {
     padding-top: 6em;
     margin-top: -6em;
 }
@@ -118,14 +112,14 @@ sup[id^="fnref:"], li[id^="fn:"] {
     padding: 1em 0;
 }
 
-.post .tags-list {
+ .tags-list {
     margin-left: 1em;
     margin-right: 1em;
 } */
 
 /* === TAGS ================================================================ */
 
-.tags-list {
+/* .tags-list {
     list-style-type: none;
     margin: 0;
     margin-top: 0.5em;
@@ -143,4 +137,4 @@ sup[id^="fnref:"], li[id^="fn:"] {
     background-color: var(--narrow-light-grey);
     background-color: var(--narrow-light-grey);
     border-radius: 4px;
-}
+} */
