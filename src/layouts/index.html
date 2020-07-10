@@ -9,7 +9,7 @@
         <!-- <img src="images/parker-addison-tree-small.jpg" alt="" height=200> -->
         <div class="intro">
             <img src="images/parker-addison.jpg" alt="" height=180>
-            <div>
+            <!-- <div> -->
                 <h1>Hi there,<br />
                     I&rsquo;m Parker Addison.</h1>
 
@@ -17,7 +17,7 @@
                     I'm studying at the intersection of data science, statistics, and society — delving into data
                     science and what it can do for the world.
                 </p>
-            </div>
+            <!-- </div> -->
         </div>
     </section>
 
@@ -27,7 +27,7 @@
 
     <section id="featured">
 
-        <h1 class="section-title">Featured</h1>
+        <h1 class="section-title">Featured 📊</h1>
 
         <article>
             <a href="https://parkeraddison.com/dvorak-viz">
@@ -68,7 +68,27 @@
     </section>
 
     <section id="latest-posts" class="sidebar">
-        {{ partial "latest-posts" . }}
+        <aside id="blog-posts">
+            <h1 class="section-title">Latest Posts ✍️</h1>
+            <div class="article-wrapper">
+                {{ with $posts := where .Site.RegularPages "Section" "blog" }}
+                {{ range first 3 ($posts.ByParam "date").Reverse }}
+                <a href="{{ .Permalink }}">
+                    <article>
+
+                        <h1 class="title">{{ .Title }}</h1>
+                        <p class="description" lang="en">{{ .Params.Description | .RenderString }}</p>
+                        <p class="date">{{ .Params.Date.Format "Jan 2, 2006" }}</p>
+
+                    </article>
+                </a>
+                {{ end }}
+                {{ end }}
+                <span class="see-more"><a href="{{ .Site.BaseURL }}blog">
+                        All
+                    </a></span>
+            </div>
+        </aside>
     </section>
 
 </main>

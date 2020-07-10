@@ -6,7 +6,7 @@
 <main id="news">
 {{ end }}
 
-    <h1 class="section-title">News</h1>
+    <h1 class="section-title">News 📰</h1>
     {{ with $pages := where .Site.RegularPages "Section" "news" }}
     {{ range first $num ($pages.ByParam "date").Reverse }}
     <article>

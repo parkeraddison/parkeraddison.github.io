@@ -1,5 +1,5 @@
 ---
-title: "Data Science Portfolio"
+title: "Data Science Portfolio 🤖"
 date: 2020-02-13T13:12:45-08:00
 draft: false
 description: "I'm Parker Addison.  This data science portfolio acts as a sort of online curriculum vitae to showcase my academics, my work and research experience, and my data science related projects."
