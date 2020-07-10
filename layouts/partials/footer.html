@@ -1,19 +1,20 @@
-{{ if and (not .IsHome) (ne .Kind "404") }}
-<div class="main-like">
-    <div>
-        <span class="see-less"><a href="{{ .Parent.Permalink }}">
-            {{ if .Parent.IsHome }}
-            Back
-            {{ else }}
-            {{ .Parent.Title }}
-            {{ end }}
-        </a></span>
-    </div>
-</div>
-{{ end }}
 
 
 <footer>
+    {{/*  {{ if and (not .IsHome) (ne .Kind "404") }}  */}}
+    {{ if and (not .IsHome) (true) }}
+    {{/*  <div class="pseudomain">  */}}
+        <div>
+            <span class="see-less"><a href="{{ .Parent.Permalink }}">
+                {{ if .Parent.IsHome }}
+                Home
+                {{ else }}
+                {{ .Parent.Title }}
+                {{ end }}
+            </a></span>
+        </div>
+    {{/*  </div>  */}}
+    {{ end }}
     <p>
         <!-- Thanks for stopping by, -->
         <a href="https://parkeraddison.com">

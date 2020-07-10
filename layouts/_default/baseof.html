@@ -19,7 +19,7 @@
     {{ $allStyles = $allStyles | append (resources.Get "css/main.css") }}
     {{ $allStyles = $allStyles | append (resources.Get "css/syntax.css") }}
     {{ $allStyles = $allStyles | append (resources.Match "css/partials/*") }}
-    {{ $style := $allStyles | resources.Concat "bundle.css" | minify | fingerprint }}
+    {{ $style := $allStyles | resources.Concat "bundle.css" | postCSS | minify | fingerprint }}
     <link rel="stylesheet" href="{{ $style.Permalink }}" integrity="{{ $style.Data.Integrity }}" media="screen">
 
     {{/*  Include page-specific css (with the help of a include-css partial)  */}}
@@ -44,7 +44,7 @@
             ]
         });"></script>
 
-    
+
     {{/* Custom scripts */}}
     {{ $script := resources.Get "js/main.js"| minify }}
     <script src="{{ $script.Permalink }}"></script>
@@ -53,19 +53,10 @@
 </head>
 
 <body>
-    <section id="body-container">
-        {{ partial "header" . }}
-
-        <section id="aside-wrapper">
-            {{ block "aside" . }}
-            {{ end }}
-        </section>
-
-        <section id="main-wrapper">
-            {{ block "main" . }}
-            {{ end }}
-            {{ partial "footer" . }}
-        </section>
+    {{ partial "header" . }}
+    {{ block "main" . }}
+    {{ end }}
+    {{ partial "footer" . }}
     </section>
 </body>
 

@@ -1,20 +1,3 @@
-#aside-wrapper {
-    position: absolute;
-    /* right: calc(-1 * var(--aside-width)); */
-    /* right: var(--side-margin); */
-    /* margin: 0; */
-    /* left: calc(100vw - 2*var(--side-margin) - 2*4em - var(--aside-width)); */
-    left: calc(
-        100% +
-            (
-                100vw - 100% - var(--gap) - var(--header-width) -
-                    var(--side-margin)
-            ) - var(--aside-width) - var(--side-margin)
-        /* - 4em */
-    );
-    top: 0;
-    width: var(--aside-width);
-}
 
 aside article {
     padding: 0;
@@ -55,16 +38,13 @@ aside .see-more a {
 
 /* === Smaller Viewports ==================================================== */
 
-@media only screen and (max-width: 960px) {
+@media only screen and (max-width: 940px) {
     #aside-wrapper {
         position: static;
         width: 100%;
     }
 
     .article-wrapper {
-        /* display: flex;
-        justify-content: space-between;
-        flex-wrap: wrap; */
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(12em, 1fr));
         gap: 3em;

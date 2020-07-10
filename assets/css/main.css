@@ -1,19 +1,27 @@
 :root {
-    --text-color: #303030;
-    --text-color-alt: #778;
-    --text-width: 36rem;
+    --side-margin: 4em;
+    --top-margin: 4em;
+    --column-gap: 2em;
+    --text-width: 34rem;
+    --header-width: 9rem;
+    --sidebar-width: 16rem;
+    --font-size: 19px;
 
-    --transition-speed: 0.1s;
-    --page-background: #fcfcfc;
-    --page-background-alt: #f4f4f4;
-    --page-width: 768px;
-    --page-width: 700px;
-    --page-width-wider: 1200px;
     --sans-serif: 'IBM Plex Sans', sans-serif;
     --sans-serif: 'Lexend Deca', sans-serif;
     --serif: 'Source Serif Pro', Cambria, Cochin, Georgia, Times,
         'Times New Roman', serif;
     --monospace: Consolas, Menlo, monospace;
+
+    --text-color: #303030;
+    --text-color-alt: #778;
+    --link-color: #007bff;
+    --link-color: rgb(120, 130, 250);
+
+    --page-background: #fcfcfc;
+    --page-background-alt: #f4f4f4;
+    --dark-background: #2f3542;
+    --dark-background: rgb(40, 45, 50);
 
     --light-grey: #888;
     --narrow-light-grey: #e8e8e8;
@@ -24,19 +32,9 @@
     --accent-yellow: #f0c60a;
     --accent-blue: #00b3e5;
     --accent-blue: #28f;
-    --link-color: #007bff;
     --accent-indigo: #764afa;
-    --dark-background: #2f3542;
-    --dark-background: rgb(40, 45, 50);
 
-    --header-width: 8em;
-    --aside-width: 18em;
-    --side-margin: 4em;
-    --top-margin: 4em;
-    --gap: 4em;
-
-    --link-color: rgb(110, 140, 255);
-    --link-color: rgb(120, 130, 250);
+    --transition-speed: 0.1s;
 }
 
 /* === Raw elements ========================================================= */
@@ -46,27 +44,30 @@ body {
     padding: 0;
     margin: 0;
     font-family: var(--sans-serif);
-    font-size: 19px;
+    font-size: var(--font-size);
     background-color: var(--page-background);
     color: var(--text-color);
+}
+body {
+    padding: var(--top-margin) var(--side-margin);
 }
 
 p {
     color: var(--text-color-alt);
 }
 
-p i,
-p em {
-    padding-right: 2px;
+i,
+em {
+    padding-right: 0.25ex;
 }
 
 p code {
     font-family: var(--monospace);
-    /* color: #f26; */
     font-size: 90%;
     padding: 4px 4px 2px;
     background-color: #f0f0f0;
     border-radius: 4px;
+    /* color: #d8005a; */
 }
 
 h1,
@@ -75,7 +76,6 @@ h3 {
     font-family: var(--serif);
     font-weight: 600;
 }
-
 h1 {
     font-size: 150%;
 }
@@ -85,7 +85,6 @@ h2 {
 h3 {
     font-size: 100%;
 }
-
 h1.section-title {
     font-family: var(--serif);
     font-size: 110%;
@@ -93,35 +92,30 @@ h1.section-title {
     color: var(--text-color-alt);
     margin: 0 0 2em;
 }
-
 article h1 {
     font-size: 110%;
 }
-
 article h2 {
     font-size: 100%;
 }
 
 a {
-    color: var(--text-color);
+    color: inherit;
     fill: var(--text-color-alt);
     text-decoration: none;
     border-bottom: none;
     transition: color var(--transition-speed),
         border-bottom var(--transition-speed);
 }
-
 a:hover,
 a:focus {
     color: var(--link-color);
     fill: var(--link-color);
 }
-
 p a {
     color: var(--text-color-alt);
     border-bottom: 1px solid #ddd;
 }
-
 p a:hover,
 p a:focus {
     border-bottom: 2px solid var(--link-color);
@@ -129,7 +123,6 @@ p a:focus {
 
 span.see-more a,
 span.see-less a {
-    display: inline-block;
     width: 100%;
     font-size: 95%;
     padding-bottom: 1em;
@@ -137,10 +130,12 @@ span.see-less a {
     margin-top: 0.5em;
     position: relative;
 }
+span.see-more a {
+    display: inline-block;
+}
 span.see-less a {
     padding-left: 1em;
 }
-
 span.see-more a::after {
     content: ' \2192';
     padding-left: 0;
@@ -150,7 +145,6 @@ span.see-more a:hover::after,
 span.see-more a:focus::after {
     padding-left: 1em;
 }
-
 span.see-less a::before {
     content: '\2190 ';
     padding-left: 0;
@@ -163,32 +157,118 @@ span.see-less a:focus::before {
     left: -1em;
 }
 
-#body-container {
+/* === Layout ========================================================== */
+
+main,
+main ~ .pseudomain,
+main ~ footer {
     display: grid;
-    grid-template-columns: var(--header-width) 1fr var(--aside-width);
-    gap: var(--gap);
-    padding: var(--top-margin) var(--side-margin);
-    margin: 0;
+    grid-template-columns:
+        [page-start]
+        var(--header-width) 1fr
+        [text-start]
+        var(--text-width)
+        [text-end margin-start]
+        1fr var(--sidebar-width)
+        [ margin-end page-end];
+    column-gap: 1rem;
+    width: 100%;
+}
+main > *,
+main ~ .pseudomain > *,
+main ~ footer > * {
+    grid-column: text;
+}
+.sidebar {
+    grid-column: margin;
+    max-width: var(--sidebar-width);
+    justify-self: end;
+    height: 0;
+}
+.margin-note {
+    grid-column: margin;
+    max-width: 12em;
+    height: 0; /* This way it doesn't interfere with the body spacing */
+}
+.margin-note p {
+    color: var(--text-color-alt);
+    font-size: 85%;
+}
+@media only screen and (max-width: 1500px) {
+    :root {
+        --side-margin: 2rem;
+        --top-margin: 2rem;
+        --sidebar-width: 14rem;
+    }
+}
+@media only screen and (max-width: 1300px) {
+    :root {
+        --font-size: 17px;
+    }
+}
+@media only screen and (max-width: 1100px) {
+    :root {
+        --sidebar-width: 12rem;
+    }
+    main,
+    main ~ .pseudomain,
+    main ~ footer {
+        grid-template-columns:
+            [page-start]
+            var(--header-width)
+            [text-start]
+            1fr
+            [text-end margin-start]
+            var(--sidebar-width)
+            [ margin-end page-end];
+        column-gap: 2em;
+    }
+}
+@media only screen and (max-width: 940px) {
+    :root {
+        --side-margin: 0.5em;
+        --top-margin: 4em;
+    }
+    main,
+    main ~ .pseudomain,
+    main ~ footer {
+        grid-template-columns:
+            1fr
+            [page-start text-start]
+            minmax(0, var(--text-width))
+            [text-end page-end]
+            1fr;
+        column-gap: 0;
+    }
+    .sidebar {
+        grid-column: text;
+        grid-row: unset !important;
+        max-width: unset;
+        height: unset;
+        justify-self: unset;
+    }
+}
+@media only screen and (max-width: 800px) {
+    .margin-note {
+        grid-column: text;
+        grid-row: unset !important;
+        max-width: unset;
+        height: unset;
+        justify-self: unset;
+        /* border: 1px solid var(--narrow-light-grey);
+        border-style: solid none; */
+    }
 }
 
-main > :not(.main-like),
-.main-like > :not(.main-like) {
-    margin-left: auto;
-    margin-right: auto;
-    max-width: var(--text-width);
-}
-
-.generic-wrapper {
-    position: relative;
-}
+/* === Components, like sections and articles =============================== */
 
 section {
-    margin-bottom: 6em;
+    margin-bottom: 1em;
 }
 
 main > article,
 main section > article {
-    margin: 0 0 4em;
+    margin: 0 0 3em;
 }
 
 main article hgroup {
@@ -214,33 +294,6 @@ main article p {
     --text-color: var(--text-color-alt);
 }
 
-/* === Smaller Viewports ==================================================== */
-
-@media only screen and (max-width: 1500px) {
-    :root {
-        --side-margin: 1em;
-        --aside-width: 20vw;
-        --gap: 2em;
-    }
-}
-
-@media only screen and (max-width: 1100px) {
-    html, body {
-        font-size: 17px;
-    }
-}
-
-@media only screen and (max-width: 960px) {
-    :root {
-        --top-margin: 0;
-        --side-margin: 0.5em;
-    }
-
-    #body-container {
-        grid-template-columns: 1fr;
-    }
-}
-
 /* === No hover capability ================================================== */
 
 @media (hover: none) {
@@ -249,8 +302,8 @@ main article p {
     }
 
     a h1 {
-        text-decoration: underline;
-        text-decoration-color: var(--link-color);
-        text-decoration-style: dashed;
+    text-decoration: underline;
+    text-decoration-color: var(--link-color);
+    text-decoration-style: dashed;
     }
 }
