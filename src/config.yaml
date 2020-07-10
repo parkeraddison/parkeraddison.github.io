@@ -1,0 +1,24 @@
+baseURL: "https://parkeraddison.com/"
+languageCode: "en-us"
+title: "Parker Addison"
+
+enableRobotsTXT: true
+canonifyURLs: true
+
+# publishDir: "../"
+
+Author:
+    name: "Parker Grey Addison"
+
+params:
+    resumeURL: "https://nbviewer.jupyter.org/github/parkeraddison/resume/blob/master/resume.pdf"
+
+pluralizeListTitles: false
+
+taxonomies:
+    tag: tags
+
+markup:
+    defaultMarkdownHandler: pandoc
+
+assetDir: assets
