@@ -10,11 +10,6 @@ footer p > * {
     text-decoration: none;
     border: none;
 }
-footer code {
-    background: none;
-    padding: 0;
-    font-size: initial;
-}
 footer img {
     position: relative;
     height: 1.2em;

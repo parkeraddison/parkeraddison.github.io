@@ -1,7 +1,4 @@
 {{ define "css" }}
-<script>
-    console.log("{{ .Type }}list");
-</script>
 {{ $section := .Type | printf "%slist" }}
 {{ partial "include-css" (string $section) }}
 {{ end }}

@@ -6,13 +6,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Parker Addison</title>
+    {{ if .IsHome }}
+    <title>{{ .Site.Title }}</title>
+    {{ else if (eq .Kind "404") }}
+    <title>😿 | {{ .Site.Title }}</title>
+    {{ else }}
+    <title>{{ .Title }} | {{ .Site.Title }}</title>
+    {{ end }}
     {{ partial "seo-head.html" . }}
 
     <link href="https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Source+Serif+Pro:wght@400;600&display=swap" rel="stylesheet">
-    {{/*  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,500;1,500&display=swap" rel="stylesheet">   */}}
-    {{/*  <link href="https://fonts.googleapis.com/css2?family=Vollkorn:ital,wght@0,600;1,600&display=swap" rel="stylesheet">   */}}
 
     {{/*  Bundle, minify, and link all styles  */}}
     {{ $allStyles := slice }}
@@ -20,7 +24,7 @@
     {{ $allStyles = $allStyles | append (resources.Get "css/syntax.css") }}
     {{ $allStyles = $allStyles | append (resources.Match "css/partials/*") }}
     {{ $style := $allStyles | resources.Concat "bundle.css" | minify | fingerprint }}
-    {{/*  {{ $style := $allStyles | resources.Concat "bundle.css" | postCSS | minify | fingerprint }}  */}}
+    {{/*  {{ $style := $allStyles | resources.Concat "bundle.css" | postCSS | minify | fingerprint }} */}}
     <link rel="stylesheet" href="{{ $style.Permalink }}" integrity="{{ $style.Data.Integrity }}" media="screen">
 
     {{/*  Include page-specific css (with the help of a include-css partial)  */}}
