@@ -8,7 +8,7 @@
     console.log("No page css exists for `{{ . }}`");
 </script>
 {{ else }}
-{{ $css = $css | minify | fingerprint }}
-{{/*  {{ $css = $css | postCSS | minify | fingerprint }}  */}}
+{{/*  {{ $css = $css | minify | fingerprint }}  */}}
+{{ $css = $css | postCSS | minify }}
 <link rel="stylesheet" href="{{ $css.Permalink }}" integrity="{{ $css.Data.integrity }}" media="screen">
 {{ end }}
