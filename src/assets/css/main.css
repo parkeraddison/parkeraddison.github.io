@@ -1,27 +1,19 @@
-:root {
-    --side-margin: 4em;
-    --top-margin: 4em;
-    --column-gap: 2em;
-    --text-width: 34rem;
-    --header-width: 9rem;
-    --sidebar-width: 16rem;
-    --font-size: 19px;
+* {
+    box-sizing: border-box;
+}
 
-    --sans-serif: 'IBM Plex Sans', sans-serif;
+:root {
     --sans-serif: 'Lexend Deca', sans-serif;
     --serif: 'Source Serif Pro', Cambria, Cochin, Georgia, Times,
         'Times New Roman', serif;
     --monospace: Consolas, Menlo, monospace;
 
-    --text-color: #303030;
-    --text-color-alt: #778;
-    --link-color: #007bff;
-    --link-color: rgb(120, 130, 250);
-
-    --page-background: #fcfcfc;
-    --page-background-alt: #f4f4f4;
-    --dark-background: #2f3542;
-    --dark-background: rgb(40, 45, 50);
+    --bg: #fbfbf8;
+    --text: #282833;
+    --text-light: #888;
+    --text-extra-light: #bbb;
+    --link-color: rgb(173, 88, 105);
+    --link-color: #AD5869;
 
     --light-grey: #888;
     --narrow-light-grey: #e8e8e8;
@@ -33,277 +25,195 @@
     --accent-blue: #00b3e5;
     --accent-blue: #28f;
     --accent-indigo: #764afa;
-
-    --transition-speed: 0.1s;
 }
 
-/* === Raw elements ========================================================= */
+/* === Responsive Grid ====================================================== */
+
+:root {
+    --grid-layout: [page-start] 1fr [wide-start left-start] 300px [left-end
+        narrow-start] 333px [midpoint] 333px [narrow-end right-start] 300px
+        [right-end wide-end] 1fr [page-end];
+    --column-gap: 16px;
+    --row-gap: 16px;
+}
+
+@media screen and (max-width: 1372px) {
+    :root {
+        --grid-layout: [page-start] 0px [wide-start left-start] 1fr [left-end
+            narrow-start] 333px [midpoint] 333px [narrow-end] 1fr [wide-end] 0px
+            [page-end];
+    }
+}
+
+@media screen and (max-width: 764px) {
+    :root {
+        --grid-layout: [page-start] 1fr [wide-start narrow-start]
+            minmax(300px, 700px) [narrow-end wide-end] 1fr [page-end];
+        --column-gap: 0.5em;
+    }
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: var(--grid-layout);
+    column-gap: var(--column-gap);
+    row-gap: var(--row-gap);
+    width: 100%;
+}
+
+.col-narrow {
+    grid-column: narrow;
+}
+.col-wide {
+    grid-column: wide;
+}
+
+/* === Html, Body =========================================================== */
 
 html,
 body {
-    padding: 0;
-    margin: 0;
     font-family: var(--sans-serif);
-    font-size: var(--font-size);
-    background-color: var(--page-background);
-    color: var(--text-color);
-}
-body {
-    padding: var(--top-margin) var(--side-margin);
+    background-color: var(--bg);
+    margin: 0;
+
+    color: var(--text);
 }
 
-p {
-    color: var(--text-color-alt);
-}
-
-i,
-em {
-    padding-right: 0.25ex;
-}
-
-p code {
-    font-family: var(--monospace);
-    font-size: 90%;
-    padding: 4px 4px 2px;
-    background-color: #f0f0f0;
-    border-radius: 4px;
-    /* color: #d8005a; */
-}
+/* === Text (headers, paragraphs, em, etcs) ===================================== */
 
 h1,
 h2,
 h3 {
     font-family: var(--serif);
-    font-weight: 600;
 }
-h1 {
-    font-size: 150%;
+
+section > h1 {
+    font-size: 170%;
 }
-h2 {
-    font-size: 150%;
+
+p {
+    margin-top: 0;
 }
-h3 {
-    font-size: 100%;
+
+em {
+    padding-right: 2px;
 }
-h1.section-title {
-    font-family: var(--serif);
-    font-size: 110%;
+
+small {
+    color: var(--text-light);
     font-family: var(--sans-serif);
-    color: var(--text-color-alt);
-    margin: 0 0 2em;
 }
-article h1 {
-    font-size: 110%;
+
+code,
+pre.sourceCode {
+    font-size: 90% !important;
+    font-family: var(--monospace);
 }
-article h2 {
-    font-size: 100%;
+
+span.nowrap {
+    white-space: nowrap;
 }
+
+.icon svg {
+    height: 1em;
+    width: 1em;
+    position: relative;
+    top: 0.15em;
+}
+
+/* === Links ================================================================ */
 
 a {
-    color: inherit;
-    fill: var(--text-color-alt);
-    text-decoration: none;
-    border-bottom: none;
-    transition: color var(--transition-speed),
-        border-bottom var(--transition-speed);
-}
-a:hover,
-a:focus {
     color: var(--link-color);
-    fill: var(--link-color);
-}
-p a {
-    color: var(--text-color-alt);
-    border-bottom: 1px solid #ddd;
-}
-p a:hover,
-p a:focus {
-    border-bottom: 2px solid var(--link-color);
+    /* text-decoration-color: var(--text-extra-light); */
+    text-decoration: none;
 }
 
-span.see-more a,
-span.see-less a {
-    width: 100%;
-    font-size: 95%;
-    padding-bottom: 1em;
-    padding-top: 0.5em;
-    margin-top: 0.5em;
-    position: relative;
+a.see-more {
+    padding-right: 2em;
 }
-span.see-more a {
-    display: inline-block;
-}
-span.see-less a {
-    padding-left: 1em;
-}
-span.see-more a::after {
-    content: ' \2192';
-    padding-left: 0;
-    transition: padding-left var(--transition-speed);
-}
-span.see-more a:hover::after,
-span.see-more a:focus::after {
-    padding-left: 1em;
-}
-span.see-less a::before {
-    content: '\2190 ';
-    padding-left: 0;
+a.see-more:after {
+    content: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" fill="#282833" width="16px" height="16px"><path d="M10.9,13l-1.4-1.4L12.2,9H0V7h12.2L9.5,4.4L10.9,3L16,8L10.9,13z" /></svg>');
+    content: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" fill="rgb(173, 88, 105)" width="16px" height="16px"><path d="M10.9,13l-1.4-1.4L12.2,9H0V7h12.2L9.5,4.4L10.9,3L16,8L10.9,13z" /></svg>');
     position: absolute;
-    left: 0;
-    transition: left var(--transition-speed);
+    margin-left: 0.5em;
+    margin-top: 0.15em;
+    transition: margin-left 0.1s;
 }
-span.see-less a:hover::before,
-span.see-less a:focus::before {
-    left: -1em;
+a.see-more:hover:after,
+a.see-more:focus:after {
+    margin-left: 1em;
 }
 
-/* === Layout ========================================================== */
+a.see-less {
+    padding-left: 2em;
+    position: relative;
+    left: -8px;
+}
+a.see-less::before {
+    content: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" fill="#282833" width="16px" height="16px"><path d="M10.9,13l-1.4-1.4L12.2,9H0V7h12.2L9.5,4.4L10.9,3L16,8L10.9,13z" transform="scale(-1, 1) translate(-16,0)" /></svg>');
+    content: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" fill="rgb(173, 88, 105)" width="16px" height="16px"><path d="M10.9,13l-1.4-1.4L12.2,9H0V7h12.2L9.5,4.4L10.9,3L16,8L10.9,13z" transform="scale(-1, 1) translate(-16,0)" /></svg>');
+    position: absolute;
+    left: 0.5em;
+    top: 0.15em;
+    transition: left 0.1s;
+}
+a.see-less:hover::before,
+a.see-less:focus::before {
+    left: 0em;
+}
 
-main,
-main ~ .pseudomain,
-main ~ footer {
-    display: grid;
-    grid-template-columns:
-        [page-start]
-        var(--header-width) 1fr
-        [text-start]
-        var(--text-width)
-        [text-end margin-start]
-        1fr var(--sidebar-width)
-        [ margin-end page-end];
-    column-gap: 1rem;
-    width: 100%;
+a.see-more,
+a.see-less {
+    color: var(--text);
+    color: var(--link-color);
+    text-decoration: none;
 }
-main > *,
-main ~ .pseudomain > *,
-main ~ footer > * {
-    grid-column: text;
-}
-.sidebar {
-    grid-column: margin;
-    max-width: var(--sidebar-width);
-    justify-self: end;
+
+/* === General page layout, sections and articles =========================== */
+
+section.grid > h1 {
+    grid-column: left;
+    text-align: right;
+    position: sticky;
+    top: 4em;
     height: 0;
-}
-.margin-note {
-    grid-column: margin;
-    max-width: 12em;
-    height: 0; /* This way it doesn't interfere with the body spacing */
-}
-.margin-note p {
-    color: var(--text-color-alt);
-    font-size: 85%;
-}
-@media only screen and (max-width: 1500px) {
-    :root {
-        --side-margin: 2rem;
-        --top-margin: 2rem;
-        --sidebar-width: 14rem;
-    }
-}
-@media only screen and (max-width: 1300px) {
-    :root {
-        --font-size: 17px;
-    }
-}
-@media only screen and (max-width: 1100px) {
-    :root {
-        --sidebar-width: 12rem;
-    }
-    main,
-    main ~ .pseudomain,
-    main ~ footer {
-        grid-template-columns:
-            [page-start]
-            var(--header-width)
-            [text-start]
-            1fr
-            [text-end margin-start]
-            var(--sidebar-width)
-            [ margin-end page-end];
-        column-gap: 2em;
-    }
-}
-@media only screen and (max-width: 940px) {
-    :root {
-        --side-margin: 0.5em;
-        --top-margin: 4em;
-    }
-    main,
-    main ~ .pseudomain,
-    main ~ footer {
-        grid-template-columns:
-            1fr
-            [page-start text-start]
-            minmax(0, var(--text-width))
-            [text-end page-end]
-            1fr;
-        column-gap: 0;
-    }
-    .sidebar {
-        grid-column: text;
-        grid-row: unset !important;
-        max-width: unset;
-        height: unset;
-        justify-self: unset;
-    }
-}
-@media only screen and (max-width: 800px) {
-    .margin-note {
-        grid-column: text;
-        grid-row: unset !important;
-        max-width: unset;
-        height: unset;
-        justify-self: unset;
-        /* border: 1px solid var(--narrow-light-grey);
-        border-style: solid none; */
-    }
+    margin-right: 1em;
 }
 
-/* === Components, like sections and articles =============================== */
+@media screen and (max-width: 1024px) {
+    section.grid > h1 {
+        grid-column: wide;
+        text-align: left;
+        position: static;
+    }
+}
 
 section {
-    margin-bottom: 1em;
+    margin-bottom: 4em;
 }
 
-main > article,
-main section > article {
-    margin: 0 0 3em;
+.grid > article,
+.grid > .article-wrapper {
+    grid-column: narrow;
 }
 
-main article hgroup {
-    margin: 1em 0;
-    position: relative;
+section article:first-of-type,
+section .article-wrapper article {
+    margin-top: 28px;
 }
 
-main article hgroup > * {
-    margin: 0.25em 0;
+.article-wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    column-gap: 24px;
 }
 
-main article .subtitle {
-    font-weight: normal;
-    font-size: 1.1em;
+article h1 {
+    margin-top: 0;
 }
 
-main article figure {
-    margin: 1em 0;
-    text-align: center;
+article.see-more {
+    margin-top: 1em;
 }
 
-main article p {
-    --text-color: var(--text-color-alt);
-}
-
-/* === No hover capability ================================================== */
-
-@media (hover: none) {
-    span.see-more a {
-        /* color: var(--link-color); */
-    }
-
-    a h1 {
-    text-decoration: underline;
-    text-decoration-color: var(--link-color);
-    text-decoration-style: dashed;
-    }
-}

@@ -1,24 +1,27 @@
 {{ define "css" }}
-{{ $section := .Type | printf "%slist" }}
-{{ partial "include-css" (string $section) }}
+{{ partial "include-css" (string .Type | printf "%slist") }}
 {{ end }}
-
 {{ define "main" }}
 <main>
+    {{ if templates.Exists (printf "partials/%s.html" .Type) }}
+    {{ partial (string .Type) . }}
+    {{ else }}
+    <section class="grid">
+        <h1 class="section-title">{{ .Title }}</h1>
 
-    <h1 class="section-title">{{ .Title }}</h1>
+        {{ range .Pages  }}
+        <article>
 
-    {{ range .Pages  }}
-    <article>
-        
-        <a href="{{ .Permalink }}">
-            <h1 class="title">{{ .Title }}</h1>
-        </a>
+            <a href="{{ .Permalink }}">
+                <h1 class="title">{{ .Title }}</h1>
+            </a>
             <p class="description" lang="en">{{ .Params.Description | .RenderString }}</p>
             <p class="date">{{ .Params.Date.Format "Jan 2, 2006" }}</p>
 
         </article>
-    {{ end }}
+        {{ end }}
+    </section>
 
 </main>
+{{ end }}
 {{ end }}

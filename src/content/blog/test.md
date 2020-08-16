@@ -23,6 +23,10 @@ How about a table? hmm
 | 1 | 2 | 3 | 4 | 5 | 6 | 7 |
 | and this is some long text | 2 | 3 | 4 | 5 | 6 | 7 |
 
+| This | Needs | To | Be | Really | Long | Super | Cali | Fragil | Istic | Expee | Ali | Doshus | Whew! | That | Wasn't | Even | Quite |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---
+
+Here's a paragraph that is immediately followed by a list, see?
 
 - Some lists
 - That
@@ -39,6 +43,7 @@ async def get_frame(self, session):
     This does something
     """
     _, frame = self.real_cam.read()
+    ################################################################################
     # fetch the mask with retries (the app needs to warmup and we're lazy)
     # e v e n t u a l l y c o n s i s t e n t
     mask = None

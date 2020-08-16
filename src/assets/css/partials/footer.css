@@ -1,12 +1,11 @@
 footer {
     margin: 8em 0;
     text-align: center;
-    row-gap: 4em;
 }
 footer p,
 footer p > * {
-    color: #aaa;
-    font-size: 85%;
+    color: var(--text-extra-light);
+    font-size: 90%;
     text-decoration: none;
     border: none;
 }
