@@ -1,8 +1,3 @@
-* {
-    box-sizing: border-box;
-    appearance: auto;
-}
-
 :root {
     --sans-serif: 'Lexend Deca', sans-serif;
     --serif: 'Source Serif Pro', Cambria, Cochin, Georgia, Times,
@@ -26,6 +21,10 @@
     --accent-blue: #00b3e5;
     --accent-blue: #28f;
     --accent-indigo: #764afa;
+}
+
+* {
+    box-sizing: border-box;
 }
 
 /* === Responsive Grid ====================================================== */
