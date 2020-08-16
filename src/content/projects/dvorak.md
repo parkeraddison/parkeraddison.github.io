@@ -3,7 +3,7 @@ title: "QWERTY vs Dvorak"
 subline: "A visual exploration of the Dvorak keyboard layout"
 date: 2020-08-15T18:54:09-07:00
 draft: false
-url: demo
+use: "demo"
 code: "https://github.com/parkeraddison/dvorak-viz"
 demo: "https://parkeraddison.com/dvorak-viz"
 report:
