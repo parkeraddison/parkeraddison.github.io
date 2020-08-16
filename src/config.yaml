@@ -13,7 +13,8 @@ params:
     resumeURL: "https://nbviewer.jupyter.org/github/parkeraddison/resume/blob/master/resume.pdf"
 
 disableKinds:
-    - "projects"
+    - "taxonomy"
+    - "taxonomyTerm"
 
 # taxonomies:
 #     tag: tags
