@@ -6,10 +6,30 @@
     <description>Recent content on Parker Addison</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 01 Jul 2020 20:01:29 -0700</lastBuildDate>
+    <lastBuildDate>Sat, 15 Aug 2020 18:54:09 -0700</lastBuildDate>
     
 	<atom:link href="https://parkeraddison.com/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>QWERTY vs Dvorak</title>
+      <link>https://parkeraddison.com/demo/</link>
+      <pubDate>Sat, 15 Aug 2020 18:54:09 -0700</pubDate>
+      
+      <guid>https://parkeraddison.com/demo/</guid>
+      <description>Why are we stuck typing on the same keyboard layout that was invented for the earliest typewriters?
+The Dvorak keyboard layout is fabled to be much more efficient… come play with this interactive data visualization and put that claim to the test!</description>
+    </item>
+    
+    <item>
+      <title>Let&#39;s work together 📡</title>
+      <link>https://parkeraddison.com/contact/</link>
+      <pubDate>Thu, 13 Aug 2020 15:49:12 -0800</pubDate>
+      
+      <guid>https://parkeraddison.com/contact/</guid>
+      <description>   Email pgaddiso@ucsd.edu   LinkedIn https://linkedin.com/in/parkeraddison   GitHub https://github.com/parkeraddison   UC San Diego https://acsweb.ucsd.edu/~pgaddiso    
+If you have questions about the HDSI Data Science Program or are a student in the program, you can schedule a meeting with me by sending an email to dscrep@ucsd.edu and asking for ‘Parker’. </description>
+    </item>
     
     <item>
       <title>First</title>
@@ -80,12 +100,12 @@ This website. It might not feature the most data, but I think it’s cool Most p
     </item>
     
     <item>
-      <title>The Verbosified Works of A.I. Space Rovers</title>
-      <link>https://parkeraddison.com/projects/verbosified-space-rovers/</link>
+      <title>The Verbosified Works on A.I. Space Rovers</title>
+      <link>https://parkeraddison.com/projects/verbosified/</link>
       <pubDate>Fri, 07 Feb 2020 12:00:34 -0800</pubDate>
       
-      <guid>https://parkeraddison.com/projects/verbosified-space-rovers/</guid>
-      <description></description>
+      <guid>https://parkeraddison.com/projects/verbosified/</guid>
+      <description>I (ab)used OpenAI’s GPT-2 model—the one that’s &amp;quot;too dangerous to release&amp;quot;—to make an art piece which doubles the word count of my high school essay by injecting machine-generated fluff text.</description>
     </item>
     
     <item>

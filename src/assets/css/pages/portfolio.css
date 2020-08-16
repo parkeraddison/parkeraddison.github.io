@@ -5,7 +5,7 @@ main {
 }
 
 main h1:not(.section-title) {
-    color: var(--element-light-grey);
+    /* color: var(--text-extra-light); */
     font-size: 2em;
     text-align: center;
     margin-top: 2em;
@@ -24,11 +24,11 @@ main h2 {
 }
 
 main h2 a {
-    border-bottom: 1px solid #ddd;
+    /* border-bottom: 1px solid #ddd; */
 }
 main h2 a:hover,
 main h2 a:focus {
-    border-bottom: 2px solid var(--link-color);
+    /* border-bottom: 2px solid var(--link-color); */
 }
 
 main h3 {
@@ -83,7 +83,7 @@ table {
     width: calc(100% - var(--indent-width));
     margin-bottom: 1em;
     margin-left: var(--indent-width);
-    color: var(--text-color-alt);
+    color: var(--text);
 }
 
 table tbody {
@@ -100,6 +100,5 @@ table tr {
 
 table th {
     font-size: 1.2em;
-    color: var(--text-color);
     width: 100%;
 }

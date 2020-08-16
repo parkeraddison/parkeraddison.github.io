@@ -4,6 +4,7 @@ title: "Parker Addison"
 
 enableRobotsTXT: true
 canonifyURLs: true
+pluralizeListTitles: false
 
 Author:
     name: "Parker Grey Addison"
@@ -11,10 +12,11 @@ Author:
 params:
     resumeURL: "https://nbviewer.jupyter.org/github/parkeraddison/resume/blob/master/resume.pdf"
 
-pluralizeListTitles: false
+disableKinds:
+    - "projects"
 
-taxonomies:
-    tag: tags
+# taxonomies:
+#     tag: tags
 
 markup:
     defaultMarkdownHandler: pandoc

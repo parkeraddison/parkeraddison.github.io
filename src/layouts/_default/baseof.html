@@ -27,7 +27,7 @@
     {{/*  {{ $style := $allStyles | resources.Concat "bundle.css" | postCSS | minify | fingerprint }} */}}
     <link rel="stylesheet" href="{{ $style.Permalink }}" integrity="{{ $style.Data.Integrity }}" media="screen">
 
-    {{/*  Include page-specific css (with the help of a include-css partial)  */}}
+    {{/*  Include page-specific css (with the help of an include-css partial)  */}}
     {{ block "css" . }}{{ end }}
 
     {{/*  KaTeX  */}}
@@ -58,11 +58,12 @@
 </head>
 
 <body>
-    {{ partial "header" . }}
+    {{ if not .IsHome }}
+        {{ partial "header" . }}
+    {{ end }}
     {{ block "main" . }}
     {{ end }}
     {{ partial "footer" . }}
-    </section>
 </body>
 
 </html>

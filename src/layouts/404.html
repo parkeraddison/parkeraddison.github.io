@@ -1,9 +1,59 @@
 {{ define "main" }}
-<main>
-    <h1><em>Whoops!</em></h1>
+<main class="grid">
+    <div class="col-narrow">
+        <h1><em>Whoops!</em></h1>
 
-    <p>
-        Looks like this page doesn't exist :(
-    </p>
+        <p>
+            Looks like this page doesn't exist, sorry. Maybe <a href="{{ .Site.BaseURL }}">head home</a>?
+        </p>
+        <style>
+            pre {
+                text-align: center;
+                margin-top: 4em;
+                color: #bba;
+
+                font-size: 14px;
+                overflow: hidden;
+            }
+            @media screen and (max-width: 450px) {
+                pre {
+                    font-size: 10px;
+                }
+            }
+        </style>
+        <pre>
+
+                                         |       
+                                         |       
+                                         |       
+                                         |       
+   _______                   ________    |       
+  |ooooooo|      ____       | __  __ |   |       
+  |[]+++[]|     [____]      |/  \/  \|   |       
+  |+ ___ +|     ]()()[      |\__/\__/|   |       
+  |:|   |:|   ___\__/___    |[][][][]|   |       
+  |:|___|:|  |__|    |__|   |++++++++|   |       
+  |[]===[]|   |_|_/\_|_|    | ______ |   |       
+_ ||||||||| _ | | __ | | __ ||______|| __|       
+  |_______|   |_|[::]|_|    |________|   \       
+              \_|_||_|_/               jro\      
+                |_||_|                     \     
+               _|_||_|_                     \    
+      ____    |___||___|                     \   
+     /  __\          ____                     \  
+     \( oo          (___ \                     \ 
+     _\_o/           oo~)/                       
+    / \|/ \         _\-_/_                       
+   / / __\ \___    / \|/  \                      
+   \ \|   |__/_)  / / .- \ \                     
+    \/_)  |       \ \ .  /_/                     
+     ||___|        \/___(_/                      
+     | | |          | |  |                       
+     | | |          | |  |                       
+     |_|_|          |_|__|                       
+     [__)_)        (_(___]                       
+                                                 
+            </pre>
+    </div>
 </main>
 {{ end }}

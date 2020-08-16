@@ -1,0 +1,26 @@
+{{ with site.GetPage . }}
+<article class="project">
+    {{ $url := .Params.Get (string .Params.url)}}
+    <div class="hgroup">
+        <h1>
+            <a href="{{ $url }}">{{ .Title }}</a>
+        </h1>
+        <h2>
+            <a href="{{ $url }}">{{ .Params.Subline }}</a>
+        </h2>
+    </div>
+    <div class="project-body">
+        <figure>
+            <a href="{{ $url }}"><img src="{{ .Params.Image }}" width="100%"></a>
+        </figure>
+        <div class="content">
+            {{ .Content }}
+        </div>
+    </div>
+    <div class="links">
+        {{ if .Params.code }}<a href="{{ .Params.code }}" class="code">Code</a>{{ end }}
+        {{ if .Params.demo }}<a href="{{ .Params.demo }}" class="demo">Demo</a>{{ end }}
+        {{ if .Params.report }}<a href="{{ .Params.report }}" class="report">Report</a>{{ end }}
+    </div>
+</article>
+{{ end }}

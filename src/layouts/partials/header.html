@@ -1,4 +1,19 @@
-<!-- Creating SVG icons for social links -->
+<header class="grid {{ if not .IsHome }}at-top{{ end }}">
+    <nav role="navigation">
+        <a href="{{ .Site.BaseURL }}" class="name">Parker Addison</a>
+        <span class="flex-span-left"></span>
+        <div class="tabs">
+            <a href="{{ .Site.BaseURL }}portfolio">Portfolio</a>
+            <a href="{{ .Site.BaseURL }}blog">Blog</a>
+            <a href="{{ .Site.Params.ResumeURL }}">Resume</a>
+            <a href="{{ .Site.BaseURL }}contact">Contact</a>
+        </div>
+        <span class="flex-span-right"></span>
+    </nav>
+</header>
+
+
+{{/*  <!-- Creating SVG icons for social links -->
 <svg aria-hidden="true" style="position: absolute; width: 0; height: 0; overflow: hidden;" version="1.1"
     xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
     <defs>
@@ -58,5 +73,4 @@
             </li>
         </ul>
     </nav>
-
-</header>
+</header>  */}}

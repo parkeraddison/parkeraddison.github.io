@@ -1,140 +1,101 @@
-/* === POSTS =============================================================== */
-
-main {
-    --body-text-color: #444;
-    color: var(--body-text-color);
+#blog > article {
+    font-size: 110%;
 }
 
-h1 {
+#blog > article > * {
+    grid-column: narrow;
+}
+
+#blog > article h1 {
     font-size: 2.6em;
     margin-bottom: 0;
 }
 
-main .info {
-    font-family: var(--monospace);
-    font-size: 75%;
-    margin-bottom: 4rem;
+p, ul, ol, li {
+    line-height: 1.45;
+    margin-top: 0;
 }
 
-main h2,
-h3 {
-    margin-top: 2rem;
+p + ul, p + ol {
+    margin-top: -1em;
 }
 
-main p,
-main li {
-    color: var(--body-text-color);
-    line-height: 1.4;
-    margin-bottom: 1.4em;
-}
-
-main > hr {
-    border: none;
-    border-top: 1px solid var(--narrow-light-grey);
-    width: calc(100% - 4em);
-    margin: 1em auto;
-    height: 1em;
-}
-
-/* main > hr:after {
-    background: var(--page-background);
-    content: '§';
-    padding: 0 4px;
-    position: relative;
-    font-family: sans-serif;
+.info, .margin-note, figcaption {
+    color: var(--text-light);
     font-size: 85%;
-    top: -16px;
-} */
-
-main .footnotes p,
-main .footnotes li {
-    color: var(--text-color-alt);
 }
 
-/* === Styling for specific components, like tables, figures, code ========== */
+.margin-note {
+    grid-column: right;
+}
 
-table,
+hr {
+    width: 100%;
+    border: 1px solid var(--narrow-light-grey);
+    border: 1px solid var(--text-extra-light);
+}
+
+table {
+    display: block;
+    /* margin: 0 auto 1em; */
+    margin-bottom: 1em;
+    max-width: 100%;
+    width: max-content;
+    overflow-x: auto;
+
+    border-collapse: collapse;
+    border: 1px solid var(--element-light-grey);
+}
+
 th,
 td {
-    border-collapse: collapse;
-    border: 1px solid var(--narrow-light-grey);
+    border: 1px solid var(--element-light-grey);
+    padding: 4px;
 }
 
-main figure.raw {
+figure.raw {
     margin: 1em auto;
 }
-main figure img {
+
+figure img {
     max-width: 100%;
-}
-main figure figcaption p {
-    color: var(--text-color-alt);
-    font-size: 85%;
-}
-
-/* 
-
- .nextprev {
-    position: relative;
-    display: grid;
-    margin: auto;
-    margin-top: 4em;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 4em;
-    text-align: center;
-    width: 100%;
-}
-
- .nextprev a {
-    height: 100%;
-}
-
- .nextprev .disabled {
-    pointer-events: none;
-    color: var(--element-light-grey);
-    box-shadow: none;
-} */
-
-/* This shifts the hash positions so that they aren't covered by the header. */
-
-sup[id^='fnref:'],
-li[id^='fn:'] {
-    padding-top: 6em;
-    margin-top: -6em;
-}
-
-/* .footnote-ref, .footnote-backref {
-    color: var(--light-grey);
 }
 
 .footnotes {
-    color: var(--light-grey);
-    font-size: 0.85em;
-    padding: 1em 0;
+    font-size: 91%;
 }
 
- .tags-list {
-    margin-left: 1em;
-    margin-right: 1em;
-} */
-
-/* === TAGS ================================================================ */
-
-/* .tags-list {
-    list-style-type: none;
-    margin: 0;
-    margin-top: 0.5em;
-    padding: 0;
-    overflow: hidden;
-    color: var(--light-grey);
+[id^='fnref'],
+[id^='fn:'] {
+    padding-top: 8em;
+    margin-top: -8em;
 }
 
-.tag a {
-    font-size: 0.85em;
-    border: none;
-    float: left;
-    margin: 0.2em 0.4em 0.2em 0;
-    padding: 2px 6px;
-    background-color: var(--narrow-light-grey);
-    background-color: var(--narrow-light-grey);
-    border-radius: 4px;
-} */
+/* Make the targeted note flash when jumping */
+@keyframes highlight-flash {
+    0% {
+        background-color: rgba(var(--highlight-rgb), 0);
+    }
+    50% {
+        background-color: rgba(var(--highlight-rgb), 1);
+    }
+    100% {
+        background-color: rgba(var(--highlight-rgb), 0);
+    }
+}
+
+:target >* {
+    --highlight-rgb: 247, 214, 27;
+    --highlight-rgb: 255, 200, 200;
+    animation: highlight-flash 1500ms ease-in-out;
+}
+
+.nextprev {
+    grid-column: wide;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 16px;
+    padding-top: 4em;
+    margin-top: 4em;
+    border-top: 2px solid var(--text-extra-light);
+}

@@ -1,18 +1,16 @@
-
-
 <footer>
-    {{/*  {{ if and (not .IsHome) (ne .Kind "404") }}  */}}
+    {{/*  {{ if and (not .IsHome) (ne .Kind "404") }} */}}
     {{ if and (not .IsHome) (true) }}
     {{/*  <div class="pseudomain">  */}}
-        <div>
-            <span class="see-less"><a href="{{ .Parent.Permalink }}">
-                {{ if .Parent.IsHome }}
-                Home
-                {{ else }}
-                {{ .Parent.Title }}
-                {{ end }}
-            </a></span>
-        </div>
+    <div>
+        <a href="{{ .Parent.Permalink }}" class="see-less">
+            {{ if .Parent.IsHome }}
+            Home
+            {{ else }}
+            {{ .Parent.Title }}
+            {{ end }}
+        </a>
+    </div>
     {{/*  </div>  */}}
     {{ end }}
     <p>
@@ -20,7 +18,7 @@
         <a href="https://parkeraddison.com">
             <img src="/images/parker-headshot-small.jpg" alt="">
             Made by Parker</a>,
-        <a href="https://github.com/parkeraddison/parkeraddison.github.io"><b>&lt;/&gt;</b> on
+        <a href="https://github.com/parkeraddison/parkeraddison.github.io">&lt;/&gt; on
             GitHub</a>
     </p>
     <!-- <p>
