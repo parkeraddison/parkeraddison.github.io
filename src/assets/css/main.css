@@ -2,6 +2,7 @@
     --sans-serif: 'Lexend Deca', sans-serif;
     --serif: 'Source Serif Pro', Cambria, Cochin, Georgia, Times,
         'Times New Roman', serif;
+    /* --serif: 'PT Serif'; */
     --monospace: Consolas, Menlo, monospace;
 
     --bg: #fbfbf8;
@@ -127,6 +128,10 @@ a {
     color: var(--link-color);
     /* text-decoration-color: var(--text-extra-light); */
     text-decoration: none;
+}
+
+a:hover, a:focus {
+    text-decoration: underline solid var(--link-color) 2px !important;
 }
 
 a.see-more {
