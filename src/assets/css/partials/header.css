@@ -12,8 +12,6 @@ header {
     margin-bottom: 20vh;
 
     transition: border-color 0.3s;
-
-    will-change: transform;
 }
 
 nav {
@@ -46,7 +44,9 @@ header.at-top nav a {
 }
 
 nav a.name {
+    /* Manual positioning is icky, but flex acted strange with sticky! */
     position: fixed;
+    top: 2.2em;
     font-size: 14px;
     font-weight: bold;
     text-decoration: none;
@@ -70,17 +70,28 @@ nav .tabs {
     flex-basis: 700px;
     font-size: 16px;
     justify-content: space-evenly;
+    z-index: 99;
     transition: flex-basis 0.3s, font-size 0.3s;
+    transform: translate3d(0,0,0); 
+    /* Might help some animation performance on iOS... unclear */
 }
 
 span[class^='flex-span'] {
     flex-grow: 1;
-    transition: flex-grow 450ms;
+    /* transition: flex-grow 450ms;
     transition-timing-function: cubic-bezier(0.64, -0.435, 0.385, 1.25);
+    will-change: flex-grow; */
+}
+
+header .flex-span-right {
+    /* Using max-width transitions instead of flex-grow transitions. */
+    max-width: 700px;
+    transition: max-width 450ms;
+    will-change: max-width;
 }
 
 header.at-top .flex-span-right {
-    flex-grow: 0;
+    max-width: 0px;
 }
 
 header.at-top {

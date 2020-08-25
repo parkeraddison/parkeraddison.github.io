@@ -6,8 +6,8 @@
 
 #landing .intro {
     grid-column: narrow;
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, auto));
     gap: 2em;
 }
 
