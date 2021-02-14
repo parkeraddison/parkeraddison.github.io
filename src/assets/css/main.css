@@ -131,7 +131,13 @@ a {
 }
 
 a:hover, a:focus {
-    text-decoration: underline solid var(--link-color) 2px !important;
+    text-decoration: underline !important;
+}
+
+@supports (text-decoration-thickness: 2px) {
+    a:hover, a:focus {
+        text-decoration: underline solid var(--link-color) 2px !important;
+    }
 }
 
 a.see-more {
