@@ -1,6 +1,6 @@
 {{ with site.GetPage . }}
 <article class="project">
-    {{ $url := .Params.Get (string .Params.use)}}
+    {{ $url := .Params.Get (string .Params.linkto)}}
     <div class="hgroup">
         <h1>
             <a href="{{ $url }}">{{ .Title }}</a>

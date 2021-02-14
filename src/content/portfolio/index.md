@@ -14,43 +14,7 @@ description: "I'm Parker Addison.  This data science portfolio acts as a sort of
 
 # Projects
 
-## [The Verbosified Works of A.I. Space Rovers](https://lost-in-deep.space)
-### Convincing GPT-2 that more is more - An A.I. Art Piece
-
-I (ab)used OpenAI's GPT-2 model—the one that's "too dangerous to release"—to make an art piece which doubles the word count of my high school essay by injecting machine-generated fluff text.
-
-## This website.
-### It might not feature the most data, but I think it's cool
-
-Most pages on my website (including this one) are dynamically populated from Markdown files!
-
-[The code can be found on GitHub!](https://github.com/parkeraddison/parkeraddison.github.io)
-
-## Sharing the Road
-### A data-driven journey on the bike path to enlightenment
-
-I'm writing a blog post detailing some of the interesting results from [a project a teammate and I did in our Geospatial Data Science course](https://nbviewer.jupyter.org/github/parkeraddison/Geospatial-Data-Science/blob/master/mp3.ipynb).
-
-Come back again soon when the post is complete!
-
-## [Neural Network Visual](https://devpost.com/software/neural-network-visual-3d-graphical-editor)
-### SD Hacks 2018 @ UC San Diego
-
-Education in Machine Learning has experienced incredible growth. To aid the educational cause, we created an interactive, 3D visual editor for simple neural network models.
-
-## Ouch! That Hurts
-### UC Health Hack 2018 @ UC San Diego
-
-How an Amazon Alexa skill can open the door to data-driven medical insights.
-
-We created an Amazon Alexa skill named "Ouch, That Hurts!" which allows patients to easily report symptoms without needing to keep a journal or call the doctor. By making it extremely easy to report such symptoms, we could collect a plethora of data that could be used to help predict and diagnose symptoms in the future.
-
-## Indeed Job Search City Recommender
-### ASA DataFest @ Chapman Univ.
-
-We were given an anonymized dataset from indeed.com, and tasked to come up with an interesting question and create a short business pitch to present to indeed by the end of the hackathon. After plenty of stress and sleep deprivation, we posed a question to find out what cities have the best prospects for different types of jobs and we created an algorithm to rank and recommend cities that are well suited for a given job industry.
-
-
+{{< portfolio-projects >}}
 
 # Research
 
@@ -136,15 +100,16 @@ I am heavily involved with the management of this committee, and am currently in
 | Data Science ||
 | :--- | :--- |
 | COGS 9 | Introduction to Data Science |
-| DSC 10<small> *</small> | Principles of Data Science |
+| DSC 10<small> *</small> | Principles of Data Science <br /><small>[Hopefully you've seen the new textbook we wrote!](http://diveintods.com)</small> |
 | DSC 20, 30 | Data Structures and Algorithms |
 | DSC 80<small> *</small> | Practice and Application of Data Science |
 | &horbar; |
-| CSE 151<small> *</small> | Intro to AI: Statistical Approaches |
 | CSE 158 | Recommender Systems and Web Mining |
 | DSC 100 | Introduction to Data Management |
+| DSC 102 | Systems for Scalable Analytics |
 | DSC 106 | Data Visualization |
 | DSC 170 | Spatial Data Science and its Applications <br /><small>[Esri and Microsoft made this course possible. Check out the blog post from GeoAI!](https://medium.com/geoai/esri-microsoft-join-uc-san-diego-teaching-practical-geospatial-data-science-and-deep-learning-3d7e62bd23fb)</small> |
+| DSC 180A-B | Capstone in Data Science |
 | ECE 188 | Machine Learning for the Arts | 
 
 <!--  <small>[UCSD joined forces with Microsoft and Esri to make this course possible—check out this blog post from GeoAI!](https://medium.com/geoai/esri-microsoft-join-uc-san-diego-teaching-practical-geospatial-data-science-and-deep-learning-3d7e62bd23fb)</small> -->
@@ -155,6 +120,8 @@ I am heavily involved with the management of this committee, and am currently in
 | MATH 18, 31AH | Linear Algebra |
 | MATH 20C | Calculus and Analytic Geometry |
 | &horbar; |
+| CSE 151<small> *</small> | Intro to AI: Statistical Approaches |
+| DSC 140A | Probabilistic Modeling |
 | MATH 180A | Introduction to Probability |
 | MATH 181A-B | Mathematical Statistics I, II |
 | MATH 189 | Exploratory Data Analysis and Inference |
@@ -164,5 +131,12 @@ I am heavily involved with the management of this committee, and am currently in
 | MGT 18 | Managing Diverse Teams |
 | &horbar; |
 | MGT 103 | Product Marketing and Management |
+| MGT 112 | Global Business Strategy |
 | MGT 119 | Data Analytics for Event Management |
 | MGT 166 | Business Ethics and Corporate Social Responsibility |
+| MGT 181 | Enterprise Finance |
+
+---
+
+# Got any ideas?
+If you think there's something I might be interested in... well, *I probably am!* Please [reach out and let's chat](/contact).

@@ -33,7 +33,7 @@
             "datePublished": "2020-02-13 13:12:45 -0800 PST",
             "dateModified" : "2020-02-13 13:12:45 -0800 PST",
             "url" : "https:\/\/parkeraddison.com\/portfolio\/",
-            "wordCount" : "1285",
+            "wordCount" : "1236",
             "keywords" : [ "Blog","Data Science" ]
         }
     </script>
@@ -56,7 +56,7 @@
     
     
     
-    <link rel="stylesheet" href="https://parkeraddison.com/bundle.min.css" integrity="" media="screen">
+    <link rel="stylesheet" href="https://parkeraddison.com/bundle.min.b973738c48c47151983584fa62e6436b00868ebea29df73b0c1fa8045113f53d.css" integrity="sha256-uXNzjEjEcVGYNYT6YuZDawCGjr6infc7DB&#43;oBFET9T0=" media="screen">
 
     
     
@@ -131,27 +131,306 @@
 <li><a href="#involvement-relevant-courses">(Extra)curriculars</a></li>
 </ul>
 <h1 id="projects">Projects</h1>
-<h2 id="the-verbosified-works-of-a.i.-space-rovers"><a href="https://lost-in-deep.space">The Verbosified Works of A.I. Space Rovers</a></h2>
-<h3 id="convincing-gpt-2-that-more-is-more---an-a.i.-art-piece">Convincing GPT-2 that more is more - An A.I. Art Piece</h3>
-<p>I (ab)used OpenAI’s GPT-2 model—the one that’s “too dangerous to release”—to make an art piece which doubles the word count of my high school essay by injecting machine-generated fluff text.</p>
-<h2 id="this-website.">This website.</h2>
-<h3 id="it-might-not-feature-the-most-data-but-i-think-its-cool">It might not feature the most data, but I think it’s cool</h3>
-<p>Most pages on my website (including this one) are dynamically populated from Markdown files!</p>
-<p><a href="https://github.com/parkeraddison/parkeraddison.github.io">The code can be found on GitHub!</a></p>
-<h2 id="sharing-the-road">Sharing the Road</h2>
-<h3 id="a-data-driven-journey-on-the-bike-path-to-enlightenment">A data-driven journey on the bike path to enlightenment</h3>
-<p>I’m writing a blog post detailing some of the interesting results from <a href="https://nbviewer.jupyter.org/github/parkeraddison/Geospatial-Data-Science/blob/master/mp3.ipynb">a project a teammate and I did in our Geospatial Data Science course</a>.</p>
-<p>Come back again soon when the post is complete!</p>
-<h2 id="neural-network-visual"><a href="https://devpost.com/software/neural-network-visual-3d-graphical-editor">Neural Network Visual</a></h2>
-<h3 id="sd-hacks-2018-uc-san-diego">SD Hacks 2018 @ UC San Diego</h3>
-<p>Education in Machine Learning has experienced incredible growth. To aid the educational cause, we created an interactive, 3D visual editor for simple neural network models.</p>
-<h2 id="ouch-that-hurts">Ouch! That Hurts</h2>
-<h3 id="uc-health-hack-2018-uc-san-diego">UC Health Hack 2018 @ UC San Diego</h3>
-<p>How an Amazon Alexa skill can open the door to data-driven medical insights.</p>
-<p>We created an Amazon Alexa skill named “Ouch, That Hurts!” which allows patients to easily report symptoms without needing to keep a journal or call the doctor. By making it extremely easy to report such symptoms, we could collect a plethora of data that could be used to help predict and diagnose symptoms in the future.</p>
-<h2 id="indeed-job-search-city-recommender">Indeed Job Search City Recommender</h2>
-<h3 id="asa-datafest-chapman-univ.">ASA DataFest @ Chapman Univ.</h3>
-<p>We were given an anonymized dataset from indeed.com, and tasked to come up with an interesting question and create a short business pitch to present to indeed by the end of the hackathon. After plenty of stress and sleep deprivation, we posed a question to find out what cities have the best prospects for different types of jobs and we created an algorithm to rank and recommend cities that are well suited for a given job industry.</p>
+<style>
+     
+    .portfolio-project-grid {
+         
+
+         
+
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        grid-auto-rows: 200px;
+        column-gap: 2em;
+        row-gap: 3em;
+    }
+
+    .portfolio-project-grid article {
+        break-inside: avoid;
+        background: #fff0;
+        border: 1px solid #0000;
+        border-radius: 1em;
+    }
+
+    .portfolio-project-grid article:first-of-type {
+        margin-top: unset;
+    }
+
+    .portfolio-project-content {
+        height: 100%;
+    }
+
+    .portfolio-project-content h2 {
+        margin-top: 0 !important;
+    }
+
+    .project-hero {
+        position: relative;
+        height: 100%;
+    }
+
+    .project-hero .project-hero-image {
+        width: 100%;
+        height: 100%;
+        position: relative;
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+        border-radius: 1em;
+    }
+
+    .project-hero .project-hero-text {
+        padding: 2em 0;
+        margin: 1ex;
+        color: var(--bg);
+        color: #fff;
+    }
+
+    .portfolio-project-content .links a {
+        margin-right: 8px;
+    }
+</style>
+<section class="portfolio-project-grid">
+    
+    
+    
+    
+    
+    <article class="porfolio-project">
+        <div class="portfolio-project-content">
+            
+            <div class="project-hero">
+                
+                <div class="project-hero-image" width="100%" style="background-image:
+                    
+                    linear-gradient(to bottom, #0008, #6128),
+                    url(https://parkeraddison.com/./images/dvorak.jpg);">
+                    <div class="project-hero-text">
+                        <h2>QWERTY vs Dvorak</h2>
+                        <h3>A visual exploration of the Dvorak keyboard layout</h3>
+                    </div>
+                </div>
+
+            </div>
+            
+            <div class="links">
+                
+                <a href="https://github.com/parkeraddison/dvorak-viz" class="code">Code</a>
+                <a href="https://parkeraddison.com/dvorak-viz" class="demo">Demo</a>
+                
+            </div>
+        </div>
+    </article>
+    
+    
+    
+    <article class="porfolio-project">
+        <div class="portfolio-project-content">
+            
+            <div class="project-hero">
+                
+                <div class="project-hero-image" width="100%" style="background-image:
+                    
+                    linear-gradient(to bottom, #0008, #6128),
+                    url(https://parkeraddison.com/);">
+                    <div class="project-hero-text">
+                        <h2>This website.</h2>
+                        <h3>Who knew web design could be so fun?</h3>
+                    </div>
+                </div>
+
+            </div>
+            
+            <div class="links">
+                
+                <a href="https://github.com/parkeraddison/parkeraddison.github.io" class="code">Code</a>
+                
+                
+            </div>
+        </div>
+    </article>
+    
+    
+    
+    <article class="porfolio-project">
+        <div class="portfolio-project-content">
+            
+            <div class="project-hero">
+                
+                <div class="project-hero-image" width="100%" style="background-image:
+                    
+                    linear-gradient(to bottom, #0008, #6128),
+                    url(https://parkeraddison.com/./images/verbosified.gif);">
+                    <div class="project-hero-text">
+                        <h2>The Verbosified Works on A.I. Space Rovers</h2>
+                        <h3>Convincing GPT-2 that more is more - An A.I. Art Piece</h3>
+                    </div>
+                </div>
+
+            </div>
+            
+            <div class="links">
+                
+                <a href="https://github.com/parkeraddison/aiArt-verbosified-space-rovers/" class="code">Code</a>
+                <a href="https://lost-in-deep.space/" class="demo">Demo</a>
+                <a href="https://github.com/parkeraddison/aiArt-verbosified-space-rovers/blob/master/README.md" class="report">Report</a>
+            </div>
+        </div>
+    </article>
+    
+    
+    
+    <article class="porfolio-project">
+        <div class="portfolio-project-content">
+            
+            <div class="project-hero">
+                
+                <div class="project-hero-image" width="100%" style="background-image:
+                    
+                    linear-gradient(to bottom, #0008, #6128),
+                    url(https://parkeraddison.com/);">
+                    <div class="project-hero-text">
+                        <h2>Sharing the Road</h2>
+                        <h3>A data-driven journey on the bike path to enlightenment</h3>
+                    </div>
+                </div>
+
+            </div>
+            
+            <div class="links">
+                
+                <a href="https://nbviewer.jupyter.org/github/parkeraddison/Geospatial-Data-Science/blob/master/mp3.ipynb" class="code">Code</a>
+                
+                
+            </div>
+        </div>
+    </article>
+    
+    
+    
+    <article class="porfolio-project">
+        <div class="portfolio-project-content">
+            
+            <div class="project-hero">
+                
+                <div class="project-hero-image" width="100%" style="background-image:
+                    
+                    linear-gradient(to bottom, #0008, #6128),
+                    url(https://parkeraddison.com/);">
+                    <div class="project-hero-text">
+                        <h2>Neural Network Visual</h2>
+                        <h3>SD Hacks 2018 @ UC San Diego</h3>
+                    </div>
+                </div>
+
+            </div>
+            
+            <div class="links">
+                
+                
+                <a href="https://devpost.com/software/neural-network-visual-3d-graphical-editor" class="demo">Demo</a>
+                
+            </div>
+        </div>
+    </article>
+    
+    
+    
+    <article class="porfolio-project">
+        <div class="portfolio-project-content">
+            
+            <div class="project-hero">
+                
+                <div class="project-hero-image" width="100%" style="background-image:
+                    
+                    linear-gradient(to bottom, #0008, #6128),
+                    url(https://parkeraddison.com/);">
+                    <div class="project-hero-text">
+                        <h2>Ouch! That Hurts</h2>
+                        <h3>UC Health Hack 2018 @ UC San Diego</h3>
+                    </div>
+                </div>
+
+            </div>
+            
+            <div class="links">
+                <a href="./posts/alexa-medical-insight/" class="blog">Blog</a>
+                
+                
+                
+            </div>
+        </div>
+    </article>
+    
+    
+    
+    <article class="porfolio-project">
+        <div class="portfolio-project-content">
+            
+            
+            <div class="project-hero">
+                
+                <div class="project-hero-image" width="100%" style="background-image:
+                    
+                    linear-gradient(to bottom, #0008, #6128),
+                    url(https://parkeraddison.com/./images/indeed.png);">
+                    <div class="project-hero-text">
+                        <h2>Indeed Job Search City Recommender</h2>
+                        <h3>ASA DataFest @ Chapman Univ.</h3>
+                    </div>
+                </div>
+
+            </div>
+            
+            <div class="links">
+                
+                
+                
+                
+            </div>
+        </div>
+    </article>
+    
+    
+</section>
+
+<script>
+    
+
+    function resizeMasonryItem(item) {
+         
+        var grid = document.getElementsByClassName('portfolio-project-grid')[0],
+            rowGap = parseInt(window.getComputedStyle(grid).getPropertyValue('grid-row-gap')),
+            rowHeight = parseInt(window.getComputedStyle(grid).getPropertyValue('grid-auto-rows'));
+
+        
+
+        var rowSpan = Math.ceil((item.querySelector('.portfolio-project-content').getBoundingClientRect().height + rowGap) / (rowHeight + rowGap));
+
+         
+        item.style.gridRowEnd = 'span ' + rowSpan;
+    }
+
+    
+
+    function resizeAllMasonryItems() {
+        
+        var allItems = document.getElementsByClassName('porfolio-project');
+
+        
+
+        for (var i = 0; i < allItems.length; i++) {
+            resizeMasonryItem(allItems[i]);
+        }
+    }
+
+     
+    var masonryEvents = ['load', 'resize'];
+    masonryEvents.forEach(function (event) {
+        window.addEventListener(event, resizeAllMasonryItems);
+    });
+</script>
+
 <h1 id="research">Research</h1>
 <h2 id="ar-noc">AR-NOC</h2>
 <h3 id="qualcomm-institute-national-science-foundation">Qualcomm Institute, National Science Foundation</h3>
@@ -216,7 +495,7 @@
 </tr>
 <tr class="even">
 <td style="text-align: left;">DSC 10<small> *</small></td>
-<td style="text-align: left;">Principles of Data Science</td>
+<td style="text-align: left;">Principles of Data Science <br /><small><a href="http://diveintods.com">Hopefully you’ve seen the new textbook we wrote!</a></small></td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">DSC 20, 30</td>
@@ -231,16 +510,16 @@
 <td style="text-align: left;"></td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">CSE 151<small> *</small></td>
-<td style="text-align: left;">Intro to AI: Statistical Approaches</td>
-</tr>
-<tr class="odd">
 <td style="text-align: left;">CSE 158</td>
 <td style="text-align: left;">Recommender Systems and Web Mining</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">DSC 100</td>
 <td style="text-align: left;">Introduction to Data Management</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">DSC 102</td>
+<td style="text-align: left;">Systems for Scalable Analytics</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">DSC 106</td>
@@ -251,6 +530,10 @@
 <td style="text-align: left;">Spatial Data Science and its Applications <br /><small><a href="https://medium.com/geoai/esri-microsoft-join-uc-san-diego-teaching-practical-geospatial-data-science-and-deep-learning-3d7e62bd23fb">Esri and Microsoft made this course possible. Check out the blog post from GeoAI!</a></small></td>
 </tr>
 <tr class="odd">
+<td style="text-align: left;">DSC 180A-B</td>
+<td style="text-align: left;">Capstone in Data Science</td>
+</tr>
+<tr class="even">
 <td style="text-align: left;">ECE 188</td>
 <td style="text-align: left;">Machine Learning for the Arts</td>
 </tr>
@@ -280,6 +563,14 @@
 <tr class="even">
 <td style="text-align: left;">―</td>
 <td style="text-align: left;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">CSE 151<small> *</small></td>
+<td style="text-align: left;">Intro to AI: Statistical Approaches</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">DSC 140A</td>
+<td style="text-align: left;">Probabilistic Modeling</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">MATH 180A</td>
@@ -316,15 +607,26 @@
 <td style="text-align: left;">Product Marketing and Management</td>
 </tr>
 <tr class="even">
+<td style="text-align: left;">MGT 112</td>
+<td style="text-align: left;">Global Business Strategy</td>
+</tr>
+<tr class="odd">
 <td style="text-align: left;">MGT 119</td>
 <td style="text-align: left;">Data Analytics for Event Management</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">MGT 166</td>
 <td style="text-align: left;">Business Ethics and Corporate Social Responsibility</td>
 </tr>
+<tr class="odd">
+<td style="text-align: left;">MGT 181</td>
+<td style="text-align: left;">Enterprise Finance</td>
+</tr>
 </tbody>
 </table>
+<hr />
+<h1 id="got-any-ideas">Got any ideas?</h1>
+<p>If you think there’s something I might be interested in… well, <em>I probably am!</em> Please <a href="https://parkeraddison.com/contact">reach out and let’s chat</a>.</p>
 
         </article>
     </section>
