@@ -80,6 +80,25 @@ a:hover {
     clear: left;
 }
 
+.admonition {
+    padding: 1ex;
+    margin: 1ex 0;
+    background-color: #bdf;
+}
+
+.admonition::before {
+    content: 'Note:  ';
+    font-weight: bold;
+}
+
+.admonition.warning {
+    background-color: #da0;
+}
+
+.admonition.warning::before {
+    content: '\26A0  ';
+}
+
 dl {
     margin: 0;
 }
@@ -98,11 +117,4 @@ dl dd ul {
     padding-bottom: 0.5em;
     margin-bottom: 0.5em;
     border-bottom: solid 1px #eee;
-}
-
-img.emoji {
-    height: 1em;
-    width: 1em;
-    margin: 0 .05em 0 .1em;
-    vertical-align: -0.1em;
 }
