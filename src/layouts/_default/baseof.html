@@ -23,8 +23,8 @@
     {{ $allStyles = $allStyles | append (resources.Get "css/main.css") }}
     {{ $allStyles = $allStyles | append (resources.Get "css/syntax.css") }}
     {{ $allStyles = $allStyles | append (resources.Match "css/partials/*") }}
-    {{ $style := $allStyles | resources.Concat "bundle.css" | minify | fingerprint }}
-    {{/* {{ $style := $allStyles | resources.Concat "bundle.css" | postCSS | minify }} */}}
+    {{/*  {{ $style := $allStyles | resources.Concat "bundle.css" | minify | fingerprint }}  */}}
+    {{ $style := $allStyles | resources.Concat "bundle.css" | postCSS | minify }}
     <link rel="stylesheet" href="{{ $style.Permalink }}" integrity="{{ $style.Data.Integrity }}" media="screen">
 
     {{/*  Include page-specific css (with the help of an include-css partial)  */}}
