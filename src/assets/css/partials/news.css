@@ -6,3 +6,7 @@
     text-indent: 2em;
     margin-bottom: 0;
 }
+
+#news article {
+    margin-bottom: 1em;
+}
