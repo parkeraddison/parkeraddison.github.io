@@ -6,7 +6,7 @@ linkto: code
 code: https://nbviewer.jupyter.org/github/parkeraddison/Geospatial-Data-Science/blob/master/mp3.ipynb
 demo:
 report:
-image:
+image: ./images/sharrow.jpg
 video:
 ---
 

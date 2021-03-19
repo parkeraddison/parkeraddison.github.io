@@ -91,6 +91,7 @@ I am heavily involved with the management of this committee, and am currently in
 
 ## B.S. Data Science, Minor Business Management
 ### University of California, San Diego
+### GPA: 3.94
 ### Technical GPA: 3.97
 
 <br>
@@ -99,20 +100,18 @@ I am heavily involved with the management of this committee, and am currently in
 
 | Data Science ||
 | :--- | :--- |
-| COGS 9 | Introduction to Data Science |
-| DSC 10<small> *</small> | Principles of Data Science <br /><small>[Hopefully you've seen the new textbook we wrote!](http://diveintods.com)</small> |
+| COGS 9 | Introduction to Data Science <br /><small>Taught by the incredible Bradley Voytek</small> |
+| DSC 10<small> *</small> | Principles of Data Science <br /><small>[Hopefully you've seen the new textbook we wrote](http://diveintods.com)</small> |
 | DSC 20, 30 | Data Structures and Algorithms |
 | DSC 80<small> *</small> | Practice and Application of Data Science |
 | &horbar; |
 | CSE 158 | Recommender Systems and Web Mining |
 | DSC 100 | Introduction to Data Management |
 | DSC 102 | Systems for Scalable Analytics |
-| DSC 106 | Data Visualization |
-| DSC 170 | Spatial Data Science and its Applications <br /><small>[Esri and Microsoft made this course possible. Check out the blog post from GeoAI!](https://medium.com/geoai/esri-microsoft-join-uc-san-diego-teaching-practical-geospatial-data-science-and-deep-learning-3d7e62bd23fb)</small> |
-| DSC 180A-B | Capstone in Data Science |
-| ECE 188 | Machine Learning for the Arts | 
-
-<!--  <small>[UCSD joined forces with Microsoft and Esri to make this course possible—check out this blog post from GeoAI!](https://medium.com/geoai/esri-microsoft-join-uc-san-diego-teaching-practical-geospatial-data-science-and-deep-learning-3d7e62bd23fb)</small> -->
+| DSC 106 | Data Visualization <br /><small>[Went ahead and made the Dvorak typing simulation in this course](https://parkeraddison.com/dvorak-viz)</small> |
+| DSC 170 | Spatial Data Science and its Applications <br /><small>[Esri and Microsoft made this course possible! Check out the blog post from GeoAI](https://medium.com/geoai/esri-microsoft-join-uc-san-diego-teaching-practical-geospatial-data-science-and-deep-learning-3d7e62bd23fb)</small> |
+| DSC 180A-B | Capstone in Data Science <br /><small>[I present to you: *DANE* -- a tool tool solve data representation issues in network traffic datasets (thanks to Viasat for their mentorship!)](https://github.com/dane-tool/dane)</small> |
+| ECE 188 | Machine Learning for the Arts <br /><small>[We made some fun aiArt projects you should check out](https://github.com/parkeraddison?tab=repositories&q=aiArt)</small> | 
 
 | Mathematics ||
 | :--- | :--- |
@@ -124,7 +123,7 @@ I am heavily involved with the management of this committee, and am currently in
 | DSC 140A | Probabilistic Modeling |
 | MATH 180A | Introduction to Probability |
 | MATH 181A-B | Mathematical Statistics I, II |
-| MATH 189 | Exploratory Data Analysis and Inference |
+| MATH 189 | Exploratory Data Analysis and Inference <br /><small>Working on a blog post about a cool mathematical pattern found in this course's data...</small> |
 
 | Management ||
 | :--- | :--- |
@@ -133,7 +132,7 @@ I am heavily involved with the management of this committee, and am currently in
 | MGT 103 | Product Marketing and Management |
 | MGT 112 | Global Business Strategy |
 | MGT 119 | Data Analytics for Event Management |
-| MGT 166 | Business Ethics and Corporate Social Responsibility |
+| MGT 166 | Business Ethics and Corporate Social Responsibility <br /><small>Truly among my favorite courses at UCSD. It really makes you think...</small> |
 | MGT 181 | Enterprise Finance |
 
 ---
