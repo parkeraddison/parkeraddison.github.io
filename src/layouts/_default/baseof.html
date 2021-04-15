@@ -6,31 +6,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    {{ if .IsHome }}
+    {{- if .IsHome -}}
     <title>{{ .Site.Title }}</title>
-    {{ else if (eq .Kind "404") }}
+    {{- else if (eq .Kind "404") -}}
     <title>😿 | {{ .Site.Title }}</title>
-    {{ else }}
+    {{- else -}}
     <title>{{ .Title }} | {{ .Site.Title }}</title>
-    {{ end }}
-    {{ partial "seo-head.html" . }}
+    {{- end -}}
+    {{- partial "seo-head.html" . -}}
 
     <link href="https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Source+Serif+Pro:wght@400;600&display=swap" rel="stylesheet">
 
-    {{/*  Bundle, minify, and link all styles  */}}
-    {{ $allStyles := slice }}
-    {{ $allStyles = $allStyles | append (resources.Get "css/main.css") }}
-    {{ $allStyles = $allStyles | append (resources.Get "css/syntax.css") }}
-    {{ $allStyles = $allStyles | append (resources.Match "css/partials/*") }}
-    {{/*  {{- $style := $allStyles | resources.Concat "bundle.css" | minify -}}  */}}
-    {{/*  {{- $style := $allStyles | resources.Concat "bundle.css" | minify | fingerprint -}}  */}}
-    {{- $style := $allStyles | resources.Concat "bundle.css" | postCSS | minify -}}
-    {{/*  {{- $style := $allStyles | resources.Concat "bundle.css" | postCSS | minify | fingerprint -}}  */}}
-    <link rel="stylesheet" href="{{ $style.Permalink }}" integrity="{{ $style.Data.Integrity }}" media="screen">
+    {{/*  Bundle, minify, and link all styles */}}
+    {{- $allStyles := slice -}}
+    {{- $allStyles = $allStyles | append (resources.Get "css/main.css") -}}
+    {{- $allStyles = $allStyles | append (resources.Get "css/syntax.css") -}}
+    {{- $allStyles = $allStyles | append (resources.Match "css/partials/*") -}}
+    {{- $style := $allStyles | resources.Concat "bundle.css" | postCSS | minify | fingerprint -}} 
+    <link rel="stylesheet" href="{{ $style.Permalink }}" integrity="{{ $style.Data.Integrity }}" media="screen"> 
 
     {{/*  Include page-specific css (with the help of an include-css partial)  */}}
-    {{ block "css" . }}{{ end }}
+    {{- block "css" . -}}{{- end -}}
 
     {{/*  KaTeX  */}}
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css"
@@ -51,21 +48,19 @@
             ]
         });"></script>
 
-
     {{/* Custom scripts */}}
-    {{ $script := resources.Get "js/main.js"| minify }}
+    {{- $script := resources.Get "js/main.js"| minify -}}
     <script src="{{ $script.Permalink }}"></script>
-
 
 </head>
 
 <body>
-    {{ if not .IsHome }}
-        {{ partial "header" . }}
-    {{ end }}
-    {{ block "main" . }}
-    {{ end }}
-    {{ partial "footer" . }}
+    {{- if not .IsHome -}}
+        {{- partial "header" . -}}
+    {{- end -}}
+    {{- block "main" . -}}
+    {{- end -}}
+    {{- partial "footer" . -}}
 </body>
 
 </html>
