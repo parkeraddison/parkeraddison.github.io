@@ -7,9 +7,9 @@ description: "You can find me at pgaddiso@ucsd.edu, on LinkedIn at https://linke
 
 | | |
 |:-:|:--|
-| <img src="/icons/SVG/mail.svg" height=18>&nbsp; | pgaddiso *[at]* ucsd *[dot]* edu |
-| <img src="/icons/SVG/linkedin2.svg" height=18>&nbsp; | [https://linkedin.com/in/parkeraddison](https://linkedin.com/in/parkeraddison) |
-| <img src="/icons/SVG/github.svg" height=18>&nbsp; | [https://github.com/parkeraddison](https://github.com/parkeraddison) |
+| <img src="/icons/SVG/mail.svg"> | pgaddiso *[at]* ucsd *[dot]* edu |
+| <img src="/icons/SVG/linkedin2.svg"> | [https://linkedin.com/in/parkeraddison](https://linkedin.com/in/parkeraddison) |
+| <img src="/icons/SVG/github.svg"> | [https://github.com/parkeraddison](https://github.com/parkeraddison) |
 
 ## Extra links
 

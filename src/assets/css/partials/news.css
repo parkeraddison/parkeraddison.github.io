@@ -1,5 +1,6 @@
 #news article h1, #news article p:first-of-type {
     display: inline;
+    margin-right: 1ex;
 }
 
 #news article p:nth-of-type(n+2) {
