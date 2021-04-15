@@ -1,9 +1,7 @@
 
 ## TODO:
 
-- [ ] Update portfolio page to pull from `/projects` (and include images!)
-- [ ] ~~Have a good time~~
-- [x] Have a fantastic time
+- [ ] Fix css caching preventing changes from being built
 
 ## Notes:
 
@@ -16,6 +14,7 @@ User Pages need to be built from the master branch -- making things a bit messy 
 - .gitignore
 - CNAME
 - Makefile
+- package.json
 - package-lock.json
 - README.md
 ```
