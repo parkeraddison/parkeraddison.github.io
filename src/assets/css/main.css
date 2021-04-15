@@ -8,13 +8,11 @@
     --bg: #fbfbf8;
     --bg: hsl(26, 60%, 95%);
     --text: #282833;
-    --text-light: #888;
-    --text-light: #657580;
     --text-light: #a6a4a4;
     --text-extra-light: #bbb;
+    --text-extra-light: var(--text-light);
     --link-color: rgb(173, 88, 105);
-    --link-color: #AD5869;
-    --link-color: hsl(355, 83%, 37%);
+    --link-color: hsl(350, 83%, 38%);
 
     --light-grey: #888;
     --narrow-light-grey: #e8e8e8;
@@ -130,8 +128,8 @@ span.nowrap {
 
 a {
     color: var(--link-color);
-    /* text-decoration-color: var(--text-extra-light); */
     text-decoration: none;
+    /* text-decoration: underline 1px var(--text-extra-light); */
 }
 
 a:hover, a:focus {
@@ -148,8 +146,7 @@ a.see-more {
     padding-right: 2em;
 }
 a.see-more:after {
-    content: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" fill="#282833" width="16px" height="16px"><path d="M10.9,13l-1.4-1.4L12.2,9H0V7h12.2L9.5,4.4L10.9,3L16,8L10.9,13z" /></svg>');
-    content: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" fill="rgb(173, 88, 105)" width="16px" height="16px"><path d="M10.9,13l-1.4-1.4L12.2,9H0V7h12.2L9.5,4.4L10.9,3L16,8L10.9,13z" /></svg>');
+    content: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" fill="hsl(350, 83%, 38%)" width="16px" height="16px"><path d="M10.9,13l-1.4-1.4L12.2,9H0V7h12.2L9.5,4.4L10.9,3L16,8L10.9,13z" /></svg>');
     position: absolute;
     margin-left: 0.5em;
     margin-top: 0.15em;
