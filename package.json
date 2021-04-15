@@ -1,6 +1,24 @@
 {
-  "dependencies": {
-    "autoprefixer": "^10.2.4",
+  "name": "parkeraddison.github.io",
+  "description": "",
+  "version": "1.0.0",
+  "main": "",
+  "devDependencies": {
+    "autoprefixer": "^10.2.5",
+    "postcss": "^8.2.10",
     "postcss-cli": "^8.3.1"
-  }
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/parkeraddison/parkeraddison.github.io.git"
+  },
+  "author": "Parker Addison",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/parkeraddison/parkeraddison.github.io/issues"
+  },
+  "homepage": "https://github.com/parkeraddison/parkeraddison.github.io#readme"
 }
