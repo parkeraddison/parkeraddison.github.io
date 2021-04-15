@@ -1,14 +1,13 @@
-{{ $page := replace "css/pages/PAGE.css" "PAGE" . }}
-{{ $css := resources.Get $page }}
+{{- $page := replace "css/pages/PAGE.css" "PAGE" . -}}
+{{- $css := resources.Get $page -}}
 <script>
     console.log("For input `{{ . }}` fetching resources `{{ $css }}`");
 </script>
-{{ if not $css }}
+{{- if not $css -}}
 <script>
     console.log("No page css exists for `{{ . }}`");
 </script>
-{{ else }}
-{{ $css = $css | minify }}
-{{/* {{ $css = $css | postCSS | minify }} */}}
+{{- else -}}
+{{ $css = $css | postCSS | minify | fingerprint }}
 <link rel="stylesheet" href="{{ $css.Permalink }}" integrity="{{ $css.Data.integrity }}" media="screen">
-{{ end }}
+{{- end -}}

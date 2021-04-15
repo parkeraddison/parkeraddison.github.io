@@ -6,11 +6,15 @@
     --monospace: Consolas, Menlo, monospace;
 
     --bg: #fbfbf8;
+    --bg: hsl(26, 60%, 95%);
     --text: #282833;
     --text-light: #888;
+    --text-light: #657580;
+    --text-light: #a6a4a4;
     --text-extra-light: #bbb;
     --link-color: rgb(173, 88, 105);
     --link-color: #AD5869;
+    --link-color: hsl(355, 83%, 37%);
 
     --light-grey: #888;
     --narrow-light-grey: #e8e8e8;
