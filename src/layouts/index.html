@@ -171,32 +171,4 @@
     </article>
 </section>
 
-<script>
-    document.addEventListener("DOMContentLoaded", function () {
-
-
-        const stickyElm = document.querySelector('header')
-
-        const observer = new IntersectionObserver(
-            ([e]) => {
-                e.target.classList.toggle('at-top', e.boundingClientRect.y < 0);
-            },
-            { threshold: [1] }
-        );
-
-        observer.observe(stickyElm)
-
-        const wavingHand = document.querySelector('.wave');
-
-        function waveTheHand() {
-            if (wavingHand.classList.contains('animate-me')) return;
-            wavingHand.classList.add('animate-me');
-            setTimeout(() => wavingHand.classList.remove('animate-me'), 1600);
-        }
-
-        waveTheHand();
-        wavingHand.addEventListener("mouseenter", waveTheHand);
-
-    });
-</script>
 {{ end }}
