@@ -2,7 +2,7 @@
 
 header {
     position: sticky;
-    top: -1px;
+    top: -0.1px; /* This must be less than zero to trigger the intersection */
     background-color: var(--bg);
     border-bottom: 1px solid #0000;
     padding: 2em 0;
@@ -14,12 +14,12 @@ header {
     transition: border-color 0.3s;
 }
 
-nav {
+header nav {
     grid-column: wide;
     display: flex;
 }
 
-nav a {
+header nav a {
     padding: 0.5em;
     text-decoration: underline;
     text-decoration-color: var(--text-extra-light);
@@ -43,10 +43,10 @@ header.at-top nav a {
     }
 }
 
-nav a.name {
+header nav a.name {
     /* Manual positioning is icky, but flex acted strange with sticky! */
     position: fixed;
-    top: 2.2em;
+    top: 32px;
     font-size: 14px;
     font-weight: bold;
     text-decoration: none;
@@ -55,6 +55,8 @@ nav a.name {
     /* Adjust for padding */
     margin-left: -0.5em;
 
+    /* This way the name truncates to just 'Parker' when the viewport is small
+       enough. */
     max-width: 32vw;
     max-height: 1.8em;
     overflow: hidden;
@@ -65,7 +67,7 @@ header.at-top nav a.name {
     opacity: 1;
 }
 
-nav .tabs {
+header nav .tabs {
     display: flex;
     flex-basis: 700px;
     font-size: 16px;
@@ -106,7 +108,38 @@ header.at-top .tabs {
     margin-right: -0.5em;
 }
 
+/* === To-top and Dark-mode buttons ========================================= */
 
+input#dark-mode, input#dark-mode + label, input#to-top, input#to-top + label {
+    position: fixed;
+    bottom: 1em;
+    right: 1em;
+    background-color: var(--bg);
+    border: 1px solid #8884;
+    border-radius: 1em;
+    height: 1.5em;
+    width: 2.2em;
+    text-align: center;
+    line-height: 1.2em;
+    cursor: pointer;
+    z-index: 999;
+}
+input#dark-mode, input#to-top {
+    visibility: hidden;
+}
+input#dark-mode + label::before {
+    content: '🌒︎';
+}
+input#dark-mode:checked + label::before {
+    content: '☀️';
+}
+
+input#to-top, input#to-top + label {
+    bottom: 2.6em;
+    transform: scale(-1,1);
+}
+
+/* === Old ================================================================== */
 
 /* header {
     position: absolute;

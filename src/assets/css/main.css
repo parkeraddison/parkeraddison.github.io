@@ -26,8 +26,17 @@
     --accent-indigo: #764afa;
 }
 
+/* Easy-peasy dark mode with just some variable changes :) */
+:root.dark {
+    --bg: hsl(40, 5%, 8%);
+    --text: hsl(26,50%,80%);
+    --text-light: #777;
+}
+
 * {
     box-sizing: border-box;
+    /* Transition for dark mode */
+    transition: background-color 1s;
 }
 
 /* === Responsive Grid ====================================================== */
@@ -77,7 +86,9 @@ html,
 body {
     font-family: var(--sans-serif);
     background-color: var(--bg);
+    color: var(--text);
     margin: 0;
+}
 
     color: var(--text);
 }
