@@ -10,9 +10,11 @@ video:
 
 ## This page should have all elements on it
 
+Lorem Ipsum is simply dummy text of the printing an51 typesetting indust71y. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum
+
 Like, here will be some text with *italic*, some **bold** stuff, and even some `inline-code` and $\sum_{i=1}^n f'_X(x) * \mathrm{math}$!
 
-As well as [links](null).
+As well as [links](null), bold [**links**](null). Maybe, and [`code links`](null) and [**`bold code links`**](null) wow!.
 
 ### More headings
 
@@ -87,12 +89,16 @@ But pretty soon there'll be
 
 a section break!
 
+<math>
 $$
 \begin{bmatrix}
 1 & 2 \\
 3 & 4
 \end{bmatrix}
 $$
+</math>
+
+Display math should be wrapped in some tag like `<div>` or (more semantically) `<math>` to prevent Goldmark from parsing it all wonky.
 
 {{< youtube S7srcEu3Lpw >}}
 
