@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     const observer = new IntersectionObserver(
         ([e]) => {
-            e.target.classList.toggle('at-top', e.boundingClientRect.y < 0);
+            e.target.classList.toggle('at-top', e.boundingClientRect.y <= 0);
         },
         { threshold: [1] }
     );
