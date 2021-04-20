@@ -20,7 +20,13 @@ disableKinds:
 #     tag: tags
 
 markup:
-    defaultMarkdownHandler: pandoc
+    # defaultMarkdownHandler: pandoc
+    defaultMarkdownHandler: goldmark
+    goldmark:
+        renderer:
+            unsafe: true
+    highlight:
+        style: monokai
 
 assetDir: assets
 publishDir: "../"

@@ -6,11 +6,14 @@ description: "I'm Parker Addison.  This data science portfolio acts as a sort of
 
 ---
 
+<nav>
+
 - [Projects](#projects)
 - [Research](#research)
 - [Communication](#communication)
-- [(Extra)curriculars](#involvement-relevant-courses)
+- [(Extra)curriculars](#involvement--relevant-courses)
 
+</nav>
 
 # Projects
 
