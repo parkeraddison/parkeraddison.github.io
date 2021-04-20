@@ -11,7 +11,7 @@ header {
 
     margin-bottom: 20vh;
 
-    transition: border-color 0.3s;
+    transition: background-color 1s, border-color 0.3s;
 }
 
 header nav {
