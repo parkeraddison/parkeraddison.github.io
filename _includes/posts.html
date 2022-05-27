@@ -1,0 +1,14 @@
+{% assign sorted =  site.blog | sort "date" | reverse %}
+{% for post in sorted | limit: include.limit %}
+    <article class="_posts">
+        <h1>
+            {{ post.title }}
+        </h1>
+        {{ post.description }}
+    </article>
+{% endfor %}
+{% if include.limit %}
+    <article>
+        <a class="cta" href="">See all posts</a>
+    </article>
+{% endif %}

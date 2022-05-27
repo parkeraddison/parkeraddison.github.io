@@ -1,0 +1,23 @@
+* {
+    box-sizing: border-box;
+}
+
+a.cta {
+    text-decoration: none;
+    padding-right: 2em;
+
+    &::after {
+        content: "→";
+        position: absolute;
+        margin-left: 1ex;
+        transition: margin-left 0.1s;
+    }
+    &:hover{
+        text-decoration: underline;
+
+        &::after {
+            margin-left: 1em;
+        }
+
+    }
+}

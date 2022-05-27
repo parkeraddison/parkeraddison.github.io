@@ -1,0 +1,48 @@
+---
+layout: default
+---
+
+<main>
+    
+    <section id="intro">
+        <div>
+            <img src="{{ page.image }}" alt="Profile portrait of Parker Addison" height="100" width="100">
+        </div>
+        <div>
+            <h1>Hi there, 👋
+                <br>
+                I'm {{ site.author.name }}
+            </h1>
+            <p>
+                {{ page.summary }}
+            </p>
+            <p>
+                <a class="cta" href="">{{ page.cta }}</a>
+            </p>
+        </div>
+    </section>
+    
+    {% include nav.html %}
+    
+    <section id="news">
+        <h1>News 👉</h1>
+        {% include news.html limit=5 %}
+    </section>
+
+    <section id="projects">
+        <h1>Proud of these projects 🙌</h1>
+        {% include projects.html limit=2 %}
+    </section>
+
+    <section id="posts">
+        <h1>Latest posts ✍</h1>
+        {% include posts.html limit=3 %}
+    </section>
+
+    <section id="contact">
+        <h1>Call me maybe? 🤙</h1>
+        <p>Got a cool data science idea? Want to ask questions about data science at UC San Diego or Deloitte? Just want some company?</p>
+        <p>Well wait no longer, <a class="cta" href="./contact">here's where you can find me on the web</a></p>
+    </section>
+
+</main>

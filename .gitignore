@@ -1,0 +1,15 @@
+# Jekyll/Bundle related files
+_site
+.sass-cache
+.jekyll-cache
+.jekyll-metadata
+.bundle
+vendor
+Gemfile.lock
+*.gem
+
+# Example site files used for testing
+_blog
+_news
+images
+portfolio

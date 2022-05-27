@@ -1,0 +1,31 @@
+title: test
+author:
+  name: Parker Addison
+  email: pargrey@gmail.com
+description: >
+  A description which can span
+  multiple lines.
+
+theme: parkeraddison
+
+parkeraddison:
+  nav_links:
+    - name: Portfolio
+      url: ./portfolio
+    - name: Blog
+      url: ./blog
+    - name: Resume
+      url: ./resume
+    - name: Contact
+      url: ./contact
+
+collections:
+  news:
+  blog:
+    output: true
+  projects:
+    output: true
+
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
