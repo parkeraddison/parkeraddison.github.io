@@ -11,5 +11,6 @@ Gemfile.lock
 # Example site files used for testing
 _blog
 _news
+_projects
 images
 portfolio

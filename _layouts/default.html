@@ -3,9 +3,10 @@
 
 {%- include head.html -%}
     
-<body>
+{% include header.html %}
 
-    {{ content }}
-    
-</body>
-</html>
+{{ content }}
+
+{%- include footer.html -%}
+
+{%- include tail.html -%}

@@ -5,26 +5,39 @@ author:
 description: >
   A description which can span
   multiple lines.
+repository: https://github.com/parkeraddison/parkeraddison.github.io
 
 theme: parkeraddison
 
 parkeraddison:
   nav_links:
     - name: Portfolio
-      url: ./portfolio
+      url: /portfolio
     - name: Blog
-      url: ./blog
+      url: /blog
     - name: Resume
-      url: ./resume
+      url: /resume
     - name: Contact
-      url: ./contact
+      url: /contact
 
 collections:
-  news:
   blog:
     output: true
+  news:
   projects:
-    output: true
+
+defaults:
+  - scope:
+      path: ""
+      type: "blog"
+    values:
+      layout: "post"
+  - scope:
+      path: ""
+    values:
+      layout: "default"
+
+kramdown:
 
 plugins:
   - jekyll-feed

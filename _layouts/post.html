@@ -2,4 +2,10 @@
 layout: default
 ---
 
-{{ content }}
+<main class="layout-post">
+    {{ content }}
+</main>
+
+<!-- Add post navigation here -->
+
+{%- include action.html type="back" href="/blog" text="Back to all posts" -%}

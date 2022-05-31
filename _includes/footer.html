@@ -1,0 +1,11 @@
+<footer>
+    {%- if page.url != '/' -%}
+        <nav>
+            {%- include action.html type="back" href="/" text="Home" -%}
+        </nav>
+    {%- endif -%}
+    <a href="{{ site.repository }}">
+    <img src="/images/parker-headshot-small.jpg" alt="">
+    <span>Made by Parker,</span>
+    <code>&lt;/&gt;</code> on GitHub</a>
+</footer>

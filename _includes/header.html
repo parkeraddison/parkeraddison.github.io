@@ -1,0 +1,17 @@
+<header>
+    <nav role="navigation">
+        <a href="/">Parker Addison</a>
+        <ul>
+        {%- for item in site.parkeraddison.nav_links -%}
+            <li>
+                <a href="{{ item.url }}">{{ item.name }}</a>
+            </li>
+        {%- endfor -%}
+        </ul>
+    </nav>
+
+    <label for="theme-switcher">
+        <input type="checkbox" name="theme-switcher" id="theme-switcher">
+    </label>
+    <script>initializeThemeSwitcher()</script>
+</header>

@@ -1,8 +1,9 @@
----
-layout: default
----
+<!DOCTYPE html>
+<html lang="en">
 
-<main>
+{%- include head.html -%}
+    
+<main class="layout-home">
     
     <section id="intro">
         <div>
@@ -17,12 +18,12 @@ layout: default
                 {{ page.summary }}
             </p>
             <p>
-                <a class="cta" href="">{{ page.cta }}</a>
+                {%- include action.html href=page.cta.url text=page.cta.message -%}
             </p>
         </div>
     </section>
     
-    {% include nav.html %}
+    {% include header.html %}
     
     <section id="news">
         <h1>News 👉</h1>
@@ -42,7 +43,11 @@ layout: default
     <section id="contact">
         <h1>Call me maybe? 🤙</h1>
         <p>Got a cool data science idea? Want to ask questions about data science at UC San Diego or Deloitte? Just want some company?</p>
-        <p>Well wait no longer, <a class="cta" href="./contact">here's where you can find me on the web</a></p>
+        <p>Well wait no longer, {% include action.html href="/contact" text="here's where you can find me on the web" %}</p>
     </section>
 
 </main>
+
+{%- include footer.html -%}
+
+{%- include tail.html -%}

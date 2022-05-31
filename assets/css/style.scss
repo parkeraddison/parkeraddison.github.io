@@ -2,4 +2,24 @@
 ---
 
 @import
-    "parkeraddison/base";
+    "parkeraddison/variables"
+;
+
+@mixin spread-map($map: ()) {
+    @each $key, $value in $map {
+        #{$key}: $value;
+    }
+}
+
+:root[data-theme="light"] {
+    @include spread-map($theme-map-light);
+}
+
+:root[data-theme="dark"] {
+    @include spread-map($theme-map-dark);
+}
+
+@import
+    "parkeraddison/base",
+    "parkeraddison/layout"
+;

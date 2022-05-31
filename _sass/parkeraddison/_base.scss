@@ -2,22 +2,161 @@
     box-sizing: border-box;
 }
 
-a.cta {
-    text-decoration: none;
-    padding-right: 2em;
+html.theme-transition,
+html.theme-transition body,
+html.theme-transition a {
+    transition-property: background-color, color, border-color;
+    transition-duration: $transition-speed;
+    transition-timing-function: ease-out;
+}
 
-    &::after {
-        content: "→";
-        position: absolute;
-        margin-left: 1ex;
-        transition: margin-left 0.1s;
+// html.theme-transition body {
+//     --swipe-speed: 600ms;
+//     transition-duration: none;
+//     transition-delay: calc(0.5 * var(--swipe-speed));
+
+//     &::before {
+//         content: '';
+//         position: fixed;
+//         top: 0;
+//         left: 0;
+//         width: 100%;
+//         background-color: $accent-green;
+//         animation: transition-swipe var(--swipe-speed) ease-in-out forwards;
+//         z-index: 999;
+//         pointer-events: none;
+//     }
+
+//     @keyframes transition-swipe {
+//         0% {
+//             top: 0;
+//             height: 0%;
+//         }
+//         50% {
+//             top: 0;
+//             height: 100%;
+//         }
+//         100% {
+//             top: 100%;
+//             height: 0%;
+//         }
+//     }
+// }
+    
+body {
+    background-color: var(--theme-background);
+    color: var(--theme-text);
+
+    font-family: $font-body;
+    font-size: 16px;
+}
+
+section {
+    display: grid;
+    grid-template-columns: 1fr minmax(300px, 800px) 1fr;
+
+    &> * {
+        grid-column: 2;
     }
-    &:hover{
+
+    &> h1 {
+        grid-column: 1;
+        text-align: right;
+        position: sticky;
+        top: 4em;
+        height: 0;
+        margin-right: 1em;
+    }
+}
+
+h1, h2, h3 {
+    font-family: $font-display;
+}
+
+
+a {
+    color: var(--theme-primary);
+    text-decoration: none;
+
+    &:hover,
+    &:focus {
+        color: var(--theme-primary-contrast);
         text-decoration: underline;
+        text-decoration-thickness: 2px;
+    }
 
-        &::after {
-            margin-left: 1em;
+    &.link-action{
+
+        position: relative;
+        display: inline-block;
+    
+        & svg {
+            stroke: currentColor;
+            position: absolute;
+            top: 10%;
         }
+    
+        &.link-cta {
+            padding-right: 2em;
+    
+            & svg {
+                margin-left: 1ex;
+                transition: margin-left $transition-speed;
+            }
+    
+            &:hover,
+            &:focus {
+                & svg {
+                    margin-left: 1em;
+                }
+            }
+        }
+    
+        &.link-back {
+            padding-left: 2em;
+    
+            & svg {
+                margin-left: calc(-1em + -1ex);
+                transition: margin-left $transition-speed;
+            }
+    
+            &:hover,
+            &:focus {
+                & svg {
+                    margin-left: calc(-1em + -1em);
+                }
+            }
+        }
+    }
+    
+}
 
+// Add decoration for external links
+main a:not(.link-action)[href^="https://"]::after {
+    content: '↸';
+    transform: scaleX(-100%);
+    // color: var(--theme-text-faint);
+    font-size: 80%;
+    line-height: 0;
+    position: relative;
+    top: -0.25em;
+    margin-left: 2px;
+    // Remove the underline from the link. Inline-block is necessary.
+    display: inline-block;
+    text-decoration: none;
+}
+
+footer {
+    margin: 8em 0;
+    text-align: center;
+    font-size: 95%;
+    & img {
+        position: relative;
+        height: 1.2em;
+        top: 0.3em;
+        border-radius: 100%;
+    }
+    & a {
+        color: var(--theme-text-ultrafaint);
     }
 }

@@ -9,6 +9,6 @@
 {% endfor %}
 {% if include.limit %}
     <article>
-        <a class="cta" href="">See all posts</a>
+        {%- include action.html href="/blog" text="See all posts" -%}
     </article>
 {% endif %}
