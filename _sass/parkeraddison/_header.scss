@@ -1,0 +1,123 @@
+/* Default values are for when the home page is loaded. */
+
+header {
+    position: sticky;
+    top: -0.1px; /* This must be less than zero to trigger the intersection */
+    background-color: var(--theme-background);
+    border-bottom: 1px solid #0000;
+    z-index: 99;
+
+    height: 4em;
+
+    margin-bottom: 20vh;
+
+    transition: background-color 1s, border-color 0.3s;
+
+    display: grid;
+    grid-template-columns: $grid-base-columns;
+
+    & nav {
+        grid-column: wide;
+
+        display: flex;
+
+        & svg {
+            height: 1em;
+            width: 3em;
+            stroke-width: 4px;
+            vertical-align: middle;
+        }
+
+        // Name
+        & .flexer {
+            visibility: hidden;
+            opacity: 0;
+            align-self: center;
+            flex-basis: 0%;
+            min-width: 0;
+            transition: opacity 500ms 500ms, flex 500ms;
+        }
+
+        // Tabs
+        & ul {
+            flex-basis: 700px;
+            transition: flex-basis $transition-speed;
+            margin: auto;
+            padding: 0;
+
+            display: flex;
+            justify-content: space-evenly;
+            gap: 1em;
+
+            & li {
+                list-style: none;
+            }
+        }
+
+    }
+
+    &.at-top {
+
+        border-color: #8882;
+
+        & nav {
+
+            & a {
+                text-decoration: none;
+            }
+
+            & .flexer {
+                visibility: visible;
+                opacity: 1;
+                flex-basis: 100%;
+            }
+
+            & ul {
+                flex-basis: 0px;
+            }
+        }
+    }
+}
+
+label[for=theme-switcher] {
+
+    width: min-content;
+    height: min-content;
+
+    box-sizing: content-box;
+    padding: 1em;
+
+    position: absolute;
+    bottom: 0;
+    right: 1.5em;
+
+    @media (max-width: $size-phone) {
+        top: unset;
+        bottom: 1em;
+    }
+
+    & input {
+        visibility: hidden;
+        position: absolute;
+    }
+
+    & svg {
+        color: var(--theme-text-ultrafaint);
+
+        &:hover, &:focus {
+            color: $accent-yellow;
+        }
+
+        :root[data-theme='dark'] & {
+            & > .sun-beams {
+                opacity: 0;
+            }
+
+            & > .moon > circle {
+            transform: translateX(-7px);
+        }
+    }
+}
+
+
+}

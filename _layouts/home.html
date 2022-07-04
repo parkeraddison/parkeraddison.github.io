@@ -2,29 +2,29 @@
 <html lang="en">
 
 {%- include head.html -%}
-    
+
 <main class="layout-home">
-    
-    <section id="intro">
-        <div>
-            <img src="{{ page.image }}" alt="Profile portrait of Parker Addison" height="100" width="100">
-        </div>
-        <div>
-            <h1>Hi there, 👋
-                <br>
-                I'm {{ site.author.name }}
-            </h1>
-            <p>
-                {{ page.summary }}
-            </p>
-            <p>
-                {%- include action.html href=page.cta.url text=page.cta.message -%}
-            </p>
+
+    <section id="landing">
+        <div class="intro">
+            <img src="{{ page.image }}" alt="Profile portrait of Parker Addison">
+            <div class="writing">
+                <h1>Hi there, <span class="wave">👋</span>
+                    <br>
+                    I'm {{ site.author.name }}
+                </h1>
+                <p>
+                    {{ page.summary }}
+                </p>
+                <p>
+                    {%- include action.html href=page.cta.url text=page.cta.message -%}
+                </p>
+            </div>
         </div>
     </section>
-    
+
     {% include header.html %}
-    
+
     <section id="news">
         <h1>News 👉</h1>
         {% include news.html limit=5 %}
@@ -51,3 +51,33 @@
 {%- include footer.html -%}
 
 {%- include tail.html -%}
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+
+        // === Header stickiness ================================================ //
+        const stickyElm = document.querySelector('header')
+
+        const observer = new IntersectionObserver(
+            ([e]) => {
+                e.target.classList.toggle('at-top', e.boundingClientRect.y <= 0);
+            },
+            { threshold: [1] }
+        );
+
+        observer.observe(stickyElm);
+
+        // === Hand waving ====================================================== //
+        const wavingHand = document.querySelector('.wave');
+
+        function waveTheHand() {
+            if (wavingHand.classList.contains('animate-me')) return;
+            wavingHand.classList.add('animate-me');
+            setTimeout(() => wavingHand.classList.remove('animate-me'), 1600);
+        }
+
+        waveTheHand();
+        wavingHand.addEventListener("mouseenter", waveTheHand);
+
+    });
+</script>

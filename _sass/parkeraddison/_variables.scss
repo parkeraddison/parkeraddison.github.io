@@ -1,10 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Lexend:wght@380;600&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Source+Serif+Pro:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Serif+Pro:ital,wght@0,400;0,600;1,400;1,600&display=swap');
 
-$font-body: 'Lexend', 'Segoe UI';
+$font-body: 'Lexend', 'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 $font-monospace: 'Cascadia Code';
-$font-display: 'Source Serif Pro', Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+$font-display: 'Source Serif Pro', Georgia, Times, 'Times New Roman', serif;
 
 $accent-green: hsl(158, 68%, 28%);
 // $accent-red: #ff6961;
@@ -15,21 +14,26 @@ $accent-purple: #764afa;
 
 $transition-speed: 100ms;
 
+$grid-base-columns: [full-start] 1fr [wide-start] 1fr [main-start] minmax(300px, 800px) [main-end] 1fr [wide-end] 1fr [full-end];
+
+$size-phone: 600px;
+
 $theme-map-light: (
     --theme-background: hsl(30, 25%, 95%),
-    --theme-text: #111,
+    --theme-text: #151515,
     --theme-text-faint: #666,
-    --theme-text-ultrafaint: #bbb,
-    --theme-primary: $accent-green,
+    --theme-text-ultrafaint: #bfbfbf,
+    // --theme-primary: lighten($accent-green, 5%),
+    --theme-primary: saturate($accent-green, 10%),
     --theme-primary-contrast: darken($accent-green, 10%),
     --theme-secondary: $accent-yellow,
 );
-    
+
 $theme-map-dark: (
     --theme-background: hsl(180, 25%, 5%),
-    --theme-text: #fff,
+    --theme-text: #ffe5e5,
     --theme-text-faint: #555,
-    --theme-text-ultrafaint: #333,
+    --theme-text-ultrafaint: #444,
     --theme-primary: lighten($accent-green, 15%),
     --theme-primary-contrast: lighten($accent-green, 35%),
     --theme-secondary: $accent-yellow,

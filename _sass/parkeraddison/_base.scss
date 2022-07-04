@@ -42,25 +42,28 @@ html.theme-transition a {
 //         }
 //     }
 // }
-    
+
 body {
     background-color: var(--theme-background);
     color: var(--theme-text);
 
     font-family: $font-body;
+    font-weight: 380;
     font-size: 16px;
+
+    margin: 0;
 }
 
 section {
     display: grid;
-    grid-template-columns: 1fr minmax(300px, 800px) 1fr;
+    grid-template-columns: $grid-base-columns;
 
     &> * {
-        grid-column: 2;
+        grid-column: main;
     }
 
     &> h1 {
-        grid-column: 1;
+        grid-column: wide-start / main-start;
         text-align: right;
         position: sticky;
         top: 4em;
@@ -71,12 +74,14 @@ section {
 
 h1, h2, h3 {
     font-family: $font-display;
+    font-weight: bold;
+    // color: var(--theme-primary);
 }
 
 
 a {
     color: var(--theme-primary);
-    text-decoration: none;
+    text-decoration: underline 0.5px solid var(--theme-text-ultrafaint);
 
     &:hover,
     &:focus {
@@ -89,21 +94,21 @@ a {
 
         position: relative;
         display: inline-block;
-    
+
         & svg {
             stroke: currentColor;
             position: absolute;
             top: 10%;
         }
-    
+
         &.link-cta {
             padding-right: 2em;
-    
+
             & svg {
                 margin-left: 1ex;
                 transition: margin-left $transition-speed;
             }
-    
+
             &:hover,
             &:focus {
                 & svg {
@@ -111,15 +116,15 @@ a {
                 }
             }
         }
-    
+
         &.link-back {
             padding-left: 2em;
-    
+
             & svg {
                 margin-left: calc(-1em + -1ex);
                 transition: margin-left $transition-speed;
             }
-    
+
             &:hover,
             &:focus {
                 & svg {
@@ -128,35 +133,35 @@ a {
             }
         }
     }
-    
+
 }
 
 // Add decoration for external links
-main a:not(.link-action)[href^="https://"]::after {
-    content: '↸';
-    transform: scaleX(-100%);
-    // color: var(--theme-text-faint);
-    font-size: 80%;
-    line-height: 0;
-    position: relative;
-    top: -0.25em;
-    margin-left: 2px;
-    // Remove the underline from the link. Inline-block is necessary.
-    display: inline-block;
-    text-decoration: none;
+main a:not(.link-action)[href^="https://"] {
+
+    &::after {
+        // content: '↸';
+        // transform: scaleX(-100%);
+        content: '↗';
+        // color: var(--theme-text-faint);
+        font-size: 80%;
+        position: relative;
+        top: 0em;
+        // opacity: 0;
+        margin-left: 1px;
+        // Remove the underline from the link. Inline-block is necessary.
+        display: inline-block;
+        text-decoration: none;
+        transition: top $transition-speed, opacity $transition-speed;
+    }
+
+    &:hover::after,
+    &:focus::after {
+        top: -0.5em;
+        opacity: 1;
+    }
+
 }
 
-footer {
-    margin: 8em 0;
-    text-align: center;
-    font-size: 95%;
-    & img {
-        position: relative;
-        height: 1.2em;
-        top: 0.3em;
-        border-radius: 100%;
-    }
-    & a {
-        color: var(--theme-text-ultrafaint);
-    }
-}
+@import "parkeraddison/header";
+@import "parkeraddison/footer";
