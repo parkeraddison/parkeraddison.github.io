@@ -3,27 +3,28 @@
 
 {%- include head.html -%}
 
-<main class="layout-home">
 
-    <section id="landing">
-        <div class="intro">
-            <img src="{{ page.image }}" alt="Profile portrait of Parker Addison">
-            <div class="writing">
-                <h1>Hi there, <span class="wave">👋</span>
-                    <br>
-                    I'm {{ site.author.name }}
-                </h1>
-                <p>
-                    {{ page.summary }}
-                </p>
-                <p>
-                    {%- include action.html href=page.cta.url text=page.cta.message -%}
-                </p>
-            </div>
+<section id="landing" class="grid-main">
+    <div class="intro">
+        <img src="{{ page.image }}" alt="Profile portrait of Parker Addison">
+        <div class="writing">
+            <h1>Hi there, <span class="wave">👋</span>
+                <br>
+                I'm {{ site.author.name }}
+            </h1>
+            <p>
+                {{ page.summary }}
+            </p>
+            <p>
+                {%- include action.html href=page.cta.url text=page.cta.message -%}
+            </p>
         </div>
-    </section>
+    </div>
+</section>
 
-    {% include header.html %}
+{% include header.html %}
+
+<main class="layout-home">
 
     <section id="news">
         <h1>News 👉</h1>
@@ -32,7 +33,7 @@
 
     <section id="projects">
         <h1>Proud of these projects 🙌</h1>
-        {% include projects.html limit=2 %}
+        {% include projects.html limit=3 %}
     </section>
 
     <section id="posts">

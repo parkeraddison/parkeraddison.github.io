@@ -1,38 +1,44 @@
-<header {% if page.layout != 'home' %}class='at-top'{% endif %}>
+<header {% if page.layout !='home' %}class='at-top' {% endif %}>
     <nav role="navigation">
         <div class="flexer">
-            <a href="/">
-                <svg class="p-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 342.7 170.1"><path fill="currentColor" stroke="currentColor" d="m82 138-12 11L0 91l70-59 12 12-57 47ZM190 59a46 46 0 0 1-3 16 41 41 0 0 1-10 15 49 49 0 0 1-17 10q-10 4-24 4h-17v49h-19V17h39a82 82 0 0 1 19 2 47 47 0 0 1 17 7 36 36 0 0 1 11 13q4 8 4 20Zm-19 0q0-13-9-20t-24-7h-19v56h17q17 0 26-7t9-22ZM258 0l-72 170h-18L240 0ZM261 38l12-12 70 59-70 59-12-12 57-47Z"/></svg>
+            <a href="/" title="Home">
+                <svg class="p-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 342.7 170.1">
+                    <path fill="currentColor" stroke="currentColor"
+                        d="m82 138-12 11L0 91l70-59 12 12-57 47ZM190 59a46 46 0 0 1-3 16 41 41 0 0 1-10 15 49 49 0 0 1-17 10q-10 4-24 4h-17v49h-19V17h39a82 82 0 0 1 19 2 47 47 0 0 1 17 7 36 36 0 0 1 11 13q4 8 4 20Zm-19 0q0-13-9-20t-24-7h-19v56h17q17 0 26-7t9-22ZM258 0l-72 170h-18L240 0ZM261 38l12-12 70 59-70 59-12-12 57-47Z" />
+                </svg>
             </a>
         </div>
         <ul>
-        {%- for item in site.parkeraddison.nav_links -%}
+            {%- for item in site.parkeraddison.nav_links -%}
             <li>
                 <a href="{{ item.url }}">{{ item.name }}</a>
             </li>
-        {%- endfor -%}
+            {%- endfor -%}
         </ul>
     </nav>
 
-    <label for="theme-switcher">
-        <input type="checkbox" name="theme-switcher" id="theme-switcher">
-        <svg class="sun-and-moon" aria-hidden="true" width="24" height="24" viewBox="0 0 24 24">
-            <mask class="moon" id="moon-mask">
-                <rect x="0" y="0" width="100%" height="100%" fill="white" />
-                <circle cx="24" cy="10" r="6" fill="black" />
-            </mask>
-            <circle class="sun" cx="12" cy="12" r="6" mask="url(#moon-mask)" fill="currentColor" />
-            <g class="sun-beams" stroke="currentColor">
-                <line x1="12" y1="1" x2="12" y2="3" />
-                <line x1="12" y1="21" x2="12" y2="23" />
-                <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" />
-                <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" />
-                <line x1="1" y1="12" x2="3" y2="12" />
-                <line x1="21" y1="12" x2="23" y2="12" />
-                <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" />
-                <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" />
-            </g>
-        </svg>
-    </label>
-    <script>initializeThemeSwitcher()</script>
+    <!-- <div class="header-buttons"> -->
+        <label for="theme-switcher" title="Switch light or dark theme">
+            <input type="checkbox" name="theme-switcher" id="theme-switcher">
+            <svg class="sun-and-moon" aria-hidden="true" width="24" height="24" viewBox="0 0 24 24">
+                <mask class="moon" id="moon-mask">
+                    <rect x="0" y="0" width="100%" height="100%" fill="white" />
+                    <circle cx="24" cy="10" r="6" fill="black" />
+                </mask>
+                <circle class="sun" cx="12" cy="12" r="6" mask="url(#moon-mask)" fill="currentColor" />
+                <g class="sun-beams" stroke="currentColor">
+                    <line x1="12" y1="1" x2="12" y2="3" />
+                    <line x1="12" y1="21" x2="12" y2="23" />
+                    <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" />
+                    <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" />
+                    <line x1="1" y1="12" x2="3" y2="12" />
+                    <line x1="21" y1="12" x2="23" y2="12" />
+                    <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" />
+                    <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" />
+                </g>
+            </svg>
+        </label>
+        <script>initializeThemeSwitcher()</script>
+    <!-- </div> -->
+
 </header>

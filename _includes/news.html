@@ -2,9 +2,11 @@
 {% for event in sorted | limit: include.limit %}
     <article class="_news">
         <h1>
-            <date>{{ event.date | date: "%Y-%m-%d" }}</date>
+            <date>{{ event.date | date: "%Y-%m-%d" }}</date>:
         </h1>
-        {{ event.content }}
+        <div class="content">
+            {{ event.content }}
+        </div>
     </article>
 {% endfor %}
 {% if include.limit %}

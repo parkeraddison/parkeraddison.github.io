@@ -1,10 +1,19 @@
+<div class="_posts">
 {% assign sorted =  site.blog | sort "date" | reverse %}
 {% for post in sorted | limit: include.limit %}
-    <article class="_posts">
+    <article class="_post">
         <h1>
-            {{ post.title }}
+            <a href="{{ post.url }}">{{ post.title }}</a>
         </h1>
         {{ post.description }}
+        <div class="reading-time">
+            {% assign words = post.content | number_of_words %}
+            {% if words < 360 %}
+            1 minute
+            {% else %}
+            {{ words | divided_by:180 }} minutes
+            {% endif %}
+        </div>
     </article>
 {% endfor %}
 {% if include.limit %}
@@ -12,3 +21,4 @@
         {%- include action.html href="/blog" text="See all posts" -%}
     </article>
 {% endif %}
+</div>

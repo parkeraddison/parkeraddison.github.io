@@ -6,22 +6,25 @@ description: "I'm Parker Addison.  This data science portfolio acts as a sort of
 
 ---
 
-<!-- <nav> -->
+<main class="portfolio">
 
+<section>
+{%- capture md -%}
 - [Projects](#projects)
 - [Research](#research)
 - [Communication](#communication)
 - [(Extra)curriculars](#involvement--relevant-courses)
-
-<!-- </nav> -->
-
-# Projects
-
-<!-- Since I use four spaces in my html code, the partial is treated like a preformatted block. Therefore we need to capture this output and remove indentation. -->
-{%- capture html -%}
-{% include projects.html %}
 {%- endcapture -%}
-{{ html | replace: '    ', '' }}
+{{ md | markdownify }}
+</section>
+
+<section id="projects">
+<h1>Projects</h1>
+{% include projects.html %}
+</section>
+
+<section id="research">
+{%- capture md -%}
 
 # Research
 
@@ -57,6 +60,14 @@ I worked as a machine learning engineer at a startup founded on campus. We built
 
 Microinfluencers are often location and demographic specific, they fill a particular niche, and they often don't realize that they are an influencer! From a database of all Instagram, YouTube, and Twitter personalities, our service would rank their influence over a given industry and keywords using recommender systems, association rule learning, and other graph theory techniques.
 
+{%- endcapture -%}
+{{ md | markdownify }}
+</section>
+
+
+<section id="communication">
+{%- capture md -%}
+
 # Communication
 
 ## Invited Speaker, ["What Ignited My Love For Data Science"](https://youtu.be/S7srcEu3Lpw)
@@ -79,6 +90,14 @@ I mentored over 100+ students who were tackling projects on Azure's computer vis
 I've tutored for various DSC courses, such as DSC 10, 40B, and 80. I was even placed in charge of discussion sections (both creating [the materials](https://github.com/ucsd-ets/dsc10-fa18/tree/master/Discussions) and leading the sessions). [Week 9](https://github.com/ucsd-ets/dsc10-fa18/blob/master/Discussions/week09/discussion09-filled.ipynb) has some good stuff... then again I think I liked all of the notebooks I made!
 
 Teaching holds a very special place in my heart, and I have no doubt that I will continue to pursue opportunities to spread knowledge and facilitate those "a-ha" moments!
+
+{%- endcapture -%}
+{{ md | markdownify }}
+</section>
+
+
+<section id="extracurricular">
+{%- capture md -%}
 
 # Involvement / Relevant Courses
 
@@ -111,7 +130,7 @@ I am heavily involved with the management of this committee, and am currently in
 | DSC 10<small> *</small> | Principles of Data Science <br /><small>Hopefully you've seen the [new textbook](http://diveintods.com) we wrote</small> |
 | DSC 20, 30 | Data Structures and Algorithms |
 | DSC 80<small> *</small> | Practice and Application of Data Science |
-| &horbar; |
+| &mdash; |
 | CSE 158 | Recommender Systems and Web Mining |
 | DSC 100 | Introduction to Data Management |
 | DSC 102 | Systems for Scalable Analytics |
@@ -119,14 +138,14 @@ I am heavily involved with the management of this committee, and am currently in
 | DSC 167 | Fairness and Algorithmic Decision Making <br /><small>Audited after graduation</small> |
 | DSC 170 | Spatial Data Science and its Applications <br /><small>Esri and Microsoft made this course possible! Check out the [blog post from GeoAI](https://medium.com/geoai/esri-microsoft-join-uc-san-diego-teaching-practical-geospatial-data-science-and-deep-learning-3d7e62bd23fb)</small> |
 | DSC 180A-B | Capstone in Data Science <br /><small>I present to you: [*DANE*](https://github.com/dane-tool/dane) -- a tool to solve data representation issues in network traffic datasets (thanks to Viasat for their mentorship!)</small> |
-| ECE 188 | Machine Learning for the Arts <br /><small>We made some fun [aiArt projects](https://github.com/parkeraddison?tab=repositories&q=aiArt) you should check out</small> | 
+| ECE 188 | Machine Learning for the Arts <br /><small>We made some fun [aiArt projects](https://github.com/parkeraddison?tab=repositories&q=aiArt) you should check out</small> |
 
 | Mathematics ||
 | :--- | :--- |
 | DSC 40A-B<small> *</small> | Theoretical Foundations of Data Science I, II |
 | MATH 18, 31AH | Linear Algebra |
 | MATH 20C | Calculus and Analytic Geometry |
-| &horbar; |
+| &mdash; |
 | CSE 151<small> *</small> | Intro to AI: Statistical Approaches |
 | DSC 140A | Probabilistic Modeling |
 | MATH 180A | Introduction to Probability |
@@ -136,7 +155,7 @@ I am heavily involved with the management of this committee, and am currently in
 | Management ||
 | :--- | :--- |
 | MGT 18 | Managing Diverse Teams |
-| &horbar; |
+| &mdash; |
 | MGT 103 | Product Marketing and Management |
 | MGT 112 | Global Business Strategy |
 | MGT 119 | Data Analytics for Event Management |
@@ -147,3 +166,9 @@ I am heavily involved with the management of this committee, and am currently in
 
 # Got any ideas?
 If you think there's something I might be interested in... well, *I probably am!* Please [reach out and let's chat](/contact).
+
+{%- endcapture -%}
+{{ md | markdownify }}
+</section>
+
+</main>

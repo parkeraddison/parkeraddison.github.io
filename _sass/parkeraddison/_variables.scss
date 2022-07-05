@@ -5,7 +5,7 @@ $font-body: 'Lexend', 'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif
 $font-monospace: 'Cascadia Code';
 $font-display: 'Source Serif Pro', Georgia, Times, 'Times New Roman', serif;
 
-$accent-green: hsl(158, 68%, 28%);
+$accent-green: hsl(158, 75%, 28%);
 // $accent-red: #ff6961;
 $accent-red: hsl(350, 83%, 38%);
 $accent-yellow: #f0c60a;
@@ -14,9 +14,17 @@ $accent-purple: #764afa;
 
 $transition-speed: 100ms;
 
-$grid-base-columns: [full-start] 1fr [wide-start] 1fr [main-start] minmax(300px, 800px) [main-end] 1fr [wide-end] 1fr [full-end];
+$grid-xlarge-columns: [full-start] 1fr [wide-start] minmax(200px, 1fr) [main-start] minmax(300px, 800px) [main-end] 1fr [wide-end] 1fr [full-end];
+$grid-large-columns: [full-start wide-start] 1fr [main-start] minmax(300px, 800px) [main-end] 1fr [wide-end full-end];
+$grid-medium-columns: [full-start wide-start] 5px [main-start] minmax(300px, 800px) [main-end] 5px [wide-end full-end];
+$grid-small-columns: [full-start wide-start main-start] minmax(300px, 800px) [main-end wide-end full-end];
+// $size-large: 1200px;
+// $size-medium: 800px;
+$size-small: 650px;
+$size-large: 0px;
+$size-medium: 0px;
+// $size-small: 0px;
 
-$size-phone: 600px;
 
 $theme-map-light: (
     --theme-background: hsl(30, 25%, 95%),
@@ -32,8 +40,8 @@ $theme-map-light: (
 $theme-map-dark: (
     --theme-background: hsl(180, 25%, 5%),
     --theme-text: #ffe5e5,
-    --theme-text-faint: #555,
-    --theme-text-ultrafaint: #444,
+    --theme-text-faint: #777,
+    --theme-text-ultrafaint: #555,
     --theme-primary: lighten($accent-green, 15%),
     --theme-primary-contrast: lighten($accent-green, 35%),
     --theme-secondary: $accent-yellow,

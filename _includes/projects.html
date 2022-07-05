@@ -1,14 +1,35 @@
-{% assign sorted =  site.projects | sort "date" | reverse %}
-{% for project in sorted | limit: include.limit %}
-    <article class="_projects">
-        <h1>
-            {{ project.title }}
-        </h1>
-        {{ project.content }}
-    </article>
-{% endfor %}
-{% if include.limit %}
-    <article>
-        {%- include action.html href="/portfolio" text="Interested? Check out my projects" -%}
-    </article>
-{% endif %}
+<div class="_projects">
+    {%- assign sorted =  site.projects | sort "date" | reverse -%}
+    {%- for project in sorted | limit: include.limit -%}
+
+    {% assign url = project[project.linkto] %}
+        <article class="_project">
+            <hgroup>
+                <a href="{{ url }}">
+                    <h1>
+                        {{ project.title }}
+                    </h1>
+                    <h2>{{ project.subline }}</h2>
+                </a>
+                </hgroup>
+                <div class="project-body">
+                    <figure>
+                        <a href="{{ url }}"><img src="{{ project.image }}" width="100%"></a>
+                    </figure>
+                    <div class="content">
+                        {{ project.content }}
+                    </div>
+                </div>
+                <p class="links">
+                    {% if project.code %}<a href="{{ project.code }}" class="code">Code</a>{% endif %}
+                    {% if project.demo %}<a href="{{ project.demo }}" class="demo">Demo</a>{% endif %}
+                    {% if project.report %}<a href="{{ project.report }}" class="report">Report</a>{% endif %}
+                </p>
+        </article>
+    {%- endfor -%}
+    {%- if include.limit -%}
+        <article>
+            {%- include action.html href="/portfolio" text="Interested? Check out my projects" -%}
+        </article>
+    {%- endif -%}
+</div>

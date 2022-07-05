@@ -2,7 +2,7 @@
 
 header {
     position: sticky;
-    top: -0.1px; /* This must be less than zero to trigger the intersection */
+    top: -0.1px; // This must be less than zero to trigger the intersection
     background-color: var(--theme-background);
     border-bottom: 1px solid #0000;
     z-index: 99;
@@ -11,10 +11,14 @@ header {
 
     margin-bottom: 20vh;
 
-    transition: background-color 1s, border-color 0.3s;
+    transition: border-color 0.3s;
 
     display: grid;
-    grid-template-columns: $grid-base-columns;
+    grid-template-columns: $grid-xlarge-columns;
+
+    @media (max-width: $size-small) {
+        grid-template-columns: 5px [wide-start] 1fr [wide-end] 5px;
+    }
 
     & nav {
         grid-column: wide;
@@ -23,19 +27,18 @@ header {
 
         & svg {
             height: 1em;
-            width: 3em;
             stroke-width: 4px;
             vertical-align: middle;
         }
 
-        // Name
+        // Logo and spacer
         & .flexer {
             visibility: hidden;
             opacity: 0;
             align-self: center;
             flex-basis: 0%;
             min-width: 0;
-            transition: opacity 500ms 500ms, flex 500ms;
+            transition: opacity 500ms 200ms, flex 500ms;
         }
 
         // Tabs
@@ -51,6 +54,11 @@ header {
 
             & li {
                 list-style: none;
+
+                & a {
+                    display: block;
+                    padding: 1em 0;
+                }
             }
         }
 
@@ -73,6 +81,7 @@ header {
             }
 
             & ul {
+                font-size: 90%;
                 flex-basis: 0px;
             }
         }
@@ -81,19 +90,25 @@ header {
 
 label[for=theme-switcher] {
 
+    cursor: pointer;
+
     width: min-content;
     height: min-content;
 
     box-sizing: content-box;
     padding: 1em;
 
-    position: absolute;
-    bottom: 0;
-    right: 1.5em;
+    position: sticky;
+    top: 0;
+    margin: auto;
+    margin-top: -100vh;
 
-    @media (max-width: $size-phone) {
+    @media (max-width: $size-small) {
+        position: fixed;
         top: unset;
-        bottom: 1em;
+        bottom: 1ex;
+        right: 1ex;
+        margin: 0;
     }
 
     & input {
@@ -101,23 +116,48 @@ label[for=theme-switcher] {
         position: absolute;
     }
 
+    &:hover svg,
+    &:focus svg {
+        color: $accent-yellow;
+    }
+
     & svg {
         color: var(--theme-text-ultrafaint);
+        position: relative;
+        top: 2px;
 
-        &:hover, &:focus {
-            color: $accent-yellow;
+        overflow: visible;
+
+        &>circle.sun {
+            transform-origin: center;
+            transition: transform $transition-speed;
+        }
+
+        &>.sun-beams {
+            transform-origin: center;
+            transition: opacity $transition-speed, transform $transition-speed;
+        }
+
+        &>.moon>circle {
+            transform-origin: center;
+            transition: transform $transition-speed;
         }
 
         :root[data-theme='dark'] & {
-            & > .sun-beams {
+            &>.sun-beams {
                 opacity: 0;
+                transform: scale(1.5);
             }
 
-            & > .moon > circle {
-            transform: translateX(-7px);
+            &>circle.sun {
+                transform: scale(1.3);
+            }
+
+            &>.moon>circle {
+                transform: translateX(-7px);
+            }
         }
     }
-}
 
 
 }
