@@ -134,8 +134,8 @@ a {
     &:hover,
     &:focus {
         color: var(--theme-primary-contrast);
-        text-decoration: underline;
-        text-decoration-thickness: 2px;
+        text-decoration: underline !important;
+        text-decoration-thickness: 2px !important;
     }
 
 
@@ -169,4 +169,43 @@ main p a:not(.link-action)[href^="https://"] {
         opacity: 1;
     }
 
+}
+
+[id] {
+    scroll-margin-top: 10vh;
+}
+
+p, li {
+    & code {
+        background-color: #8881;
+        padding: 2px 4px;
+        border-radius: 2px;
+    }
+}
+
+div.highlight {
+    &, & pre {
+        border-radius: 8px;
+    }
+    & pre {
+        padding: 1ch;
+        // position: relative;
+        // &::after {
+        //     content: '📋';
+        //     position: absolute;
+        //     top: 1ch;
+        //     right: 1ch;
+        //     padding: 8px;
+        //     background-color: #7774;
+        //     cursor: pointer;
+        //     opacity: 0;
+        //     visibility: hidden;
+        // }
+        // &:hover, &:focus {
+        //     &::after {
+        //         opacity: 1;
+        //         visibility: visible;
+        //     }
+        // }
+    }
 }

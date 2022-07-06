@@ -3,13 +3,10 @@
         margin-top: 28px;
 
         display: grid;
-        grid-template-columns: 10ch 1fr;
+        grid-template-columns: minmax(min-content, 6ch) 1fr;
 
         & h1 {
-            font-size: 1em;
             margin: 0;
-            margin-top: 3px;
-            color: var(--theme-text-faint);
         }
 
         & p {

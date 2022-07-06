@@ -3,9 +3,12 @@ title: Let's work together 📡
 layout: page
 ---
 
+<section id="contact">
+{%- capture md -%}
+
 # Let's work together 📡
 
-| Email | ✉ | pgaddiso *[at]* ucsd *[dot]* edu |
+| Email | 📧 | pgaddiso *[at]* ucsd *[dot]* edu |
 | LinkedIn | 💼 | <https://linkedin.com/in/parkeraddison>
 | GitHub | 🐙 | <https://github.com/parkeraddison>
 
@@ -23,3 +26,7 @@ UC San Diego
 
 HDSI Student Reps
 : <https://datascience.ucsd.edu/parker-addison>
+
+{%- endcapture -%}
+{{ md | markdownify }}
+</section>

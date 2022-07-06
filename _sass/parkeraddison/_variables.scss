@@ -14,10 +14,14 @@ $accent-purple: #764afa;
 
 $transition-speed: 100ms;
 
-$grid-xlarge-columns: [full-start] 1fr [wide-start] minmax(200px, 1fr) [main-start] minmax(300px, 800px) [main-end] 1fr [wide-end] 1fr [full-end];
-$grid-large-columns: [full-start wide-start] 1fr [main-start] minmax(300px, 800px) [main-end] 1fr [wide-end full-end];
-$grid-medium-columns: [full-start wide-start] 5px [main-start] minmax(300px, 800px) [main-end] 5px [wide-end full-end];
-$grid-small-columns: [full-start wide-start main-start] minmax(300px, 800px) [main-end wide-end full-end];
+:root {
+    --col-max-width: 800px;
+}
+$grid-xlarge-columns: [full-start] 1fr [wide-start] minmax(200px, 1fr) [main-start] minmax(300px, var(--col-max-width)) [main-end] 1fr [wide-end] 1fr [full-end];
+$grid-xlarge-columns-right: [full-start] 1fr [wide-start] 1fr [main-start] minmax(300px, var(--col-max-width)) [main-end] minmax(200px, 1fr) [wide-end] 1fr [full-end];
+$grid-large-columns: [full-start wide-start] 1fr [main-start] minmax(300px, var(--col-max-width)) [main-end] 1fr [wide-end full-end];
+$grid-medium-columns: [full-start wide-start] 5px [main-start] minmax(300px, var(--col-max-width)) [main-end] 5px [wide-end full-end];
+$grid-small-columns: [full-start wide-start main-start] minmax(300px, var(--col-max-width)) [main-end wide-end full-end];
 // $size-large: 1200px;
 // $size-medium: 800px;
 $size-small: 650px;
@@ -27,22 +31,26 @@ $size-medium: 0px;
 
 
 $theme-map-light: (
-    --theme-background: hsl(30, 25%, 95%),
-    --theme-text: #151515,
-    --theme-text-faint: #666,
-    --theme-text-ultrafaint: #bfbfbf,
+    --theme-background: hsl(40, 15%, 95%),
+    --theme-text: hsl(0, 0%, 10%),
+    --theme-text-faint: hsl(30, 8%, 55%),
+    --theme-text-ultrafaint: hsl(30, 8%, 80%),
+    --theme-primary: hsl(150, 100%, 30%),
+    --theme-primary-contrast: hsl(210, 100%, 40%),
     // --theme-primary: lighten($accent-green, 5%),
-    --theme-primary: saturate($accent-green, 10%),
-    --theme-primary-contrast: darken($accent-green, 10%),
-    --theme-secondary: $accent-yellow,
+    // --theme-primary: saturate($accent-red, 10%),
+    // --theme-primary-contrast: darken($accent-red, 10%),
+    // --theme-secondary: $accent-yellow,
 );
 
 $theme-map-dark: (
-    --theme-background: hsl(180, 25%, 5%),
-    --theme-text: #ffe5e5,
+    --theme-background: hsl(40, 25%, 10%),
+    --theme-text: hsl(30, 5%, 87%),
     --theme-text-faint: #777,
     --theme-text-ultrafaint: #555,
-    --theme-primary: lighten($accent-green, 15%),
-    --theme-primary-contrast: lighten($accent-green, 35%),
-    --theme-secondary: $accent-yellow,
+    --theme-primary: hsl(150, 80%, 40%),
+    --theme-primary-contrast: hsl(210, 80%, 60%),
+    // --theme-primary: lighten($accent-red, 15%),
+    // --theme-primary-contrast: lighten($accent-red, 35%),
+    // --theme-secondary: $accent-yellow,
 );

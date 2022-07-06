@@ -1,0 +1,99 @@
+main.layout-post {
+
+    & section {
+        grid-template-columns: $grid-xlarge-columns-right;
+
+        @media (max-width: $size-small) {
+            grid-template-columns: $grid-small-columns;
+        }
+    }
+
+    .title {
+        grid-column: wide;
+
+        & h1 {
+            font-size: 260%;
+            margin-bottom: 1rem;
+        }
+
+        & .info {
+            font-size: 90%;
+            color: var(--theme-text-faint);
+        }
+        margin-bottom: 2rem;
+    }
+
+    ._post {
+        --col-max-width: 70ch;
+
+        & p, li {
+            // text-align: justify;
+            line-height: 1.4;
+        }
+
+        & h2, h3, h4 {
+            margin-bottom: 0;
+        }
+
+        & table, & th, & td {
+            border: 1px solid var(--theme-text-ultrafaint);
+            border-collapse: collapse;
+        }
+        & table {
+            display: block;
+            max-width: 100%;
+            width: max-content;
+            overflow-x: auto;
+        }
+    }
+
+    & .post-navigation {
+
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1em;
+
+        @media (max-width: $size-small) {
+            grid-template-columns: 1fr;
+        }
+
+        & .older, .newer {
+            display: flex;
+            align-items: center;
+            border: 1px solid var(--theme-text-ultrafaint);
+            border-radius: 1ch;
+            padding: 3em;
+            position: relative;
+
+            &::before {
+                position: absolute;
+                top: 1ch;
+                left: 1ch;
+                color: var(--theme-text-ultrafaint);
+            }
+
+            &.disabled {
+                cursor: not-allowed;
+                opacity: 0.5;
+                color: var(--theme-text-faint);
+            }
+        }
+
+        & .newer {
+            &::before {
+                content: 'More recent:';
+            }
+        }
+
+        & .older {
+            &::before {
+                content: 'Another post:';
+            }
+        }
+
+        & .link-back {
+            grid-column: 1/-1;
+            text-align: center;
+        }
+    }
+}

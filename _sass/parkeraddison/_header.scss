@@ -17,11 +17,13 @@ header {
     grid-template-columns: $grid-xlarge-columns;
 
     @media (max-width: $size-small) {
-        grid-template-columns: 5px [wide-start] 1fr [wide-end] 5px;
+        // grid-template-columns: 5px [wide-start] 1fr [wide-end] 5px;
+        grid-template-columns: $grid-small-columns;
     }
 
     & nav {
         grid-column: wide;
+        padding: 0 5px;
 
         display: flex;
 
