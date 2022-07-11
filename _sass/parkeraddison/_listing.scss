@@ -1,7 +1,5 @@
 #news {
     & article {
-        margin-top: 28px;
-
         display: grid;
         grid-template-columns: minmax(min-content, 6ch) 1fr;
 

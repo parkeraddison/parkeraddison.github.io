@@ -8,8 +8,9 @@ description: "I'm Parker Addison.  This data science portfolio acts as a sort of
 
 <main class="portfolio">
 
-<section>
+<section class='toc'>
 {%- capture md -%}
+**Table of Contents:**
 - [Projects](#projects)
 - [Research](#research)
 - [Communication](#communication)
@@ -120,17 +121,17 @@ I am heavily involved with the management of this committee, and am currently in
 ### GPA: 3.94 *(Magna Cum Laude)*
 ### Technical GPA: 3.97
 
-<br>
-
-<small>* Indicates that I've also tutored for this course</small>
+||
+| --- |
+| * <small>Indicates that I've also tutored for this course</small> |
 
 | Data Science ||
 | :--- | :--- |
 | COGS 9 | Introduction to Data Science <br /><small>Taught by the incredible Bradley Voytek</small> |
-| DSC 10<small> *</small> | Principles of Data Science <br /><small>Hopefully you've seen the [new textbook](http://diveintods.com) we wrote</small> |
+| DSC 10* | Principles of Data Science <br /><small>Hopefully you've seen the [new textbook](http://diveintods.com) we wrote</small> |
 | DSC 20, 30 | Data Structures and Algorithms |
-| DSC 80<small> *</small> | Practice and Application of Data Science |
-| &mdash; |
+| DSC 80* | Practice and Application of Data Science |
+| ― |
 | CSE 158 | Recommender Systems and Web Mining |
 | DSC 100 | Introduction to Data Management |
 | DSC 102 | Systems for Scalable Analytics |
@@ -142,11 +143,11 @@ I am heavily involved with the management of this committee, and am currently in
 
 | Mathematics ||
 | :--- | :--- |
-| DSC 40A-B<small> *</small> | Theoretical Foundations of Data Science I, II |
-| MATH 18, 31AH | Linear Algebra |
+| DSC 40A-B* | Theoretical Foundations of Data Science I, II |
+| MATH 18, 31AH | Linear Algebra (Honors) |
 | MATH 20C | Calculus and Analytic Geometry |
-| &mdash; |
-| CSE 151<small> *</small> | Intro to AI: Statistical Approaches |
+| ― |
+| CSE 151* | Intro to AI: Statistical Approaches |
 | DSC 140A | Probabilistic Modeling |
 | MATH 180A | Introduction to Probability |
 | MATH 181A-B | Mathematical Statistics I, II |
@@ -155,14 +156,22 @@ I am heavily involved with the management of this committee, and am currently in
 | Management ||
 | :--- | :--- |
 | MGT 18 | Managing Diverse Teams |
-| &mdash; |
+| ― |
 | MGT 103 | Product Marketing and Management |
 | MGT 112 | Global Business Strategy |
 | MGT 119 | Data Analytics for Event Management |
-| MGT 166 | Business Ethics and Corporate Social Responsibility <br /><small>Truly among my favorite and most relevant courses at UCSD</small> |
+| MGT 166 | Business Ethics and Corporate Social Responsibility <br /><small>Truly among my favorite and most relevant courses at UCSD, especially embracing *systems thinking*</small> |
 | MGT 181 | Enterprise Finance |
 
----
+
+{%- endcapture -%}
+{{ md | markdownify }}
+</section>
+
+<hr>
+
+<section>
+{%- capture md -%}
 
 # Got any ideas?
 If you think there's something I might be interested in... well, *I probably am!* Please [reach out and let's chat](/contact).

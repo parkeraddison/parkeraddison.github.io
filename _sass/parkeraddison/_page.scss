@@ -1,0 +1,61 @@
+main.portfolio {
+
+    hr {
+        margin: 4em;
+    }
+
+    & .toc {
+        & p, & li {
+            margin: 0;
+        }
+    }
+
+    & section[id] > {
+        h2 {
+            margin-bottom: 0;
+
+            &:first-of-type {
+                margin-top: 0;
+            }
+        }
+
+        h3 {
+            margin-top: 0;
+            margin-bottom: 0.5em;
+            font-weight: normal;
+        }
+
+        p {
+            padding-left: 2ch;
+            margin: 0.5em 0;
+        }
+
+        table {
+            margin-left: 2ch;
+            width: calc(100% - 2ch);
+            max-width: 650px;
+            border-spacing: 0 8px;
+
+            & small {
+                color: var(--theme-text-faint);
+            }
+
+            & br+small {
+                display: inline-block;
+                margin-left: 2ch;
+            }
+
+            & th {
+                font-size: 110%;
+            }
+
+            & tr {
+                vertical-align: top;
+
+                & td:first-of-type {
+                    width: 10em;
+                }
+            }
+        }
+    }
+}

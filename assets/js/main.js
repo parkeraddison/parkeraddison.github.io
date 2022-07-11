@@ -1,9 +1,14 @@
-// // Add copy functionality to code blocks
-// var codeBlocks = document.querySelectorAll('pre.highlight');
+// Add copy functionality to code blocks
+var codeBlocks = document.querySelectorAll('div.highlight');
 
-// codeBlocks.forEach(element => {
-//     var afterElem = window.getComputedStyle(element, "::after");
-//     afterElem.addEventListener('click', function(e) {
-//         console.log(element.innerHTML);
-//     });
-// });
+codeBlocks.forEach(div => {
+
+    let copy = document.createElement('button');
+    copy.innerText = '📋';
+
+    copy.addEventListener('click', function(e) {
+        navigator.clipboard.writeText(div.querySelector('pre').innerText);
+    });
+
+    div.append(copy);
+});

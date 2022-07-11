@@ -3,7 +3,6 @@
 header {
     position: sticky;
     top: -0.1px; // This must be less than zero to trigger the intersection
-    background-color: var(--theme-background);
     border-bottom: 1px solid #0000;
     z-index: 99;
 
@@ -68,6 +67,7 @@ header {
 
     &.at-top {
 
+        background-color: var(--theme-background);
         border-color: #8882;
 
         & nav {
