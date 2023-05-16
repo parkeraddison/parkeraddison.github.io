@@ -1,0 +1,158 @@
+contact:
+  name: Parker Addison
+  title: Data Science Consultant
+  email: parkergreyaddison@gmail.com
+  phone: +1 415-497-8545
+  links:
+    website: https://parkeraddison.com
+    linkedin: https://linkedin.com/in/parkeraddison
+    github: https://github.com/parkeraddison
+
+education:
+  - university: University of California San Diego
+    department: Halicioglu Data Science Institute
+    degree: B.S. Data Science, Minor Business
+    gpa: 3.94
+    startDate: 2017-09-25
+    endDate: 2021-03-20
+    awards:
+      - <a href="">Jeffrey L. Elman Award for Academic Excellence</a>
+      - <a href="">Halicioglu Undergraduate Research Scholarship</a>
+      - Magna Cum Laude
+      - Provost Honors
+
+experience:
+  work:
+    - company: Deloitte Consulting
+      positions:
+        - title: AI Consultant (Consultant)
+          startDate: 2023-06-01
+          endDate: present
+        - title: Data Scientist (Analytist)
+          startDate: 2021-10-03
+          endDate: 2023-05-31
+      description:
+    - company: Universities Space Research Association at NASA Ames
+      positions:
+        - title: High-Performance Computing R&D Intern
+          startDate: 2021-02-01
+          endDate: 2021-07-31
+      description:
+    - company: Sapie Space
+      positions:
+        - title: Machine Learning Engineer
+          startDate: 2018-01-27
+          endDate: 2018-06-01
+      description:
+    - company: SommSelect
+      positions:
+        - title: Interim Data Analyst
+          startDate: 2017-07-19
+          endDate: 2017-09-01
+      description:
+    - company: Ameriprise Inc.
+      positions:
+        - title: Financial Intern
+          startDate: 2017-06-23
+          endDate: 2017-08-17
+      description:
+  research:
+    - company: Halicioglu Data Science Institute
+      title: Undergraduate Research Scholarship - Applied Data Science
+      startDate: 2018-09-27
+      endDate: 2019-11-12
+      description: Helping communities in food deserts by applying numerical optimization to grocery lists, using web-scraped data from local stores with dual optimization of nutritional value and total costs.
+    - company: NSF REU at Qualcomm Institute
+      title: R&D Engineer - NLP and Experimental Data Visualization
+      startDate: 2019-07-01
+      endDate: 2020-12-31
+      description: Supporting NSF grants for improvement of the Nautilus HyperCluster as part of the Pacific Research Platform. Building a DevOps chatbot to aid researchers with Kubernetes commands; Prototyping experimental data pipelines and visualizations in Unreal Engine for an augmented reality network operations center (AR-NOC) to monitor cluster health.
+    - company: UC San Diego
+      title: Research Assistant - Network Graph Sampling and Bias
+      startDate: 2019-04-01
+      endDate: 2019-06-11
+      description: Statistical approaches to describe bias in network graph degree distributions resulting from various graph sampling schemes. Researched new sampling schemes to address bias and implemented the Snowboot R package in Python. Under the incredible Prof. Aaron Fraenkel.
+  teaching:
+    - university: UC San Diego
+      positions:
+        - department: Halicioglu Data Science Institute
+          course: 'DSC 10 - Principles of Data Science; DSC 40B - Theory of Data Science II; DSC 80 - Practice of Data Science'
+          title: Instructional Assistant
+          startDate: 2018-04-02
+          endDate: 2020-12-22
+        - department: Jacobs School of Engineering
+          course: 'CSE 151A - Introduction to AI: Statistical Approaches'
+          title: Instructional Assistant
+          startDate: 2020-03-30
+          endDate: 2020-06-09
+  leadership:
+    - title: Founding Member - Alumni Association
+      company: Halicioglu Data Science Institute Alumni Association
+      startDate: 2022-03-01
+      endDate: present
+      description: |
+        I joined a team to create an alumni group for our data science department to provide
+        networking opportunities and career support for HDSI alumni, and continue to ensure our
+        program receives feedback from its prior students. Website:
+        [hdsi-alumni.org](https://hdsi-alumni.org)
+    - title: Founding Member - Student Representative
+      company: Halicioglu Data Science Institute Student Representatives
+      startDate: 2019-11-01
+      endDate: 2021-06-11
+      description: |
+        After advocating for and founding the student representative program, I launched our student
+        feedback directive -- shaping and conducting surveys to help the student voice reach
+        professors ears in an ever-adapting (and ever-improving) curriculum. Website:
+        [https://datascience.ucsd.edu/current-students/student-representatives/](https://datascience.ucsd.edu/current-students/student-representatives/)
+    - title: Mentor - DataHacks
+      company: Data Science Student Society (DS3)
+      startDate: 2020-02-08
+      description: I mentored over 100+ students at UC San Diego's first-ever data-centric hackathon. Domains of projects included Azure computer vision classification models, Google Local business reviews, and Open Data traffic collisions in San Diego.
+    - title: Committee Member
+      company: Data Science Student Society (DS3)
+      startDate: 2020-01-01
+      description: Our subcommittee was responsible for organizing a showcase of faculty and student research to demonstrate the purpose and power of data science, and what UC San Diego is doing to advance the field.
+
+presentations:
+  - title: 'Beyond Graduation: Conversations with HDSI Alumni'
+    venue: Halicioglu Data Science Institute Alumni Association
+    date: 2022-05-12
+    url: https://www.youtube.com/watch?v=_q6TVtPbgHo
+  - title: Data Science Class of 2021 Student Speaker
+    venue: Halicioglu Data Science Institute Graduation Ceremony
+    date: 2021-06-14
+    url: https://vimeo.com/638838561
+  - title: What Ignited My Love for Data Science
+    venue: Ignite Talks @ UCSD by Tritons for Sally Ride Science
+    date: 2019-05-31
+    url: https://youtu.be/S7srcEu3Lpw
+
+publications:
+  - title: Response to RFI on Advancing Privacy-Enhancing Technologies
+    org: Deloitte, in response to White House Office of Science & Technology Policy
+    date: 2022-07-08
+    url: https://www.nitrd.gov/rfi/2022/87-fr-35250/Deloitte-Consulting-PET-RFI-Response-2022.pdf
+
+certifications:
+  - name: AWS Certified Data Analytics – Specialty
+    issuer: Amazon Web Services
+    date: 2022
+    url: https://www.credly.com/badges/427473b2-71e4-40ff-92cc-7201f043d0be
+  - name: AWS Certified Machine Learning – Specialty
+    issuer: Amazon Web Services
+    date: 2022
+    url: https://www.credly.com/badges/dff7369e-050b-464f-8d65-625dbc3e2228
+  - name: AWS Certified DevOps Engineer – Professional
+    issuer: Amazon Web Services
+    date: 2022
+    url: https://www.credly.com/badges/31219a1b-cf93-4b76-b518-e93c1e777705
+  - name: AWS Certified Developer – Associate
+    issuer: Amazon Web Services
+    date: 2022
+    url: https://www.credly.com/badges/fd379199-273b-4fcc-bc53-76d6544a14a1
+  - name: Data Journalism
+    issuer: Google Digital News Initiative
+    date: --
+  - name: 'PyTorch Essential Training: Deep Learning'
+    issuer: LinkedIn
+    date: --

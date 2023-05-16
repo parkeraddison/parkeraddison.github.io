@@ -1,15 +1,12 @@
 ---
 title: "What Ignited My Love For Data Science"
 date: 2019-05-31T00:00:00-08:00
-draft: false
 description: "In this 5-minute Ignite talk I outline my the purpose of data science communicating data."
 Tags: ["talk", "video"]
 Video: "https://www.youtube.com/embed/S7srcEu3Lpw"
 ---
 
-{{< youtube S7srcEu3Lpw >}}
-
-<br>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/S7srcEu3Lpw" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 
 ---
 
@@ -20,9 +17,8 @@ This was scheduled as the first talk in a series of Ignite Talks with a theme of
 Presented by Parker Addison at Ignite Talks UC San Diego (UCSD) 2019, on May 31.  Hosted by Tritons for Sally Ride Science in partnership with Ignite Talks.
 
 
-Ignite Talks UC San Diego: http://ignitetalksucsd.com/
+Ignite Talks UC San Diego: [https://ignitetalksucsd.com/](https://ignitetalksucsd.com/)
 
-Ignite Talks: http://ignitetalks.io
+Ignite Talks: [https://ignitetalks.io](https://ignitetalks.io)
 
-LinkedIn: https://linkedin.com/in/parkeraddison
-
+LinkedIn: [https://linkedin.com/in/parkeraddison](https://linkedin.com/in/parkeraddison)
