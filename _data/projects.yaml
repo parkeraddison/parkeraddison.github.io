@@ -1,0 +1,88 @@
+# Projects
+# ========
+#
+# - title: string
+#   subline: string
+#   date: yyyy-mm-dd
+#   description: |
+#     multi-line markdown
+#   linkto: fieldname
+#   code:
+#   demo:
+#   report:
+#   image:
+#   video:
+
+- title: Ouch! That Hurts
+  subline: UC Health Hack 2018 @ UC San Diego
+  date: 2018-10-06
+  linkto: blog
+  blog: ./blog/alexa-medical-insight/
+  description: |
+    We created an Amazon Alexa skill which enables patients to easily report systems without needing to keep a journal or call the doctor. By making it extremely easy to report such symptoms, we could collect a plethora of data that could be used to help predict and diagnose symptoms in the future.
+
+- title: D.A.N.E.
+  subline: Automating representative network traffic datasets
+  date: 2021-03-18
+  linkto: code
+  code: https://github.com/dane-tool/dane
+  demo: https://youtu.be/qfhJ1ITLCFM
+  report: https://dane-tool.github.io/dane/media/Analyzing-Network-Traffic-In-Diverse-Network-Conditions.pdf
+  image: ./images/dane-transparent.png
+  # image: https://img.youtube.com/vi/qfhJ1ITLCFM/hqdefault.jpg
+  video: https://www.youtube.com/watch?v=qfhJ1ITLCFM
+  site: https://dane-tool.github.io/dane
+  description: |
+    Using Docker and some Python glue, we engineered an easy-to-use tool for generating network traffic data in a variety of emulated network conditions.
+
+    We teamed with Viasat to use ML to classify network behavior even while VPNs are in use. But, collecting good, representative training data is a hassle. Enter DANE: the *Data Automation and Network Emulation* tool.
+
+- title: QWERTY vs Dvorak
+  subline: A visual exploration of the Dvorak keyboard layout
+  date: 2020-06-08
+  linkto: demo
+  code: https://github.com/parkeraddison/dvorak-viz
+  demo: https://parkeraddison.com/dvorak-viz
+  image: ./images/dvorak.jpg
+  description: |
+    Why are we stuck typing on the same keyboard layout that was invented for the earliest typewriters?
+
+    The Dvorak keyboard layout is fabled to be much more efficient... come play with this interactive data visualization and put that claim to the test!
+
+- title: Indeed Job Search City Recommender
+  subline: ASA DataFest @ Chapman Univ.
+  date: 2018-04-27
+  image: ./images/indeed.png
+  linkto: url
+  url: https://ww2.amstat.org/education/datafest/previous.cfm
+  description: |
+    We were given an anonymized dataset from indeed.com and asked to create a business pitch. We created an algorithm to rank and recommend cities that have the best prospects for a given job industry.
+
+- title: Neural Network Visual
+  subline: SD Hacks 2018 @ UC San Diego
+  date: 2018-10-14
+  linkto: demo
+  demo: https://devpost.com/software/neural-network-visual-3d-graphical-editor
+  video: https://www.youtube.com/watch?v=5Cw0u_wDvik
+  description: |
+    Education in Machine Learning has experienced incredible growth. To aid the educational cause, we created an interactive, 3D visual editor for simple neural network models.
+
+- title: Sharing the Road
+  subline: A data-driven journey on the bike path to enlightenment
+  date: 2019-05-05
+  linkto: code
+  code: https://nbviewer.jupyter.org/github/parkeraddison/Geospatial-Data-Science/blob/master/mp3.ipynb
+  image: ./images/sharrow.jpg
+  description: |
+    Bikes and cars don't mix well. Turns out there's data to prove that.
+
+- title: The Verbosified Works on A.I. Space Rovers
+  subline: Convincing GPT-2 that more is more - An A.I. Art Piece
+  date: 2019-10-20
+  linkto: report
+  code: https://github.com/parkeraddison/aiArt-verbosified-space-rovers/
+  demo: https://lost-in-deep.space/
+  report: https://github.com/parkeraddison/aiArt-verbosified-space-rovers/blob/master/README.md
+  image: ./images/verbosified.gif
+  description: |
+    I (ab)used OpenAI's GPT-2 model—the one that's "too dangerous to release"—to make an art piece in which the AI attempts to double the word count of an essay. The model can easily become *too* creative, though!
