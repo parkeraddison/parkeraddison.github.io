@@ -1,24 +1,17 @@
-{% assign sorted =  site.news | sort "date" | reverse %}
+<!-- Future improvement: Structure yaml with years as a top-level field so that
+news entries can be grouped under year headers -->
+{% assign sorted =  site.data.news | sort: "date" | reverse %}
 {% for event in sorted | limit: include.limit %}
     <article class="_news">
         <h1>
-            <p>
+            <!-- <p> -->
                 <time datetime="{{ event.date }}" title="{{ event.date | date: '%B %d, %Y' }}">
-                    {{ event.date | date: "%m/%d" }}
-                    {%- comment -%}
-                    {%- assign d = event.date | date: "%-d" -%}
-                    {%- case d -%}
-                        {%- when "1" or "21" or "31" -%} {{ d }}<sup>st</sup>
-                        {%- when "2" or "22" -%} {{ d }}<sup>nd</sup>
-                        {%- when "3" or "23" -%} {{ d }}<sup>rd</sup>
-                        {%- else -%} {{ d }}<sup>th</sup>
-                    {%- endcase -%}
-                    {%- endcomment -%}
+                    {{ event.date | date: "%b %Y" }}
                 </time>
-            </p>
+            <!-- </p> -->
         </h1>
         <div class="content">
-            {{ event.content }}
+            {{ event.description | markdownify }}
         </div>
     </article>
 {% endfor %}

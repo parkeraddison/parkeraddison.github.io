@@ -35,6 +35,10 @@ main.layout-post {
             margin-bottom: 0;
         }
 
+        & hr {
+            width: 30%;
+        }
+
         & table, & th, & td {
             border: 1px solid var(--theme-text-ultrafaint);
             border-collapse: collapse;

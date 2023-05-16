@@ -2,12 +2,13 @@
     & article {
         display: grid;
         grid-template-columns: minmax(min-content, 6ch) 1fr;
+        padding-bottom: 1em;
 
         & h1 {
             margin: 0;
         }
 
-        & p {
+        & .content p {
             text-indent: -2ch;
             margin: 2px 0;
             padding-left: 2ch

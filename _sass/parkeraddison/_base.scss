@@ -69,6 +69,12 @@ section {
     grid-template-columns: 1fr [main-start] minmax(300px, 800px) [main-end] 1fr;
 }
 
+hr {
+    width: 100%;
+    margin: 1.5em auto;
+    border-color: var(--theme-text-ultrafaint);
+}
+
 h1, h2, h3 {
     font-family: $font-display;
     font-weight: bold;
@@ -147,11 +153,10 @@ a {
 }
 
 // Add decoration for external links
-main p a:not(.link-action)[href^="https://"] {
+main p a:not(.link-action)[href^="https://"],
+main .article-body a:not(.link-action)[href^="https://"] {
 
     &::after {
-        // content: '↸';
-        // transform: scaleX(-100%);
         content: '↗';
         // color: var(--theme-text-faint);
         font-size: 80%;
@@ -176,7 +181,7 @@ main p a:not(.link-action)[href^="https://"] {
 
 }
 
-[id] {
+[id] { // Give links some extra scroll height so they dodge the header
     scroll-margin-top: 10vh;
 }
 
@@ -208,6 +213,11 @@ div.highlight {
         @media not all and (hover: none) {
             opacity: 0;
             visibility: hidden;
+        }
+
+        &.activated::after { // When clicked
+            content: "Copied!";
+            color: var(--theme-primary);
         }
     }
     &:hover button {

@@ -6,7 +6,6 @@ $font-monospace: 'Cascadia Code';
 $font-display: 'Source Serif Pro', Georgia, Times, 'Times New Roman', serif;
 
 $accent-green: hsl(158, 75%, 28%);
-// $accent-red: #ff6961;
 $accent-red: hsl(350, 83%, 38%);
 $accent-yellow: #f0c60a;
 $accent-blue: #28f;
@@ -22,35 +21,25 @@ $grid-xlarge-columns-right: [full-start] 1fr [wide-start] 1fr [main-start] minma
 $grid-large-columns: [full-start wide-start] 1fr [main-start] minmax(300px, var(--col-max-width)) [main-end] 1fr [wide-end full-end];
 $grid-medium-columns: [full-start wide-start] 5px [main-start] minmax(300px, var(--col-max-width)) [main-end] 5px [wide-end full-end];
 $grid-small-columns: [full-start wide-start main-start] minmax(300px, var(--col-max-width)) [main-end wide-end full-end];
-// $size-large: 1200px;
-// $size-medium: 800px;
 $size-small: 650px;
 $size-large: 0px;
 $size-medium: 0px;
-// $size-small: 0px;
 
 
 $theme-map-light: (
-    --theme-background: hsl(40, 15%, 95%),
+    --theme-background: hsl(147, 43%, 96%),
     --theme-text: hsl(0, 0%, 10%),
-    --theme-text-faint: hsl(30, 8%, 55%),
-    --theme-text-ultrafaint: hsl(30, 8%, 80%),
-    --theme-primary: hsl(150, 100%, 30%),
-    --theme-primary-contrast: hsl(210, 100%, 40%),
-    // --theme-primary: lighten($accent-green, 5%),
-    // --theme-primary: saturate($accent-red, 10%),
-    // --theme-primary-contrast: darken($accent-red, 10%),
-    // --theme-secondary: $accent-yellow,
+    --theme-text-faint: hsl(147, 8%, 55%),
+    --theme-text-ultrafaint: hsl(147, 8%, 80%),
+    --theme-primary: hsl(97, 50%, 46%),
+    --theme-primary-contrast: hsl(97, 50%, 32%),
 );
 
 $theme-map-dark: (
-    --theme-background: hsl(40, 25%, 10%),
-    --theme-text: hsl(30, 5%, 87%),
-    --theme-text-faint: #777,
-    --theme-text-ultrafaint: #555,
-    --theme-primary: hsl(150, 80%, 40%),
-    --theme-primary-contrast: hsl(210, 80%, 60%),
-    // --theme-primary: lighten($accent-red, 15%),
-    // --theme-primary-contrast: lighten($accent-red, 35%),
-    // --theme-secondary: $accent-yellow,
+    --theme-background: hsl(147, 5%, 10%),
+    --theme-text: hsl(147, 5%, 87%),
+    --theme-text-faint: hsl(147, 8%, 47%),
+    --theme-text-ultrafaint: hsl(147, 8%, 33%),
+    --theme-primary: hsl(97, 40%, 46%),
+    --theme-primary-contrast: hsl(97, 50%, 46%),
 );

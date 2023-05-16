@@ -1,10 +1,9 @@
 title: test
 author:
   name: Parker Addison
-  email: pargrey@gmail.com
+  email:
 description: >
-  A description which can span
-  multiple lines.
+
 repository: https://github.com/parkeraddison/parkeraddison.github.io
 
 theme: parkeraddison

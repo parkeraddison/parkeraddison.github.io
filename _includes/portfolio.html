@@ -1,0 +1,161 @@
+<section class='toc'>
+    {%- capture md -%}
+    **Jump to**
+        - [Projects](#projects)
+        - [Work Experience](#work)
+        - [Research Experience](#research)
+        - [Teaching Experience](#teaching)
+        - [Leadership Experience](#leadership)
+        - [Presentations](#presentations)
+        - [Publications](#publications)
+        - [Certifications](#certifications)
+        - [Education](#education)
+        - [Updates](#news)
+    {%- endcapture -%}
+    {{ md | markdownify }}
+</section>
+
+
+<section id="projects">
+    <h1>Projects</h1>
+{%- include projects.html -%}
+</section>
+
+{%- assign experience = site.data.cv.experience -%}
+
+<section id="work">
+<h1>Work Experience</h1>
+{%- for item in experience.work -%}
+<article>
+    <h2>{{ item.company }}</h2>
+    {%- for position in item.positions -%}
+    <h3>{{ position.title }}
+        <time>{{ position.startDate | date: '%Y %b' }} &horbar; {{ position.endDate | date: '%Y %b' }}</time>
+    </h3>
+    {%- endfor -%}
+    {%- if item.description -%}
+        <div class="article-body">{{ item.description | markdownify }}</div>
+    {%- endif -%}
+</article>
+{%- endfor -%}
+</section>
+
+<section id="research">
+<h1>Research Experience</h1>
+{%- for item in experience.research -%}
+<article>
+    <h2>{{ item.title }}</h2>
+    <h3>{{ item.company }}
+        <time>{{ item.startDate | date: '%Y %b' }} &horbar; {{ item.endDate | date: '%Y %b' }}</time>
+    </h3>
+    {%- if item.description -%}
+        <div class="article-body">{{ item.description | markdownify }}</div>
+    {%- endif -%}
+</article>
+{%- endfor -%}
+</section>
+
+<section id="teaching">
+<h1>Teaching Experience</h1>
+{%- for item in experience.teaching -%}
+<article>
+    <h2>{{ item.university }}</h2>
+    {%- for position in item.positions -%}
+        <h3>{{ position.department }} - {{ position.title }}
+            <time>{{ position.startDate | date: '%Y %b' }} &horbar; {{ position.endDate | date: '%Y %b' }}</time>
+        </h3>
+        <div class="article-body">
+            {{ position.course | markdownify }}
+        </div>
+    {%- endfor -%}
+</article>
+{%- endfor -%}
+</section>
+
+<section id="leadership">
+<h1>Leadership Experience</h1>
+{%- for item in experience.leadership -%}
+<article>
+    <h2>{{ item.title }}</h2>
+    <h3>{{ item.company }}
+        {%- if item.startDate -%}
+            <time>{{ item.startDate | date: '%Y'}}
+                {% if item.endDate %}
+                    &horbar; {{ item.endDate | date: '%Y' }}
+                {%- endif -%}
+            </time>
+        {%- endif -%}
+    </h3>
+    {%- if item.description -%}
+        <div class="article-body">{{ item.description | markdownify }}</div>
+    {%- endif -%}
+</article>
+{%- endfor -%}
+</section>
+
+<section id="presentations">
+<h1>Presentations</h1>
+{%- for item in site.data.cv.presentations -%}
+<article>
+    <h2>{{ item.title }}</h2>
+    <h3>{{ item.venue }}
+        <time>{{ item.date | date: '%Y %b %d' }}</time>
+    </h3>
+    {%- if item.url -%}
+        <div class="article-body"><a href="{{ item.url }}">View</a></div>
+    {%- endif -%}
+</article>
+{%- endfor -%}
+</section>
+
+<section id="publications">
+<h1>Publications</h1>
+{%- for item in site.data.cv.publications -%}
+<article>
+    <h2>{{ item.title }}</h2>
+    <h3>{{ item.org }}
+        <time>{{ item.date | date: '%Y %b %d' }}</time>
+    </h3>
+    {%- if item.url -%}
+        <div class="article-body"><a href="{{ item.url }}">View</a></div>
+    {%- endif -%}
+</article>
+{%- endfor -%}
+</section>
+
+<section id="certifications">
+<h1>Certifications</h1>
+{%- for item in site.data.cv.certifications -%}
+<article>
+    <h2>{{ item.name }}</h2>
+    <h3>{{ item.issuer }}
+        <time>{{ item.date }}</time>
+    </h3>
+    {%- if item.url -%}
+        <div class="article-body"><a href="{{ item.url }}">Verify</a></div>
+    {%- endif -%}
+</article>
+{%- endfor -%}
+</section>
+
+<section id="education">
+<h1>Education</h1>
+{%- for item in site.data.cv.education -%}
+<article>
+    <h2>{{ item.degree }}</h2>
+    <h3>{{ item.university }}: {{ item.department }}
+        <time>{{ item.startDate | date: '%Y %b' }} &horbar; {{ item.endDate | date: '%Y %b' }}</time>
+    </h3>
+    <div class="article-body">
+        <p><b>GPA:</b> {{ item.gpa }} <em>(Magna Cum Laude)</em></p>
+        <p><b>Technical GPA:</b> 3.97</p>
+        <p><b>Awards:</b> {{ item.awards | join: ' • '}}</p>
+    </div>
+</article>
+{%- endfor -%}
+</section>
+
+<section id="news">
+<h1>Updates</h1>
+{%- include news.html -%}
+</section>

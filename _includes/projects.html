@@ -1,5 +1,5 @@
 <div class="_projects">
-    {%- assign sorted =  site.projects | sort "date" | reverse -%}
+    {%- assign sorted =  site.data.projects | sort: "date" | reverse -%}
     {%- for project in sorted | limit: include.limit -%}
 
     {% assign url = project[project.linkto] %}
@@ -13,11 +13,13 @@
                 </a>
                 </hgroup>
                 <div class="project-body">
+                    {%- if project.image -%}
                     <figure>
                         <a href="{{ url }}"><img src="{{ project.image }}" width="100%"></a>
                     </figure>
+                    {%- endif -%}
                     <div class="content">
-                        {{ project.content }}
+                        {{ project.description | markdownify }}
                     </div>
                 </div>
                 <p class="links">

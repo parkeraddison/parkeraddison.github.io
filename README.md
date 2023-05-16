@@ -1,4 +1,32 @@
-# parkeraddison
+# parkeraddison-theme
+
+A Jekyll theme intended for my personal website at https://parkeraddison.com.
+
+## Usage
+
+### Main Pages
+For standalone or main pages, such as the homepage, contact page,
+
+### Content: Blog
+Articles are written to markdown files saved under `_blog/`.
+
+### Content: Data
+Most content in the site is populated in the form of yaml's saved under `_data/`. The supported data files are:
+- cv.yaml (WIP) -- an all-encompassing curriculum vitae
+- news.yaml -- will populate short status updates for notable events
+- projects.yaml -- details about projects I want to feature
+
+## Development
+
+(Once) run `bundle install` to setup the environment.
+
+Test on localhost by running `make serve` then open browser to `http://localhost:4000`.
+
+
+
+---
+
+# Jekyll README:
 
 Welcome to your new Jekyll theme! In this directory, you'll find the files you need to be able to package up your theme into a gem. Put your layouts in `_layouts`, your includes in `_includes`, your sass files in `_sass` and any other assets in `assets`.
 
@@ -49,4 +77,3 @@ To add a custom directory to your theme-gem, please edit the regexp in `parkerad
 ## License
 
 The theme is available as open source under the terms of the [MIT License](https://opensource.org/licenses/MIT).
-
