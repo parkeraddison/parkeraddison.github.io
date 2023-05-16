@@ -100,4 +100,9 @@ main.layout-post {
             text-align: center;
         }
     }
+
+    iframe[src^="https://www.youtu"] {
+        margin: auto;
+        max-width: 100%;
+    }
 }
