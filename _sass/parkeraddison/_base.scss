@@ -51,6 +51,7 @@ section {
         margin-top: 0;
         margin-right: 1em;
         font-size: 170%;
+        padding-bottom: 2em;
     }
 
     @media (max-width: $size-small) {
@@ -59,7 +60,7 @@ section {
         &> h1 {
             grid-column: full;
             position: static;
-            text-align: left;
+            text-align: center;
         }
     }
 }

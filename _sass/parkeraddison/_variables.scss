@@ -31,8 +31,8 @@ $theme-map-light: (
     --theme-text: hsl(0, 0%, 10%),
     --theme-text-faint: hsl(147, 8%, 55%),
     --theme-text-ultrafaint: hsl(147, 8%, 80%),
-    --theme-primary: hsl(97, 50%, 46%),
-    --theme-primary-contrast: hsl(97, 50%, 32%),
+    --theme-primary: hsl(97, 75%, 30%),
+    --theme-primary-contrast: hsl(97, 50%, 20%),
 );
 
 $theme-map-dark: (
@@ -40,6 +40,6 @@ $theme-map-dark: (
     --theme-text: hsl(147, 5%, 87%),
     --theme-text-faint: hsl(147, 8%, 47%),
     --theme-text-ultrafaint: hsl(147, 8%, 33%),
-    --theme-primary: hsl(97, 40%, 46%),
-    --theme-primary-contrast: hsl(97, 50%, 46%),
+    --theme-primary: hsl(97, 35%, 46%),
+    --theme-primary-contrast: hsl(97, 30%, 60%),
 );
