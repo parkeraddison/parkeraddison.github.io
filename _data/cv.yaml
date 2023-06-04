@@ -8,6 +8,7 @@ contact:
     linkedin: https://linkedin.com/in/parkeraddison
     github: https://github.com/parkeraddison
 
+
 education:
   - university: University of California San Diego
     department: Halicioglu Data Science Institute
@@ -16,10 +17,13 @@ education:
     startDate: 2017-09-25
     endDate: 2021-03-20
     awards:
-      - <a href="">Jeffrey L. Elman Award for Academic Excellence</a>
-      - <a href="">Halicioglu Undergraduate Research Scholarship</a>
-      - Magna Cum Laude
-      - Provost Honors
+      - name: Jeffrey L. Elman Award for Academic Excellence
+        url: https://parkeraddison.com/assets/Jeffrey_L_Elman_Award_for_Academic_Excellence_Parker_Addison.pdf
+      - name: Halicioglu Undergraduate Research Scholarship
+        url: https://web.archive.org/web/20220918142907/https://today.ucsd.edu/story/halcolu_data_science_institute_awards_research_fellowships
+      - name: Magna Cum Laude
+      - name: Provost Honors
+
 
 experience:
   work:
@@ -28,34 +32,36 @@ experience:
         - title: Consultant - AI Consultant
           startDate: 2023-06-01
           endDate: present
+          description:
         - title: Analyst - Data Scientist
           startDate: 2021-10-03
           endDate: 2023-05-31
-      description:
+          description:
     - company: Universities Space Research Association at NASA Ames
       positions:
         - title: High-Performance Computing R&D Intern
           startDate: 2021-02-01
           endDate: 2021-07-31
-      description:
+          description:
     - company: Sapie Space
       positions:
         - title: Machine Learning Engineer
           startDate: 2018-01-27
           endDate: 2018-06-01
-      description:
+          description:
     - company: SommSelect
       positions:
         - title: Interim Data Analyst
           startDate: 2017-07-19
           endDate: 2017-09-01
-      description:
+          description:
     - company: Ameriprise Inc.
       positions:
         - title: Financial Intern
           startDate: 2017-06-23
           endDate: 2017-08-17
-      description:
+          description:
+
   research:
     - company: Halicioglu Data Science Institute
       title: Undergraduate Research Scholarship - Applied Data Science
@@ -72,6 +78,7 @@ experience:
       startDate: 2019-04-01
       endDate: 2019-06-11
       description: Statistical approaches to describe bias in network graph degree distributions resulting from various graph sampling schemes. Researched new sampling schemes to address bias and implemented the Snowboot R package in Python. Under the incredible Prof. Aaron Fraenkel.
+
   teaching:
     - university: UC San Diego
       positions:
@@ -85,6 +92,7 @@ experience:
           title: Instructional Assistant
           startDate: 2020-03-30
           endDate: 2020-06-09
+
   leadership:
     - title: Founding Member - Alumni Association
       company: Halicioglu Data Science Institute Alumni Association
@@ -113,6 +121,7 @@ experience:
       startDate: 2020-01-01
       description: Our subcommittee was responsible for organizing a showcase of faculty and student research to demonstrate the purpose and power of data science, and what UC San Diego is doing to advance the field.
 
+
 presentations:
   - title: 'Beyond Graduation: Conversations with HDSI Alumni'
     venue: Halicioglu Data Science Institute Alumni Association
@@ -122,16 +131,19 @@ presentations:
     venue: Halicioglu Data Science Institute Graduation Ceremony
     date: 2021-06-14
     url: https://vimeo.com/638838561
+    notes: https://web.archive.org/web/20210613102622/https://datascience.ucsd.edu/virtual-graduation-celebration-2021/
   - title: What Ignited My Love for Data Science
     venue: Ignite Talks @ UCSD by Tritons for Sally Ride Science
     date: 2019-05-31
     url: https://youtu.be/S7srcEu3Lpw
+
 
 publications:
   - title: Response to RFI on Advancing Privacy-Enhancing Technologies
     org: Deloitte, in response to White House Office of Science & Technology Policy
     date: 2022-07-08
     url: https://www.nitrd.gov/rfi/2022/87-fr-35250/Deloitte-Consulting-PET-RFI-Response-2022.pdf
+
 
 certifications:
   - name: AWS Certified Data Analytics – Specialty
