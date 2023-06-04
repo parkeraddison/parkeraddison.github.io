@@ -9,6 +9,7 @@ Gemfile.lock
 *.gem
 
 # Example site files used for testing
+_data
 _blog
 _news
 _projects

@@ -29,13 +29,15 @@
 <article>
     <h2>{{ item.company }}</h2>
     {%- for position in item.positions -%}
-    <h3>{{ position.title }}
-        <time>{{ position.startDate | date: '%Y %b' }} &horbar; {{ position.endDate | date: '%Y %b' }}</time>
-    </h3>
+        <article class="position">
+            <h3>{{ position.title }}
+                <time>{{ position.startDate | date: '%Y %b' }} &horbar; {{ position.endDate | date: '%Y %b' }}</time>
+            </h3>
+            {%- if position.description -%}
+                <div class="article-body">{{ position.description | markdownify }}</div>
+            {%- endif -%}
+        </article>
     {%- endfor -%}
-    {%- if item.description -%}
-        <div class="article-body">{{ item.description | markdownify }}</div>
-    {%- endif -%}
 </article>
 {%- endfor -%}
 </section>
@@ -149,7 +151,16 @@
     <div class="article-body">
         <p><b>GPA:</b> {{ item.gpa }} <em>(Magna Cum Laude)</em></p>
         <p><b>Technical GPA:</b> 3.97</p>
-        <p><b>Awards:</b> {{ item.awards | join: ' • '}}</p>
+        {%- assign awardslist = '' | split: '' -%}
+        {%- for award in item.awards -%}
+            {%- if award.url -%}
+                {%- capture awardhtml -%}<a href="{{ award.url }}">{{ award.name }}</a>{%- endcapture -%}
+            {%- else -%}
+                {%- assign awardhtml = award.name -%}
+            {%- endif -%}
+            {%- assign awardslist = awardslist | push: awardhtml -%}
+        {%- endfor -%}
+        <p><b>Awards:</b> {{ awardslist | join: ' ｜ ' }}</p>
     </div>
 </article>
 {%- endfor -%}
