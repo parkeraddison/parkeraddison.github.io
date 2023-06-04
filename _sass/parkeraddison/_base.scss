@@ -158,9 +158,10 @@ main p a:not(.link-action)[href^="https://"],
 main .article-body a:not(.link-action)[href^="https://"] {
 
     &::after {
-        content: '↗';
+        content: '↗\FE0E';
         // color: var(--theme-text-faint);
         font-size: 80%;
+        font-family: monospace;
         position: relative;
         top: 0em;
         // opacity: 0;
